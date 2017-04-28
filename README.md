@@ -9,6 +9,6 @@ Using the SDK  (Refer the sdk spec "webclient_v1.pdf" in the repo)
   1. Include the src 
   <script src=” https://d24cgw3uvb9a9h.cloudfront.net/static/90077/js/api/zoommtg.js”></script>
   
-  2. Check the sample java code on how to create a meeting signature 
-  3. Check our REST API documentation to find out how to get the API key and how to create meetings
+  2. Check the sample java code on how to create a meeting signature - it's very straightforward to write it in java script or in other languages
+  3. Check our REST API documentation to find out how to get the API key/secret and how to create meetings
  
