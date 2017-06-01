@@ -12,7 +12,7 @@ Refer the sdk spec [webclient_v1.pdf](https://github.com/zoomvideo/webclient/blo
 
 ### Include the source
 
-```<script src=”https://d24cgw3uvb9a9h.cloudfront.net/static/90077/js/api/zoommtg.js”></script>```
+```<script src="https://d24cgw3uvb9a9h.cloudfront.net/static/90077/js/api/zoommtg.js"></script>```
   
 *Check the sample java code on how to create a meeting signature - it's very straightforward to write it in JavaScript or in other languages*
 
