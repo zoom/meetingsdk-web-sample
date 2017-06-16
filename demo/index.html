@@ -1,0 +1,71 @@
+<html>
+<head>
+    <title>zoom web client</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="./css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="./css/react-select.css"/>
+
+    <style>
+        #test {
+            position: absolute;
+            z-index: 99999999999;
+            width: 200px;
+            height: 660px;
+            background: indianred;
+            font-size: 12px
+        }
+        #test button {
+            text-align: left;
+            width: 170px;
+            background: yellowgreen;
+            margin: 5px 0 5px 10px
+        }
+        #list {
+            text-align: center;
+            color: yellowgreen;
+            font-weight: 600;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="test">
+        <div id="list">JS SDK Methods</div>
+        <button data-id="generateSignature">generateSignature</button>
+        <button data-id="init">init</button>
+        <button data-id="join">join</button>
+        <button data-id="showInviteFunction">showInviteFunction</button>
+        <button data-id="showCalloutFunction">showCalloutFunction</button>
+        <button data-id="showMeetingHeader">showMeetingHeader</button>
+    	<button data-id="showRecordFunction">showRecordFunction</button>
+    	<button data-id="showJoinAudioFunction">showJoinAudioFunction</button>
+        <button data-id="getAttendeeslist">getAttendeeslist</button>
+        <button data-id="callOut">callOut</button>
+        <button data-id="inviteByPhone">inviteByPhone</button>
+        <button data-id="mute">mute</button>
+        <button data-id="muteAll">muteAll</button>
+        <button data-id="rename">rename</button>
+        <button data-id="expel">expel</button>
+        <button data-id="record">record</button>
+        <button data-id="lockMeeting">lockMeeting</button>
+        <button data-id="leaveMeeting">leaveMeeting</button>
+        <button data-id="endMeeting">endMeeting</button>
+    </div>
+
+    <div class="main">
+        <div id='root'>
+        </div>
+    </div>
+
+    <script src="./lib/react.min.js"></script>
+    <script src="./lib/react-dom.min.js"></script>
+    <script src="./lib/redux.min.js"></script>
+    <script src="./lib/redux-thunk.min.js"></script>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery.i18n.js"></script>
+	<script src="http://d24cgw3uvb9a9h.cloudfront.net/jssdk/1.0/zoommtg.js"></script>
+    <script src="./js/customer.js"></script>
+</body>
+</html>
