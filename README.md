@@ -8,7 +8,7 @@ Supported Browsers:  Internet Explorer 10+, Google Chrome, Safari, and Mozilla F
 
 ## Using the SDK
 
-Refer the sdk spec [webclient_v1.pdf](https://github.com/zoomvideo/webclient/blob/master/webclient_v1.pdf) in the repo
+Refer the sdk spec [Help Documentation.pdf](https://github.com/zoom/sample-app-web/blob/master/Help%20Documentation.pdf) in the repo
 
 ### Include the source
 
