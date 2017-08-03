@@ -14,8 +14,4 @@ Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/Zoommtg.html)
 
 ```<script src="https://source.zoom.us/zoom-meeting-1.0.0.min.js"></script>```
   
-*Check the sample java code on how to create a meeting signature - it's very straightforward to write it in JavaScript or in other languages*
-
-Check our [REST API documentation](https://zoom.us/developer/overview/getting-started-with-rest-api) to find out how to get the API key/secret and how to create meetings
-
-Visit [Zoom Developer Platform](https://zoom.us/developer) for details 
+Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
