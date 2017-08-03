@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>zoom web client</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="css/react-select.css"/>
+</head>
+<body>
+    <style>
+        body {
+            padding-top: 50px;
+        }
+    </style>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MyMeetingApp</a>
+            </div>
+            <div id="navbar">
+                <form class="navbar-form navbar-right" id="meeting_form">
+                    <div class="form-group">
+                        <input value="Joshua" type="text" name="display_name" id="display_name" placeholder="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input value="4084081000" type="text" name="meeting_number" id="meeting_number" placeholder="Meeting Number" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                </form>
+            </div><!--/.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="main">
+        <div id='root'></div>
+    </div>
+
+    <script src="lib/react.min.js"></script>
+    <script src="lib/react-dom.min.js"></script>
+    <script src="lib/redux.min.js"></script>
+    <script src="lib/redux-thunk.min.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.i18n.js"></script>
+    <script src="https://source.zoom.us/zoom-meeting-1.0.0.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

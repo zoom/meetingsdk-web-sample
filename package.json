@@ -1,0 +1,15 @@
+{
+  "name": "sample-app-web",
+  "version": "1.0.0",
+  "description": "Zoom sample app for web client",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
