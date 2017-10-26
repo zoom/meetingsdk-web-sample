@@ -12,6 +12,6 @@ Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/Zoommtg.html)
 
 ### Include the source
 
-```<script src="https://source.zoom.us/zoom-meeting-1.0.0.min.js"></script>```
+```<script src="https://source.zoom.us/zoom-meeting-1.1.0.min.js"></script>```
   
 Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
