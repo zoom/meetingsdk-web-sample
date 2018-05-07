@@ -1,15 +1,17 @@
 {
   "name": "sample-app-web",
-  "version": "1.0.0",
-  "description": "Zoom sample app for web client",
+  "version": "1.2.4",
+  "description": "Zoom sample app for web client JSSDK",
   "main": "index.js",
-  "dependencies": {
-    "http-server": "^0.10.0"
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "http-server": "^0.11.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"http-server -a localhost -p 9999 -c-1\""
   },
-  "author": "",
+  "author": "Yang Jack",
   "license": "ISC"
 }
