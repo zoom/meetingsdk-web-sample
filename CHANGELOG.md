@@ -1,9 +1,27 @@
 # CHANGELOG
-## 2018-05-06
-## version 1.2.4
-###Bug Fixes:
+## version 1.3.0
 
-1. Multi languages user unable to join Meeting
+1. Multi-languages feature
+
+2. Support join meeting with computer's audio and video (receive and send)
+
+3. React require ^v15.6.1
+
+### Bug Fixes:
+
+1. Attendee be put on hold when enable_silent_mode=true
+
+2. Audio panel always open when sharing, connected audio and audioPanelAlwaysOpen=true
+
+3. There is no end popup when free meeting ends
+
+4. Remove `<div class="main"><div id='root'></div></div>` dom, jssdk will auto generate a `<div id='zmmtg-root'></div>` dom to body.
+
+
+## version 1.2.4
+### Bug Fixes:
+
+1. Multi-languages user unable to join Meeting
 
 2. Wrong Dialog
 
@@ -22,10 +40,10 @@ Change small, skipped, this bug fixed with version 1.2.4
 1. add success log and error log in init() and join()
 
 2. add four parameters in init():
-    disableInvite
-	disableCallOut
-	disableRecord
-	disableJoinAudio
+  disableInvite
+  disableCallOut
+  disableRecord
+  disableJoinAudio
 3. support to inviteCRCDevice and calcelInviteCRCDevice.
 
 4. provide signature generate method

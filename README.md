@@ -12,7 +12,7 @@ Refer the [Documentation](https://devdocs.zoom.us/v1.0/reference#web-sdk)
 
 ### Include the source
 
-```<script src="https://source.zoom.us/zoom-meeting-1.2.4.min.js"></script>```
+```<script src="https://source.zoom.us/zoom-meeting-1.3.0.min.js"></script>```
   
 Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
 
