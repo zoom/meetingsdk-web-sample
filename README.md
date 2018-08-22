@@ -8,7 +8,7 @@ Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest
 
 ## Using the SDK
 
-Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/Zoommtg.html)
+Refer the [Documentation](https://devdocs.zoom.us/v1.0/reference#web-sdk)
 
 ### Include the source
 
