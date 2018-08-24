@@ -16,6 +16,17 @@ Refer the [Documentation](https://devdocs.zoom.us/v1.0/reference#web-sdk)
   
 Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
 
+
+## Update 1.3.0 notices
+
+If you want to update 1.3.0, you need check out this repository, and update `lib, css, fonts` floder and reactjs version to you own website. keep the same path.
+
+there are many dependencies if you want to use audio and video featues. These files are indispensable expect `zoom-meeting-1.3.0.min.js`
+
+### Enable audio and video(2AV) and Multi-languages feature
+
+[https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions](https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions)
+
 ### Quick start
 ```javascript
 git clone git@github.com:zoom/sample-app-web.git
@@ -24,3 +35,4 @@ npm install
 npm run start
 ```
 open browser http://localhost:9999
+
