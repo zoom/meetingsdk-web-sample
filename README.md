@@ -27,6 +27,14 @@ there are many dependencies if you want to use audio and video featues. These fi
 
 [https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions](https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions)
 
+### Video, Computer Audio and Sharing Supported browser
+
+Feature | Chrome | Safair | Edge | IE | Opera | Vivaldi
+------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------
+Video | yes | yes | yes | no | yes | yes
+Computer Audio | yes | no | no | no | no | yes 
+Sharing | yes | yes | yes | yes| yes | yes
+
 ### Quick start
 ```javascript
 git clone git@github.com:zoom/sample-app-web.git
