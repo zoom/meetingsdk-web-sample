@@ -32,7 +32,7 @@ there are many dependencies if you want to use audio and video featues. These fi
 Feature | Chrome | firefox | Safair | Edge | IE | Opera | Vivaldi
 ------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
 Video | yes| yes | yes | yes | no | yes | yes
-Computer Audio | yes | yes | no | no | no | no | yes 
+Computer Audio | yes | no | no | no | no | no | yes 
 Sharing | yes | yes | yes | yes | yes| yes | yes
 
 ### Issues
