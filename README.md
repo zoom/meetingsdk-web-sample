@@ -35,6 +35,11 @@ Video | yes| yes | yes | yes | no | yes | yes
 Computer Audio | yes | yes | no | no | no | no | yes 
 Sharing | yes | yes | yes | yes | yes| yes | yes
 
+### Issues
+
+JSSDK just support sharing on IE even though enable 2AV. and don't include js_media.js when IE, it will have a error.
+save it use this way [https://github.com/zoom/sample-app-web/issues/12](https://github.com/zoom/sample-app-web/issues/12)
+
 ### Quick start
 ```javascript
 git clone git@github.com:zoom/sample-app-web.git
