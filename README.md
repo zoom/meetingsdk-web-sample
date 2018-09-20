@@ -8,7 +8,7 @@ Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest
 
 ## Using the SDK
 
-Refer the [Documentation](https://devdocs.zoom.us/v1.0/reference#web-sdk)
+Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/ZoomMtg.html#init)
 
 ### Include the source
 
@@ -25,7 +25,7 @@ there are many dependencies if you want to use audio and video featues. These fi
 
 ### Enable audio and video(2AV) and Multi-languages feature
 
-[https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions](https://devdocs.zoom.us/v1.0/docs/javascript-sdk-functions)
+[https://devdocs.zoom.us/docs/zoom-sdks/Web-Client-SDK](https://devdocs.zoom.us/docs/zoom-sdks/Web-Client-SDK)
 
 ### Video, Computer Audio and Sharing Supported browser
 
