@@ -24,6 +24,7 @@
           meetingNumber: parseInt(document.getElementById('meeting_number').value),
           userName: document.getElementById('display_name').value,
           passwd: "",
+          email: "",
           leaveUrl: "https://zoom.us",
           role: 1
         };
@@ -47,6 +48,7 @@
                     {
                         meetingNumber: meetConfig.meetingNumber,
                         userName: meetConfig.userName,
+                        userEmail: meetConfig.email,
                         signature: signature,
                         apiKey: meetConfig.apiKey,
                         success: function(res){
