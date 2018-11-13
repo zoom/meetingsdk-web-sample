@@ -1,4 +1,19 @@
 # CHANGELOG
+
+## version 1.3.5
+## Added
+
+1. Support join no registration Webinar
+2. Add zh-TW language support
+
+## Bug Fixes:
+1. Video tile and participant panel never overlay sharing area
+2. Missing translation fixed
+3. Phone Call and Call Me auto selected user’s country - through ip location
+4. Attendee must start twice for host see video
+5. Auto start video respect to meeting video option
+
+
 ## version 1.3.0
 
 1. Multi-languages feature
