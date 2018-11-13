@@ -16,16 +16,29 @@ Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/ZoomMtg.html#init)
   
 Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
 
+## Update for 1.3.5
+If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 
+
+```
+ZoomMtg.join(
+              {
+                userEmail: "hello@zoom.us",
+               })
+ ```
+ ```
+  role: 0
+ ```
+          
 
 ## Update 1.3.0 notices
 
 If you want to update 1.3.0, you need check out this repository, and update `lib, css, fonts` floder and reactjs version to you own website. keep the same path.
 
-there are many dependencies if you want to use audio and video featues. These files are indispensable expect `zoom-meeting-1.3.0.min.js`
+there are many dependencies if you want to use audio and video featues. These files are indispensable expect `zoom-meeting-1.3.5.min.js`
 
 ### Enable audio and video(2AV) and Multi-languages feature
 
-[https://devdocs.zoom.us/docs/zoom-sdks/Web-Client-SDK](https://devdocs.zoom.us/docs/zoom-sdks/Web-Client-SDK)
+[https://marketplace.zoom.us/docs/api-reference/sdk-reference/web-reference](https://marketplace.zoom.us/docs/api-reference/sdk-reference/web-reference)
 
 ### Video, Computer Audio and Sharing Supported browser
 
