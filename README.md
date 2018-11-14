@@ -20,10 +20,9 @@ Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to ob
 If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 
 
 ```
-ZoomMtg.join(
-              {
-                userEmail: "hello@zoom.us",
-               })
+ZoomMtg.join({
+    userEmail: "hello@zoom.us",
+})
  ```
  ```
   role: 0
