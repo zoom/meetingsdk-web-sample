@@ -14,7 +14,7 @@ Refer the [Documentation](https://zoom.github.io/zoom-sdk-web/ZoomMtg.html#init)
 
 ```<script src="https://source.zoom.us/zoom-meeting-1.3.5.min.js"></script>```
   
-Visit [Zoom Developer Platform](https://developer.zoom.us) for details and to obtain your API Key/Secret
+Visit [Zoom Developer Platform](https://devforum.zoom.us) for details and to obtain your API Key/Secret
 
 ## Update for 1.3.5
 If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 
