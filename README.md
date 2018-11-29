@@ -1,4 +1,4 @@
-# webclient
+# Web SDK Client
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments. 
 
@@ -50,10 +50,13 @@ Video | yes| yes | yes | yes | no | yes | yes
 Computer Audio | yes | no | no | no | no | no | yes 
 Sharing | yes | yes | yes | yes | yes| yes | yes
 
-### Issues
+### Known Issues
 
 JSSDK just support sharing on IE even though enable 2AV. and don't include js_media.js when IE, it will have a error.
 save it use this way [https://github.com/zoom/sample-app-web/issues/12](https://github.com/zoom/sample-app-web/issues/12)
+
+### Support
+For any issues regarding the community our Web Client SDK, please go to our new Community Support Forum at [https://devforum.zoom.us/](https://devforum.zoom.us/)
 
 ### Quick start
 ```javascript
