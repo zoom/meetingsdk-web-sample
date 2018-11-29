@@ -1,4 +1,4 @@
-# Web SDK Client
+# Web Client SDK 
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments. 
 
