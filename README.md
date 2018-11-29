@@ -56,7 +56,7 @@ JSSDK just support sharing on IE even though enable 2AV. and don't include js_me
 save it use this way [https://github.com/zoom/sample-app-web/issues/12](https://github.com/zoom/sample-app-web/issues/12)
 
 ### Support
-For any issues regarding the community our Web Client SDK, please go to our new Community Support Forum at [https://devforum.zoom.us/](https://devforum.zoom.us/)
+For any issues regarding our Web Client SDK, please visit our new Community Support Forum at [https://devforum.zoom.us/](https://devforum.zoom.us/)
 
 ### Quick start
 ```javascript
