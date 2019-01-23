@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Tutorial: Sample Demo ES6 Statement - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="$.i18n.html">i18n</a><ul class='methods'><li data-type='method'><a href="$.i18n.html#load">load</a></li><li data-type='method'><a href="$.i18n.html#reload">reload</a></li><li data-type='method'><a href="$.i18n.html#get">get</a></li><li data-type='method'><a href="$.i18n.html#printf">printf</a></li><li data-type='method'><a href="$.i18n.html#getAll">getAll</a></li></ul></li><li><a href="LanguageResource.html">LanguageResource</a><ul class='methods'><li data-type='method'><a href="LanguageResource.html#en-US">en-US</a></li><li data-type='method'><a href="LanguageResource.html#de-DE">de-DE</a></li><li data-type='method'><a href="LanguageResource.html#es-ES">es-ES</a></li><li data-type='method'><a href="LanguageResource.html#fr-FR">fr-FR</a></li><li data-type='method'><a href="LanguageResource.html#jp-JP">jp-JP</a></li><li data-type='method'><a href="LanguageResource.html#pt-PT">pt-PT</a></li><li data-type='method'><a href="LanguageResource.html#ru-RU">ru-RU</a></li><li data-type='method'><a href="LanguageResource.html#zh-CN">zh-CN</a></li><li data-type='method'><a href="LanguageResource.html#zh-TW">zh-TW</a></li></ul></li><li><a href="ZoomMtg.html">ZoomMtg</a><ul class='methods'><li data-type='method'><a href="ZoomMtg.html#setZoomJSLib">setZoomJSLib</a></li><li data-type='method'><a href="ZoomMtg.html#preLoadWasm">preLoadWasm</a></li><li data-type='method'><a href="ZoomMtg.html#prepareJssdk">prepareJssdk</a></li><li data-type='method'><a href="ZoomMtg.html#generateSignature">generateSignature</a></li><li data-type='method'><a href="ZoomMtg.html#checkSystemRequirements">checkSystemRequirements</a></li><li data-type='method'><a href="ZoomMtg.html#init">init</a></li><li data-type='method'><a href="ZoomMtg.html#join">join</a></li><li data-type='method'><a href="ZoomMtg.html#showInviteFunction">showInviteFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showMeetingHeader">showMeetingHeader</a></li><li data-type='method'><a href="ZoomMtg.html#showRecordFunction">showRecordFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showCalloutFunction">showCalloutFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showJoinAudioFunction">showJoinAudioFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showPureSharingContent">showPureSharingContent</a></li><li data-type='method'><a href="ZoomMtg.html#getAttendeeslist">getAttendeeslist</a></li><li data-type='method'><a href="ZoomMtg.html#callOut">callOut</a></li><li data-type='method'><a href="ZoomMtg.html#getZoomRoomlist">getZoomRoomlist</a></li><li data-type='method'><a href="ZoomMtg.html#inviteByPhone">inviteByPhone</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#mute">mute</a></li><li data-type='method'><a href="ZoomMtg.html#muteAll">muteAll</a></li><li data-type='method'><a href="ZoomMtg.html#rename">rename</a></li><li data-type='method'><a href="ZoomMtg.html#expel">expel</a></li><li data-type='method'><a href="ZoomMtg.html#record">record</a></li><li data-type='method'><a href="ZoomMtg.html#lockMeeting">lockMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#leaveMeeting">leaveMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#endMeeting">endMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#putOnHold">putOnHold</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-enable-2way-audio-video.html">Enable 2AV Feature</a></li><li><a href="tutorial-get-start.es5.html">Sample Demo ES5 Statement</a></li><li><a href="tutorial-get-start.es6-integration.html">integration with exist nodejs project</a></li><li><a href="tutorial-get-start.es6.html">Sample Demo ES6 Statement</a></li><li><a href="tutorial-just-enable-sharing.html">IE Join Meeting</a></li><li><a href="tutorial-multi-language.html">Use multi languages</a></li><li><a href="tutorial-register.html">Register ZOOM JSSDK API</a></li><li><a href="tutorial-webinar.html">Join Webinar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generate_signature">generate_signature</a></li><li><a href="global.html#languages">languages</a></li><li><a href="global.html#errorCodes">errorCodes</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Tutorial: Sample Demo ES6 Statement</h1>
+    
+
+    <section>
+
+<header>
+    
+
+    <h2>Sample Demo ES6 Statement</h2>
+</header>
+
+<article>
+    <h2>index.html</h2><p><a href="https://github.com/zoom/sample-app-web/sample/es6">Full Sample Demo ES6 Statement</a></p>
+<h3>Run demo</h3><pre class="prettyprint source"><code>git clone git@github.com:zoom/sample-app-web.git
+cd es6
+npm install
+npm run start</code></pre><p>open <a href="http://localhost:9999">http://localhost:9999</a></p>
+<h3>packages.json</h3><pre class="prettyprint source lang-json"><code>{
+  &quot;$schema&quot;: &quot;http://json.schemastore.org/coffeelint&quot;,
+  &quot;name&quot;: &quot;zoomus-jssdk-es6&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;Zoom sample app for web client JSSDK&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; && exit 1&quot;,
+    &quot;start&quot;: &quot;set NODE_ENV=development && set production=development && webpack-dev-server --config webpack.config.dev.js&quot;
+  },
+  &quot;keywords&quot;: [
+    &quot;zoom&quot;,
+    &quot;meeting&quot;,
+    &quot;client&quot;,
+    &quot;webclient&quot;
+  ],
+  &quot;author&quot;: &quot;Jack Yang&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;zoomus-jssdk&quot;: &quot;^1.3.7&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@babel/cli&quot;: &quot;^7.1.5&quot;,
+    &quot;@babel/core&quot;: &quot;^7.1.6&quot;,
+    &quot;@babel/preset-react&quot;: &quot;^7.0.0&quot;,
+    &quot;@babel/preset-stage-0&quot;: &quot;^7.0.0&quot;,
+    &quot;@babel/preset-stage-1&quot;: &quot;^7.0.0&quot;,
+    &quot;babel-eslint&quot;: &quot;^10.0.1&quot;,
+    &quot;babel-loader&quot;: &quot;^8.0.4&quot;,
+    &quot;babel-polyfill&quot;: &quot;^6.26.0&quot;,
+    &quot;babel-preset-airbnb&quot;: &quot;^3.0.1&quot;,
+    &quot;css-loader&quot;: &quot;^1.0.1&quot;,
+    &quot;eslint&quot;: &quot;^5.9.0&quot;,
+    &quot;eslint-config-airbnb&quot;: &quot;^17.1.0&quot;,
+    &quot;eslint-plugin-import&quot;: &quot;^2.14.0&quot;,
+    &quot;eslint-plugin-jsx-a11y&quot;: &quot;^6.1.2&quot;,
+    &quot;eslint-plugin-react&quot;: &quot;^7.11.1&quot;,
+    &quot;file-loader&quot;: &quot;^2.0.0&quot;,
+    &quot;style-loader&quot;: &quot;^0.23.1&quot;,
+    &quot;url-loader&quot;: &quot;^1.1.2&quot;,
+    &quot;webpack&quot;: &quot;^4.26.1&quot;,
+    &quot;webpack-cli&quot;: &quot;^3.1.2&quot;,
+    &quot;webpack-dev-server&quot;: &quot;^3.1.10&quot;
+  }
+}</code></pre><h3>.babelrc</h3><pre class="prettyprint source lang-json"><code>{
+  &quot;env&quot;: {
+    &quot;production&quot;: {
+      &quot;presets&quot;: [
+        [&quot;@babel/preset-env&quot;, { &quot;modules&quot;: false }],
+        &quot;@babel/preset-react&quot;,
+        &quot;airbnb&quot;]
+    },
+    &quot;development&quot;: {
+    }
+  },
+  &quot;presets&quot;: [
+    [&quot;@babel/preset-env&quot;, { &quot;modules&quot;: false }],
+    &quot;@babel/preset-react&quot;,
+    &quot;airbnb&quot;]
+}
+</code></pre><h3>.eslintrc</h3><pre class="prettyprint source lang-json"><code>{
+    &quot;extends&quot;: &quot;airbnb&quot;,
+    &quot;rules&quot;: {
+        &quot;indent&quot;: [
+            &quot;error&quot;,
+            4
+        ],
+        &quot;linebreak-style&quot;: [
+            &quot;error&quot;,
+            &quot;unix&quot;
+        ],
+        &quot;semi&quot;: [
+            &quot;error&quot;,
+            &quot;always&quot;
+        ],
+        &quot;comma-dangle&quot;: 0,
+        &quot;no-console&quot;: &quot;off&quot;,
+        &quot;react/jsx-filename-extension&quot;: [1, {
+            &quot;extensions&quot;: [&quot;.js&quot;, &quot;.jsx&quot;]
+        }],
+        &quot;global-require&quot;: &quot;off&quot;,
+        &quot;react/prop-types&quot;: [
+            1,
+            { &quot;ignore&quot;: &quot;ignore&quot;, &quot;customValidators&quot;: &quot;customValidator&quot; }
+        ],
+        &quot;react/destructuring-assignment&quot;: [true , &quot;always&quot;, { &quot;ignoreClassFields&quot;: true }],
+        &quot;react/jsx-indent&quot;: [true, 4],
+        &quot;max-len&quot;: 0,
+        &quot;class-methods-use-this&quot;: 0,
+        &quot;react/jsx-indent-props&quot;: 0,
+        &quot;import/no-named-as-default&quot;: 0,
+        &quot;jsx-a11y/click-events-have-key-events&quot;: 0,
+        &quot;jsx-a11y/interactive-supports-focus&quot;: 0,
+        &quot;no-bitwise&quot;: 0,
+        &quot;no-trailing-spaces&quot;: [&quot;error&quot;, { &quot;ignoreComments&quot;: true }],
+        &quot;react/no-string-refs&quot;: 0,
+        &quot;jsx-a11y/no-static-element-interactions&quot;: [
+            &quot;error&quot;,
+            {
+                &quot;handlers&quot;: [
+                    &quot;onClick&quot;,
+                    &quot;onMouseDown&quot;,
+                    &quot;onMouseUp&quot;,
+                    &quot;onKeyPress&quot;,
+                    &quot;onKeyDown&quot;,
+                    &quot;onKeyUp&quot;,
+                    &quot;onMouseOver&quot;,
+                    &quot;onMouseOut&quot;
+                ]
+            }
+        ]
+    },
+    &quot;env&quot;: {
+        &quot;amd&quot;: true,
+        &quot;browser&quot;: true,
+        &quot;jquery&quot;: true,
+        &quot;node&quot;: true,
+        &quot;es6&quot;: true,
+        &quot;worker&quot;: true
+    },
+    &quot;globals&quot;: {
+        &quot;document&quot;: true,
+        &quot;window&quot;: true,
+        &quot;$&quot;: true,
+        &quot;_&quot;: true
+    },
+    &quot;parser&quot;: &quot;babel-eslint&quot;
+}</code></pre><h3>webpack.config.dev.js</h3><pre class="prettyprint source lang-javascript"><code>const path = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+    devtool: 'eval',
+    entry: {
+        app: [
+            './js/index.js'
+        ]
+    },
+    output: {
+        path: path.resolve(__dirname, '/static'),
+        publicPath: '/static',
+        hashDigestLength: 5,
+        filename: '[name].min.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'url-loader?limit=500000'
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2|svg)$/,
+                loader: 'url-loader?limit=50000'
+            },
+            {
+                test: /\.scss$/,
+                loader: 'style!css!sass'
+            }
+        ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
+    context: __dirname,
+    target: 'web',
+    devServer: {
+        host: 'localhost',
+        port: 9999,
+        hot: true,
+        overlay: true,
+        historyApiFallback: false,
+        watchContentBase: true,
+        disableHostCheck: true,
+        open: true,
+        headers: {
+            'Access-Control-Allow-Origin': 'http://localhost:9999'
+        }
+    },
+    externals: {
+    },
+    mode: 'development',
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development'),
+            'process.env.BABEL_ENV': JSON.stringify('development'),
+        })
+    ],
+};
+</code></pre><h3>index.html</h3><pre class="prettyprint source lang-html"><code>&lt;html>
+&lt;head>
+    &lt;title>Zoom JSSDK&lt;/title>
+    &lt;meta charset=&quot;utf-8&quot; />
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;node_modules/zoomus-jssdk/dist/css/bootstrap.css&quot; />
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;node_modules/zoomus-jssdk/dist/css/react-select.css&quot; />
+
+    &lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;>
+&lt;/head>
+&lt;body>
+&lt;style>
+    body {
+        padding-top: 50px;
+    }
+&lt;/style>
+
+&lt;nav id=&quot;nav-tool&quot;class=&quot;navbar navbar-inverse navbar-fixed-top&quot;>
+    &lt;div class=&quot;container&quot;>
+        &lt;div class=&quot;navbar-header&quot;>
+            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;>MyMeetingApp&lt;/a>
+        &lt;/div>
+        &lt;div id=&quot;navbar&quot;>
+            &lt;form class=&quot;navbar-form navbar-right&quot; id=&quot;meeting_form&quot;>
+                &lt;div class=&quot;form-group&quot;>
+                    &lt;input type=&quot;text&quot; name=&quot;display_name&quot; id=&quot;display_name&quot; value=&quot;&quot; placeholder=&quot;Name&quot; class=&quot;form-control&quot; required>
+                &lt;/div>
+                &lt;div class=&quot;form-group&quot;>
+                    &lt;input type=&quot;text&quot; name=&quot;meeting_number&quot; id=&quot;meeting_number&quot; value=&quot;&quot; placeholder=&quot;Meeting Number&quot; class=&quot;form-control&quot; required>
+                &lt;/div>
+                &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot; id=&quot;join_meeting&quot;>Join&lt;/button>
+            &lt;/form>
+        &lt;/div>&lt;!--/.navbar-collapse -->
+    &lt;/div>
+&lt;/nav>
+
+
+&lt;script src=&quot;node_modules/jquery/dist/jquery.js&quot;>&lt;/script>
+&lt;script src=&quot;./static/app.min.js&quot;>&lt;/script>
+
+&lt;script>
+
+&lt;/script>
+&lt;/body>
+&lt;/html>
+</code></pre><h3>js/index.js</h3><pre class="prettyprint source lang-javascript"><code>
+import { ZoomMtg } from 'zoomus-jssdk';
+
+// option, set JSSDK_LIB_PATH, must use full path;
+// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av');
+
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk();
+
+document.getElementById('join_meeting').addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const meetConfig = {
+        apiKey: API_KEY,
+        apiSecret: API_SECRET,
+        meetingNumber: parseInt(document.getElementById('meeting_number').value, 10),
+        userName: document.getElementById('display_name').value,
+        passwd: '',
+        leaveUrl: 'https://zoom.us',
+        role: 0,
+    };
+
+    ZoomMtg.generateSignature({
+        meetingNumber: meetConfig.meetingNumber,
+        apiKey: meetConfig.apiKey,
+        apiSecret: meetConfig.apiSecret,
+        role: meetConfig.role,
+        success(res) {
+            console.log('signature', res.result);
+            ZoomMtg.init({
+                leaveUrl: 'http://www.zoom.us',
+                isSupportAV: true,
+                videoDrag: false,
+                videoHeader: false,
+                sharingMode: 'fit',
+                webEndpoint: meetConfig.webEndpoint,
+                rwcEndpoint: meetConfig.rwcEndpoint,
+                success() {
+                    ZoomMtg.join(
+                        {
+                            meetingNumber: meetConfig.meetingNumber,
+                            userName: meetConfig.userName,
+                            signature: res.result,
+                            apiKey: meetConfig.apiKey,
+                            userEmail: 'customer@qq.com',
+                            passWord: '',
+                            success() {
+                                $('#nav-tool').hide();
+                                console.log('join meeting success');
+                            },
+                            error(res) {
+                                console.log(res);
+                            }
+                        }
+                    );
+                },
+                error(res) {
+                    console.log(res);
+                }
+            });
+        }
+    });
+});
+</code></pre>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Dec 12 2018 18:35:54 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

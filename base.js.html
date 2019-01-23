@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>base.js - Documentation</title>
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
@@ -27,63 +27,50 @@
 
 <div id="main">
     
+    <h1 class="page-title">base.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+
+
+/**
+* Generate signature for ZoomMtg JSSDK.
+* @param string $api_key You REST API Key
+* @param string $api_secret You REST API Secret
+* @param int $meeting_number The meeting number you are creating the signature for
+* @param int $role Role that this signature is for; 0 for participant, 1 for host
+* @return {string} Returns the signature string
+* @method generate_signature
+* @example
+//PHP example code
+function generate_signature ( $api_key, $api_sercet, $meeting_number, $role){
+
+	$time = time() * 1000; //time in milliseconds (or close enough)
+	
+	$data = base64_encode($api_key . $meeting_number . $time . $role);
+	
+	$hash = hash_hmac('sha256', $data, $api_sercet, true);
+	
+	$_sig = $api_key . "." . $meeting_number . "." . $time . "." . $role . "." . base64_encode($hash);
+	
+	//return signature, url safe base64 encoded
+	return rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
+}
+*
+*/
 
 
 
-
-
-
-
-
-
-    
-
-
-    <section class="readme">
-        <article><h1>Zoom JSSDK document</h1> <!-- * A quick test way to generate signature, get an api <a href="https://developer.zoom.us/me/">Zoom developer</a>
- * backe-end to genarate signature go to see generate\_signature in php -->
-<h2>Getting Started</h2><p>NOTICE: In index.js there is an undocumented function generateSignature, we only use it here for quick prototyping and highly encourage you to generate this signature server side, you don't want to expose your API Key/Secret
-registe and become <a href="tutorial-register.html">Zoom's developer</a> </p>
-<ol>
-<li><p>Install <a href="https://nodejs.org/en/download/">Node.js/NPM</a> and <a href="https://git-scm.com/downloads">Git</a> if you don't have it</p>
-</li>
-<li><p>Download/Clone the sample app from <a href="https://github.com/zoom/sample-app-web">GitHub</a> or clone</p>
-<pre class="prettyprint source"><code> git clone git@github.com:zoom/sample-app-web.git</code></pre></li>
-<li><p>Navigate to the directory where you downloaded the sample app.</p>
-</li>
-</ol>
-<ol start="4">
-<li><p>Config YOUR_API_KEY and YOUR_API_SECRET and replace with your own REST API Key and Secret.
- Save the file.
- Navigate back to the root of the project</p>
-<p> edit path/sample-app-web/js/index.js </p>
-<pre class="prettyprint source"><code> var API_KEY = 'YOUR_API_KEY';
- var API_SECRET = 'YOUR_API_SECRET';</code></pre><p> save and then open cmd/terminal</p>
-<pre class="prettyprint source"><code> cd path/sample-app-web
- npm install
- npm run start</code></pre></li>
-<li><p>Once that is complete, this will install a node module called http-server.
- In terminal npm run start and visit </p>
-<p> <a href="http://localhost:9999">http://localhost:9999</a> </p>
-<p> <img src="img/npm-run-start.png" alt="npm run start" title="npm run start"> </p>
-<p> in your browser. You should now be seeing the sample app UI</p>
-<p> <img src="img/localhost9999.png" alt="sample app page"> </p>
-</li>
-<li><p>Enter a Name and the Meeting Number of meeting you started.
-Click Join.</p>
-<p><img src="img/joining-meeting.png" alt="joining meeting" title="joining meeting"> 
-<img src="img/participent-joined-meeting.png" alt="joined meeting as participent" title="joined meeting as participent"> </p>
-</li>
-</ol></article>
+</code></pre>
+        </article>
     </section>
-
-
 
 
 
