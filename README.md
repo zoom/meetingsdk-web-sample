@@ -7,24 +7,65 @@ The web client lets end users join a meeting, receive screen share from other at
 Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest version
 
 ### Getting Started with Meetings
-https://marketplace.zoom.us/docs/guides/zoom-sdks/Web-Client-SDK
+https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/overview
 
 ### Using the SDK
 
-Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/api-reference/sdk-reference/web-reference)
+Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/api-reference)
+
+### Dependencies
+
+```package.json
+"dependencies": {
+	"react": "15.6.1",
+	"react-dom": "15.6.1",
+	"redux": "3.7.2",
+	"react-redux": "5.0.6",
+	"jquery": "^3.2.0",
+	"lodash": "^4.17.4",
+	"redux-thunk": "2.2.0"
+}
+```
+
 
 ### Include the source
 
-```<script src="https://source.zoom.us/zoom-meeting-1.3.5.min.js"></script>```
-  
-Visit [Zoom Developer Platform](https://devforum.zoom.us) for details and to obtain your API Key/Secret
+```
+<script src="https://source.zoom.us/zoom-meeting-1.3.7.min.js"></script>
+```
+### or
 
-## Update for 1.3.5
+```
+npm install zoomus-jssdk
+```
+
+
+## update for 1.3.7
+Please notice, 1.3.7 release with two ways, the normal way and npm way(need babel and webpack).
+
+At first, you invoke those three API to init jssdk.
+```
+console.log('checkSystemRequirements');
+console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
+
+
+// it's option if you want to chenge the jssdk dependency link resources.
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.3.7/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
+
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk();
+```
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.3.7
+
+## Webinar notice
 If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 
 
 ```
 ZoomMtg.join({
-    userEmail: "hello@zoom.us",
+...
+userEmail: "hello@zoom.us",
+...    
 })
  ```
  ```
@@ -32,38 +73,45 @@ ZoomMtg.join({
  ```
           
 
-## Update 1.3.0 notices
-
-If you want to update 1.3.0, you need check out this repository, and update `lib, css, fonts` floder and reactjs version to you own website. keep the same path.
-
-there are many dependencies if you want to use audio and video featues. These files are indispensable expect `zoom-meeting-1.3.5.min.js`
-
-### Enable audio and video(2AV) and Multi-languages feature
-
-[https://marketplace.zoom.us/docs/api-reference/sdk-reference/web-reference](https://marketplace.zoom.us/docs/api-reference/sdk-reference/web-reference)
-
 ### Video, Computer Audio and Sharing Supported browser
 
 Feature | Chrome | firefox | Safari | Edge | IE | Opera | Vivaldi
 ------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
 Video | yes| yes | yes | yes | no | yes | yes
-Computer Audio | yes | no | no | no | no | no | yes 
+Computer Audio | yes | only linux | no | no | no | no | yes 
 Sharing | yes | yes | yes | yes | yes| yes | yes
 
-### Known Issues
-
-JSSDK just support sharing on IE even though enable 2AV. and don't include js_media.js when IE, it will have a error.
-save it use this way [https://github.com/zoom/sample-app-web/issues/12](https://github.com/zoom/sample-app-web/issues/12)
-
 ### Support
-For any issues regarding our Web Client SDK, please visit our new Community Support Forum at [https://devforum.zoom.us/](https://devforum.zoom.us/)
+For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
 
-### Quick start
+[https://devforum.zoom.us/](https://devforum.zoom.us/)
+
+[Register your API Key/Secret](https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/prerequisites)
+
+[Transitioning-your-developer-apps-to-zooms-marketplace](https://medium.com/zoom-developer-blog/transitioning-your-developer-apps-to-zooms-marketplace-6a8de3386716)
+
+
+## Quick start
+### More detail 
+[https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/integrate-the-sdk](https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/integrate-the-sdk)
+
+###  sample web app (CDN version) with dependecies.
+
 ```javascript
 git clone git@github.com:zoom/sample-app-web.git
-cd sample-app-web
+cd sample-app-web/CDN
 npm install
 npm run start
 ```
+
+### sample web app (local version)
+```javascript
+git clone git@github.com:zoom/sample-app-web.git
+cd sample-app-web/Local
+npm install
+npm run start
+```
+
 open browser http://localhost:9999
+
 

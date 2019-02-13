@@ -1,9 +1,25 @@
 # CHANGELOG
 
+## version 1.3.7
+## Added
+
+1. New API setZoomJSLib, preLoadWasm, prepareJssdk, checkSystemRequirements, getJSSDKVersion
+2. option disable "Original Size" mode
+3. fixed firefox overlay shareing area
+4. participent list width change to old style 265px
+5. support import zoomus-jssdk
+
+## Bug Fixes:
+
+1. unexpect signature expired.
+2. When mic access is blocked, click learn link direct to https://www.zoom.us/wc/support/mic
+
+
 ## version 1.3.5
 ## Added
 
 1. Support join no registration Webinar
+
 2. Add zh-TW language support
 
 ## Bug Fixes:

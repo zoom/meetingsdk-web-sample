@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json.schemastore.org/coffeelint",
+  "name": "zoomus-jssdk-local",
+  "version": "1.0.0",
+  "description": "Zoom sample app for web client JSSDK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=development && set BABEL_ENV=development && webpack-dev-server --config webpack.config.dev.js"
+  },
+  "keywords": [
+    "zoom",
+    "meeting",
+    "client",
+    "webclient"
+  ],
+  "author": "Jack Yang",
+  "license": "ISC",
+  "dependencies": {
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "redux": "3.7.2",
+    "react-redux": "5.0.6",
+    "jquery": "^3.2.0",
+    "lodash": "^4.17.4",
+    "redux-thunk": "2.2.0",
+    "zoomus-jssdk": "1.3.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-0": "^7.0.0",
+    "@babel/preset-stage-1": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-airbnb": "^3.0.1",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
