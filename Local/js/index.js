@@ -40,11 +40,6 @@ document.getElementById('join_meeting').addEventListener('click', (e) => {
             ZoomMtg.init({
                 leaveUrl: 'http://www.zoom.us',
                 isSupportAV: true,
-                videoDrag: false,
-                videoHeader: false,
-                sharingMode: 'fit',
-                webEndpoint: meetConfig.webEndpoint,
-                rwcEndpoint: meetConfig.rwcEndpoint,
                 success() {
                     ZoomMtg.join(
                         {
