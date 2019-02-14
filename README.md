@@ -35,6 +35,8 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/Web-C
 ```
 ### or
 
+[![NPM](https://nodei.co/npm/zoomus-jssdk.png)](https://nodei.co/npm/zoomus-jssdk/)
+
 ```
 npm install zoomus-jssdk
 ```
