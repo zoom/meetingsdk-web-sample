@@ -88,14 +88,14 @@ For any issues regarding our Web Client SDK, please visit our new Community Supp
 
 [https://devforum.zoom.us/](https://devforum.zoom.us/)
 
-[Register your API Key/Secret](https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/prerequisites)
+[Register your API Key/Secret](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/prerequisites)
 
 [Transitioning-your-developer-apps-to-zooms-marketplace](https://medium.com/zoom-developer-blog/transitioning-your-developer-apps-to-zooms-marketplace-6a8de3386716)
 
 
 ## Quick start
 ### More detail 
-[https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/integrate-the-sdk](https://marketplace.zoom.us/docs/sdk/Web-Client-SDK/getting-started/integrate-the-sdk)
+[https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk)
 
 ###  sample web app (CDN version) with dependecies.
 
