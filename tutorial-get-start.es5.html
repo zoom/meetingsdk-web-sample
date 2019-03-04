@@ -46,7 +46,7 @@ npm install
 npm run start</code></pre><p>open <a href="http://localhost:9999">http://localhost:9999</a></p>
 <h2>packages.json</h2><pre class="prettyprint source lang-json"><code>{
   &quot;name&quot;: &quot;zoomus-jssdk-cdn&quot;,
-  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;version&quot;: &quot;1.0.1&quot;,
   &quot;description&quot;: &quot;Zoom sample app for web client JSSDK&quot;,
   &quot;main&quot;: &quot;index.js&quot;,
   &quot;dependencies&quot;: {},
@@ -61,7 +61,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
   &quot;author&quot;: &quot;Yang Jack&quot;,
   &quot;license&quot;: &quot;ISC&quot;
 }</code></pre><h2>index.html</h2><pre class="prettyprint source lang-html"><code>
-&lt;html>
+&lt;!DOCTYPE html>
 &lt;head>
     &lt;title>Zoom JSSDK&lt;/title>
     &lt;meta charset=&quot;utf-8&quot; />
@@ -76,7 +76,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
     }
 &lt;/style>
 
-&lt;nav id=&quot;nav-tool&quot;class=&quot;navbar navbar-inverse navbar-fixed-top&quot;>
+&lt;nav id=&quot;nav-tool&quot; class=&quot;navbar navbar-inverse navbar-fixed-top&quot;>
     &lt;div class=&quot;container&quot;>
         &lt;div class=&quot;navbar-header&quot;>
             &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;>MyMeetingApp&lt;/a>
@@ -84,7 +84,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
         &lt;div id=&quot;navbar&quot;>
             &lt;form class=&quot;navbar-form navbar-right&quot; id=&quot;meeting_form&quot;>
                 &lt;div class=&quot;form-group&quot;>
-                    &lt;input type=&quot;text&quot; name=&quot;display_name&quot; id=&quot;display_name&quot; value=&quot;&quot; placeholder=&quot;Name&quot; class=&quot;form-control&quot; required>
+                    &lt;input type=&quot;text&quot; name=&quot;display_name&quot; id=&quot;display_name&quot; value=&quot;JSSDK1.3.8#CDN&quot; placeholder=&quot;Name&quot; class=&quot;form-control&quot; required>
                 &lt;/div>
                 &lt;div class=&quot;form-group&quot;>
                     &lt;input type=&quot;text&quot; name=&quot;meeting_number&quot; id=&quot;meeting_number&quot; value=&quot;&quot; placeholder=&quot;Meeting Number&quot; class=&quot;form-control&quot; required>
@@ -103,7 +103,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 &lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.3.7/lib/vendor/jquery.min.js&quot;>&lt;/script>
 &lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.3.7/lib/vendor/lodash.min.js&quot;>&lt;/script>
 
-&lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.3.7.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.3.8.min.js&quot;>&lt;/script>
 &lt;script src=&quot;js/index.js&quot;>&lt;/script>
 
 &lt;script>
@@ -121,6 +121,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
     ZoomMtg.preLoadWasm();
+
     ZoomMtg.prepareJssdk();
 
     var API_KEY = 'YOUR_API_KEY';
@@ -128,7 +129,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
     /**
      * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
      * The below generateSignature should be done server side as not to expose your api secret in public
-     * You can find an eaxmple in PHP here: https://gist.github.com/joshuawoodward/7574df3df9a089e2663582a2cf9f188b
+     * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
      */
     var API_SECRET = 'YOUR_API_SECRET';
 
@@ -146,7 +147,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
             apiSecret: API_SECRET,
             meetingNumber: parseInt(document.getElementById('meeting_number').value),
             userName: document.getElementById('display_name').value,
-            passwd: &quot;&quot;,
+            passWord: &quot;&quot;,
             leaveUrl: &quot;https://zoom.us&quot;,
             role: 0
         };
@@ -172,8 +173,8 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
                         userName: meetConfig.userName,
                         signature: signature,
                         apiKey: meetConfig.apiKey,
-                        userEmail: '',
-                        passWord: &quot;&quot;,
+                        userEmail: 'email@gmail.com',
+                        passWord: meetConfig.passWord,
                         success: function(res){
                             $('#nav-tool').hide();
                             console.log('join meeting success');
@@ -202,7 +203,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Feb 14 2019 14:23:19 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Mar 04 2019 14:08:42 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
