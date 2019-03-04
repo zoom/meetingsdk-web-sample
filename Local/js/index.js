@@ -25,7 +25,7 @@ document.getElementById('join_meeting').addEventListener('click', (e) => {
         apiSecret: API_SECRET,
         meetingNumber: parseInt(document.getElementById('meeting_number').value, 10),
         userName: document.getElementById('display_name').value,
-        passwd: '',
+        passWord: '',
         leaveUrl: 'https://zoom.us',
         role: 0
     };
@@ -48,7 +48,7 @@ document.getElementById('join_meeting').addEventListener('click', (e) => {
                             signature: res.result,
                             apiKey: meetConfig.apiKey,
                             userEmail: 'email@gmail.com',
-                            passWord: '',
+                            passWord: meetConfig.passWord,
                             success() {
                                 $('#nav-tool').hide();
                                 console.log('join meeting success');

@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## version 1.3.8
+## Bug Fixes:
+
+1. video freezing when resize browser.
+
+
 ## version 1.3.7
 ## Added
 

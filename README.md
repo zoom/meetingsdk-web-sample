@@ -31,7 +31,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/Web-C
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.3.7.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.3.8.min.js"></script>
 ```
 ### or
 
@@ -42,8 +42,8 @@ npm install zoomus-jssdk
 ```
 
 
-## update for 1.3.7
-Please notice, 1.3.7 release with two ways, the normal way and npm way(need babel and webpack).
+## update for 1.3.8
+Please notice, 1.3.8 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -58,7 +58,7 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.3.7
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.3.8
 
 ## Webinar notice
 If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 

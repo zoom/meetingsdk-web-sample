@@ -32,7 +32,7 @@
             apiSecret: API_SECRET,
             meetingNumber: parseInt(document.getElementById('meeting_number').value),
             userName: document.getElementById('display_name').value,
-            passwd: "",
+            passWord: "",
             leaveUrl: "https://zoom.us",
             role: 0
         };
@@ -59,9 +59,10 @@
                         signature: signature,
                         apiKey: meetConfig.apiKey,
                         userEmail: 'email@gmail.com',
-                        passWord: "",
+                        passWord: meetConfig.passWord,
                         success: function(res){
                             console.log('join meeting success');
+                            $("#nav-tool").hide();
                         },
                         error: function(res) {
                             console.log(res);
