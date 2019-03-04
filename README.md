@@ -7,7 +7,7 @@ The web client lets end users join a meeting, receive screen share from other at
 Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest version
 
 ### Getting Started with Meetings
-https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/overview
+[Web-Client-SDK Overview](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/overview)
 
 ### Using the SDK
 
