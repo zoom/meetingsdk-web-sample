@@ -116,4 +116,9 @@ npm run start
 
 open browser http://localhost:9999
 
+## License
+
+Use of this software is subject to important terms and conditions as set forth in the License file
+
+Please refer to [LICENSE.md](LICENSE.md) file for details
 
