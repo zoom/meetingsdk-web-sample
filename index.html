@@ -48,33 +48,35 @@
     <section class="readme">
         <article><h1>Zoom JSSDK document</h1> <!-- * A quick test way to generate signature, get an api <a href="https://developer.zoom.us/me/">Zoom developer</a>
  * backe-end to genarate signature go to see generate\_signature in php -->
-<h2>Getting Started</h2><p>NOTICE: In index.js there is an undocumented function generateSignature, we only use it here for quick prototyping and highly encourage you to generate this signature server side, you don't want to expose your API Key/Secret
-registe and become <a href="tutorial-register.html">Zoom's developer</a> </p>
-<ol>
-<li><p>Install <a href="https://nodejs.org/en/download/">Node.js/NPM</a> and <a href="https://git-scm.com/downloads">Git</a> if you don't have it</p>
+<h2>Getting Started</h2>
+    <p>For this tutorial, we will be referencing to a sample app located in this <a href="https://github.com/zoom/sample-app-web">repository</a>. To <a href="tutorial-registe.html">build</a> with Zoom Developer tools, you need developer access for your Zoom account provided by your admin.<br> 
+    You also need your JWT credentials for building your Web Client SDK app. Learn how to generate one from this <a href="https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/prerequisites">doc.</a></p>
+
+    <p style="background-color:#e1f5fe; color:#01579b"><b>Note</b>: For quick and easy prototyping of this demo app, we have included an undocumented function named <code>generateSignature</code> in index.js file. However, we highly encourage you to generate this signature on the server side and keep your API Key/Secret confidential and secure.</p>
+      
+<ol><li><p>Install <a href="https://nodejs.org/en/download/">Node.js/NPM</a> and <a href="https://git-scm.com/downloads">Git</a> if you do not already have them installed on your computer.</p>
 </li>
-<li><p>Download/Clone the sample app from <a href="https://github.com/zoom/sample-app-web">GitHub</a> or clone</p>
-<pre class="prettyprint source"><code> git clone git@github.com:zoom/sample-app-web.git</code></pre></li>
+<li><p>Download/Clone the sample app from <a href="https://github.com/zoom/sample-app-web">GitHub</a> by typing the following in your terminal:</p>
+<pre class="prettyprint source"><code> git clone git@github.com:zoom/sample-app-web.git</code></pre> </li> 
 <li><p>Navigate to the directory where you downloaded the sample app.</p>
 </li>
 </ol>
 <ol start="4">
-<li><p>Config YOUR_API_KEY and YOUR_API_SECRET and replace with your own REST API Key and Secret.
+<li><p>Config YOUR_API_KEY and YOUR_API_SECRET and replace it with your own REST API Key and Secret. 
  Save the file.
  Navigate back to the root of the project</p>
-<p> edit path/sample-app-web/CDN/js/index.js or path/sample-app-web/Local/js/index.js</p>
+<p> Edit path/sample-app-web/CDN/js/index.js or path/sample-app-web/Local/js/index.js.</p>
 <pre class="prettyprint source"><code> var API_KEY = 'YOUR_API_KEY';
- var API_SECRET = 'YOUR_API_SECRET';</code></pre><p> save and then open cmd/terminal</p>
+ var API_SECRET = 'YOUR_API_SECRET';</code></pre><p> Save the file and in your terminal, type:</p>
 <pre class="prettyprint source"><code> cd path/sample-app-web/CDN
  npm install
  npm run start</code></pre></li>
 <li><p>Once that is complete, this will install a node module called http-server.
- In terminal npm run start and visit </p>
-<p> <a href="http://localhost:9999">http://localhost:9999</a></p>
-<p> in your browser. You should now be seeing the sample app UI</p>
+ After running <code>npm run start</code> command, visit
+<a href="http://localhost:9999">http://localhost:9999</a> in your browser. You should now be seeing the sample app UI.</p>
 <p> <img src="img/localhost9999.png" alt="sample app page"> </p>
 </li>
-<li><p>Enter a Name and the Meeting Number of meeting you started.
+<li><p>Enter a Name and the Meeting Number of the meeting you scheduled.
 Click Join.</p>
 <p><img src="img/joining-meeting.png" alt="joining meeting" title="joining meeting"> 
 <img src="img/participent-joined-meeting.png" alt="joined meeting as participent" title="joined meeting as participent"> </p>
