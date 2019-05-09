@@ -31,7 +31,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.3.8.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.4.0.min.js"></script>
 ```
 ### or
 
@@ -40,10 +40,8 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 ```
 npm install zoomus-jssdk
 ```
-
-
-## update for 1.3.8
-Please notice, 1.3.8 release with two ways, the normal way and npm way(need babel and webpack).
+   
+Please notice, 1.4.0 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -52,13 +50,31 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 
 // it's option if you want to chenge the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.3.7/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.0/lib', '/av'); // CDN version default 
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.3.8
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.4.0
+
+## Screen share
+```
+ZoomMtg.init({
+...
+screenShare: true, // default, and it also require account's sharing setting enabled.
+...    
+})
+```
+
+## Chat
+```
+ZoomMtg.init({
+...
+isSupportChat: true, // default, and it also require account's sharing setting enabled.
+...    
+})
+```
 
 ## Webinar notice
 If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function. 
@@ -81,7 +97,9 @@ Feature | Chrome | firefox | Safari | Edge | IE | Opera | Vivaldi
 ------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
 Video | yes| yes | yes | yes | no | yes | yes
 Computer Audio | yes | only linux | no | no | no | no | yes 
-Sharing | yes | yes | yes | yes | yes| yes | yes
+View Sharing | yes | yes | yes | yes | yes| yes | yes
+Screen Sharing | >=72 | >=66 | no | >=17 | no | no | yes
+Chat | yes | yes | yes | yes | yes | yes | yes | yes
 
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
@@ -116,9 +134,18 @@ npm run start
 
 open browser http://localhost:9999
 
+### run demo with https
+we provide a https option, other machines can join the demo and test audio and video feature.
+
+notice: the certification signed by localhost. don't use in your production.
+
+```
+npm run https
+```
+open browser https://localhost:9999
+
 ## License
 
 Use of this software is subject to important terms and conditions as set forth in the License file
 
 Please refer to [LICENSE.md](LICENSE.md) file for details
-

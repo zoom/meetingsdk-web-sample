@@ -1,4 +1,18 @@
 # CHANGELOG
+## version 1.4.0
+## Added
+
+1. browser share (only support english)
+2. chat feature
+3. meeting Nonverbal feedback
+4. local/cloud recording ico
+
+## Bug Fixes:
+
+1. Ask to start video dialog don't shown in unsupported browsers
+2. Meeting timeout message is not translated
+3. join meeting/webinar fail don't show dialog
+4. After join meeting success immediately invoke success callback report don't joined meeting.
 
 ## version 1.3.8
 ## Bug Fixes:
