@@ -31,7 +31,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.4.0.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.4.2.min.js"></script>
 ```
 ### or
 
@@ -41,7 +41,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 npm install zoomus-jssdk
 ```
    
-Please notice, 1.4.0 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.4.2 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -50,13 +50,13 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 
 // it's option if you want to chenge the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.0/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib', '/av'); // CDN version default 
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.4.0
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.4.2
 
 ## Screen share
 ```
