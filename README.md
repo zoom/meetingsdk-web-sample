@@ -118,7 +118,7 @@ For any issues regarding our Web Client SDK, please visit our new Community Supp
 ###  sample web app (CDN version) with dependecies.
 
 ```javascript
-git clone git@github.com:zoom/sample-app-web.git
+git clone https://github.com/zoom/sample-app-web.git
 cd sample-app-web/CDN
 npm install
 npm run start
@@ -126,7 +126,7 @@ npm run start
 
 ### sample web app (local version)
 ```javascript
-git clone git@github.com:zoom/sample-app-web.git
+git clone https://github.com/zoom/sample-app-web.git
 cd sample-app-web/Local
 npm install
 npm run start
