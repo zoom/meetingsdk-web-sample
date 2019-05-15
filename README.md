@@ -58,6 +58,9 @@ ZoomMtg.prepareJssdk();
 ```
 Go to see sample web app (CDN version) how to update 1.3.5 for 1.4.2
 
+
+[![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
+
 ## Screen share
 ```
 ZoomMtg.init({
