@@ -17,12 +17,12 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 
 ```package.json
 "dependencies": {
-	"react": "15.6.1",
-	"react-dom": "15.6.1",
+	"react": "16.8.6",
+	"react-dom": "16.8.6",
 	"redux": "3.7.2",
-	"react-redux": "5.0.6",
-	"jquery": "^3.2.0",
-	"lodash": "^4.17.4",
+	"react-redux": "7.1.0",
+	"jquery": "^3.4.1",
+	"lodash": "^4.17.14",
 	"redux-thunk": "2.2.0"
 }
 ```
@@ -31,7 +31,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.4.2.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.5.0.min.js"></script>
 ```
 ### or
 
@@ -41,7 +41,7 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 npm install zoomus-jssdk
 ```
    
-Please notice, 1.4.2 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.5.0 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -50,13 +50,13 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 
 // it's option if you want to chenge the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib', '/av'); // CDN version default 
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.4.2
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.5.0
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
@@ -95,8 +95,7 @@ userEmail: "hello@zoom.us",
           
 
 ### Video, Computer Audio and Sharing Supported browser
-
-Feature | Chrome | firefox | Safari | Edge | IE | Opera | Vivaldi
+Feature | Chrome | firefox | Safari | Edge | IE >=11 | Opera | Vivaldi
 ------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
 Video | yes| yes | yes | yes | no | yes | yes
 Computer Audio | yes | only linux | no | no | no | no | yes 
@@ -104,6 +103,7 @@ View Sharing | yes | yes | yes | yes | yes| yes | yes
 Screen Sharing | >=72 | >=66 | no | >=17 | no | no | yes
 Chat | yes | yes | yes | yes | yes | yes | yes | yes
 
+notice: if you want use IE10, please use 1.4.2 version, React 16 don't support IE10
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
 

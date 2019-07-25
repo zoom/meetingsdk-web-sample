@@ -1,4 +1,14 @@
 # CHANGELOG
+## version 1.5.0
+## Added
+1. Responsive Footer, both desktop and mobile. 
+2. Update React to 16.8.6, Don't support IE10
+3. Recording Pop Up Message
+4. 1000 attendees to a meeting
+5. Option to disable/enable footer always visible 
+6. Option to disable/enable Nonverbal feedback
+7. Phone number support Full-width and half-width numbers.
+
 ## version 1.4.2
 ## Added
 
