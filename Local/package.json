@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "zoomus-jssdk-local",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Zoom sample app for web client JSSDK",
   "main": "index.js",
   "scripts": {
@@ -18,14 +18,14 @@
   "author": "Jack Yang",
   "license": "ISC",
   "dependencies": {
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "redux": "3.7.2",
-    "react-redux": "5.0.6",
-    "jquery": "^3.2.0",
-    "lodash": "^4.17.4",
+    "react-redux": "7.1.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.14",
     "redux-thunk": "2.2.0",
-    "zoomus-jssdk": "1.4.2"
+    "zoomus-jssdk": "1.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
