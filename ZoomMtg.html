@@ -62,7 +62,7 @@
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>JSSDK1.4.2</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>JSSDK1.5.0</li></ul></dd>
     
 
     
@@ -193,7 +193,7 @@
 
     <h5>Example</h5>
     
-    <pre class="prettyprint"><code>ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib', '/av');
+    <pre class="prettyprint"><code>ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib', '/av');
 //AVFiles = {
 //  audioEncWorkerPath: `${zoomJSLib}${zoomJSAVLib}/js_audio_process.min.js`,
 //  audioDecWorkerPath: `${zoomJSLib}${zoomJSAVLib}/js_audio_process.min.js`,
@@ -310,7 +310,7 @@
             
                 <td class="default">
                 
-                    <code>'https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib'</code>
+                    <code>'https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib'</code>
                 
                 </td>
             
@@ -1212,7 +1212,7 @@ false
     
     <pre class="prettyprint"><code>ZoomMtg.getJSSDKVersion()</code></pre>
 
-    <pre class="prettyprint"><code>["1.4.2", "version_{date}_releaseType_stage - {date}"]</code></pre>
+    <pre class="prettyprint"><code>["1.5.0", "version_{date}_releaseType_stage - {date}"]</code></pre>
 
 
 
@@ -1339,7 +1339,9 @@ false
     rwcBackup: '', //optional,
     videoDrag: true, //optional,
     sharingMode: 'both', //optional,
-    videoHeader: true //optional,
+    videoHeader: true, //optional,
+    isLockBottom: true, // optional,
+    isSupportNonverbal: true // optional
     });</code></pre>
 
 
@@ -1997,6 +1999,84 @@ false
 
         <tr>
             
+                <td class="name"><code>isLockBottom</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>true</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>alway show footer or auto hide footer</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>isSupportNonverbal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>true</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>Enable/Disable Noverbal feedback feature</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>success</code></td>
             
 
@@ -2110,7 +2190,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line269">line 269</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line273">line 273</a>
     </li></ul></dd>
     
 
@@ -2534,7 +2614,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line297">line 297</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line301">line 301</a>
     </li></ul></dd>
     
 
@@ -2743,7 +2823,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line311">line 311</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line315">line 315</a>
     </li></ul></dd>
     
 
@@ -2952,7 +3032,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line325">line 325</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line329">line 329</a>
     </li></ul></dd>
     
 
@@ -3161,7 +3241,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line339">line 339</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line343">line 343</a>
     </li></ul></dd>
     
 
@@ -3370,7 +3450,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line353">line 353</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line357">line 357</a>
     </li></ul></dd>
     
 
@@ -3579,7 +3659,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line367">line 367</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line371">line 371</a>
     </li></ul></dd>
     
 
@@ -3788,7 +3868,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line381">line 381</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line385">line 385</a>
     </li></ul></dd>
     
 
@@ -3926,7 +4006,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line392">line 392</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line396">line 396</a>
     </li></ul></dd>
     
 
@@ -4115,7 +4195,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line406">line 406</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line410">line 410</a>
     </li></ul></dd>
     
 
@@ -4306,7 +4386,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line422">line 422</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line426">line 426</a>
     </li></ul></dd>
     
 
@@ -4519,7 +4599,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line438">line 438</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line442">line 442</a>
     </li></ul></dd>
     
 
@@ -4708,7 +4788,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line452">line 452</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line456">line 456</a>
     </li></ul></dd>
     
 
@@ -4921,7 +5001,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line468">line 468</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line472">line 472</a>
     </li></ul></dd>
     
 
@@ -5059,7 +5139,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line479">line 479</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line483">line 483</a>
     </li></ul></dd>
     
 
@@ -5248,7 +5328,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line493">line 493</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line497">line 497</a>
     </li></ul></dd>
     
 
@@ -5461,7 +5541,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line509">line 509</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line513">line 513</a>
     </li></ul></dd>
     
 
@@ -5650,7 +5730,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line523">line 523</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line527">line 527</a>
     </li></ul></dd>
     
 
@@ -5888,7 +5968,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line542">line 542</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line546">line 546</a>
     </li></ul></dd>
     
 
@@ -6077,7 +6157,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line556">line 556</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line560">line 560</a>
     </li></ul></dd>
     
 
@@ -6266,7 +6346,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line570">line 570</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line574">line 574</a>
     </li></ul></dd>
     
 
@@ -6455,7 +6535,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line584">line 584</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line588">line 588</a>
     </li></ul></dd>
     
 
@@ -6593,7 +6673,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line595">line 595</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line599">line 599</a>
     </li></ul></dd>
     
 
@@ -6731,7 +6811,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line606">line 606</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line610">line 610</a>
     </li></ul></dd>
     
 
@@ -7503,7 +7583,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 10 2019 16:57:05 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 25 2019 11:23:00 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

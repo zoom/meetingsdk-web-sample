@@ -43,7 +43,7 @@
 /**
  * @copyright Zoom 2019
  * @namespace LanguageResource
- * @version JSSDK1.4.2
+ * @version JSSDK1.5.0
 */
 
 
@@ -73,7 +73,7 @@ const LanguageResource = {
 };
 
 /**
- * en-US.json {@link https://zoom.github.io/zoom-sdk-web/languages/en-US.json}
+ * en-US.json {@link https://zoom.github.io/sample-app-web/languages/en-US.json}
  * @method en-US
  * @memberof LanguageResource
  * @instance
@@ -103,11 +103,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - Are you sure you want to disconnect from audio?
  * @param {string} [apac.dialog.remain_view] - You will be disconnected from audio and remain as a viewer.
  * @param {string} [apac.dialog.btn_hangup] - Hang Up
- * @param {string} [apac.dialog.calling_indication] - &lt;p>You were calling &lt;span>&lt;/span>just now. S/he would join the meeting very soon.&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - You were calling {0} just now. S/he would join the conference very soon.
+ * @param {string} [apac.dialog.webinar_ended] - The webinar has been ended
  * @param {string} [apac.dialog.placeholder_display_name] - Invite display name in the conference
  * @param {string} [apac.dialog.placeholder_phone_number] - Phone Number
  * @param {string} [apac.toolbar_invite] - Invite
  * @param {string} [apac.dialog.invite_others] - Invite Another People
+ * @param {string} [apac.dialog.host_end_webinar] - This webinar has been ended by host.
+ * @param {string} [apac.dialog.meeting_ended] - The meeting has been ended
  * @param {string} [apac.dialog.btn_cancle] - Cancel
  * @param {string} [apac.wc_invite_by_phone] - Invite by Phone
  * @param {string} [apac.wc_invite_by_email] - Invite by Email
@@ -115,7 +118,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Copied
  * @param {string} [apac.wc_copy_url] - Copy URL
  * @param {string} [apac.wc_defalut_email] - Default Email
+ * @param {string} [apac.wc_muteall_desc] - Current and new participants will be muted
+ * @param {string} [apac.wc_remote_control.request] - Request remote control
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - Continue
  * @param {string} [apac.wc_choose_email_service] - Choose your email service to send invitation
+ * @param {string} [apac.dialog.meeting_removed_by_host] - You have been removed from this meeting by the host.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - You have been removed from this webinar by the host.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo Email
  * @param {string} [apac.wc_invitation_url] - Invitation URL
@@ -160,13 +170,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - Browser disallow mic
  * @param {string} [apac.toolbar_leave] - Leave
  * @param {string} [apac.wc_leave_meeting] - Leave Meeting
+ * @param {string} [apac.wc_leave_webinar] - Leave Webinar
  * @param {string} [apac.wc_audio] - Audio
  * @param {string} [apac.wc_audio_setting] - Audio Setting
+ * @param {string} [apac.dialog.leave_webinar] - Leave this webinar
+ * @param {string} [apac.dialog.leave_webinar_confirm] - Are you sure you want to leave this webinar now?
  * @param {string} [apac.toolbar_join_audio] - Join Audio
  * @param {string} [apac.toolbar_lock] - Lock
  * @param {string} [apac.toolbar_unlock] - Unlock
  * @param {string} [apac.wc_manage_participants] - Manage Participants
  * @param {string} [apac.wc_participants] - Participants
+ * @param {string} [apac.wc_extra_function_enable_video] - Enable video receiving
+ * @param {string} [apac.wc_extra_function_disable_video] - Disable video receiving
  * @param {string} [apac.toolbar_record] - Record
  * @param {string} [apac.wc_cloud_recording] - Cloud Recording
  * @param {string} [apac.toolbar_muteall] - Mute All
@@ -180,6 +195,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - Meeting ID
  * @param {string} [apac.meeting_calling] - Calling
  * @param {string} [apac.wc_stop_recording] - Stop Recording
+ * @param {string} [apac.wc_stop_recording_content] - If Yes, you will receive an email notification when the cloud recording is ready.
+ * @param {string} [apac.wc_record_reminder_title] - This meeting is being recorded
+ * @param {string} [apac.wc_record_reminder_webinar_title] - This webinar is being recorded
+ * @param {string} [apac.wc_record_reminder_desc] - By continuing to be in the meeting, you are consenting to be recorded.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - By continuing to be in the webinar, you are consenting to be recorded.
  * @param {string} [apac.wc_recording] - 
  * @param {string} [apac.meeting_recording] - Recording...
  * @param {string} [apac.wc_talk] - Talk
@@ -218,7 +238,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - End this meeting
  * @param {string} [apac.dialog.meeting_over] - Everyone on the call will be disconnected and meeting will be over.
  * @param {string} [apac.dialog.host_end_meeting] - This meeting has been ended by host.
- * @param {string} [apac.dialog.meeting_ended] - The meeting has been ended
  * @param {string} [apac.dialog.something_wrong] - Something went wrong
  * @param {string} [apac.dialog.server_error] - The server encountered an internal error and was unable to process your request.
  * @param {string} [apac.dialog.error_code] - Error Code:
@@ -296,6 +315,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - more
  * @param {string} [apac.wc_waiting_room_title3] - person is on hold
  * @param {string} [apac.wc_waiting_room_title4] - people are on hold
+ * @param {string} [apac.wc_remove_user] - Do you want to remove
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_title] - Install Chrome extension
  * @param {string} [apac.wc_sharer_request_extension_installation_desc] - Install the Zoom Scheduler Chrome extension to share screen.
@@ -330,13 +350,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - You cannot unmute yourself because the host muted you.
  * @param {string} [apac.wc_chat.disable_chat] - The host has disabled attendee chat.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Your audio is connected using Dial In
+ * @param {string} [apac.wc_video.camera_is_taken] - 
+ * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Send anonymous
+ * @param {string} [apac.wc_qa.is_privately] - Send privately
+ * @param {string} [apac.wc_qa.cancel] - Cancel
+ * @param {string} [apac.wc_qa.send] - Send
+ * @param {string} [apac.wc_qa.input_tips] - Type your question here...
+ * @param {string} [apac.wc_qa.display_all_answer] - Show all
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Collapse all
+ * @param {string} [apac.wc_qa.button_display_answer] - Type answer
+ * @param {string} [apac.wc_qa.button_comment] - Comment
+ * @param {string} [apac.wc_qa.button_live] - Answer live
+ * @param {string} [apac.wc_qa.button_live_done] - Done
+ * @param {string} [apac.wc_qa.button_reopen] - Reopen
+ * @param {string} [apac.wc_qa.live_tips_done] - This question has been answered live
+ * @param {string} [apac.wc_qa.live_tips_start] - would like to answer this question live
+ * @param {string} [apac.wc_qa.dissmis_tips] - Dismiss
+ * @param {string} [apac.wc_qa.allQ] - All questions
+ * @param {string} [apac.wc_qa.myQ] - My questions
+ * @param {string} [apac.wc_qa.openedQ] - Open
+ * @param {string} [apac.wc_qa.answeredQ] - Answered
+ * @param {string} [apac.wc_qa.dismissedQ] - Dismissed
+ * @param {string} [apac.wc_qa.answer_private_type] - Private answer
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Allow anonymous questions
+ * @param {string} [apac.wc_qa.setting_allow_view] - Allow attendees to view
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Answered questions only
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - All questions
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Attendees can upvote
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Attendees can comment
+ * @param {string} [apac.wc_qa.welcome_banner] - Feel free to ask the host and panelists questions
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Welcome
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Anonymous Attendee
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Copy the URL to your clipboard
+ * @param {string} [apac.wc_cc_type_myself] - I will type
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Assign a participant to type
+ * @param {string} [apac.wc_cc_assign_to_type] - Assign someone to type
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Copy this link and paste on third part CC typer
+ * @param {string} [apac.wc_cc.placeholder] - Type here, press Enter to broadcast
+ * @param {string} [apac.wc_closed_caption_btn] - Closed Caption
+ * @param {string} [apac.wc_closed_caption_truned_on] - Closed Caption is turned on
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - Closed Caption is available
+ * @param {string} [apac.wc_broadcasting] - Broadcasting
+ * @param {string} [apac.wc_cc_host_assigned] - The host has assigned you to type Closed Caption
+ * @param {string} [apac.wc_remote_control.can_control] - You can control {0}'s screen
+ * @param {string} [apac.wc_remote_control.is_controlling] - You are controlling {0}'s screen
 */
 
 
 
 
 /**
- * de-DE.json {@link https://zoom.github.io/zoom-sdk-web/languages/de-DE.json}
+ * de-DE.json {@link https://zoom.github.io/sample-app-web/languages/de-DE.json}
  * @method de-DE
  * @memberof LanguageResource
  * @instance
@@ -366,11 +435,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - Sind Sie sicher, dass Sie vom Audio getrennt werden möchten?
  * @param {string} [apac.dialog.remain_view] - Sie werden vom Audio getrennt und verbleiben als Zuschauer.
  * @param {string} [apac.dialog.btn_hangup] - Auflegen
- * @param {string} [apac.dialog.calling_indication] - &lt;p>Sie haben gerade &lt;span>&lt;/span>angerufen. Er/sie wird der Konferenz in Kürze beitreten.&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - Sie haben gerade {0} angerufen. Er/sie wird der Konferenz in Kürze beitreten.
+ * @param {string} [apac.dialog.webinar_ended] - Das Webinar wurde beendet
  * @param {string} [apac.dialog.placeholder_display_name] - Anzeigename in die Konferenz einladen
  * @param {string} [apac.dialog.placeholder_phone_number] - Telefonnummer
  * @param {string} [apac.toolbar_invite] - Einladen
  * @param {string} [apac.dialog.invite_others] - Weitere Personen einladen
+ * @param {string} [apac.dialog.host_end_webinar] - Dieses Webinar wurde vom Host beendet.
+ * @param {string} [apac.dialog.meeting_ended] - Das Meeting wurde beendet
  * @param {string} [apac.dialog.btn_cancle] - Abbrechen
  * @param {string} [apac.wc_invite_by_phone] - Per Telefon einladen
  * @param {string} [apac.wc_invite_by_email] - Per E-Mail einladen
@@ -378,7 +450,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Kopiert
  * @param {string} [apac.wc_copy_url] - URL kopieren
  * @param {string} [apac.wc_defalut_email] - Standard-E-Mail
+ * @param {string} [apac.wc_muteall_desc] - Aktuelle und neue Teilnehmer stumm geschaltet werden
+ * @param {string} [apac.wc_remote_control.request] - Fernsteuerung beantragen
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - fortsetzen
  * @param {string} [apac.wc_choose_email_service] - Ihren E-Mail-Service zum Versand der Einladung wählen
+ * @param {string} [apac.dialog.meeting_removed_by_host] - Sie wurden vom Host von diesem Meeting entfernt.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - Sie wurden vom Host von diesem Webinar entfernt.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo E-Mail
  * @param {string} [apac.wc_invitation_url] - Einladungs-URL
@@ -423,13 +502,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - Browser lässt Mikrofon nicht zu
  * @param {string} [apac.toolbar_leave] - Verlassen
  * @param {string} [apac.wc_leave_meeting] - Meeting verlassen
+ * @param {string} [apac.wc_leave_webinar] - Webinar verlassen
  * @param {string} [apac.wc_audio] - Audio
  * @param {string} [apac.wc_audio_setting] - Audioeinstellung
+ * @param {string} [apac.dialog.leave_webinar] - Dieses Webinar verlassen
+ * @param {string} [apac.dialog.leave_webinar_confirm] - Jetzt sind Sie sicher, dass Sie in diesem Webinar verlassen wollen?
  * @param {string} [apac.toolbar_join_audio] - Audio beitreten
  * @param {string} [apac.toolbar_lock] - Sperren
  * @param {string} [apac.toolbar_unlock] - Entsperren
  * @param {string} [apac.wc_manage_participants] - Teilnehmer verwalten
  * @param {string} [apac.wc_participants] - Teilnehmer
+ * @param {string} [apac.wc_extra_function_enable_video] - Aktivieren Videoaufnahme
+ * @param {string} [apac.wc_extra_function_disable_video] - Deaktivieren Videoaufnahme
  * @param {string} [apac.toolbar_record] - Aufzeichnen
  * @param {string} [apac.wc_cloud_recording] - Cloud-Aufzeichnung
  * @param {string} [apac.toolbar_muteall] - Alle stummschalten
@@ -443,6 +527,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - Konferenz-ID:
  * @param {string} [apac.meeting_calling] - Anrufen
  * @param {string} [apac.wc_stop_recording] - Aufnahme anhalten
+ * @param {string} [apac.wc_stop_recording_content] - Wenn ja, erhalten Sie eine E-Mail-Benachrichtigung erhalten, wenn die Wolke Aufnahme bereit ist.
+ * @param {string} [apac.wc_record_reminder_title] - Diese Sitzung wird aufgezeichnet
+ * @param {string} [apac.wc_record_reminder_webinar_title] - In diesem Webinar wird aufgezeichnet
+ * @param {string} [apac.wc_record_reminder_desc] - Durch die Weiterbildung in der Sitzung sein, stimmen Sie zu erfassen.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - Weiter in dem Webinar werden, stimmen Sie zu erfassen.
  * @param {string} [apac.wc_recording] - Aufzeichnung läuft
  * @param {string} [apac.meeting_recording] - Aufzeichnung läuft ...
  * @param {string} [apac.wc_talk] - Sprechen
@@ -481,7 +570,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - Dieses Meeting beenden
  * @param {string} [apac.dialog.meeting_over] - Jeder bei diesem Anruf wird getrennt und das Meeting ist zu Ende.
  * @param {string} [apac.dialog.host_end_meeting] - Dieses Meeting wurde vom Host beendet.
- * @param {string} [apac.dialog.meeting_ended] - Das Meeting wurde beendet
  * @param {string} [apac.dialog.something_wrong] - Es ist ein Fehler aufgetreten.
  * @param {string} [apac.dialog.server_error] - Auf dem Server ist ein interner Fehler aufgetreten und Ihre Anfrage konnte nicht verarbeitet werden.
  * @param {string} [apac.dialog.error_code] - Fehlercode:
@@ -559,6 +647,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - Weitere
  * @param {string} [apac.wc_waiting_room_title3] - Person wird gehalten
  * @param {string} [apac.wc_waiting_room_title4] - Personen werden gehalten
+ * @param {string} [apac.wc_remove_user] - Möchten Sie entfernen
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Schließen
  * @param {string} [apac.wc_cc_withdraw] - Untertitelgenehmigung widerrufen
@@ -569,13 +658,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - Sie können sich nicht die Stummschaltung aufzuheben, da der Host Sie stumm geschaltet.
  * @param {string} [apac.wc_chat.disable_chat] - Der Moderator hat den Teilnehmer-Chat deaktiviert.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Ihr Audiosignal wird per Telefoneinwahl eingespeist
+ * @param {string} [apac.wc_video.camera_is_taken] - Ihre Kamera wurde von anderen Anwendungen blockiert. Bitte geben Sie die Berechtigung frei und versuchen Sie es erneut.
+ * @param {string} [apac.wc_qa.qa_comp_title] - F&amp;A
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Anonym senden
+ * @param {string} [apac.wc_qa.is_privately] - Privat senden
+ * @param {string} [apac.wc_qa.cancel] - Abbrechen
+ * @param {string} [apac.wc_qa.send] - Senden
+ * @param {string} [apac.wc_qa.input_tips] - Geben Sie Ihre Frage hier ein...
+ * @param {string} [apac.wc_qa.display_all_answer] - Alle zeigen
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Alle einklappen
+ * @param {string} [apac.wc_qa.button_display_answer] - Antwort eingeben
+ * @param {string} [apac.wc_qa.button_comment] - Kommentieren
+ * @param {string} [apac.wc_qa.button_live] - Live beantworten
+ * @param {string} [apac.wc_qa.button_live_done] - Fertig
+ * @param {string} [apac.wc_qa.button_reopen] - Erneut öffnen
+ * @param {string} [apac.wc_qa.live_tips_done] - Diese Frage wurde live beantwortet
+ * @param {string} [apac.wc_qa.live_tips_start] - möchte diese Frage live beantworten
+ * @param {string} [apac.wc_qa.dissmis_tips] - Ausblenden
+ * @param {string} [apac.wc_qa.allQ] - Alle Fragen
+ * @param {string} [apac.wc_qa.myQ] - Meine Fragen
+ * @param {string} [apac.wc_qa.openedQ] - Offen
+ * @param {string} [apac.wc_qa.answeredQ] - Beantwortet
+ * @param {string} [apac.wc_qa.dismissedQ] - Ausgeblendet
+ * @param {string} [apac.wc_qa.answer_private_type] - Private Antwort
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Anonyme Fragen erlauben
+ * @param {string} [apac.wc_qa.setting_allow_view] - Zuschauern die Erlaubnis zur Ansicht geben
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Nur beantwortete Fragen
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - Alle Fragen
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Zuschauer können zustimmen
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Zuschauer können kommentieren
+ * @param {string} [apac.wc_qa.welcome_banner] - Stellen Sie dem Host und den Diskussionsteilnehmern ruhig Fragen
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Herzlich willkommen
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Anonymer Zuschauer
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Kopieren Sie die URL in die Zwischenablage
+ * @param {string} [apac.wc_cc_type_myself] - Ich gebe ein
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Teilnehmer einem Typ zuweisen
+ * @param {string} [apac.wc_cc_assign_to_type] - Teilnehmer einem Typ zuweisen
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Kopieren Sie diesen Link und fügen Sie ihn in den CC-Typ des Drittanbieters ein
+ * @param {string} [apac.wc_cc.placeholder] - Hier eingeben und Enter zur Übertragung drücken
+ * @param {string} [apac.wc_closed_caption_btn] - Untertitel
+ * @param {string} [apac.wc_closed_caption_truned_on] - Untertitel wurden eingeschaltet.
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - Untertitel sind verfügbar
+ * @param {string} [apac.wc_broadcasting] - Rundfunk
+ * @param {string} [apac.wc_cc_host_assigned] - Der Moderator hat Sie dem Untertitel zugewiesen
+ * @param {string} [apac.wc_remote_control.can_control] - Sie können den Bildschirm von {0} steuern
+ * @param {string} [apac.wc_remote_control.is_controlling] - Sie steuern den Bildschirm von {0}
 */
 
 
 
 
 /**
- * es-ES.json {@link https://zoom.github.io/zoom-sdk-web/languages/es-ES.json}
+ * es-ES.json {@link https://zoom.github.io/sample-app-web/languages/es-ES.json}
  * @method es-ES
  * @memberof LanguageResource
  * @instance
@@ -605,11 +743,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - ¿Está seguro de que desea desconectarse del audio?
  * @param {string} [apac.dialog.remain_view] - Se lo desconectará del audio y será un observador.
  * @param {string} [apac.dialog.btn_hangup] - Colgar
- * @param {string} [apac.dialog.calling_indication] - &lt;p>Usted estaba llamando &lt;span>&lt;/span>recientemente Él/ella se unirá a la conferencia pronto.&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - Usted estaba llamando {0} recientemente Él/ella se unirá a la conferencia pronto.
+ * @param {string} [apac.dialog.webinar_ended] - El seminario web ha finalizado
  * @param {string} [apac.dialog.placeholder_display_name] - Invitar por nombre para mostrar en la conferencia
  * @param {string} [apac.dialog.placeholder_phone_number] - Número de teléfono
  * @param {string} [apac.toolbar_invite] - Invitar
  * @param {string} [apac.dialog.invite_others] - Invitar a otras personas
+ * @param {string} [apac.dialog.host_end_webinar] - El anfitrión ha finalizado este seminario web.
+ * @param {string} [apac.dialog.meeting_ended] - La reunión ha finalizado
  * @param {string} [apac.dialog.btn_cancle] - Cancelar
  * @param {string} [apac.wc_invite_by_phone] - Invitar por teléfono
  * @param {string} [apac.wc_invite_by_email] - Invitar por e-mail
@@ -617,7 +758,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Copiado
  * @param {string} [apac.wc_copy_url] - Copiar URL
  * @param {string} [apac.wc_defalut_email] - E-mail predeterminado
+ * @param {string} [apac.wc_muteall_desc] - los participantes actuales y nuevos se silenciarán
+ * @param {string} [apac.wc_remote_control.request] - Solicitar control remoto
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - continuar
  * @param {string} [apac.wc_choose_email_service] - Elija su servicio de e-mail para enviar la invitación
+ * @param {string} [apac.dialog.meeting_removed_by_host] - El anfitrión lo ha retirado de esta reunión.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - El anfitrión lo ha retirado de este seminario web.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo Email
  * @param {string} [apac.wc_invitation_url] - Dirección de la página web de la invitación
@@ -662,13 +810,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - El navegador no permite el micrófono
  * @param {string} [apac.toolbar_leave] - Salir
  * @param {string} [apac.wc_leave_meeting] - Salir de la reunión
+ * @param {string} [apac.wc_leave_webinar] - Abandonar seminario web
  * @param {string} [apac.wc_audio] - Audio
  * @param {string} [apac.wc_audio_setting] - Configuración del audio
+ * @param {string} [apac.dialog.leave_webinar] - Abandonar este seminario web
+ * @param {string} [apac.dialog.leave_webinar_confirm] - ¿Seguro que quieres dejar este seminario en línea ahora?
  * @param {string} [apac.toolbar_join_audio] - Entrar al audio
  * @param {string} [apac.toolbar_lock] - Boquear
  * @param {string} [apac.toolbar_unlock] - Desbloquear
  * @param {string} [apac.wc_manage_participants] - Control de los participantes
  * @param {string} [apac.wc_participants] - Participantes
+ * @param {string} [apac.wc_extra_function_enable_video] - Habilitar recepción de vídeo
+ * @param {string} [apac.wc_extra_function_disable_video] - Desactivar recepción de vídeo
  * @param {string} [apac.toolbar_record] - Grabar
  * @param {string} [apac.wc_cloud_recording] - Grabación en la nube
  * @param {string} [apac.toolbar_muteall] - Silenciar a todos
@@ -682,6 +835,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - ID de la conferencia
  * @param {string} [apac.meeting_calling] - Llamada
  * @param {string} [apac.wc_stop_recording] - Detener grabación
+ * @param {string} [apac.wc_stop_recording_content] - En caso afirmativo, usted recibirá una notificación por correo electrónico cuando la grabación de la nube está listo.
+ * @param {string} [apac.wc_record_reminder_title] - Esta reunión se está grabando
+ * @param {string} [apac.wc_record_reminder_webinar_title] - Este seminario está siendo grabada
+ * @param {string} [apac.wc_record_reminder_desc] - Al continuar para estar en la reunión, usted está consintiendo que desea grabar.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - Al continuar a estar en el seminario, usted está consintiendo que desea grabar.
  * @param {string} [apac.wc_recording] - Grabando…
  * @param {string} [apac.meeting_recording] - Grabando…
  * @param {string} [apac.wc_talk] - Hablar
@@ -720,7 +878,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - Finalizar esta reunión
  * @param {string} [apac.dialog.meeting_over] - Todos en la llamada se desconectarán y la reunión habrá terminado.
  * @param {string} [apac.dialog.host_end_meeting] - El anfitrión ha finalizado esta reunión.
- * @param {string} [apac.dialog.meeting_ended] - La reunión ha finalizado
  * @param {string} [apac.dialog.something_wrong] - Algo salió mal
  * @param {string} [apac.dialog.server_error] - Se produjo un error interno en el servidor y no pudo procesar su solicitud.
  * @param {string} [apac.dialog.error_code] - Código de error:
@@ -798,6 +955,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - más
  * @param {string} [apac.wc_waiting_room_title3] - persona está en espera
  * @param {string} [apac.wc_waiting_room_title4] - personas están en espera
+ * @param {string} [apac.wc_remove_user] - ¿Quiere retirar a?
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Cerrar
  * @param {string} [apac.wc_cc_withdraw] - Retirar el permiso de subtítulos
@@ -808,13 +966,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - No se puede activar el sonido de sí mismo porque el host que silencia.
  * @param {string} [apac.wc_chat.disable_chat] - El anfitrión ha inhabilitado el chat de los asistentes.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Su audio está conectado usando el número de acceso
+ * @param {string} [apac.wc_video.camera_is_taken] - Su cámara ha estado ocupada por otras aplicaciones, libere los privilegios e inténtelo de nuevo.
+ * @param {string} [apac.wc_qa.qa_comp_title] - Preguntas y respuestas
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Enviar de forma anónima
+ * @param {string} [apac.wc_qa.is_privately] - Enviar en privado
+ * @param {string} [apac.wc_qa.cancel] - Cancelar
+ * @param {string} [apac.wc_qa.send] - Enviar
+ * @param {string} [apac.wc_qa.input_tips] - Escriba su pregunta aquí...
+ * @param {string} [apac.wc_qa.display_all_answer] - Mostrar todo
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Comprimir todo
+ * @param {string} [apac.wc_qa.button_display_answer] - Escriba su respuesta
+ * @param {string} [apac.wc_qa.button_comment] - Comentar
+ * @param {string} [apac.wc_qa.button_live] - Responder en vivo
+ * @param {string} [apac.wc_qa.button_live_done] - Finalizado
+ * @param {string} [apac.wc_qa.button_reopen] - Volver a abrir
+ * @param {string} [apac.wc_qa.live_tips_done] - Esta pregunta se respondió en vivo
+ * @param {string} [apac.wc_qa.live_tips_start] - desearía responder a esto en directo
+ * @param {string} [apac.wc_qa.dissmis_tips] - Descartar
+ * @param {string} [apac.wc_qa.allQ] - Todas las preguntas
+ * @param {string} [apac.wc_qa.myQ] - Mis preguntas
+ * @param {string} [apac.wc_qa.openedQ] - Abierto
+ * @param {string} [apac.wc_qa.answeredQ] - Respondido
+ * @param {string} [apac.wc_qa.dismissedQ] - Descartado
+ * @param {string} [apac.wc_qa.answer_private_type] - Respuesta privada
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Permitir preguntas anónimas
+ * @param {string} [apac.wc_qa.setting_allow_view] - Permitir que los espectadores vean
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Solo preguntas respondidas
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - Todas las preguntas
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Los espectadores pueden votar a favor
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Los espectadores pueden comentar
+ * @param {string} [apac.wc_qa.welcome_banner] - Siéntase libre de hacerles preguntas al anfitrión y a los panelistas
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Bienvenido/a
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Espectador anónimo
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Copie la dirección en su portapapeles
+ * @param {string} [apac.wc_cc_type_myself] - Yo voy a escribir
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Asignar a un participante para escribir
+ * @param {string} [apac.wc_cc_assign_to_type] - Asignar a alguien para que escriba
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Copie este enlace y péguelo en el editor de subtítulos de terceros
+ * @param {string} [apac.wc_cc.placeholder] - Escriba aquí, presione la tecla de Entrada para empezar a transmitir
+ * @param {string} [apac.wc_closed_caption_btn] - Subtítulos
+ * @param {string} [apac.wc_closed_caption_truned_on] - Los subtítulos están activados
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - Subtítulos está disponible
+ * @param {string} [apac.wc_broadcasting] - Broadcasting
+ * @param {string} [apac.wc_cc_host_assigned] - El anfitrión le ha asignado para que escriba los subtítulos
+ * @param {string} [apac.wc_remote_control.can_control] - Puede controlar la pantalla de {0}
+ * @param {string} [apac.wc_remote_control.is_controlling] - Usted está controlando la pantalla de {0}
 */
 
 
 
 
 /**
- * fr-FR.json {@link https://zoom.github.io/zoom-sdk-web/languages/fr-FR.json}
+ * fr-FR.json {@link https://zoom.github.io/sample-app-web/languages/fr-FR.json}
  * @method fr-FR
  * @memberof LanguageResource
  * @instance
@@ -844,11 +1051,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - Êtes-vous sûr de vouloir vous déconnecter de l’audio ?
  * @param {string} [apac.dialog.remain_view] - Vous serez déconnecté de l’audio et continuerez à recevoir la vidéo.
  * @param {string} [apac.dialog.btn_hangup] - Raccrocher
- * @param {string} [apac.dialog.calling_indication] - &lt;p>Vous étiez juste &lt;span>&lt;/span>en train d’appeler. Il/elle devrait rejoindre la conférence très bientôt.&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - Vous étiez juste {0} en train d’appeler. Il/elle devrait rejoindre la conférence très bientôt.
+ * @param {string} [apac.dialog.webinar_ended] - Le webinaire a été terminé
  * @param {string} [apac.dialog.placeholder_display_name] - Inviter le nom affiché à la conférence
  * @param {string} [apac.dialog.placeholder_phone_number] - Numéro de téléphone
  * @param {string} [apac.toolbar_invite] - Inviter
  * @param {string} [apac.dialog.invite_others] - Inviter quelqu’un d’autre
+ * @param {string} [apac.dialog.host_end_webinar] - Ce webinaire a été terminé par son animateur.
+ * @param {string} [apac.dialog.meeting_ended] - La réunion a été terminée
  * @param {string} [apac.dialog.btn_cancle] - Annuler
  * @param {string} [apac.wc_invite_by_phone] - Inviter par téléphone
  * @param {string} [apac.wc_invite_by_email] - Inviter par e-mail
@@ -856,7 +1066,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Copié
  * @param {string} [apac.wc_copy_url] - Copiez l’URL
  * @param {string} [apac.wc_defalut_email] - E-mail par défaut
+ * @param {string} [apac.wc_muteall_desc] - Actuels et nouveaux participants seront mis en sourdine
+ * @param {string} [apac.wc_remote_control.request] - Demander le contrôle à distance
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - continuer
  * @param {string} [apac.wc_choose_email_service] - Choisissez votre service de messagerie pour envoyer l’invitation
+ * @param {string} [apac.dialog.meeting_removed_by_host] - Vous avez été exclu de cette réunion par l’animateur.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - Vous avez été exclu de ce webinaire par l’animateur.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo Email
  * @param {string} [apac.wc_invitation_url] - URL de l’invitation
@@ -901,13 +1118,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - Le navigateur a désactivé le micro
  * @param {string} [apac.toolbar_leave] - Quitter
  * @param {string} [apac.wc_leave_meeting] - Quittez la réunion
+ * @param {string} [apac.wc_leave_webinar] - Quitter le webinaire
  * @param {string} [apac.wc_audio] - Audio
  * @param {string} [apac.wc_audio_setting] - Paramètres audio
+ * @param {string} [apac.dialog.leave_webinar] - Quitter ce webinaire
+ * @param {string} [apac.dialog.leave_webinar_confirm] - Etes-vous sûr de vouloir quitter ce webinaire maintenant?
  * @param {string} [apac.toolbar_join_audio] - Rejoindre l’audio
  * @param {string} [apac.toolbar_lock] - Verrou
  * @param {string} [apac.toolbar_unlock] - Déverrouiller
  * @param {string} [apac.wc_manage_participants] - Gérer les participants
  * @param {string} [apac.wc_participants] - Participants
+ * @param {string} [apac.wc_extra_function_enable_video] - Activer réception vidéo
+ * @param {string} [apac.wc_extra_function_disable_video] - Désactiver réception vidéo
  * @param {string} [apac.toolbar_record] - Enregistrer
  * @param {string} [apac.wc_cloud_recording] - Enregistrement sur le nuage informatique
  * @param {string} [apac.toolbar_muteall] - Couper tous les micros
@@ -921,6 +1143,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - No de la conférence
  * @param {string} [apac.meeting_calling] - Appel en cours
  * @param {string} [apac.wc_stop_recording] - Arrêter l’enregistrement
+ * @param {string} [apac.wc_stop_recording_content] - Si oui, vous recevrez une notification par e-mail lorsque l'enregistrement des nuages ​​est prêt.
+ * @param {string} [apac.wc_record_reminder_title] - Cette réunion est en cours d'enregistrement
+ * @param {string} [apac.wc_record_reminder_webinar_title] - Ce séminaire en ligne est en cours d'enregistrement
+ * @param {string} [apac.wc_record_reminder_desc] - En continuant à être à la réunion, vous acceptez d'être enregistré.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - En continuant à être dans le webinaire, vous acceptez d'être enregistré.
  * @param {string} [apac.wc_recording] - Enregistrement…
  * @param {string} [apac.meeting_recording] - Enregistrement…
  * @param {string} [apac.wc_talk] - Parler
@@ -959,7 +1186,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - Terminer cette réunion
  * @param {string} [apac.dialog.meeting_over] - Toutes les personnes connectées seront déconnectées et la réunion se terminera.
  * @param {string} [apac.dialog.host_end_meeting] - Cette réunion a été terminée par son animateur.
- * @param {string} [apac.dialog.meeting_ended] - La réunion a été terminée
  * @param {string} [apac.dialog.something_wrong] - Quelque chose a mal tourné
  * @param {string} [apac.dialog.server_error] - Le serveur a été affecté par une erreur interne et n’a pas pu traiter votre requête.
  * @param {string} [apac.dialog.error_code] - Code d’erreur :
@@ -1037,6 +1263,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - plus
  * @param {string} [apac.wc_waiting_room_title3] - personne est en attente
  * @param {string} [apac.wc_waiting_room_title4] - personne est en attente
+ * @param {string} [apac.wc_remove_user] - Souhaitez-vous exclure
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Fermer
  * @param {string} [apac.wc_cc_withdraw] - Retirer la permission de sous-titrage
@@ -1047,13 +1274,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - Vous ne pouvez pas vous désactiver parce que l'hôte vous mis en sourdine.
  * @param {string} [apac.wc_chat.disable_chat] - L’animateur a désactivé les conversations des participants.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Votre son est connecté à l’aide de la fonction de composition de numéro
+ * @param {string} [apac.wc_video.camera_is_taken] - Votre caméra est utilisée par d’autres applications, libérez-la puis réessayez.
+ * @param {string} [apac.wc_qa.qa_comp_title] - Questions-Réponses
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Envoyer anonymement
+ * @param {string} [apac.wc_qa.is_privately] - Envoyer en privé
+ * @param {string} [apac.wc_qa.cancel] - Annuler
+ * @param {string} [apac.wc_qa.send] - Envoyer
+ * @param {string} [apac.wc_qa.input_tips] - Saisissez votre question ici…
+ * @param {string} [apac.wc_qa.display_all_answer] - Tout afficher
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Tout réduire
+ * @param {string} [apac.wc_qa.button_display_answer] - Tapez réponse
+ * @param {string} [apac.wc_qa.button_comment] - Commenter
+ * @param {string} [apac.wc_qa.button_live] - Répondre en direct
+ * @param {string} [apac.wc_qa.button_live_done] - Terminé
+ * @param {string} [apac.wc_qa.button_reopen] - Rouvrir
+ * @param {string} [apac.wc_qa.live_tips_done] - Cette question a été répondue en direct
+ * @param {string} [apac.wc_qa.live_tips_start] - souhaite répondre à cette question en direct
+ * @param {string} [apac.wc_qa.dissmis_tips] - Rejeter
+ * @param {string} [apac.wc_qa.allQ] - Toutes les questions
+ * @param {string} [apac.wc_qa.myQ] - Mes questions
+ * @param {string} [apac.wc_qa.openedQ] - Ouvrir
+ * @param {string} [apac.wc_qa.answeredQ] - Résolue
+ * @param {string} [apac.wc_qa.dismissedQ] - Rejeté
+ * @param {string} [apac.wc_qa.answer_private_type] - Réponse privée
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Autoriser des questions anonymes
+ * @param {string} [apac.wc_qa.setting_allow_view] - Autoriser les participants à voir
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Questions répondues seulement
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - Toutes les questions
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Les participants peuvent voter en faveur
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Les participants peuvent commenter
+ * @param {string} [apac.wc_qa.welcome_banner] - N’hésitez pas à poser des questions à l’hôte et aux conférenciers
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Bienvenue
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Spectateur anonyme
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Copier l’URL dans votre presse-papiers
+ * @param {string} [apac.wc_cc_type_myself] - Je ferai la saisie
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Affecter un participant à la saisie
+ * @param {string} [apac.wc_cc_assign_to_type] - Affecter quelqu’un à la saisie
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Copier ce lien et le coller dans la saisie de sous-titres tierce
+ * @param {string} [apac.wc_cc.placeholder] - Saisir ici et appuyer sur Retour pour diffuser
+ * @param {string} [apac.wc_closed_caption_btn] - Sous-titres
+ * @param {string} [apac.wc_closed_caption_truned_on] - Sous-titrage est activé
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - Le sous-titrage est disponible
+ * @param {string} [apac.wc_broadcasting] - Diffusion
+ * @param {string} [apac.wc_cc_host_assigned] - L’animateur vous a affecté à la saisie des sous-titres
+ * @param {string} [apac.wc_remote_control.can_control] - Vous pouvez contrôler l’écran de {0}
+ * @param {string} [apac.wc_remote_control.is_controlling] - Vous contrôlez l’écran de {0}
 */
 
 
 
 
 /**
- * jp-JP.json {@link https://zoom.github.io/zoom-sdk-web/languages/jp-JP.json}
+ * jp-JP.json {@link https://zoom.github.io/sample-app-web/languages/jp-JP.json}
  * @method jp-JP
  * @memberof LanguageResource
  * @instance
@@ -1083,11 +1359,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - 音声から切断してよろしいですか？
  * @param {string} [apac.dialog.remain_view] - 音声から切断され、ビューワーとして残っています。
  * @param {string} [apac.dialog.btn_hangup] - 通話を切る
- * @param {string} [apac.dialog.calling_indication] - &lt;p>たった今&lt;span>&lt;/span>に電話をかけていました。その方は間もなく会議に参加します。&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - たった今 {0} に電話をかけていました。その方は間もなく会議に参加します。
+ * @param {string} [apac.dialog.webinar_ended] - ウェビナーは終了しました
  * @param {string} [apac.dialog.placeholder_display_name] - 会議にディスプレイ名を招待する
  * @param {string} [apac.dialog.placeholder_phone_number] - 電話番号
  * @param {string} [apac.toolbar_invite] - 招待
  * @param {string} [apac.dialog.invite_others] - 別の電話に招待
+ * @param {string} [apac.dialog.host_end_webinar] - このウェビナーはホストによって終了しました。
+ * @param {string} [apac.dialog.meeting_ended] - ミーティングは終了しました
  * @param {string} [apac.dialog.btn_cancle] - キャンセル
  * @param {string} [apac.wc_invite_by_phone] - 電話で招待
  * @param {string} [apac.wc_invite_by_email] - メールで招待
@@ -1095,7 +1374,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - コピー済み
  * @param {string} [apac.wc_copy_url] - URLをコピー
  * @param {string} [apac.wc_defalut_email] - デフォルトのメール
+ * @param {string} [apac.wc_muteall_desc] - 現在、新たな参加者がミュートされます
+ * @param {string} [apac.wc_remote_control.request] - リモート制御のリクエスト
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - 持続する
  * @param {string} [apac.wc_choose_email_service] - 招待状をお送りするメールサービスを選択してください
+ * @param {string} [apac.dialog.meeting_removed_by_host] - ホストによってこのミーティングから削除されました。
+ * @param {string} [apac.dialog.webinar_removed_by_host] - ホストによってこのウェビナーから削除されました。
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahooメール
  * @param {string} [apac.wc_invitation_url] - 招待状のURL
@@ -1140,13 +1426,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - ブラウザでマイクの使用を許可しない
  * @param {string} [apac.toolbar_leave] - 退出
  * @param {string} [apac.wc_leave_meeting] - ミーティングを退出
+ * @param {string} [apac.wc_leave_webinar] - ウェビナーから退出します。
  * @param {string} [apac.wc_audio] - オーディオ
  * @param {string} [apac.wc_audio_setting] - オーディオ設定
+ * @param {string} [apac.dialog.leave_webinar] - このウェビナーを退出
+ * @param {string} [apac.dialog.leave_webinar_confirm] - あなたは今、このウェビナーを残すにしてもよろしいですか？
  * @param {string} [apac.toolbar_join_audio] - 音声に参加します
  * @param {string} [apac.toolbar_lock] - ロック
  * @param {string} [apac.toolbar_unlock] - ロック解除
  * @param {string} [apac.wc_manage_participants] - 参加者を管理
  * @param {string} [apac.wc_participants] - 参加者
+ * @param {string} [apac.wc_extra_function_enable_video] - ビデオ受信を有効にします
+ * @param {string} [apac.wc_extra_function_disable_video] - ビデオ受信を無効にします
  * @param {string} [apac.toolbar_record] - 記録
  * @param {string} [apac.wc_cloud_recording] - クラウド記録
  * @param {string} [apac.toolbar_muteall] - 全てをミュート
@@ -1160,6 +1451,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - 会議ID
  * @param {string} [apac.meeting_calling] - 呼び出し中
  * @param {string} [apac.wc_stop_recording] - 録音停止
+ * @param {string} [apac.wc_stop_recording_content] - はい場合は、クラウド録音の準備ができたとき、あなたは電子メール通知を受信します。
+ * @param {string} [apac.wc_record_reminder_title] - この会議は記録されています
+ * @param {string} [apac.wc_record_reminder_webinar_title] - このウェビナーでは記録されています
+ * @param {string} [apac.wc_record_reminder_desc] - 会議であることを続けることで、あなたは記録することが同意されています。
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - ウェビナーであることを続けることで、あなたは記録することが同意されています。
  * @param {string} [apac.wc_recording] - 録画中・・・
  * @param {string} [apac.meeting_recording] - 録画中・・・
  * @param {string} [apac.wc_talk] - 会話
@@ -1198,7 +1494,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - このミーティングを終了
  * @param {string} [apac.dialog.meeting_over] - 電話の全員の接続が切断され、ミーティングが終了します。
  * @param {string} [apac.dialog.host_end_meeting] - このミーティングはホストによって終了しました。
- * @param {string} [apac.dialog.meeting_ended] - ミーティングは終了しました
  * @param {string} [apac.dialog.something_wrong] - 何かが正しくありませんでした
  * @param {string} [apac.dialog.server_error] - サーバーの内部エラーでリクエストを処理できませんでした。
  * @param {string} [apac.dialog.error_code] - エラーコード：
@@ -1276,6 +1571,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - 更に
  * @param {string} [apac.wc_waiting_room_title3] - のユーザーは保留中です
  * @param {string} [apac.wc_waiting_room_title4] - のユーザーは保留中です
+ * @param {string} [apac.wc_remove_user] - 削除しますか
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 閉じる
  * @param {string} [apac.wc_cc_withdraw] - 字幕許可から退出します。
@@ -1286,13 +1582,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - ホストがあなたをミュートので、あなたは自分自身のミュートを解除することはできません。
  * @param {string} [apac.wc_chat.disable_chat] - ホストが参加者チャットを無効にしました。
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - オーディオはダイヤルインを使用して接続されます
+ * @param {string} [apac.wc_video.camera_is_taken] - お使いのカメラは他のアプリで優先的に使用されいるので、そのアプリへの優先設定を解除してからもう一度お試しください。
+ * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - 匿名で送信
+ * @param {string} [apac.wc_qa.is_privately] - 個人的に送信
+ * @param {string} [apac.wc_qa.cancel] - キャンセル
+ * @param {string} [apac.wc_qa.send] - 送信
+ * @param {string} [apac.wc_qa.input_tips] - 質問をここに入力してください...
+ * @param {string} [apac.wc_qa.display_all_answer] - 全てを表示
+ * @param {string} [apac.wc_qa.collapse_all_answer] - 全て折りたたむ
+ * @param {string} [apac.wc_qa.button_display_answer] - 回答を入力
+ * @param {string} [apac.wc_qa.button_comment] - コメント
+ * @param {string} [apac.wc_qa.button_live] - ライブで回答
+ * @param {string} [apac.wc_qa.button_live_done] - 完了
+ * @param {string} [apac.wc_qa.button_reopen] - 再開する
+ * @param {string} [apac.wc_qa.live_tips_done] - この質問はライブで回答されました
+ * @param {string} [apac.wc_qa.live_tips_start] - はこの質問をライブで回答することを希望しています
+ * @param {string} [apac.wc_qa.dissmis_tips] - 却下
+ * @param {string} [apac.wc_qa.allQ] - 全ての質問
+ * @param {string} [apac.wc_qa.myQ] - 自分の質問
+ * @param {string} [apac.wc_qa.openedQ] - 未回答
+ * @param {string} [apac.wc_qa.answeredQ] - 回答済み
+ * @param {string} [apac.wc_qa.dismissedQ] - 却下
+ * @param {string} [apac.wc_qa.answer_private_type] - プライベート回答
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - 匿名での質問を許可する
+ * @param {string} [apac.wc_qa.setting_allow_view] - 出席者に閲覧を許可する
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - 回答済みの質問のみ
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - 全ての質問
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - 出席者は賛成できます
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - 出席者はコメントできます
+ * @param {string} [apac.wc_qa.welcome_banner] - ホストとパネリストに気軽に質問してください
+ * @param {string} [apac.wc_qa.welcome_banner_title] - ようこそ
+ * @param {string} [apac.wc_qa.anonymous_attendee] - 匿名出席者
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - URLをクリップボードにコピーします。
+ * @param {string} [apac.wc_cc_type_myself] - 入力します。
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - 参加者を入力に指定します。
+ * @param {string} [apac.wc_cc_assign_to_type] - 入力を誰かに指定します。
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - このリンクをコピーしてサードパーティのCCタイパーにペーストします。
+ * @param {string} [apac.wc_cc.placeholder] - ここに入力してエンターキーを押し、放送します。
+ * @param {string} [apac.wc_closed_caption_btn] - 字幕
+ * @param {string} [apac.wc_closed_caption_truned_on] - 字幕がオンです。
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - 字幕が利用可能です。
+ * @param {string} [apac.wc_broadcasting] - 放送
+ * @param {string} [apac.wc_cc_host_assigned] - ホストはあなたを字幕入力に指定しました。
+ * @param {string} [apac.wc_remote_control.can_control] - {0}の画面をコントロールできます
+ * @param {string} [apac.wc_remote_control.is_controlling] - {0}の画面を制御しています
 */
 
 
 
 
 /**
- * pt-PT.json {@link https://zoom.github.io/zoom-sdk-web/languages/pt-PT.json}
+ * pt-PT.json {@link https://zoom.github.io/sample-app-web/languages/pt-PT.json}
  * @method pt-PT
  * @memberof LanguageResource
  * @instance
@@ -1322,11 +1667,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - Tem certeza de que deseja se desconectar do áudio?
  * @param {string} [apac.dialog.remain_view] - Você será desconectado do áudio e permanecerá como espectador.
  * @param {string} [apac.dialog.btn_hangup] - Desligar
- * @param {string} [apac.dialog.calling_indication] - &lt;p>Você estava chamando &lt;span>&lt;/span>agora mesmo. Ele(a) entrará na conferência em breve.&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - Você estava chamando {0} agora mesmo. Ele(a) entrará na conferência em breve.
+ * @param {string} [apac.dialog.webinar_ended] - O webinar foi encerrado
  * @param {string} [apac.dialog.placeholder_display_name] - Nome de exibição do convite na conferência
  * @param {string} [apac.dialog.placeholder_phone_number] - Número de telefone
  * @param {string} [apac.toolbar_invite] - Convidar
  * @param {string} [apac.dialog.invite_others] - Convidar outras pessoas
+ * @param {string} [apac.dialog.host_end_webinar] - Este webinar foi encerrado pelo anfitrião.
+ * @param {string} [apac.dialog.meeting_ended] - A reunião foi encerrada
  * @param {string} [apac.dialog.btn_cancle] - Cancelar
  * @param {string} [apac.wc_invite_by_phone] - Convidar por telefone
  * @param {string} [apac.wc_invite_by_email] - Convidar por e-mail
@@ -1334,7 +1682,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Copiado
  * @param {string} [apac.wc_copy_url] - Copiar URL
  * @param {string} [apac.wc_defalut_email] - E-mail padrão
+ * @param {string} [apac.wc_muteall_desc] - Atuais e novos participantes será silenciado
+ * @param {string} [apac.wc_remote_control.request] - Solicitar controle remoto
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - continuar
  * @param {string} [apac.wc_choose_email_service] - Selecionar seu serviço de e-mail para enviar convite
+ * @param {string} [apac.dialog.meeting_removed_by_host] - Você foi removido desta reunião pelo anfitrião.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - Você foi removido deste webinar pelo anfitrião.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - E-mail do Yahoo
  * @param {string} [apac.wc_invitation_url] - URL do convite
@@ -1379,13 +1734,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - Navegar para encerrar permissão do microfone
  * @param {string} [apac.toolbar_leave] - Sair
  * @param {string} [apac.wc_leave_meeting] - Sair da reunião
+ * @param {string} [apac.wc_leave_webinar] - Sair do webinar
  * @param {string} [apac.wc_audio] - Áudio
  * @param {string} [apac.wc_audio_setting] - Configurações de áudio
+ * @param {string} [apac.dialog.leave_webinar] - Sair deste webinar
+ * @param {string} [apac.dialog.leave_webinar_confirm] - Tem certeza de que deseja sair desse webinar agora?
  * @param {string} [apac.toolbar_join_audio] - Incluir áudio
  * @param {string} [apac.toolbar_lock] - Bloquear
  * @param {string} [apac.toolbar_unlock] - Desbloquear
  * @param {string} [apac.wc_manage_participants] - Gerenciar participantes
  * @param {string} [apac.wc_participants] - Participantes
+ * @param {string} [apac.wc_extra_function_enable_video] - Habilitar a recepção de vídeo
+ * @param {string} [apac.wc_extra_function_disable_video] - recepção vídeo Disable
  * @param {string} [apac.toolbar_record] - Gravar
  * @param {string} [apac.wc_cloud_recording] - Gravação em nuvem
  * @param {string} [apac.toolbar_muteall] - Desativar som de todos
@@ -1399,6 +1759,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - ID da conferência
  * @param {string} [apac.meeting_calling] - Chamando
  * @param {string} [apac.wc_stop_recording] - Parar gravação
+ * @param {string} [apac.wc_stop_recording_content] - Se sim, você receberá uma notificação por email quando a gravação nuvem está pronto.
+ * @param {string} [apac.wc_record_reminder_title] - Esta reunião está sendo gravada
+ * @param {string} [apac.wc_record_reminder_webinar_title] - Este webinar está sendo gravado
+ * @param {string} [apac.wc_record_reminder_desc] - Ao continuar a estar na reunião, você está consentindo a ser gravado.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - Ao continuar a estar no webinar, você está consentindo a ser gravado.
  * @param {string} [apac.wc_recording] - Gravando
  * @param {string} [apac.meeting_recording] - Gravando...
  * @param {string} [apac.wc_talk] - Falar
@@ -1437,7 +1802,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - Encerrar esta reunião
  * @param {string} [apac.dialog.meeting_over] - Todos os participantes da chamada serão desconectados e a reunião vai terminar.
  * @param {string} [apac.dialog.host_end_meeting] - Esta reunião foi encerrada pelo anfitrião.
- * @param {string} [apac.dialog.meeting_ended] - A reunião foi encerrada
  * @param {string} [apac.dialog.something_wrong] - Algo deu errado
  * @param {string} [apac.dialog.server_error] - O servidor encontrou um erro interno e não conseguiu processar sua solicitação.
  * @param {string} [apac.dialog.error_code] - Código de erro:
@@ -1515,6 +1879,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - mais
  * @param {string} [apac.wc_waiting_room_title3] - pessoa em espera
  * @param {string} [apac.wc_waiting_room_title4] - pessoas em espera
+ * @param {string} [apac.wc_remove_user] - Quer remover %s?
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Fechar
  * @param {string} [apac.wc_cc_withdraw] - Retirar permissão de Closed Caption
@@ -1525,13 +1890,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - Você não pode ativar o som de si mesmo, porque o anfitrião silenciado você.
  * @param {string} [apac.wc_chat.disable_chat] - O anfitrião desativou o bate-papo do participante.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Seu áudio está conectado por discagem
+ * @param {string} [apac.wc_video.camera_is_taken] - Sua câmera está sendo usada por outros aplicativos, libere o privilégio e tente novamente.
+ * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Enviar anonimamente
+ * @param {string} [apac.wc_qa.is_privately] - Enviar reservadamente
+ * @param {string} [apac.wc_qa.cancel] - Cancelar
+ * @param {string} [apac.wc_qa.send] - Enviar
+ * @param {string} [apac.wc_qa.input_tips] - Digite sua pergunta aqui...
+ * @param {string} [apac.wc_qa.display_all_answer] - Exibir todos
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Fechar todas
+ * @param {string} [apac.wc_qa.button_display_answer] - Digitar resposta
+ * @param {string} [apac.wc_qa.button_comment] - Comentar
+ * @param {string} [apac.wc_qa.button_live] - Responder ao vivo
+ * @param {string} [apac.wc_qa.button_live_done] - Concluído
+ * @param {string} [apac.wc_qa.button_reopen] - Abrir novamente
+ * @param {string} [apac.wc_qa.live_tips_done] - Esta pergunta foi respondida ao vivo
+ * @param {string} [apac.wc_qa.live_tips_start] - gostaria de responder a esta pergunta ao vivo
+ * @param {string} [apac.wc_qa.dissmis_tips] - Descartar
+ * @param {string} [apac.wc_qa.allQ] - Todas as perguntas
+ * @param {string} [apac.wc_qa.myQ] - Minhas perguntas
+ * @param {string} [apac.wc_qa.openedQ] - Abrir
+ * @param {string} [apac.wc_qa.answeredQ] - Respondida
+ * @param {string} [apac.wc_qa.dismissedQ] - Descartada
+ * @param {string} [apac.wc_qa.answer_private_type] - Resposta privada
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Permitir perguntas anônimas
+ * @param {string} [apac.wc_qa.setting_allow_view] - Permitir que participantes visualizem
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Apenas perguntas respondidas
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - Todas as perguntas
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Participantes podem curtir
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Participantes podem comentar
+ * @param {string} [apac.wc_qa.welcome_banner] - Fique à vontade para fazer perguntas ao anfitrião e aos palestrantes
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Bem-vindo!
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Participante anônimo
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Copiar URL para sua área de transferência
+ * @param {string} [apac.wc_cc_type_myself] - Vou digitar
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Atribuir participante para digitar
+ * @param {string} [apac.wc_cc_assign_to_type] - Atribuir alguém para digitar
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Copie este link e cole no campo de digitação de CC de um terceiro
+ * @param {string} [apac.wc_cc.placeholder] - Digite aqui, pressione Enter para transmitir
+ * @param {string} [apac.wc_closed_caption_btn] - Closed Caption
+ * @param {string} [apac.wc_closed_caption_truned_on] - O Closed Caption está ligado
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - O Closed Caption está disponível
+ * @param {string} [apac.wc_broadcasting] - Radiodifusão
+ * @param {string} [apac.wc_cc_host_assigned] - O anfitrião atribuiu a você a digitação do Closed Caption
+ * @param {string} [apac.wc_remote_control.can_control] - Você pode controlar a tela de {0}
+ * @param {string} [apac.wc_remote_control.is_controlling] - Você está controlando a tela de {0}
 */
 
 
 
 
 /**
- * ru-RU.json {@link https://zoom.github.io/zoom-sdk-web/languages/ru-RU.json}
+ * ru-RU.json {@link https://zoom.github.io/sample-app-web/languages/ru-RU.json}
  * @method ru-RU
  * @memberof LanguageResource
  * @instance
@@ -1562,10 +1976,13 @@ const LanguageResource = {
  * @param {string} [apac.dialog.remain_view] - Вы будете отключены от аудиоконференции и станете зрителем.
  * @param {string} [apac.dialog.btn_hangup] - Положить трубку
  * @param {string} [apac.dialog.calling_indication] - Вы только что выполнили вызов {0}. Этот участник в ближайшее время присоединится к конференции.
+ * @param {string} [apac.dialog.webinar_ended] - Веб-семинар завершен
  * @param {string} [apac.dialog.placeholder_display_name] - Пригласить отображаемое имя в конференцию
  * @param {string} [apac.dialog.placeholder_phone_number] - Номер телефона
  * @param {string} [apac.toolbar_invite] - Пригласить
  * @param {string} [apac.dialog.invite_others] - Пригласить других участников
+ * @param {string} [apac.dialog.host_end_webinar] - Этот веб-семинар завершен организатором.
+ * @param {string} [apac.dialog.meeting_ended] - Совещание завершена
  * @param {string} [apac.dialog.btn_cancle] - Отмена
  * @param {string} [apac.wc_invite_by_phone] - Пригласить по телефону
  * @param {string} [apac.wc_invite_by_email] - Пригласить по электронной почте
@@ -1573,7 +1990,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - Скопировано
  * @param {string} [apac.wc_copy_url] - Копировать URL
  * @param {string} [apac.wc_defalut_email] - Электронная почта по умолчанию
+ * @param {string} [apac.wc_muteall_desc] - Текущие и новые участники будут отключены
+ * @param {string} [apac.wc_remote_control.request] - Запрос дистанционного управления
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - Продолжить
  * @param {string} [apac.wc_choose_email_service] - Выберите службу электронной почты для отправки приглашения
+ * @param {string} [apac.dialog.meeting_removed_by_host] - Вы были удалены из этой конференции организатором.
+ * @param {string} [apac.dialog.webinar_removed_by_host] - Вы были удалены из этого веб-семинара организатором.
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo Email
  * @param {string} [apac.wc_invitation_url] - URL приглашения
@@ -1618,13 +2042,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - Браузер не разрешает доступ к микрофону
  * @param {string} [apac.toolbar_leave] - Выйти
  * @param {string} [apac.wc_leave_meeting] - Выйти из конференции
+ * @param {string} [apac.wc_leave_webinar] - Выйти из веб-семинара
  * @param {string} [apac.wc_audio] - Звук
  * @param {string} [apac.wc_audio_setting] - Настройки звука
+ * @param {string} [apac.dialog.leave_webinar] - Выйти из этого веб-семинара
+ * @param {string} [apac.dialog.leave_webinar_confirm] - Вы уверены, что хотите покинуть этот вебинар сейчас?
  * @param {string} [apac.toolbar_join_audio] - Войти в аудиоконференцию
  * @param {string} [apac.toolbar_lock] - Заблокировать
  * @param {string} [apac.toolbar_unlock] - Разблокировать
  * @param {string} [apac.wc_manage_participants] - Управлять участниками
  * @param {string} [apac.wc_participants] - Участники
+ * @param {string} [apac.wc_extra_function_enable_video] - Включить видео прием
+ * @param {string} [apac.wc_extra_function_disable_video] - Отключить видео Принимающий
  * @param {string} [apac.toolbar_record] - Запись
  * @param {string} [apac.wc_cloud_recording] - Запись в облако
  * @param {string} [apac.toolbar_muteall] - Выключить звук для всех
@@ -1638,6 +2067,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - Идентификатор конференции
  * @param {string} [apac.meeting_calling] - Выполняется вызов
  * @param {string} [apac.wc_stop_recording] - Остановить запись
+ * @param {string} [apac.wc_stop_recording_content] - Если да, то вы получите уведомление по электронной почте, когда запись облака готова.
+ * @param {string} [apac.wc_record_reminder_title] - Эта встреча записывается
+ * @param {string} [apac.wc_record_reminder_webinar_title] - Этот вебинар записывается
+ * @param {string} [apac.wc_record_reminder_desc] - Продолжая быть в собрании, вы соглашаетесь быть записаны.
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - Продолжая быть в вебинаре, вы соглашаетесь быть записаны.
  * @param {string} [apac.wc_recording] - 
  * @param {string} [apac.meeting_recording] - Запись...
  * @param {string} [apac.wc_talk] - Разговор
@@ -1676,7 +2110,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - Завершить эту конференцию
  * @param {string} [apac.dialog.meeting_over] - Все участники будут отключены, а Совещание завершена.
  * @param {string} [apac.dialog.host_end_meeting] - Эта Совещание завершена организатором.
- * @param {string} [apac.dialog.meeting_ended] - Совещание завершена
  * @param {string} [apac.dialog.something_wrong] - Что-то пошло не так
  * @param {string} [apac.dialog.server_error] - На сервере возникла внутренняя ошибка, и он не в состоянии обработать ваш запрос.
  * @param {string} [apac.dialog.error_code] - Код ошибки:
@@ -1754,6 +2187,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - подробнее
  * @param {string} [apac.wc_waiting_room_title3] - абонент на удержании
  * @param {string} [apac.wc_waiting_room_title4] - абонента (-ов) на удержании
+ * @param {string} [apac.wc_remove_user] - Хотите ли вы удалить
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Закрыть
  * @param {string} [apac.wc_cc_withdraw] - Отозвать разрешение субтитров по требованию
@@ -1764,13 +2198,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - Вы не можете приглушение себя, потому что хозяин приглушен вас.
  * @param {string} [apac.wc_chat.disable_chat] - Организатор отключил чат участников.
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Для воспроизведения звука используется устройство набора номера
+ * @param {string} [apac.wc_video.camera_is_taken] - В данный момент камера используется другими приложениями. Освободите камеру и повторите попытку.
+ * @param {string} [apac.wc_qa.qa_comp_title] - Вопросы и ответы
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - Отправить анонимно
+ * @param {string} [apac.wc_qa.is_privately] - Отправить личное сообщение
+ * @param {string} [apac.wc_qa.cancel] - Отмена
+ * @param {string} [apac.wc_qa.send] - Отправить
+ * @param {string} [apac.wc_qa.input_tips] - Введите здесь ваш вопрос...
+ * @param {string} [apac.wc_qa.display_all_answer] - Показать все
+ * @param {string} [apac.wc_qa.collapse_all_answer] - Свернуть все
+ * @param {string} [apac.wc_qa.button_display_answer] - Введите ответ
+ * @param {string} [apac.wc_qa.button_comment] - Комментарий
+ * @param {string} [apac.wc_qa.button_live] - Ответить по сети
+ * @param {string} [apac.wc_qa.button_live_done] - Готово
+ * @param {string} [apac.wc_qa.button_reopen] - Открыть повторно
+ * @param {string} [apac.wc_qa.live_tips_done] - На этот вопрос получен ответ по сети
+ * @param {string} [apac.wc_qa.live_tips_start] - хочет ответить по сети
+ * @param {string} [apac.wc_qa.dissmis_tips] - Отклонить
+ * @param {string} [apac.wc_qa.allQ] - Все вопросы
+ * @param {string} [apac.wc_qa.myQ] - Мои вопросы
+ * @param {string} [apac.wc_qa.openedQ] - Открыть
+ * @param {string} [apac.wc_qa.answeredQ] - Отвеченные
+ * @param {string} [apac.wc_qa.dismissedQ] - Отклонено
+ * @param {string} [apac.wc_qa.answer_private_type] - Ответ в личном сообщении
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - Разрешить анонимные вопросы
+ * @param {string} [apac.wc_qa.setting_allow_view] - Разрешить участникам просмотр
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - Только отвеченные вопросы
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - Все вопросы
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - Участники могут голосовать за
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - Участники могут комментировать
+ * @param {string} [apac.wc_qa.welcome_banner] - Свободно задавайте вопросы организатору и членам группы
+ * @param {string} [apac.wc_qa.welcome_banner_title] - Добро пожаловать!
+ * @param {string} [apac.wc_qa.anonymous_attendee] - Анонимный участник
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - Копировать URL в буфер
+ * @param {string} [apac.wc_cc_type_myself] - Я буду вводить
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - Назначить участника для ввода
+ * @param {string} [apac.wc_cc_assign_to_type] - Назначить пользователя для ввода
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - Копировать эту ссылку и вставить в стороннюю программу наложения субтитров по требованию
+ * @param {string} [apac.wc_cc.placeholder] - Введите здесь, нажмите Ввод для трансляции
+ * @param {string} [apac.wc_closed_caption_btn] - Субтитры по требованию
+ * @param {string} [apac.wc_closed_caption_truned_on] - Субтитры по требованию включены
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - Субтитры по требованию доступны
+ * @param {string} [apac.wc_broadcasting] - вещания
+ * @param {string} [apac.wc_cc_host_assigned] - Организатор назначил вас для ввода субтитров по требованию
+ * @param {string} [apac.wc_remote_control.can_control] - Вы можете осуществлять управление экраном {0}
+ * @param {string} [apac.wc_remote_control.is_controlling] - Вы осуществляете управление экраном {0}
 */
 
 
 
 
 /**
- * zh-CN.json {@link https://zoom.github.io/zoom-sdk-web/languages/zh-CN.json}
+ * zh-CN.json {@link https://zoom.github.io/sample-app-web/languages/zh-CN.json}
  * @method zh-CN
  * @memberof LanguageResource
  * @instance
@@ -1800,11 +2283,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - 您是否确定要断开音频连接？
  * @param {string} [apac.dialog.remain_view] - 您将断开音频连接，并作为观察者。
  * @param {string} [apac.dialog.btn_hangup] - 挂断
- * @param {string} [apac.dialog.calling_indication] - &lt;p>您刚才拨叫的是&lt;span>&lt;/span>。他/她将很快加入会议。&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - 您刚才拨叫的是 {0} 。他/她将很快加入会议。
+ * @param {string} [apac.dialog.webinar_ended] - 此网络研讨会已结束
  * @param {string} [apac.dialog.placeholder_display_name] - 邀请会议中的显示名称
  * @param {string} [apac.dialog.placeholder_phone_number] - 电话号码
  * @param {string} [apac.toolbar_invite] - 邀请
  * @param {string} [apac.dialog.invite_others] - 邀请另一位
+ * @param {string} [apac.dialog.host_end_webinar] - 此网络研讨会已由主持人结束。
+ * @param {string} [apac.dialog.meeting_ended] - 此会议已结束
  * @param {string} [apac.dialog.btn_cancle] - 取消
  * @param {string} [apac.wc_invite_by_phone] - 通过电话邀请
  * @param {string} [apac.wc_invite_by_email] - 通过电子邮件邀请
@@ -1812,7 +2298,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - 已复制
  * @param {string} [apac.wc_copy_url] - 复制网址
  * @param {string} [apac.wc_defalut_email] - 默认电子邮件
+ * @param {string} [apac.wc_muteall_desc] - 现有的和新的参与者将被静音
+ * @param {string} [apac.wc_remote_control.request] - 请求远程控制
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - 继续
  * @param {string} [apac.wc_choose_email_service] - 选择您的电子邮件服务来发送邀请
+ * @param {string} [apac.dialog.meeting_removed_by_host] - 您已被主持人从此会议中删除。
+ * @param {string} [apac.dialog.webinar_removed_by_host] - 您已被主持人从此网络研讨会中删除。
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo电子邮件
  * @param {string} [apac.wc_invitation_url] - 邀请网址
@@ -1857,13 +2350,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - 浏览器不允许使用麦克风
  * @param {string} [apac.toolbar_leave] - 离开
  * @param {string} [apac.wc_leave_meeting] - 离开会议
+ * @param {string} [apac.wc_leave_webinar] - 离开网络研讨会
  * @param {string} [apac.wc_audio] - 音频
  * @param {string} [apac.wc_audio_setting] - 音频设置
+ * @param {string} [apac.dialog.leave_webinar] - 离开此网络研讨会
+ * @param {string} [apac.dialog.leave_webinar_confirm] - 你确定你现在要离开这个研讨会？
  * @param {string} [apac.toolbar_join_audio] - 加入音频
  * @param {string} [apac.toolbar_lock] - 锁定
  * @param {string} [apac.toolbar_unlock] - 解锁
  * @param {string} [apac.wc_manage_participants] - 管理参加者
  * @param {string} [apac.wc_participants] - 参与者
+ * @param {string} [apac.wc_extra_function_enable_video] - 启用视频接收
+ * @param {string} [apac.wc_extra_function_disable_video] - 禁用视频接收
  * @param {string} [apac.toolbar_record] - 录制
  * @param {string} [apac.wc_cloud_recording] - 云记录
  * @param {string} [apac.toolbar_muteall] - 静音所有
@@ -1877,6 +2375,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - 会议ID
  * @param {string} [apac.meeting_calling] - 正在呼叫
  * @param {string} [apac.wc_stop_recording] - 停止录音
+ * @param {string} [apac.wc_stop_recording_content] - 如果是，当云记录准备好将收到电子邮件通知。
+ * @param {string} [apac.wc_record_reminder_title] - 此会议正在录制中
+ * @param {string} [apac.wc_record_reminder_webinar_title] - 此网络研讨会正在录制中
+ * @param {string} [apac.wc_record_reminder_desc] - 继续参加本会议，即表示你同意进行录制。
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - 继续参加本网络研讨会，即表示你同意进行录制。
  * @param {string} [apac.wc_recording] - 录制
  * @param {string} [apac.meeting_recording] - 录制...
  * @param {string} [apac.wc_talk] - 谈话
@@ -1915,7 +2418,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - 结束此会议
  * @param {string} [apac.dialog.meeting_over] - 所有线上人员将断开连接，会议结束。
  * @param {string} [apac.dialog.host_end_meeting] - 此会议已由主持人结束。
- * @param {string} [apac.dialog.meeting_ended] - 此会议已结束
  * @param {string} [apac.dialog.something_wrong] - 出现错误
  * @param {string} [apac.dialog.server_error] - 服务器遭遇内部错误，无法处理您的请求。
  * @param {string} [apac.dialog.error_code] - 错误代码：
@@ -1993,6 +2495,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - 更多
  * @param {string} [apac.wc_waiting_room_title3] - 人处于保持状态
  * @param {string} [apac.wc_waiting_room_title4] - 人处于保持状态
+ * @param {string} [apac.wc_remove_user] - 您是否要移除
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 关闭
  * @param {string} [apac.wc_cc_withdraw] - 收回隐藏字幕权限
@@ -2003,13 +2506,62 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - 你无法自我解除静音，应为主持人已经将你静音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已禁用与会者聊天功能。
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - 通过拨入连接音频
+ * @param {string} [apac.wc_video.camera_is_taken] - 您的摄像头已被其他应用占用，请释放该权限，然后重试。
+ * @param {string} [apac.wc_qa.qa_comp_title] - 问答
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - 匿名发送
+ * @param {string} [apac.wc_qa.is_privately] - 私下发送
+ * @param {string} [apac.wc_qa.cancel] - 取消
+ * @param {string} [apac.wc_qa.send] - 发送
+ * @param {string} [apac.wc_qa.input_tips] - 在这里输入您的问题...
+ * @param {string} [apac.wc_qa.display_all_answer] - 全部显示
+ * @param {string} [apac.wc_qa.collapse_all_answer] - 全部折叠
+ * @param {string} [apac.wc_qa.button_display_answer] - 输入回答
+ * @param {string} [apac.wc_qa.button_comment] - 评论
+ * @param {string} [apac.wc_qa.button_live] - 在线回答
+ * @param {string} [apac.wc_qa.button_live_done] - 完成
+ * @param {string} [apac.wc_qa.button_reopen] - 重新打开
+ * @param {string} [apac.wc_qa.live_tips_done] - 已在线回答此问题
+ * @param {string} [apac.wc_qa.live_tips_start] - 想在线回答这个问题
+ * @param {string} [apac.wc_qa.dissmis_tips] - 忽略
+ * @param {string} [apac.wc_qa.allQ] - 所有问题
+ * @param {string} [apac.wc_qa.myQ] - 我的问题
+ * @param {string} [apac.wc_qa.openedQ] - 未回答
+ * @param {string} [apac.wc_qa.answeredQ] - 已回答
+ * @param {string} [apac.wc_qa.dismissedQ] - 已关闭
+ * @param {string} [apac.wc_qa.answer_private_type] - 私密回复
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - 允许匿名提问
+ * @param {string} [apac.wc_qa.setting_allow_view] - 允许观众查看
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - 仅已回答的问题
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - 所有问题
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - 观众可以点击赞同
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - 观众可以评论
+ * @param {string} [apac.wc_qa.welcome_banner] - 可随时询问主持人和嘉宾问题
+ * @param {string} [apac.wc_qa.welcome_banner_title] - 欢迎
+ * @param {string} [apac.wc_qa.anonymous_attendee] - 匿名观众
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - 将 URL 复制到剪贴板
+ * @param {string} [apac.wc_cc_type_myself] - 我将输入
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - 指定参加者输入
+ * @param {string} [apac.wc_cc_assign_to_type] - 指定输入者
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - 复制该链接并粘贴到第三方隐藏字幕输入器中
+ * @param {string} [apac.wc_cc.placeholder] - 在此处输入消息，然后按 Enter 广播
+ * @param {string} [apac.wc_closed_caption_btn] - 字幕
+ * @param {string} [apac.wc_closed_caption_truned_on] - 已开启隐藏字幕
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - 可使用隐藏字幕
+ * @param {string} [apac.wc_broadcasting] - 广播
+ * @param {string} [apac.wc_cc_host_assigned] - 主持人已指定您输入隐藏字幕
+ * @param {string} [apac.wc_remote_control.can_control] - 您可以控制{0}的屏幕
+ * @param {string} [apac.wc_remote_control.is_controlling] - 您正在控制{0}的屏幕
 */
 
 
 
 
 /**
- * zh-TW.json {@link https://zoom.github.io/zoom-sdk-web/languages/zh-TW.json}
+ * zh-TW.json {@link https://zoom.github.io/sample-app-web/languages/zh-TW.json}
  * @method zh-TW
  * @memberof LanguageResource
  * @instance
@@ -2039,11 +2591,14 @@ const LanguageResource = {
  * @param {string} [apac.dialog.hangup_confirm] - 確定要與音訊中斷連線嗎？
  * @param {string} [apac.dialog.remain_view] - 您將與音訊中斷連線並以檢視者身份留在會議中。
  * @param {string} [apac.dialog.btn_hangup] - 掛斷
- * @param {string} [apac.dialog.calling_indication] - &lt;p>您剛才呼叫的是 &lt;span>&lt;/span>。他/她將很快加入電話會議。&lt;/p>
+ * @param {string} [apac.dialog.calling_indication] - 您剛才呼叫的是 {0} 。他/她將很快加入電話會議。
+ * @param {string} [apac.dialog.webinar_ended] - 網路研討會已結束
  * @param {string} [apac.dialog.placeholder_display_name] - 在電話會議中邀請顯示名稱
  * @param {string} [apac.dialog.placeholder_phone_number] - 電話號碼
  * @param {string} [apac.toolbar_invite] - 邀請
  * @param {string} [apac.dialog.invite_others] - 邀請其他人
+ * @param {string} [apac.dialog.host_end_webinar] - 主持人已結束該網路研討會。
+ * @param {string} [apac.dialog.meeting_ended] - 會議已結束
  * @param {string} [apac.dialog.btn_cancle] - 取消
  * @param {string} [apac.wc_invite_by_phone] - 透過電話邀請
  * @param {string} [apac.wc_invite_by_email] - 透過電子郵件邀請
@@ -2051,7 +2606,14 @@ const LanguageResource = {
  * @param {string} [apac.wc_copied] - 已複製
  * @param {string} [apac.wc_copy_url] - 複製 URL
  * @param {string} [apac.wc_defalut_email] - 預設電子郵件
+ * @param {string} [apac.wc_muteall_desc] - 現有的和新的參與者將被靜音
+ * @param {string} [apac.wc_remote_control.request] - 請求遠端控制權
+ * @param {string} [apac.wc_remote_control.text3] - 
+ * @param {string} [apac.wc_remote_control.text5] - 
+ * @param {string} [apac.wc_continue] - 繼續
  * @param {string} [apac.wc_choose_email_service] - 選取您的電子郵件服務以傳送邀請
+ * @param {string} [apac.dialog.meeting_removed_by_host] - 主持人已將您從該會議中刪除。
+ * @param {string} [apac.dialog.webinar_removed_by_host] - 主持人已將您從該網路研討會中刪除。
  * @param {string} [apac.wc_gmail] - Gmail
  * @param {string} [apac.wc_yahoo_email] - Yahoo 郵箱
  * @param {string} [apac.wc_invitation_url] - 邀請 URL
@@ -2096,13 +2658,18 @@ const LanguageResource = {
  * @param {string} [apac.wc_bo_disallow_mic] - 瀏覽器不允許麥克風
  * @param {string} [apac.toolbar_leave] - 離開
  * @param {string} [apac.wc_leave_meeting] - 離開會議
+ * @param {string} [apac.wc_leave_webinar] - 離開網路研討會
  * @param {string} [apac.wc_audio] - 音訊
  * @param {string} [apac.wc_audio_setting] - 音訊設定
+ * @param {string} [apac.dialog.leave_webinar] - 離開該網路研討會
+ * @param {string} [apac.dialog.leave_webinar_confirm] - 你確定你現在要離開這個研討會？
  * @param {string} [apac.toolbar_join_audio] - 加入音訊
  * @param {string} [apac.toolbar_lock] - 鎖定
  * @param {string} [apac.toolbar_unlock] - 解除鎖定
  * @param {string} [apac.wc_manage_participants] - 管理參與者
  * @param {string} [apac.wc_participants] - 參與者
+ * @param {string} [apac.wc_extra_function_enable_video] - 啟用視頻接收
+ * @param {string} [apac.wc_extra_function_disable_video] - 禁用視頻接收
  * @param {string} [apac.toolbar_record] - 記錄
  * @param {string} [apac.wc_cloud_recording] - 雲端錄製
  * @param {string} [apac.toolbar_muteall] - 全部靜音
@@ -2116,6 +2683,11 @@ const LanguageResource = {
  * @param {string} [apac.dialog.presscode] - 會議 ID
  * @param {string} [apac.meeting_calling] - 正在呼叫
  * @param {string} [apac.wc_stop_recording] - 停止錄製
+ * @param {string} [apac.wc_stop_recording_content] - 如果是，當雲記錄準備好將收到電子郵件通知。
+ * @param {string} [apac.wc_record_reminder_title] - 正在錄製本會議
+ * @param {string} [apac.wc_record_reminder_webinar_title] - 正在錄製本網絡研討會
+ * @param {string} [apac.wc_record_reminder_desc] - 一旦繼續參加會議，即為同意錄影。
+ * @param {string} [apac.wc_record_webinar_reminder_desc] - 一旦繼續參加網絡研討會，即為同意錄影。
  * @param {string} [apac.wc_recording] - 正在錄製
  * @param {string} [apac.meeting_recording] - 正在錄製...
  * @param {string} [apac.wc_talk] - 交談
@@ -2154,7 +2726,6 @@ const LanguageResource = {
  * @param {string} [apac.dialog.end_meeting] - 結束該會議
  * @param {string} [apac.dialog.meeting_over] - 通話中的所有人都將中斷連線，會議將結束。
  * @param {string} [apac.dialog.host_end_meeting] - 主持人已結束該會議。
- * @param {string} [apac.dialog.meeting_ended] - 會議已結束
  * @param {string} [apac.dialog.something_wrong] - 發生錯誤
  * @param {string} [apac.dialog.server_error] - 伺服器遇到內部錯誤，無法處理您的要求。
  * @param {string} [apac.dialog.error_code] - 錯誤代碼 ：
@@ -2232,6 +2803,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_nonverbal.more] - 更多
  * @param {string} [apac.wc_waiting_room_title3] - 人已保留
  * @param {string} [apac.wc_waiting_room_title4] - 人已保留
+ * @param {string} [apac.wc_remove_user] - 確定要刪除
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 關閉
  * @param {string} [apac.wc_cc_withdraw] - 撤回隱藏字幕權限
@@ -2242,6 +2814,55 @@ const LanguageResource = {
  * @param {string} [apac.wc_audio_cannot_unmute] - 你無法自我解除靜音，應為主持人已經將你靜音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已停用出席者聊天。
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - 您是透過撥入連線音訊
+ * @param {string} [apac.wc_video.camera_is_taken] - 您的攝影機已由其他應用程式所佔用，請釋放該權限，然後再試一次。
+ * @param {string} [apac.wc_qa.qa_comp_title] - 問答
+ * @param {string} [apac.wc_qa.qa_comp_ally_title] - 
+ * @param {string} [apac.wc_qa.pending_questions_tips] - 
+ * @param {string} [apac.wc_qa.is_anonymous] - 匿名傳送
+ * @param {string} [apac.wc_qa.is_privately] - 私下傳送
+ * @param {string} [apac.wc_qa.cancel] - 取消
+ * @param {string} [apac.wc_qa.send] - 傳送
+ * @param {string} [apac.wc_qa.input_tips] - 在此處輸入您的問題...
+ * @param {string} [apac.wc_qa.display_all_answer] - 全部顯示
+ * @param {string} [apac.wc_qa.collapse_all_answer] - 收起所有
+ * @param {string} [apac.wc_qa.button_display_answer] - 輸入回答
+ * @param {string} [apac.wc_qa.button_comment] - 評論
+ * @param {string} [apac.wc_qa.button_live] - 線上回答
+ * @param {string} [apac.wc_qa.button_live_done] - 完成
+ * @param {string} [apac.wc_qa.button_reopen] - 重新打開
+ * @param {string} [apac.wc_qa.live_tips_done] - 已在線上回答這個問題
+ * @param {string} [apac.wc_qa.live_tips_start] - 想線上回答這個問題
+ * @param {string} [apac.wc_qa.dissmis_tips] - 關閉
+ * @param {string} [apac.wc_qa.allQ] - 所有問題
+ * @param {string} [apac.wc_qa.myQ] - 我的問題
+ * @param {string} [apac.wc_qa.openedQ] - 未回答
+ * @param {string} [apac.wc_qa.answeredQ] - 已回答
+ * @param {string} [apac.wc_qa.dismissedQ] - 已關閉
+ * @param {string} [apac.wc_qa.answer_private_type] - 私密回復
+ * @param {string} [apac.wc_qa.setting_btn_name] - 
+ * @param {string} [apac.wc_qa.setting_option_allow_anony_question] - 允許匿名提問
+ * @param {string} [apac.wc_qa.setting_allow_view] - 允許觀眾查看
+ * @param {string} [apac.wc_qa.setting_option_allow_view_answered] - 僅已回答的問題
+ * @param {string} [apac.wc_qa.setting_option_allow_view_all] - 所有問題
+ * @param {string} [apac.wc_qa.setting_option_allow_vote] - 觀眾可以點擊贊同
+ * @param {string} [apac.wc_qa.setting_option_allow_comment] - 觀眾可以評論
+ * @param {string} [apac.wc_qa.welcome_banner] - 可隨時詢問主持人和嘉賓問題
+ * @param {string} [apac.wc_qa.welcome_banner_title] - 歡迎
+ * @param {string} [apac.wc_qa.anonymous_attendee] - 匿名觀眾
+ * @param {string} [apac.wc_3rd_cc_url_copy_to_clipboard] - 將 URL 儲存到剪貼簿。
+ * @param {string} [apac.wc_cc_type_myself] - 我將輸入
+ * @param {string} [apac.wc_cc_assign_participant_to_type] - 指派參加者輸入
+ * @param {string} [apac.wc_cc_assign_to_type] - 指派輸入者
+ * @param {string} [apac.wc_3rd_cc_url_help_tips] - 複製此連結並貼至第三方隱藏字幕輸入器中
+ * @param {string} [apac.wc_cc.placeholder] - 在此處輸入訊息，然後按下 Enter 廣播
+ * @param {string} [apac.wc_closed_caption_btn] - 字幕
+ * @param {string} [apac.wc_closed_caption_truned_on] - 已開啟隱藏字幕
+ * @param {string} [apac.wc_closed_caption_truned_off] - 
+ * @param {string} [apac.wc_closed_caption_available] - 可使用隱藏字幕
+ * @param {string} [apac.wc_broadcasting] - 廣播
+ * @param {string} [apac.wc_cc_host_assigned] - 主持人已指派您輸入隱藏字幕
+ * @param {string} [apac.wc_remote_control.can_control] - 您可以控制{0}的螢幕
+ * @param {string} [apac.wc_remote_control.is_controlling] - 您正在控制{0}的螢幕
 */
 
 
@@ -2258,7 +2879,7 @@ module.exports = LanguageResource;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 10 2019 16:57:05 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 25 2019 11:22:59 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

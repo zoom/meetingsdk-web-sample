@@ -46,7 +46,7 @@ npm install
 npm run start</code></pre><p>open <a href="http://localhost:9999">http://localhost:9999</a></p>
 <h2>packages.json</h2><pre class="prettyprint source lang-json"><code>{
   &quot;name&quot;: &quot;zoomus-jssdk-cdn&quot;,
-  &quot;version&quot;: &quot;1.4.2&quot;,
+  &quot;version&quot;: &quot;1.5.0&quot;,
   &quot;description&quot;: &quot;Zoom sample app for web client JSSDK&quot;,
   &quot;main&quot;: &quot;index.js&quot;,
   &quot;dependencies&quot;: {},
@@ -65,8 +65,8 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 &lt;head>
     &lt;title>Zoom JSSDK&lt;/title>
     &lt;meta charset=&quot;utf-8&quot; />
-    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/css/bootstrap.css&quot;/>
-    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/css/react-select.css&quot;/>
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/css/bootstrap.css&quot;/>
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/css/react-select.css&quot;/>
     &lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;>
 &lt;/head>
 &lt;body>
@@ -84,7 +84,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
         &lt;div id=&quot;navbar&quot;>
             &lt;form class=&quot;navbar-form navbar-right&quot; id=&quot;meeting_form&quot;>
                 &lt;div class=&quot;form-group&quot;>
-                    &lt;input type=&quot;text&quot; name=&quot;display_name&quot; id=&quot;display_name&quot; value=&quot;JSSDK1.4.2#CDN&quot; placeholder=&quot;Name&quot; class=&quot;form-control&quot; required>
+                    &lt;input type=&quot;text&quot; name=&quot;display_name&quot; id=&quot;display_name&quot; value=&quot;JSSDK1.5.0#CDN&quot; placeholder=&quot;Name&quot; class=&quot;form-control&quot; required>
                 &lt;/div>
                 &lt;div class=&quot;form-group&quot;>
                     &lt;input type=&quot;text&quot; name=&quot;meeting_number&quot; id=&quot;meeting_number&quot; value=&quot;&quot; placeholder=&quot;Meeting Number&quot; class=&quot;form-control&quot; required>
@@ -96,14 +96,14 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 &lt;/nav>
 
 
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/react.min.js&quot;>&lt;/script>
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/react-dom.min.js&quot;>&lt;/script>
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/redux.min.js&quot;>&lt;/script>
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/redux-thunk.min.js&quot;>&lt;/script>
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/jquery.min.js&quot;>&lt;/script>
-&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib/vendor/lodash.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/react.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/react-dom.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/redux.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/redux-thunk.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/jquery.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib/vendor/lodash.min.js&quot;>&lt;/script>
 
-&lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.4.2.min.js&quot;>&lt;/script>
+&lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.5.0.min.js&quot;>&lt;/script>
 &lt;script src=&quot;js/index.js&quot;>&lt;/script>
 
 &lt;script>
@@ -117,7 +117,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
     console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to chenge the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.4.2/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib', '/av'); // CDN version default 
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
     ZoomMtg.preLoadWasm();
@@ -165,7 +165,6 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 
         ZoomMtg.init({
             leaveUrl: 'http://www.zoom.us',
-            isSupportAV: true,
             success: function () {
                 ZoomMtg.join(
                     {
@@ -203,7 +202,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri May 10 2019 16:57:05 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jul 25 2019 11:23:00 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
