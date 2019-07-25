@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o\"",
-    "https": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -S -C localhost.crt -K localhost.key -o\""
+    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o index.html\"",
+    "https": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -S -C localhost.crt -K localhost.key -o index.html\""
   },
   "author": "Yang Jack",
   "license": "ISC"
