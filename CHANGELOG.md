@@ -1,13 +1,16 @@
 # CHANGELOG
 ## version 1.5.0
 ## Added
-1. Responsive Footer, both desktop and mobile. 
-2. Update React to 16.8.6, Don't support IE10
-3. Recording Pop Up Message
-4. 1000 attendees to a meeting
-5. Option to disable/enable footer always visible 
-6. Option to disable/enable Nonverbal feedback
-7. Phone number support Full-width and half-width numbers.
+## Added
+* Added responsive design footer for desktop and mobile based browsers.
+* Display “This meeting is being recorded” dialog message before the meeting is recorded.
+* New API option to enable or disable meeting non-verbal feedback.
+* New API option to either always show or auto hide footer. 
+
+## Enhancements
+* Increased meeting & webinar capacity up to 1000 attendees.
+* Included support for full-width and half-width phone numbers.
+* Added Web SDK requirement for React version of 16.8.6.
 
 ## version 1.4.2
 ## Added
