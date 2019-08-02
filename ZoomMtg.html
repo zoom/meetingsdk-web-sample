@@ -6,11 +6,20 @@
 
     <script src="scripts/prettify/prettify.js"></script>
     <script src="scripts/prettify/lang-css.js"></script>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/app.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="/style.css">
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link type="text/css" rel="stylesheet" href="styles/prettify.css">
     <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+
+    <script type="text/javascript">
+    $(document).ready(() => {
+        zoomDocInit();
+    });
+    </script>
 </head>
 <body>
 
@@ -22,7 +31,7 @@
 <label for="nav-trigger" class="overlay"></label>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Namespaces</h3><ul><li><a href="$.i18n.html">i18n</a><ul class='methods'><li data-type='method'><a href="$.i18n.html#load">load</a></li><li data-type='method'><a href="$.i18n.html#reload">reload</a></li><li data-type='method'><a href="$.i18n.html#get">get</a></li><li data-type='method'><a href="$.i18n.html#printf">printf</a></li><li data-type='method'><a href="$.i18n.html#getAll">getAll</a></li></ul></li><li><a href="LanguageResource.html">LanguageResource</a><ul class='methods'><li data-type='method'><a href="LanguageResource.html#en-US">en-US</a></li><li data-type='method'><a href="LanguageResource.html#de-DE">de-DE</a></li><li data-type='method'><a href="LanguageResource.html#es-ES">es-ES</a></li><li data-type='method'><a href="LanguageResource.html#fr-FR">fr-FR</a></li><li data-type='method'><a href="LanguageResource.html#jp-JP">jp-JP</a></li><li data-type='method'><a href="LanguageResource.html#pt-PT">pt-PT</a></li><li data-type='method'><a href="LanguageResource.html#ru-RU">ru-RU</a></li><li data-type='method'><a href="LanguageResource.html#zh-CN">zh-CN</a></li><li data-type='method'><a href="LanguageResource.html#zh-TW">zh-TW</a></li></ul></li><li><a href="ZoomMtg.html">ZoomMtg</a><ul class='methods'><li data-type='method'><a href="ZoomMtg.html#setZoomJSLib">setZoomJSLib</a></li><li data-type='method'><a href="ZoomMtg.html#preLoadWasm">preLoadWasm</a></li><li data-type='method'><a href="ZoomMtg.html#prepareJssdk">prepareJssdk</a></li><li data-type='method'><a href="ZoomMtg.html#generateSignature">generateSignature</a></li><li data-type='method'><a href="ZoomMtg.html#checkSystemRequirements">checkSystemRequirements</a></li><li data-type='method'><a href="ZoomMtg.html#getJSSDKVersion">getJSSDKVersion</a></li><li data-type='method'><a href="ZoomMtg.html#init">init</a></li><li data-type='method'><a href="ZoomMtg.html#join">join</a></li><li data-type='method'><a href="ZoomMtg.html#showInviteFunction">showInviteFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showMeetingHeader">showMeetingHeader</a></li><li data-type='method'><a href="ZoomMtg.html#showRecordFunction">showRecordFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showCalloutFunction">showCalloutFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showJoinAudioFunction">showJoinAudioFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showPureSharingContent">showPureSharingContent</a></li><li data-type='method'><a href="ZoomMtg.html#getAttendeeslist">getAttendeeslist</a></li><li data-type='method'><a href="ZoomMtg.html#callOut">callOut</a></li><li data-type='method'><a href="ZoomMtg.html#getZoomRoomlist">getZoomRoomlist</a></li><li data-type='method'><a href="ZoomMtg.html#inviteByPhone">inviteByPhone</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#mute">mute</a></li><li data-type='method'><a href="ZoomMtg.html#muteAll">muteAll</a></li><li data-type='method'><a href="ZoomMtg.html#rename">rename</a></li><li data-type='method'><a href="ZoomMtg.html#expel">expel</a></li><li data-type='method'><a href="ZoomMtg.html#record">record</a></li><li data-type='method'><a href="ZoomMtg.html#lockMeeting">lockMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#leaveMeeting">leaveMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#endMeeting">endMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#putOnHold">putOnHold</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-enable-2way-audio-video.html">Enable 2AV Feature</a></li><li><a href="tutorial-get-start.es5.html">Sample Demo CDN Statement</a></li><li><a href="tutorial-get-start.es6-integration.html">integration with exist nodejs project</a></li><li><a href="tutorial-get-start.es6.html">Sample Demo Local Statement</a></li><li><a href="tutorial-just-enable-sharing.html">IE Join Meeting</a></li><li><a href="tutorial-multi-language.html">Use multi languages</a></li><li><a href="tutorial-register.html">Register ZOOM JSSDK API</a></li><li><a href="tutorial-webinar.html">Join Webinar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generate_signature">generate_signature</a></li><li><a href="global.html#languages">languages</a></li><li><a href="global.html#errorCodes">errorCodes</a></li></ul>
+    <h2><a href="index.html"><img src="/ZoomLogo.png" ></a></h2><h3>Namespaces</h3><ul><li><a href="$.i18n.html">i18n</a><ul class='methods'><li data-type='method'><a href="$.i18n.html#load">load</a></li><li data-type='method'><a href="$.i18n.html#reload">reload</a></li><li data-type='method'><a href="$.i18n.html#get">get</a></li><li data-type='method'><a href="$.i18n.html#printf">printf</a></li><li data-type='method'><a href="$.i18n.html#getAll">getAll</a></li></ul></li><li><a href="LanguageResource.html">LanguageResource</a><ul class='methods'><li data-type='method'><a href="LanguageResource.html#en-US">en-US</a></li><li data-type='method'><a href="LanguageResource.html#de-DE">de-DE</a></li><li data-type='method'><a href="LanguageResource.html#es-ES">es-ES</a></li><li data-type='method'><a href="LanguageResource.html#fr-FR">fr-FR</a></li><li data-type='method'><a href="LanguageResource.html#jp-JP">jp-JP</a></li><li data-type='method'><a href="LanguageResource.html#pt-PT">pt-PT</a></li><li data-type='method'><a href="LanguageResource.html#ru-RU">ru-RU</a></li><li data-type='method'><a href="LanguageResource.html#zh-CN">zh-CN</a></li><li data-type='method'><a href="LanguageResource.html#zh-TW">zh-TW</a></li></ul></li><li><a href="ZoomMtg.html">ZoomMtg</a><ul class='methods'><li data-type='method'><a href="ZoomMtg.html#setZoomJSLib">setZoomJSLib</a></li><li data-type='method'><a href="ZoomMtg.html#preLoadWasm">preLoadWasm</a></li><li data-type='method'><a href="ZoomMtg.html#prepareJssdk">prepareJssdk</a></li><li data-type='method'><a href="ZoomMtg.html#generateSignature">generateSignature</a></li><li data-type='method'><a href="ZoomMtg.html#checkSystemRequirements">checkSystemRequirements</a></li><li data-type='method'><a href="ZoomMtg.html#getJSSDKVersion">getJSSDKVersion</a></li><li data-type='method'><a href="ZoomMtg.html#init">init</a></li><li data-type='method'><a href="ZoomMtg.html#join">join</a></li><li data-type='method'><a href="ZoomMtg.html#showInviteFunction">showInviteFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showMeetingHeader">showMeetingHeader</a></li><li data-type='method'><a href="ZoomMtg.html#showRecordFunction">showRecordFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showCalloutFunction">showCalloutFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showJoinAudioFunction">showJoinAudioFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showPureSharingContent">showPureSharingContent</a></li><li data-type='method'><a href="ZoomMtg.html#getAttendeeslist">getAttendeeslist</a></li><li data-type='method'><a href="ZoomMtg.html#callOut">callOut</a></li><li data-type='method'><a href="ZoomMtg.html#getZoomRoomlist">getZoomRoomlist</a></li><li data-type='method'><a href="ZoomMtg.html#inviteByPhone">inviteByPhone</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#mute">mute</a></li><li data-type='method'><a href="ZoomMtg.html#muteAll">muteAll</a></li><li data-type='method'><a href="ZoomMtg.html#rename">rename</a></li><li data-type='method'><a href="ZoomMtg.html#expel">expel</a></li><li data-type='method'><a href="ZoomMtg.html#record">record</a></li><li data-type='method'><a href="ZoomMtg.html#lockMeeting">lockMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#leaveMeeting">leaveMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#endMeeting">endMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#putOnHold">putOnHold</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-enable-2way-audio-video.html">Enable 2AV Feature</a></li><li><a href="tutorial-get-start.es5.html">Sample Demo CDN Statement</a></li><li><a href="tutorial-get-start.es6-integration.html">integration with exist nodejs project</a></li><li><a href="tutorial-get-start.es6.html">Sample Demo Local Statement</a></li><li><a href="tutorial-just-enable-sharing.html">IE Join Meeting</a></li><li><a href="tutorial-multi-language.html">Use multi languages</a></li><li><a href="tutorial-register.html">Register ZOOM JSSDK API</a></li><li><a href="tutorial-webinar.html">Join Webinar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generate_signature">generate_signature</a></li><li><a href="global.html#languages">languages</a></li><li><a href="global.html#errorCodes">errorCodes</a></li></ul>
 </nav>
 
 <div id="main">
@@ -461,6 +470,8 @@
 
 
 
+
+
         
             
 
@@ -536,6 +547,8 @@ wasm file(big) to browser cache, reduce customer download those file time and im
 // pre load wasm success: ${zoomJSLib}${zoomJSAVLib}/av/sharing.wasm
 // pre load wasm success: ${zoomJSLib}${zoomJSAVLib}/av/audio.encode.wasm
 // pre load wasm success: ${zoomJSLib}${zoomJSAVLib}/av/video.decode.wasm</code></pre>
+
+
 
 
 
@@ -635,6 +648,8 @@ wasm file(big) to browser cache, reduce customer download those file time and im
 // &lt;/div>
 // react modal auto generation. 
 // &lt;div class="ReactModalPortal">&lt;/div></code></pre>
+
+
 
 
 
@@ -925,6 +940,8 @@ function generateSignature(data) {
 
 
 
+
+
 <h5>Returns:</h5>
 
         
@@ -1116,6 +1133,8 @@ false
 
 
 
+
+
 <h5>Returns:</h5>
 
         
@@ -1213,6 +1232,8 @@ false
     <pre class="prettyprint"><code>ZoomMtg.getJSSDKVersion()</code></pre>
 
     <pre class="prettyprint"><code>["1.5.0", "version_{date}_releaseType_stage - {date}"]</code></pre>
+
+
 
 
 
@@ -2144,7 +2165,8 @@ false
                 </td>
             
 
-            <td class="description last"><p>Call back function on error</p></td>
+            <td class="description last"><p>Call back function on error
+//  * @gifs gif1;gif2 - / ;en/1.5.0/images/tenor.gif;http://localhost:9999/images/tenor.gif</p></td>
         </tr>
 
     
@@ -2157,6 +2179,8 @@ false
     
     </tbody>
 </table>
+
+
 
 
 
@@ -2190,7 +2214,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line274">line 274</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line275">line 275</a>
     </li></ul></dd>
     
 
@@ -2597,6 +2621,8 @@ false
 
 
 
+
+
         
             
 
@@ -2614,7 +2640,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line302">line 302</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line303">line 303</a>
     </li></ul></dd>
     
 
@@ -2806,6 +2832,8 @@ false
 
 
 
+
+
         
             
 
@@ -2823,7 +2851,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line316">line 316</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line317">line 317</a>
     </li></ul></dd>
     
 
@@ -3015,6 +3043,8 @@ false
 
 
 
+
+
         
             
 
@@ -3032,7 +3062,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line330">line 330</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line331">line 331</a>
     </li></ul></dd>
     
 
@@ -3224,6 +3254,8 @@ false
 
 
 
+
+
         
             
 
@@ -3241,7 +3273,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line344">line 344</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line345">line 345</a>
     </li></ul></dd>
     
 
@@ -3433,6 +3465,8 @@ false
 
 
 
+
+
         
             
 
@@ -3450,7 +3484,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line358">line 358</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line359">line 359</a>
     </li></ul></dd>
     
 
@@ -3642,6 +3676,8 @@ false
 
 
 
+
+
         
             
 
@@ -3659,7 +3695,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line372">line 372</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line373">line 373</a>
     </li></ul></dd>
     
 
@@ -3851,6 +3887,8 @@ false
 
 
 
+
+
         
             
 
@@ -3868,7 +3906,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line386">line 386</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line387">line 387</a>
     </li></ul></dd>
     
 
@@ -3989,6 +4027,8 @@ false
 
 
 
+
+
         
             
 
@@ -4006,7 +4046,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line397">line 397</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line398">line 398</a>
     </li></ul></dd>
     
 
@@ -4178,6 +4218,8 @@ false
 
 
 
+
+
         
             
 
@@ -4195,7 +4237,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line411">line 411</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line412">line 412</a>
     </li></ul></dd>
     
 
@@ -4369,6 +4411,8 @@ false
 
 
 
+
+
         
             
 
@@ -4386,7 +4430,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line427">line 427</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line428">line 428</a>
     </li></ul></dd>
     
 
@@ -4582,6 +4626,8 @@ false
 
 
 
+
+
         
             
 
@@ -4599,7 +4645,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line443">line 443</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line444">line 444</a>
     </li></ul></dd>
     
 
@@ -4771,6 +4817,8 @@ false
 
 
 
+
+
         
             
 
@@ -4788,7 +4836,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line457">line 457</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line458">line 458</a>
     </li></ul></dd>
     
 
@@ -4984,6 +5032,8 @@ false
 
 
 
+
+
         
             
 
@@ -5001,7 +5051,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line473">line 473</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line474">line 474</a>
     </li></ul></dd>
     
 
@@ -5122,6 +5172,8 @@ false
 
 
 
+
+
         
             
 
@@ -5139,7 +5191,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line484">line 484</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line485">line 485</a>
     </li></ul></dd>
     
 
@@ -5311,6 +5363,8 @@ false
 
 
 
+
+
         
             
 
@@ -5328,7 +5382,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line498">line 498</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line499">line 499</a>
     </li></ul></dd>
     
 
@@ -5524,6 +5578,8 @@ false
 
 
 
+
+
         
             
 
@@ -5541,7 +5597,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line514">line 514</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line515">line 515</a>
     </li></ul></dd>
     
 
@@ -5713,6 +5769,8 @@ false
 
 
 
+
+
         
             
 
@@ -5730,7 +5788,7 @@ false
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line528">line 528</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line529">line 529</a>
     </li></ul></dd>
     
 
@@ -5951,6 +6009,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -5968,7 +6028,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line547">line 547</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line548">line 548</a>
     </li></ul></dd>
     
 
@@ -6140,6 +6200,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -6157,7 +6219,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line561">line 561</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line562">line 562</a>
     </li></ul></dd>
     
 
@@ -6329,6 +6391,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -6346,7 +6410,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line575">line 575</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line576">line 576</a>
     </li></ul></dd>
     
 
@@ -6518,6 +6582,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -6535,7 +6601,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line589">line 589</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line590">line 590</a>
     </li></ul></dd>
     
 
@@ -6656,6 +6722,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -6673,7 +6741,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line600">line 600</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line601">line 601</a>
     </li></ul></dd>
     
 
@@ -6794,6 +6862,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
         
             
 
@@ -6811,7 +6881,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line611">line 611</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line612">line 612</a>
     </li></ul></dd>
     
 
@@ -6991,6 +7061,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
     
     </tbody>
 </table>
+
+
 
 
 
@@ -7290,6 +7362,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
             
                 
 
@@ -7567,6 +7641,8 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 
 
 
+
+
             
     
 
@@ -7583,7 +7659,7 @@ userId and oldName must bee right, otherwise you can't modify success</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Jul 30 2019 16:32:21 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Aug 02 2019 19:35:44 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
