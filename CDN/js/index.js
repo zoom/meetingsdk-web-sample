@@ -4,7 +4,9 @@
 	console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to chenge the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib', '/av'); // CDN version default 
+// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.0/lib', '/av'); // CDN version default
+// ZoomMtg.setZoomJSLib('https://source.zoom.us/1.5.0/lib', '/av'); // use source.zoom.us
+// ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.5.0/lib', '/av'); // use jssdk.zoomus.cn   
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
     ZoomMtg.preLoadWasm();
