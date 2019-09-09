@@ -28,9 +28,9 @@ Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/nativ
 ```
 ### CDN Accelerated
 
-global CDN ```source.zoom.us```
+Global CDN ```source.zoom.us```
 
-China CND ```jssdk.zoomus.cn```
+China CDN ```jssdk.zoomus.cn```
 
 ### Include the source
 
