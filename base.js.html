@@ -48,9 +48,8 @@
         <article>
             <pre class="prettyprint source linenums"><code>
 
-
 /**
-* Generate signature for ZoomMtg JSSDK. {@link https://github.com/danharper/hmac-examples|hmac-examples}
+* Generate signature for ZoomMtg WebSDK. {@link https://github.com/danharper/hmac-examples|hmac-examples}
 * @param string $api_key You REST API Key
 * @param string $api_secret You REST API Secret
 * @param int $meeting_number The meeting number you are creating the signature for
@@ -62,16 +61,16 @@
 //PHP example code
 function generate_signature ( $api_key, $api_sercet, $meeting_number, $role){
 
-	$time = time() * 1000; //time in milliseconds (or close enough)
-	
-	$data = base64_encode($api_key . $meeting_number . $time . $role);
-	
-	$hash = hash_hmac('sha256', $data, $api_sercet, true);
-	
-	$_sig = $api_key . "." . $meeting_number . "." . $time . "." . $role . "." . base64_encode($hash);
-	
-	//return signature, url safe base64 encoded
-	return rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
+    $time = time() * 1000; //time in milliseconds (or close enough)
+
+    $data = base64_encode($api_key . $meeting_number . $time . $role);
+
+    $hash = hash_hmac('sha256', $data, $api_sercet, true);
+
+    $_sig = $api_key . "." . $meeting_number . "." . $time . "." . $role . "." . base64_encode($hash);
+
+    //return signature, url safe base64 encoded
+    return rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
 }
 
 //======================================================================================================
@@ -84,32 +83,32 @@ import java.security.InvalidKeyException;
 import javax.xml.bind.DatatypeConverter;
 
 public class test {
-	public static String generateSignature(String apiKey, String apiSecret, String meetingNumber, Integer role) {
-		try {
-			Mac hasher = Mac.getInstance("HmacSHA256");
-			String ts = Long.toString(System.currentTimeMillis());
-			String msg = String.format("%s%s%s%d", apiKey, meetingNumber, ts, role);
-			
-			hasher.init(new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256"));
-			
-			String message = Base64.getEncoder().encodeToString(msg.getBytes());
-			byte[] hash = hasher.doFinal(message.getBytes());
-			
-			String hashBase64Str = DatatypeConverter.printBase64Binary(hash);
-			String tmpString = String.format("%s.%s.%s.%d.%s", apiKey, meetingNumber, ts, role, hashBase64Str);
-			String encodedString = Base64.getEncoder().encodeToString(tmpString.getBytes());
-			
-			return encodedString.replaceAll("\\=+$", "");
-			
-	  	}
-	  	catch (NoSuchAlgorithmException e) {}
-	  	catch (InvalidKeyException e) {}
-		return "";
-	}
-	public static void main(String[] args) {
-		String signature = test.generateSignature("apiKey", "apiSecret", "meetingNumber", 0);
-		System.out.println(signature);
-	}
+    public static String generateSignature(String apiKey, String apiSecret, String meetingNumber, Integer role) {
+        try {
+            Mac hasher = Mac.getInstance("HmacSHA256");
+            String ts = Long.toString(System.currentTimeMillis());
+            String msg = String.format("%s%s%s%d", apiKey, meetingNumber, ts, role);
+
+            hasher.init(new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256"));
+
+            String message = Base64.getEncoder().encodeToString(msg.getBytes());
+            byte[] hash = hasher.doFinal(message.getBytes());
+
+            String hashBase64Str = DatatypeConverter.printBase64Binary(hash);
+            String tmpString = String.format("%s.%s.%s.%d.%s", apiKey, meetingNumber, ts, role, hashBase64Str);
+            String encodedString = Base64.getEncoder().encodeToString(tmpString.getBytes());
+
+            return encodedString.replaceAll("\\=+$", "");
+
+          }
+          catch (NoSuchAlgorithmException e) {}
+          catch (InvalidKeyException e) {}
+        return "";
+    }
+    public static void main(String[] args) {
+        String signature = test.generateSignature("apiKey", "apiSecret", "meetingNumber", 0);
+        System.out.println(signature);
+    }
 }
 
 //======================================================================================================
@@ -122,8 +121,8 @@ import time
 def generateSignature(data):
     ts = (int(round(time.time() * 1000)));  #ts; // 1544683367752
     print (ts)
-    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);    
-    message = base64.b64encode(bytes(msg).encode('utf-8'));  
+    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);
+    message = base64.b64encode(bytes(msg).encode('utf-8'));
     secret = bytes(data['apiSecret']).encode('utf-8')
     hash = hmac.new(secret, message, hashlib.sha256);
     hash =  base64.b64encode(hash.digest());
@@ -149,9 +148,9 @@ import datetime
 
 def generateSignature(data):
     ts = int(round(datetime.datetime.utcnow().timestamp() * 1000));
-    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);    
+    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);
     message = base64.b64encode(bytes(msg, 'utf-8'));
-    # message = message.decode("utf-8");    
+    # message = message.decode("utf-8");
     secret = bytes(data['apiSecret'], 'utf-8')
     hash = hmac.new(secret, message, hashlib.sha256);
     hash =  base64.b64encode(hash.digest());
@@ -166,8 +165,8 @@ if __name__ == '__main__':
                 'apiSecret': "",
                 'meetingNumber': 888,
                 'role': 0}
-	print (generateSignature(data))
-	
+    print (generateSignature(data))
+
 //======================================================================================================
 //Nodejs
 // npm install --save-dev js-base64 crypto-js
@@ -193,7 +192,7 @@ role: 0}
 console.log(generateSignature(data));
 
 //======================================================================================================
-// JSSDK us this generateSignature
+// WebSDK us this generateSignature
 // npm install --save-dev js-base64 crypto-js
 import * as base64JS from 'js-base64';
 import * as hmacSha256 from 'crypto-js/hmac-sha256';
@@ -212,7 +211,71 @@ function generateSignature(data) {
     return signature;
 }
 *
-*/</code></pre>
+
+
+//======================================================================================================
+// C#
+// this demo use vscode and .NET Core 2.2.5
+// https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
+// https://dotnet.microsoft.com/download
+// https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
+// https://www.jokecamp.com/blog/examples-of-creating-base64-hashes-using-hmac-sha256-in-different-languages/#csharp
+// https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
+
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace Zoom {
+    class Program {
+        static readonly char[] padding = { '=' };
+
+        static void Main (string[] args) {
+            Console.WriteLine ("Zoom copyright!");
+            Console.WriteLine ("generate websdk token!");
+            string apiKey = "apiKey";
+            string apiSecret = "apiSecret";
+            string meetingNumber = "";
+            String ts = ToTimestamp(DateTime.UtcNow.ToUniversalTime ()).ToString();
+            string role = "1";
+            string token = GenerateToken (apiKey, apiSecret, meetingNumber, ts, role);
+            Console.WriteLine (token);
+        }
+
+        public static long ToTimestamp (DateTime value) {
+            long epoch = (value.Ticks - 621355968000000000) / 10000;
+            return epoch;
+        }
+
+        public static string GenerateToken (string apiKey, string apiSecret, string meetingNumber, string ts, string role) {
+
+            string message = String.Format ("{0}{1}{2}{3}", apiKey, meetingNumber, ts, role);
+            apiSecret = apiSecret ?? "";
+            // Console.WriteLine ("message: " + message + " secret: " + apiSecret);
+            var encoding = new System.Text.ASCIIEncoding ();
+            byte[] keyByte = encoding.GetBytes (apiSecret);
+            byte[] messageBytes = encoding.GetBytes (message);
+            // Console.WriteLine (System.Convert.ToBase64String (messageBytes));
+
+            using (var hmacsha256 = new HMACSHA256 (keyByte)) {
+                byte[] key1 = Encoding.ASCII.GetBytes (apiSecret);
+                byte[] hashmessage = hmacsha256.ComputeHash (messageBytes);
+                string msgHash = System.Convert.ToBase64String (hashmessage);
+                // Console.WriteLine ("msgHash: " + msgHash);
+
+                string token = String.Format ("{0}.{1}.{2}.{3}.{4}", apiKey, meetingNumber, ts, role, msgHash);
+                // Console.WriteLine("token", token, " ", Base64Encode(token));
+
+                var tokenBytes = System.Text.Encoding.UTF8.GetBytes (token);
+                return System.Convert.ToBase64String (tokenBytes).TrimEnd(padding);
+            }
+        }
+
+    }
+}
+
+*/
+</code></pre>
         </article>
     </section>
 
@@ -224,7 +287,7 @@ function generateSignature(data) {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Aug 08 2019 10:59:05 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Sep 09 2019 15:50:54 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
