@@ -1,6 +1,17 @@
 # CHANGELOG
-## version 1.5.0
+
+## version 1.5.1
+
 ## Added
+* Use operation rwc configuration as rwcEndpoint
+
+## Enhancements:
+* Chat Feature Performance optimization
+
+## Bug Fixes:
+* Unable to close Audio Prompt Panel when browser is zoomed
+
+## version 1.5.0
 ## Added
 * Added responsive design footer for desktop and mobile based browsers.
 * Display “This meeting is being recorded” dialog message before the meeting is recorded.
