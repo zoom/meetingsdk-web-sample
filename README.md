@@ -11,7 +11,7 @@ Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest
 
 ### Using the SDK
 
-Refer the our [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/api-reference)
+Refer to the [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/api-reference)
 
 ### Dependencies
 
