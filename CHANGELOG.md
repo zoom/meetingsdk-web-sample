@@ -3,17 +3,16 @@
 ## version 1.6.0
 
 ## Added
-1. Closed caption feature
-2. Webinar Q&A feature
-3. Remote control feature
+1. Added Closed Caption feature to show subtitles withing a meeting for attenedees and host.  
+2. Added Q&A feature for Webinar attendees. 
+3. Added Remote Control feature to allow WebSDK to control their meeting attendess desktop. 
  
 ## Enhancements:
-1. enable/disable error dialog when joining 
-2. sharing feature multi-languages support
-  meeting
+1. Added the ability for developer to enable or disable error dialog when joining a meeting.  
+2. Enhanced multi-language support for Share Screen Content during meetings. 
 
 ## Bug Fixes:
-1. IpadOS and Catalina view video and sharing broken
+1. Fixed viewing video and view sharing for iPadOS and Mac OS Catalina. 
 
 ## version 1.5.1
 
