@@ -52,7 +52,7 @@
 /**
  * @copyright Zoom 2019
  * @namespace LanguageResource
- * @version JSSDK1.5.1
+ * @version JSSDK1.6.0
 */
 
 
@@ -129,8 +129,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - Default Email
  * @param {string} [apac.wc_muteall_desc] - Current and new participants will be muted
  * @param {string} [apac.wc_remote_control.request] - Request remote control
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - You are about to request remote control of {0}'s shared content.
+ * @param {string} [apac.wc_remote_control.text2] - Select [Request] and wait for {0}' approval.
+ * @param {string} [apac.wc_remote_control.text3] - Select [Cancel] if you don't want to send a request.
+ * @param {string} [apac.wc_remote_control.text4] - {0} declined your request.
+ * @param {string} [apac.wc_remote_control.text5] - Select [Request] to try again.
+ * @param {string} [apac.wc_assign_cc_confirm] - {0} is currently assigned to type Closed Caption, do you want to assign {1} to type instead?
  * @param {string} [apac.wc_continue] - Continue
  * @param {string} [apac.wc_choose_email_service] - Choose your email service to send invitation
  * @param {string} [apac.dialog.meeting_removed_by_host] - You have been removed from this meeting by the host.
@@ -358,6 +362,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - You cannot unmute yourself because the host muted you.
  * @param {string} [apac.wc_chat.disable_chat] - The host has disabled attendee chat.
+ * @param {string} [apac.wc_chat.disabled] -
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Your audio is connected using Dial In
  * @param {string} [apac.wc_video.camera_is_taken] -
  * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
@@ -407,7 +412,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - Broadcasting
  * @param {string} [apac.wc_cc_host_assigned] - The host has assigned you to type Closed Caption
  * @param {string} [apac.wc_remote_control.can_control] - You can control {0}'s screen
+ * @param {string} [apac.wc_remote_control.give_up] - Give up remote control
  * @param {string} [apac.wc_remote_control.is_controlling] - You are controlling {0}'s screen
+ * @param {string} [apac.errorcodes_success] - joining success
+ * @param {string} [apac.errorcodes_fail] - joining fail
+ * @param {string} [apac.errorcodes_not_init] - meeting not init
+ * @param {string} [apac.errorcodes_register] - need to register
+ * @param {string} [apac.errorcodes_email_require] - missing a email
+ * @param {string} [apac.errorcodes_not_exist] - meeting not exist
+ * @param {string} [apac.errorcodes_not_host] - you are not host
+ * @param {string} [apac.errorcodes_wrong_pass] - password wrong
+ * @param {string} [apac.errorcodes_another_running] - another meeting running
+ * @param {string} [apac.errorcodes_not_start] - meeting is not started
+ * @param {string} [apac.errorcodes_re_connect] - meeting is reconnecting
+ * @param {string} [apac.errorcodes_be_removed] - be removed
+ * @param {string} [apac.errorcodes_disconnect] - meeting is disconnected
+ * @param {string} [apac.wc_chat.new_msg] - new message
+ * @param {string} [apac.wc_chat.everyone_public] - Everyone publicly
+ * @param {string} [apac.wc_chat.everyone_public_private] - Everyone publicly and privately
 */
 
 
@@ -458,9 +480,13 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_url] - URL kopieren
  * @param {string} [apac.wc_defalut_email] - Standard-E-Mail
  * @param {string} [apac.wc_muteall_desc] - Aktuelle und neue Teilnehmer stumm geschaltet werden
- * @param {string} [apac.wc_remote_control.request] - Fernsteuerung beantragen
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.request] - Fernsteuerung Anfrage
+ * @param {string} [apac.wc_remote_control.text1] - Sie sind im Begriff, die Fernsteuerung der freigegebenen Inhalte von {0} zu beantragen.
+ * @param {string} [apac.wc_remote_control.text2] - Wählen Sie [Anfrage] und warten Sie auf die Genehmigung von {0}.
+ * @param {string} [apac.wc_remote_control.text3] - Auswählen [Abbrechen] falls Sie keine Anfrage senden möchten.
+ * @param {string} [apac.wc_remote_control.text4] - {0} hat Ihre Anfrage abgelehnt.
+ * @param {string} [apac.wc_remote_control.text5] - Wählen [Anfrage] um es erneut zu versuchen.
+ * @param {string} [apac.wc_assign_cc_confirm] - {0} ist zurzeit damit beauftragt, den Untertitel einzugeben. Möchten Sie stattdessen {1} mit der Eingabe beauftragen?
  * @param {string} [apac.wc_continue] - fortsetzen
  * @param {string} [apac.wc_choose_email_service] - Ihren E-Mail-Service zum Versand der Einladung wählen
  * @param {string} [apac.dialog.meeting_removed_by_host] - Sie wurden vom Host von diesem Meeting entfernt.
@@ -531,7 +557,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - Qualität
  * @param {string} [apac.wc_start_video] - Video starten
  * @param {string} [apac.wc_stop_video] - Video anhalten
- * @param {string} [apac.dialog.presscode] - Konferenz-ID:
+ * @param {string} [apac.dialog.presscode] - Meeting-ID
  * @param {string} [apac.meeting_calling] - Anrufen
  * @param {string} [apac.wc_stop_recording] - Aufnahme anhalten
  * @param {string} [apac.wc_stop_recording_content] - Wenn ja, erhalten Sie eine E-Mail-Benachrichtigung erhalten, wenn die Wolke Aufnahme bereit ist.
@@ -544,7 +570,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - Sprechen
  * @param {string} [apac.wc_select_camera] - Eine Kamera auswählen
  * @param {string} [apac.wc_video_setting] - Videoeinstellung...
- * @param {string} [apac.wc_is_sharing_desktop] - Desktop freigeben
+ * @param {string} [apac.wc_is_sharing_desktop] - teilt Desktop
  * @param {string} [apac.wc_unlock_meeting] - Meeting sperren
  * @param {string} [apac.wc_lock_meeting] - Meeting sperren
  * @param {string} [apac.wc_more] - Mehr
@@ -656,7 +682,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - Personen werden gehalten
  * @param {string} [apac.wc_remove_user] - Möchten Sie entfernen
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Installieren
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
+ * @param {string} [apac.wc_sharer_disabled_share_title] - Behinderte Teilen
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - Der Host hat die Freigabe des Teilnehmerbildschirms deaktiviert
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - Sie können Screen-Share nicht starten, während ein anderer Teilnehmer seinen Bildschirm freigibt.
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - Abbrechen
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - Weiter
+ * @param {string} [apac.wc_sharer_start_share_title] - Screen-Sharing starten
+ * @param {string} [apac.wc_sharer_start_share_desc] - Dies wird das Screen-Sharing Anderer verhindern, möchten Sie fortfahren?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Schließen
+ * @param {string} [apac.wc_sharer_entry_button_label1] - Bildschirm freigeben
+ * @param {string} [apac.wc_sharer_entry_button_label2] - Neue Freigabe
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - Wer kann freigeben?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - Wer kann die Freigabe starten, wenn eine andere Person die Freigabe verwendet?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - Nur Host
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - Alle Teilnehmer
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - Aufzeichnung stoppen
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - Sie teilen Ihren Bildschirm…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - Ihr Screen-Sharing wurde unterbrochen.
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - Freigabe unterbrechen
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - Freigabe wieder aufnehmen
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - Teilen aufheben
  * @param {string} [apac.wc_cc_withdraw] - Untertitelgenehmigung widerrufen
  * @param {string} [apac.wc_cc_assign_to] - Zur Type Untertitel zuweisen
  * @param {string} [apac.join_3prty_audio] - Per Audio von Dritten teilnehmen
@@ -664,6 +711,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - Sie können sich nicht die Stummschaltung aufzuheben, da der Host Sie stumm geschaltet.
  * @param {string} [apac.wc_chat.disable_chat] - Der Moderator hat den Teilnehmer-Chat deaktiviert.
+ * @param {string} [apac.wc_chat.disabled] - Keine
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Ihr Audiosignal wird per Telefoneinwahl eingespeist
  * @param {string} [apac.wc_video.camera_is_taken] - Ihre Kamera wurde von anderen Anwendungen blockiert. Bitte geben Sie die Berechtigung frei und versuchen Sie es erneut.
  * @param {string} [apac.wc_qa.qa_comp_title] - F&amp;A
@@ -713,7 +761,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - Rundfunk
  * @param {string} [apac.wc_cc_host_assigned] - Der Moderator hat Sie dem Untertitel zugewiesen
  * @param {string} [apac.wc_remote_control.can_control] - Sie können den Bildschirm von {0} steuern
+ * @param {string} [apac.wc_remote_control.give_up] - Fernsteuerungsrechte aufgeben
  * @param {string} [apac.wc_remote_control.is_controlling] - Sie steuern den Bildschirm von {0}
+ * @param {string} [apac.errorcodes_success] - Verbindungs ​​Erfolg
+ * @param {string} [apac.errorcodes_fail] - Beitritt scheitern
+ * @param {string} [apac.errorcodes_not_init] - Treffen nicht init
+ * @param {string} [apac.errorcodes_register] - müssen sich registrieren
+ * @param {string} [apac.errorcodes_email_require] - fehlt eine E-Mail
+ * @param {string} [apac.errorcodes_not_exist] - Treffen nicht existieren
+ * @param {string} [apac.errorcodes_not_host] - Sie sind nicht hosten
+ * @param {string} [apac.errorcodes_wrong_pass] - falsches Passwort
+ * @param {string} [apac.errorcodes_another_running] - ein weiteres Treffen Lauf
+ * @param {string} [apac.errorcodes_not_start] - Treffen wird nicht gestartet
+ * @param {string} [apac.errorcodes_re_connect] - Treffen wird wieder anschließen
+ * @param {string} [apac.errorcodes_be_removed] - entfernt werden
+ * @param {string} [apac.errorcodes_disconnect] - Sitzung unterbrochen
+ * @param {string} [apac.wc_chat.new_msg] - Neue Nachricht
+ * @param {string} [apac.wc_chat.everyone_public] - Jeder öffentlich
+ * @param {string} [apac.wc_chat.everyone_public_private] - Jeder öffentlich und privat
 */
 
 
@@ -765,8 +830,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - E-mail predeterminado
  * @param {string} [apac.wc_muteall_desc] - los participantes actuales y nuevos se silenciarán
  * @param {string} [apac.wc_remote_control.request] - Solicitar control remoto
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - Está a punto de solicitar control remoto del contenido compartido de {0}.
+ * @param {string} [apac.wc_remote_control.text2] - Seleccione [Solicitar] y espere la aprobación de {0}.
+ * @param {string} [apac.wc_remote_control.text3] - Seleccione [Cancelar] si no desea enviar una solicitud.
+ * @param {string} [apac.wc_remote_control.text4] - {0} declinó su solicitud.
+ * @param {string} [apac.wc_remote_control.text5] - Seleccione [Solicitar] para intentarlo nuevo.
+ * @param {string} [apac.wc_assign_cc_confirm] - {0} está asignado actualmente para escribir subtítulos; ¿desea asignar a {1} para que escriba los subtítulos en su lugar?
  * @param {string} [apac.wc_continue] - continuar
  * @param {string} [apac.wc_choose_email_service] - Elija su servicio de e-mail para enviar la invitación
  * @param {string} [apac.dialog.meeting_removed_by_host] - El anfitrión lo ha retirado de esta reunión.
@@ -837,7 +906,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - Calidad
  * @param {string} [apac.wc_start_video] - Iniciar video
  * @param {string} [apac.wc_stop_video] - Detener video
- * @param {string} [apac.dialog.presscode] - ID de la conferencia
+ * @param {string} [apac.dialog.presscode] - ID de la reunión
  * @param {string} [apac.meeting_calling] - Llamada
  * @param {string} [apac.wc_stop_recording] - Detener grabación
  * @param {string} [apac.wc_stop_recording_content] - En caso afirmativo, usted recibirá una notificación por correo electrónico cuando la grabación de la nube está listo.
@@ -850,7 +919,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - Hablar
  * @param {string} [apac.wc_select_camera] - Seleccionar una cámara
  * @param {string} [apac.wc_video_setting] - Configuración del video…
- * @param {string} [apac.wc_is_sharing_desktop] - está compartiendo el escritorio
+ * @param {string} [apac.wc_is_sharing_desktop] - es compartir escritorio
  * @param {string} [apac.wc_unlock_meeting] - Desbloquear reunión
  * @param {string} [apac.wc_lock_meeting] - Bloquear reunión
  * @param {string} [apac.wc_more] - Más
@@ -962,7 +1031,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - personas están en espera
  * @param {string} [apac.wc_remove_user] - ¿Quiere retirar a?
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Instalar
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - Aceptar
+ * @param {string} [apac.wc_sharer_disabled_share_title] - Compartir discapacitados
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - El anfitrión inhabilitó la función de compartir las pantallas de los participantes
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - Usted no puede iniciar la función de compartir pantallas mientras el otro participante está compartiendo.
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - Cancelar
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - Continuar
+ * @param {string} [apac.wc_sharer_start_share_title] - Iniciar la función de compartir las pantallas
+ * @param {string} [apac.wc_sharer_start_share_desc] - Esto detendrá la función de compartir la pantalla de la otra persona; ¿desea continuar?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Cerrar
+ * @param {string} [apac.wc_sharer_entry_button_label1] - Compartir pantalla
+ * @param {string} [apac.wc_sharer_entry_button_label2] - Nueva función de compartir la pantalla
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - ¿Quién puede compartir?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - ¿Quién puede comenzar a compartir cuando otro está compartiendo?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - Solo anfitrión
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - Todos los participantes
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - Detener grabación
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - Está compartiendo la pantalla…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - Su función de compartir las pantallas está en pausa
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - Poner en pausa la función de compartir la pantalla
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - Reanudar función de compartir
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - Dejar de compartir
  * @param {string} [apac.wc_cc_withdraw] - Retirar el permiso de subtítulos
  * @param {string} [apac.wc_cc_assign_to] - Asignar para escribir subtítulos
  * @param {string} [apac.join_3prty_audio] - Unirse por audio de terceros
@@ -970,6 +1060,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - No se puede activar el sonido de sí mismo porque el host que silencia.
  * @param {string} [apac.wc_chat.disable_chat] - El anfitrión ha inhabilitado el chat de los asistentes.
+ * @param {string} [apac.wc_chat.disabled] - Ninguno
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Su audio está conectado usando el número de acceso
  * @param {string} [apac.wc_video.camera_is_taken] - Su cámara ha estado ocupada por otras aplicaciones, libere los privilegios e inténtelo de nuevo.
  * @param {string} [apac.wc_qa.qa_comp_title] - Preguntas y respuestas
@@ -1019,7 +1110,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - Broadcasting
  * @param {string} [apac.wc_cc_host_assigned] - El anfitrión le ha asignado para que escriba los subtítulos
  * @param {string} [apac.wc_remote_control.can_control] - Puede controlar la pantalla de {0}
+ * @param {string} [apac.wc_remote_control.give_up] - Renunciar al control remoto
  * @param {string} [apac.wc_remote_control.is_controlling] - Usted está controlando la pantalla de {0}
+ * @param {string} [apac.errorcodes_success] - el éxito de unirse
+ * @param {string} [apac.errorcodes_fail] - unirse a fallar
+ * @param {string} [apac.errorcodes_not_init] - reunión no init
+ * @param {string} [apac.errorcodes_register] - que registrarse
+ * @param {string} [apac.errorcodes_email_require] - la falta de un correo electrónico
+ * @param {string} [apac.errorcodes_not_exist] - Reunión no existe
+ * @param {string} [apac.errorcodes_not_host] - no se aloja
+ * @param {string} [apac.errorcodes_wrong_pass] - contraseña incorrecta
+ * @param {string} [apac.errorcodes_another_running] - otra reunión en ejecución
+ * @param {string} [apac.errorcodes_not_start] - reunión no se ha iniciado
+ * @param {string} [apac.errorcodes_re_connect] - reunión está reconectando
+ * @param {string} [apac.errorcodes_be_removed] - Ser eliminado
+ * @param {string} [apac.errorcodes_disconnect] - reunión se desconecta
+ * @param {string} [apac.wc_chat.new_msg] - nuevo mensaje
+ * @param {string} [apac.wc_chat.everyone_public] - Todos en público
+ * @param {string} [apac.wc_chat.everyone_public_private] - Todos en público y en privado
 */
 
 
@@ -1071,8 +1179,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - E-mail par défaut
  * @param {string} [apac.wc_muteall_desc] - Actuels et nouveaux participants seront mis en sourdine
  * @param {string} [apac.wc_remote_control.request] - Demander le contrôle à distance
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - Vous êtes sur le point de demander le contrôle à distance du contenu partagé de {0}.
+ * @param {string} [apac.wc_remote_control.text2] - Sélectionnez [Demander] et attendez l’approbation de {0}.
+ * @param {string} [apac.wc_remote_control.text3] - Sélectionnez [Annuler] si vous ne voulez pas envoyer de demande.
+ * @param {string} [apac.wc_remote_control.text4] - {0} a refusé d’accéder à votre demande.
+ * @param {string} [apac.wc_remote_control.text5] - Sélectionnez [Demander] pour réessayer.
+ * @param {string} [apac.wc_assign_cc_confirm] - ${0} est actuellement affecté à la saisie des sous-titres, voulez-vous plutôt y affecter ${1} ?
  * @param {string} [apac.wc_continue] - continuer
  * @param {string} [apac.wc_choose_email_service] - Choisissez votre service de messagerie pour envoyer l’invitation
  * @param {string} [apac.dialog.meeting_removed_by_host] - Vous avez été exclu de cette réunion par l’animateur.
@@ -1102,11 +1214,11 @@ const LanguageResource = {
  * @param {string} [apac.wc_upgrade_browser] - Votre navigateur ne permet pas d’utiliser le périphérique audio de votre ordinateur, mettez-le à jour en installant la dernière version.
  * @param {string} [apac.wc_prevent_access_mic] - Votre navigateur empêche l’accès à votre micro.
  * @param {string} [apac.wc_auto_join_audio] - Activer automatiquement l’audio via l’ordinateur lors de la participation à une conférence
- * @param {string} [apac.wc_already_join_by_phone] - Déjà rejoint par téléphone ? Dans la presse #{0} sur votre téléphone
+ * @param {string} [apac.wc_already_join_by_phone] - Vous aves déjà rejoint la réunion par téléphone? Saisir #{0} sure votre téléphone
  * @param {string} [apac.wc_on_your_phone] - sur votre téléphone
  * @param {string} [apac.dialog.tollfree] - Numéro gratuit
  * @param {string} [apac.dialog.toll] - Frais d’appel
- * @param {string} [apac.wc_participant_id] - No du participant
+ * @param {string} [apac.wc_participant_id] - Identifiant de participant
  * @param {string} [apac.wc_join_audio_timeout] - Zoom n’est temporairement pas en mesure d’utiliser les dispositifs de notre ordinateur pour se connecter au son de la réunion. Cliquer sur "Rejoindre l’audio par ordinateur" pour réessayer.
  * @param {string} [apac.wc_unable_pc_audio] - Impossible d’utiliser l’audio de l’ordinateur.
  * @param {string} [apac.wc_no] - Non
@@ -1143,7 +1255,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - Qualité
  * @param {string} [apac.wc_start_video] - Démarrer la vidéo
  * @param {string} [apac.wc_stop_video] - Arrêter la vidéo
- * @param {string} [apac.dialog.presscode] - No de la conférence
+ * @param {string} [apac.dialog.presscode] - Indentifiant de réunion
  * @param {string} [apac.meeting_calling] - Appel en cours
  * @param {string} [apac.wc_stop_recording] - Arrêter l’enregistrement
  * @param {string} [apac.wc_stop_recording_content] - Si oui, vous recevrez une notification par e-mail lorsque l'enregistrement des nuages ​​est prêt.
@@ -1156,7 +1268,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - Parler
  * @param {string} [apac.wc_select_camera] - Sélectionner une caméra
  * @param {string} [apac.wc_video_setting] - Paramètres vidéo…
- * @param {string} [apac.wc_is_sharing_desktop] - partage le bureau
+ * @param {string} [apac.wc_is_sharing_desktop] - est le partage de bureau
  * @param {string} [apac.wc_unlock_meeting] - Déverrouiller la réunion
  * @param {string} [apac.wc_lock_meeting] - Verrouiller la réunion
  * @param {string} [apac.wc_more] - Plus
@@ -1268,7 +1380,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - personne est en attente
  * @param {string} [apac.wc_remove_user] - Souhaitez-vous exclure
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Installer
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
+ * @param {string} [apac.wc_sharer_disabled_share_title] - désactivé Partager
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - L’animateur a désactivé le partage d’écran par les participants
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - Vous ne pouvez pas démarrer le partage d’écran pendant qu’un autre participant partage.
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - Annuler
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - Continuer
+ * @param {string} [apac.wc_sharer_start_share_title] - Démarrer le partage d’écran
+ * @param {string} [apac.wc_sharer_start_share_desc] - Cela arrêtera le partage d’écran des autres, voulez-vous continuer ?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Fermer
+ * @param {string} [apac.wc_sharer_entry_button_label1] - Partager l’écran
+ * @param {string} [apac.wc_sharer_entry_button_label2] - Nouveau partage
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - Qui peut partager ?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - Qui peut commencer à partager quand quelqu'un d'autre est en train de partager ?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - Seulement l'hôte
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - Tous les participants
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - Arrêter l’enregistrement
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - Vous êtes en train de partager votre écran…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - Votre partage d’écran est en pause
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - Mettre le partage en pause
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - Reprendre le partage
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - Arrêter le partage
  * @param {string} [apac.wc_cc_withdraw] - Retirer la permission de sous-titrage
  * @param {string} [apac.wc_cc_assign_to] - Affecter à la saisie des sous-titres
  * @param {string} [apac.join_3prty_audio] - Rejoindre via un audio tiers
@@ -1276,6 +1409,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - Vous ne pouvez pas vous désactiver parce que l'hôte vous mis en sourdine.
  * @param {string} [apac.wc_chat.disable_chat] - L’animateur a désactivé les conversations des participants.
+ * @param {string} [apac.wc_chat.disabled] - Aucun
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Votre son est connecté à l’aide de la fonction de composition de numéro
  * @param {string} [apac.wc_video.camera_is_taken] - Votre caméra est utilisée par d’autres applications, libérez-la puis réessayez.
  * @param {string} [apac.wc_qa.qa_comp_title] - Questions-Réponses
@@ -1325,7 +1459,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - Diffusion
  * @param {string} [apac.wc_cc_host_assigned] - L’animateur vous a affecté à la saisie des sous-titres
  * @param {string} [apac.wc_remote_control.can_control] - Vous pouvez contrôler l’écran de {0}
+ * @param {string} [apac.wc_remote_control.give_up] - Abandonner le contrôle à distance
  * @param {string} [apac.wc_remote_control.is_controlling] - Vous contrôlez l’écran de {0}
+ * @param {string} [apac.errorcodes_success] - succès rejoindre
+ * @param {string} [apac.errorcodes_fail] - se joindre à l'échec
+ * @param {string} [apac.errorcodes_not_init] - réunion non d 'init
+ * @param {string} [apac.errorcodes_register] - devez vous inscrire
+ * @param {string} [apac.errorcodes_email_require] - manque un e-mail
+ * @param {string} [apac.errorcodes_not_exist] - La non-satisfaction existent
+ * @param {string} [apac.errorcodes_not_host] - vous n'êtes pas hébergez
+ * @param {string} [apac.errorcodes_wrong_pass] - mot de passe incorrect
+ * @param {string} [apac.errorcodes_another_running] - une autre réunion consécutive
+ * @param {string} [apac.errorcodes_not_start] - réunion ne démarre pas
+ * @param {string} [apac.errorcodes_re_connect] - réunion reconnecte
+ * @param {string} [apac.errorcodes_be_removed] - être retiré
+ * @param {string} [apac.errorcodes_disconnect] - réunion est déconnecté
+ * @param {string} [apac.wc_chat.new_msg] - nouveau message
+ * @param {string} [apac.wc_chat.everyone_public] - Tout le monde en public
+ * @param {string} [apac.wc_chat.everyone_public_private] - Tout le monde en public et en privé
 */
 
 
@@ -1377,8 +1528,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - デフォルトのメール
  * @param {string} [apac.wc_muteall_desc] - 現在、新たな参加者がミュートされます
  * @param {string} [apac.wc_remote_control.request] - リモート制御のリクエスト
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - {0} の共有コンテンツのリモート制御をリクエストしようとしています。
+ * @param {string} [apac.wc_remote_control.text2] - [リクエスト] を選択して {0} の承認を待ってください。
+ * @param {string} [apac.wc_remote_control.text3] - リクエストを送信しない場合は [キャンセル] を選択してください。
+ * @param {string} [apac.wc_remote_control.text4] - {0}はリクエストを辞退しました。
+ * @param {string} [apac.wc_remote_control.text5] - [リクエスト]を選択して、もう一度やり直してください。
+ * @param {string} [apac.wc_assign_cc_confirm] - {0}が現在字幕を入力するように割り当てられています。{1}が代わりに入力されるように割り当てますか?
  * @param {string} [apac.wc_continue] - 持続する
  * @param {string} [apac.wc_choose_email_service] - 招待状をお送りするメールサービスを選択してください
  * @param {string} [apac.dialog.meeting_removed_by_host] - ホストによってこのミーティングから削除されました。
@@ -1449,7 +1604,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - 質
  * @param {string} [apac.wc_start_video] - ビデオを開始
  * @param {string} [apac.wc_stop_video] - ビデオを停止
- * @param {string} [apac.dialog.presscode] - 会議ID
+ * @param {string} [apac.dialog.presscode] - ミーティングID
  * @param {string} [apac.meeting_calling] - 呼び出し中
  * @param {string} [apac.wc_stop_recording] - 録音停止
  * @param {string} [apac.wc_stop_recording_content] - はい場合は、クラウド録音の準備ができたとき、あなたは電子メール通知を受信します。
@@ -1462,7 +1617,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - 会話
  * @param {string} [apac.wc_select_camera] - カメラを選択
  * @param {string} [apac.wc_video_setting] - ビデオを設定しています…
- * @param {string} [apac.wc_is_sharing_desktop] - はデスクトップを共有しています
+ * @param {string} [apac.wc_is_sharing_desktop] - デスクトップを共有しています
  * @param {string} [apac.wc_unlock_meeting] - ミーティングをアンロックする
  * @param {string} [apac.wc_lock_meeting] - ミーティングをロックする
  * @param {string} [apac.wc_more] - 更なる情報
@@ -1574,7 +1729,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - のユーザーは保留中です
  * @param {string} [apac.wc_remove_user] - 削除しますか
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - インストール
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
+ * @param {string} [apac.wc_sharer_disabled_share_title] - 無効シェア
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - ホストは、参加者の画面共有を無効にしました。
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - 他の参加者が共有中は、画面共有を開始できません。
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - キャンセル
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - 続ける
+ * @param {string} [apac.wc_sharer_start_share_title] - 画面共有の開始
+ * @param {string} [apac.wc_sharer_start_share_desc] - これを実行すると、他の画面共有が停止します。続行しますか?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 閉じる
+ * @param {string} [apac.wc_sharer_entry_button_label1] - 画面の共有
+ * @param {string} [apac.wc_sharer_entry_button_label2] - 新しい共有
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - 共有できるのは誰ですか？
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - 他の人が共有している場合に共有を開始できるのは誰ですか？
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - ホストのみ
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - 全参加者
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - レコーディングの停止
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - 画面を共有しています…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - 画面共有は一時停止しました
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - 共有の一時停止
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - 共有の再開
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - 共有を中止
  * @param {string} [apac.wc_cc_withdraw] - 字幕許可から退出します。
  * @param {string} [apac.wc_cc_assign_to] - 字幕入力に指定します。
  * @param {string} [apac.join_3prty_audio] - サードパーティのオーディオで参加
@@ -1582,6 +1758,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - ホストがあなたをミュートので、あなたは自分自身のミュートを解除することはできません。
  * @param {string} [apac.wc_chat.disable_chat] - ホストが参加者チャットを無効にしました。
+ * @param {string} [apac.wc_chat.disabled] - なし
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - オーディオはダイヤルインを使用して接続されます
  * @param {string} [apac.wc_video.camera_is_taken] - お使いのカメラは他のアプリで優先的に使用されいるので、そのアプリへの優先設定を解除してからもう一度お試しください。
  * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
@@ -1631,7 +1808,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - 放送
  * @param {string} [apac.wc_cc_host_assigned] - ホストはあなたを字幕入力に指定しました。
  * @param {string} [apac.wc_remote_control.can_control] - {0}の画面をコントロールできます
+ * @param {string} [apac.wc_remote_control.give_up] - リモート制御を放棄
  * @param {string} [apac.wc_remote_control.is_controlling] - {0}の画面を制御しています
+ * @param {string} [apac.errorcodes_success] - 成功への参加
+ * @param {string} [apac.errorcodes_fail] - 失敗参加
+ * @param {string} [apac.errorcodes_not_init] - initのない取締役会
+ * @param {string} [apac.errorcodes_register] - 登録する必要があります
+ * @param {string} [apac.errorcodes_email_require] - メールを逃します
+ * @param {string} [apac.errorcodes_not_exist] - 会議は存在しません
+ * @param {string} [apac.errorcodes_not_host] - あなたがホストされていません
+ * @param {string} [apac.errorcodes_wrong_pass] - パスワードが間違っ
+ * @param {string} [apac.errorcodes_another_running] - 別の会議ランニング
+ * @param {string} [apac.errorcodes_not_start] - 会議が開始されていません
+ * @param {string} [apac.errorcodes_re_connect] - 会議が再接続されます
+ * @param {string} [apac.errorcodes_be_removed] - 除去される
+ * @param {string} [apac.errorcodes_disconnect] - 会議が切断されています
+ * @param {string} [apac.wc_chat.new_msg] - 新しいメッセージ
+ * @param {string} [apac.wc_chat.everyone_public] - 全員をパブリックに
+ * @param {string} [apac.wc_chat.everyone_public_private] - 全員をパブリックおよびプライベートに
 */
 
 
@@ -1683,8 +1877,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - E-mail padrão
  * @param {string} [apac.wc_muteall_desc] - Atuais e novos participantes será silenciado
  * @param {string} [apac.wc_remote_control.request] - Solicitar controle remoto
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - Você está prestes a solicitar controle remoto do conteúdo compartilhado de {0}.
+ * @param {string} [apac.wc_remote_control.text2] - Selecione [Solicitar] e espere pela aprovação de {0}.
+ * @param {string} [apac.wc_remote_control.text3] - Selecione [Cancelar] se você não deseja enviar uma solicitação.
+ * @param {string} [apac.wc_remote_control.text4] - {0} recusou sua solicitação.
+ * @param {string} [apac.wc_remote_control.text5] - Selecione [Solicitar] para tentar novamente.
+ * @param {string} [apac.wc_assign_cc_confirm] - {0} está atualmente atribuído para digitar Closed Caption, deseja atribuir {1} para digitar?
  * @param {string} [apac.wc_continue] - continuar
  * @param {string} [apac.wc_choose_email_service] - Selecionar seu serviço de e-mail para enviar convite
  * @param {string} [apac.dialog.meeting_removed_by_host] - Você foi removido desta reunião pelo anfitrião.
@@ -1755,7 +1953,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - Qualidade
  * @param {string} [apac.wc_start_video] - Iniciar Vídeo
  * @param {string} [apac.wc_stop_video] - Interromper o vídeo
- * @param {string} [apac.dialog.presscode] - ID da conferência
+ * @param {string} [apac.dialog.presscode] - ID da Reunião
  * @param {string} [apac.meeting_calling] - Chamando
  * @param {string} [apac.wc_stop_recording] - Parar gravação
  * @param {string} [apac.wc_stop_recording_content] - Se sim, você receberá uma notificação por email quando a gravação nuvem está pronto.
@@ -1768,7 +1966,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - Falar
  * @param {string} [apac.wc_select_camera] - Selecionar uma câmera
  * @param {string} [apac.wc_video_setting] - Configurações de vídeo...
- * @param {string} [apac.wc_is_sharing_desktop] - está compartilhando desktop
+ * @param {string} [apac.wc_is_sharing_desktop] - é compartilhamento de desktop
  * @param {string} [apac.wc_unlock_meeting] - Desbloquear reunião
  * @param {string} [apac.wc_lock_meeting] - Bloquear reunião
  * @param {string} [apac.wc_more] - Mais
@@ -1880,7 +2078,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - pessoas em espera
  * @param {string} [apac.wc_remove_user] - Quer remover %s?
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Instalar
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
+ * @param {string} [apac.wc_sharer_disabled_share_title] - Disabled Compartilhar
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - O anfitrião desativou o compartilhamento de tela do participante
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - Você não pode iniciar o compartilhamento de tela enquanto outro participante estiver compartilhando.
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - Cancelar
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - Continuar
+ * @param {string} [apac.wc_sharer_start_share_title] - Iniciar compartilhamento de tela
+ * @param {string} [apac.wc_sharer_start_share_desc] - Isso interromperá o compartilhamento de tela dos outros. Você deseja continuar?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Fechar
+ * @param {string} [apac.wc_sharer_entry_button_label1] - Compartilhar tela
+ * @param {string} [apac.wc_sharer_entry_button_label2] - Novo Compartilhamento
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - Quem pode compartilhar?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - Quem pode começar a compartilhar quando alguém está compartilhando?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - Somente Anfitrião
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - Todos os Participantes
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - Interromper Gravação
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - Você está compartilhando sua tela...
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - Seu compartilhamento de tela está pausado
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - Pausar Compartilhamento
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - Retomar Compartilhamento
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - Interromper o compartilhamento
  * @param {string} [apac.wc_cc_withdraw] - Retirar permissão de Closed Caption
  * @param {string} [apac.wc_cc_assign_to] - Atribuir digitação de Closed Caption
  * @param {string} [apac.join_3prty_audio] - Entrar por áudio de terceiros
@@ -1888,6 +2107,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - Você não pode ativar o som de si mesmo, porque o anfitrião silenciado você.
  * @param {string} [apac.wc_chat.disable_chat] - O anfitrião desativou o bate-papo do participante.
+ * @param {string} [apac.wc_chat.disabled] - Nenhum
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Seu áudio está conectado por discagem
  * @param {string} [apac.wc_video.camera_is_taken] - Sua câmera está sendo usada por outros aplicativos, libere o privilégio e tente novamente.
  * @param {string} [apac.wc_qa.qa_comp_title] - Q&amp;A
@@ -1937,7 +2157,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - Radiodifusão
  * @param {string} [apac.wc_cc_host_assigned] - O anfitrião atribuiu a você a digitação do Closed Caption
  * @param {string} [apac.wc_remote_control.can_control] - Você pode controlar a tela de {0}
+ * @param {string} [apac.wc_remote_control.give_up] - Abrir mão do controle remoto
  * @param {string} [apac.wc_remote_control.is_controlling] - Você está controlando a tela de {0}
+ * @param {string} [apac.errorcodes_success] - sucesso juntando
+ * @param {string} [apac.errorcodes_fail] - juntando falhar
+ * @param {string} [apac.errorcodes_not_init] - reunião não o init
+ * @param {string} [apac.errorcodes_register] - precisa se registrar
+ * @param {string} [apac.errorcodes_email_require] - faltando um email
+ * @param {string} [apac.errorcodes_not_exist] - Não existem reunião
+ * @param {string} [apac.errorcodes_not_host] - você não está sediar
+ * @param {string} [apac.errorcodes_wrong_pass] - senha incorreta
+ * @param {string} [apac.errorcodes_another_running] - outra reunião em execução
+ * @param {string} [apac.errorcodes_not_start] - reunião não é iniciado
+ * @param {string} [apac.errorcodes_re_connect] - reunião está reconectando
+ * @param {string} [apac.errorcodes_be_removed] - ser removido
+ * @param {string} [apac.errorcodes_disconnect] - reunião está desconectado
+ * @param {string} [apac.wc_chat.new_msg] - nova mensagem
+ * @param {string} [apac.wc_chat.everyone_public] - Todos em modo público
+ * @param {string} [apac.wc_chat.everyone_public_private] - Todos em modo público e privado
 */
 
 
@@ -1989,8 +2226,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - Электронная почта по умолчанию
  * @param {string} [apac.wc_muteall_desc] - Текущие и новые участники будут отключены
  * @param {string} [apac.wc_remote_control.request] - Запрос дистанционного управления
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - Вы собираетесь запросить дистанционное управление совместно используемым содержимым {0}.
+ * @param {string} [apac.wc_remote_control.text2] - Нажмите [Запрос] и дождитесь утверждения со стороны {0}.
+ * @param {string} [apac.wc_remote_control.text3] - Нажмите [Отмена], если вы не хотите отправлять запрос.
+ * @param {string} [apac.wc_remote_control.text4] - {0} отклонил ваш запрос.
+ * @param {string} [apac.wc_remote_control.text5] - Нажмите [Запрос], чтобы попытаться еще раз.
+ * @param {string} [apac.wc_assign_cc_confirm] - {0} на текущий момент назначен  для ввода субтитров по требованию. Назначить вместо этого {1}?
  * @param {string} [apac.wc_continue] - Продолжить
  * @param {string} [apac.wc_choose_email_service] - Выберите службу электронной почты для отправки приглашения
  * @param {string} [apac.dialog.meeting_removed_by_host] - Вы были удалены из этой конференции организатором.
@@ -2074,7 +2315,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - Разговор
  * @param {string} [apac.wc_select_camera] - Выберите камеру
  * @param {string} [apac.wc_video_setting] - Настройки видео...
- * @param {string} [apac.wc_is_sharing_desktop] - Показ рабочего стола
+ * @param {string} [apac.wc_is_sharing_desktop] - делится рабочий стол
  * @param {string} [apac.wc_unlock_meeting] - Разблокировать конференцию
  * @param {string} [apac.wc_lock_meeting] - Заблокировать конференцию
  * @param {string} [apac.wc_more] - Подробнее
@@ -2186,7 +2427,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - абонента (-ов) на удержании
  * @param {string} [apac.wc_remove_user] - Хотите ли вы удалить
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Установить
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - ОК
+ * @param {string} [apac.wc_sharer_disabled_share_title] - Disabled Поделиться
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - Организатор отключил демонстрацию экрана участников
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - Вы не можете включить демонстрацию экрана, поскольку демонстрацию экрана осуществляет другой участник.
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - Отмена
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - Продолжить
+ * @param {string} [apac.wc_sharer_start_share_title] - Включить демонстрацию экрана
+ * @param {string} [apac.wc_sharer_start_share_desc] - Это остановит демонстрацию экрана другого участника, хотите ли вы продолжить?
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - Закрыть
+ * @param {string} [apac.wc_sharer_entry_button_label1] - Демонстрация экрана
+ * @param {string} [apac.wc_sharer_entry_button_label2] - Новая демонстрация
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - Кто может осуществлять демонстрацию?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - Кто может включить демонстрацию экрана, когда кто-то уже осуществляет демонстрацию?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - Только организатор
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - Все участники
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - Остановить запись
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - Вы осуществляете демонстрацию экрана...
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - Ваша демонстрация экрана приостановлена
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - Пауза демонстрации
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - Продолжить демонстрацию
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - Остановить совместное использование
  * @param {string} [apac.wc_cc_withdraw] - Отозвать разрешение субтитров по требованию
  * @param {string} [apac.wc_cc_assign_to] - Назначить для ввода субтитров по требованию
  * @param {string} [apac.join_3prty_audio] - Войти с использованием сторонней программы звука
@@ -2194,6 +2456,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - Вы не можете приглушение себя, потому что хозяин приглушен вас.
  * @param {string} [apac.wc_chat.disable_chat] - Организатор отключил чат участников.
+ * @param {string} [apac.wc_chat.disabled] - Нет
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - Для воспроизведения звука используется устройство набора номера
  * @param {string} [apac.wc_video.camera_is_taken] - В данный момент камера используется другими приложениями. Освободите камеру и повторите попытку.
  * @param {string} [apac.wc_qa.qa_comp_title] - Вопросы и ответы
@@ -2243,7 +2506,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - вещания
  * @param {string} [apac.wc_cc_host_assigned] - Организатор назначил вас для ввода субтитров по требованию
  * @param {string} [apac.wc_remote_control.can_control] - Вы можете осуществлять управление экраном {0}
+ * @param {string} [apac.wc_remote_control.give_up] - Передать дистанционное управление
  * @param {string} [apac.wc_remote_control.is_controlling] - Вы осуществляете управление экраном {0}
+ * @param {string} [apac.errorcodes_success] - присоединение успеха
+ * @param {string} [apac.errorcodes_fail] - присоединение не в состоянии
+ * @param {string} [apac.errorcodes_not_init] - собрание не инициализации
+ * @param {string} [apac.errorcodes_register] - необходимо зарегистрироваться
+ * @param {string} [apac.errorcodes_email_require] - отсутствует письмо
+ * @param {string} [apac.errorcodes_not_exist] - собрание не существует
+ * @param {string} [apac.errorcodes_not_host] - Вы не размещаете
+ * @param {string} [apac.errorcodes_wrong_pass] - пароль неверный
+ * @param {string} [apac.errorcodes_another_running] - еще одно совещание работает
+ * @param {string} [apac.errorcodes_not_start] - встреча не началась
+ * @param {string} [apac.errorcodes_re_connect] - Встреча переподключения
+ * @param {string} [apac.errorcodes_be_removed] - удалить
+ * @param {string} [apac.errorcodes_disconnect] - встреча отсоединен
+ * @param {string} [apac.wc_chat.new_msg] - новое сообщение
+ * @param {string} [apac.wc_chat.everyone_public] - Все: открыто
+ * @param {string} [apac.wc_chat.everyone_public_private] - Все: открыто и конфиденциально
 */
 
 
@@ -2295,8 +2575,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - 默认电子邮件
  * @param {string} [apac.wc_muteall_desc] - 现有的和新的参与者将被静音
  * @param {string} [apac.wc_remote_control.request] - 请求远程控制
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - 您将要请求控制{0}共享的内容。
+ * @param {string} [apac.wc_remote_control.text2] - 选择[请求]然后等待{0}的批准.
+ * @param {string} [apac.wc_remote_control.text3] - 如果您不想发送这个请求请选择[取消]。
+ * @param {string} [apac.wc_remote_control.text4] - {0}拒绝你的请求.
+ * @param {string} [apac.wc_remote_control.text5] - 选择[请求]再试一次。
+ * @param {string} [apac.wc_assign_cc_confirm] - 是否要将{0}的输入字幕权限分配给{1}？
  * @param {string} [apac.wc_continue] - 继续
  * @param {string} [apac.wc_choose_email_service] - 选择您的电子邮件服务来发送邀请
  * @param {string} [apac.dialog.meeting_removed_by_host] - 您已被主持人从此会议中删除。
@@ -2367,7 +2651,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - 质量
  * @param {string} [apac.wc_start_video] - 启动视频
  * @param {string} [apac.wc_stop_video] - 停止视频
- * @param {string} [apac.dialog.presscode] - 会议ID
+ * @param {string} [apac.dialog.presscode] - 会议号
  * @param {string} [apac.meeting_calling] - 正在呼叫
  * @param {string} [apac.wc_stop_recording] - 停止录音
  * @param {string} [apac.wc_stop_recording_content] - 如果是，当云记录准备好将收到电子邮件通知。
@@ -2492,7 +2776,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - 人处于保持状态
  * @param {string} [apac.wc_remove_user] - 您是否要移除
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - 安装
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - 确定
+ * @param {string} [apac.wc_sharer_disabled_share_title] - 禁止共享
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - 主持人禁止参会者屏幕共享
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - 他人正在共享屏幕，此时您无法进行屏幕共享。
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - 取消
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - 继续
+ * @param {string} [apac.wc_sharer_start_share_title] - 启动屏幕共享
+ * @param {string} [apac.wc_sharer_start_share_desc] - 这将停止他人的屏幕共享，是否继续？
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 关闭
+ * @param {string} [apac.wc_sharer_entry_button_label1] - 共享屏幕
+ * @param {string} [apac.wc_sharer_entry_button_label2] - 新的共享
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - 谁可以共享?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - 谁可以在别人共享的同时开始共享?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - 仅主持人
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - 全体参会者
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - 停止录制
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - 您正在共享屏幕…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - 您的屏幕共享被暂停
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - 暂停共享
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - 继续共享
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - 停止共享
  * @param {string} [apac.wc_cc_withdraw] - 收回隐藏字幕权限
  * @param {string} [apac.wc_cc_assign_to] - 指定输入隐藏字幕
  * @param {string} [apac.join_3prty_audio] - 通过第三方音频加入
@@ -2500,6 +2805,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - 你无法自我解除静音，应为主持人已经将你静音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已禁用与会者聊天功能。
+ * @param {string} [apac.wc_chat.disabled] - 无
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - 通过拨入连接音频
  * @param {string} [apac.wc_video.camera_is_taken] - 您的摄像头已被其他应用占用，请释放该权限，然后重试。
  * @param {string} [apac.wc_qa.qa_comp_title] - 问答
@@ -2549,7 +2855,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - 广播
  * @param {string} [apac.wc_cc_host_assigned] - 主持人已指定您输入隐藏字幕
  * @param {string} [apac.wc_remote_control.can_control] - 您可以控制{0}的屏幕
+ * @param {string} [apac.wc_remote_control.give_up] - 放弃远程控制
  * @param {string} [apac.wc_remote_control.is_controlling] - 您正在控制{0}的屏幕
+ * @param {string} [apac.errorcodes_success] - 成功加盟
+ * @param {string} [apac.errorcodes_fail] - 加入失败
+ * @param {string} [apac.errorcodes_not_init] - 会议未初始化
+ * @param {string} [apac.errorcodes_register] - 需要注册
+ * @param {string} [apac.errorcodes_email_require] - 缺少电子邮件
+ * @param {string} [apac.errorcodes_not_exist] - 会议不存在
+ * @param {string} [apac.errorcodes_not_host] - 你是不是主机
+ * @param {string} [apac.errorcodes_wrong_pass] - 密码错误
+ * @param {string} [apac.errorcodes_another_running] - 另一次会议运行
+ * @param {string} [apac.errorcodes_not_start] - 会议未启动
+ * @param {string} [apac.errorcodes_re_connect] - 会议重新连接
+ * @param {string} [apac.errorcodes_be_removed] - 被移除
+ * @param {string} [apac.errorcodes_disconnect] - 会议断开
+ * @param {string} [apac.wc_chat.new_msg] - 新消息
+ * @param {string} [apac.wc_chat.everyone_public] - 所有人公屏聊天
+ * @param {string} [apac.wc_chat.everyone_public_private] - 所有人公屏聊天和私聊
 */
 
 
@@ -2601,8 +2924,12 @@ const LanguageResource = {
  * @param {string} [apac.wc_defalut_email] - 預設電子郵件
  * @param {string} [apac.wc_muteall_desc] - 現有的和新的參與者將被靜音
  * @param {string} [apac.wc_remote_control.request] - 請求遠端控制權
- * @param {string} [apac.wc_remote_control.text3] -
- * @param {string} [apac.wc_remote_control.text5] -
+ * @param {string} [apac.wc_remote_control.text1] - 您將要請求控制 {0} 共享的內容。
+ * @param {string} [apac.wc_remote_control.text2] - 選擇[請求]然後等待{0}的批准.
+ * @param {string} [apac.wc_remote_control.text3] - 如果您不想發送這個請求請選擇[取消]。
+ * @param {string} [apac.wc_remote_control.text4] - {0}拒絕你的請求.
+ * @param {string} [apac.wc_remote_control.text5] - 選擇[請求]再試一次。
+ * @param {string} [apac.wc_assign_cc_confirm] - 目前{0}獲指派輸入隱藏式輔助字幕，您是否想將該權限改為指派給{1}？
  * @param {string} [apac.wc_continue] - 繼續
  * @param {string} [apac.wc_choose_email_service] - 選取您的電子郵件服務以傳送邀請
  * @param {string} [apac.dialog.meeting_removed_by_host] - 主持人已將您從該會議中刪除。
@@ -2673,7 +3000,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_quality] - 品質
  * @param {string} [apac.wc_start_video] - 開始視訊
  * @param {string} [apac.wc_stop_video] - 停止視訊
- * @param {string} [apac.dialog.presscode] - 會議 ID
+ * @param {string} [apac.dialog.presscode] - 會議號
  * @param {string} [apac.meeting_calling] - 正在呼叫
  * @param {string} [apac.wc_stop_recording] - 停止錄製
  * @param {string} [apac.wc_stop_recording_content] - 如果是，當雲記錄準備好將收到電子郵件通知。
@@ -2686,7 +3013,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_talk] - 交談
  * @param {string} [apac.wc_select_camera] - 選取相機
  * @param {string} [apac.wc_video_setting] - 視訊設定
- * @param {string} [apac.wc_is_sharing_desktop] - 正在分享桌面
+ * @param {string} [apac.wc_is_sharing_desktop] - 正在共享桌面
  * @param {string} [apac.wc_unlock_meeting] - 解除鎖定會議
  * @param {string} [apac.wc_lock_meeting] - 鎖定會議
  * @param {string} [apac.wc_more] - 更多
@@ -2798,7 +3125,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - 人已保留
  * @param {string} [apac.wc_remove_user] - 確定要刪除
  * @param {string} [apac.wc_download] - download
+ * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - 安裝
+ * @param {string} [apac.wc_sharer_disabled_share_button_label] - 確定
+ * @param {string} [apac.wc_sharer_disabled_share_title] - 禁用共享
+ * @param {string} [apac.wc_sharer_disabled_share1_desc] - 主持人禁止參會者螢幕共享
+ * @param {string} [apac.wc_sharer_disabled_share2_desc] - 他人正在共享螢幕時，此時您無法進行螢幕共享。
+ * @param {string} [apac.wc_sharer_start_share_button1_label] - 取消
+ * @param {string} [apac.wc_sharer_start_share_button2_label] - 繼續
+ * @param {string} [apac.wc_sharer_start_share_title] - 啟動螢幕共享
+ * @param {string} [apac.wc_sharer_start_share_desc] - 這將停止他人的螢幕共享，是否繼續？
  * @param {string} [apac.wc_aria_txt_dialog_close_btn] - 關閉
+ * @param {string} [apac.wc_sharer_entry_button_label1] - 共享螢幕
+ * @param {string} [apac.wc_sharer_entry_button_label2] - 新的共享
+ * @param {string} [apac.wc_sharer_setting_menu_category1_title] - 誰可以共享?
+ * @param {string} [apac.wc_sharer_setting_menu_category2_title] - 誰可以在別人共享的同時開始共享?
+ * @param {string} [apac.wc_sharer_setting_menu_category_option1] - 僅主持人
+ * @param {string} [apac.wc_sharer_setting_menu_category_option2] - 全體參會者
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_label] - 停止錄影
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip1] - 您正在共享屏幕…
+ * @param {string} [apac.wc_sharer_controlbar_container_rec_status_tip2] - 您的螢幕共享被暫停
+ * @param {string} [apac.wc_sharer_controlbar_container_button1_label] - 暫停共享
+ * @param {string} [apac.wc_sharer_controlbar_container_button2_label] - 繼續共享
+ * @param {string} [apac.wc_sharer_controlbar_container_button3_label] - 停止共享
  * @param {string} [apac.wc_cc_withdraw] - 撤回隱藏字幕權限
  * @param {string} [apac.wc_cc_assign_to] - 指派輸入隱藏字幕
  * @param {string} [apac.join_3prty_audio] - 透過第三方音訊加入
@@ -2806,6 +3154,7 @@ const LanguageResource = {
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - 你無法自我解除靜音，應為主持人已經將你靜音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已停用出席者聊天。
+ * @param {string} [apac.wc_chat.disabled] - 無
  * @param {string} [apac.wc_audio.using_audio_dial_tip] - 您是透過撥入連線音訊
  * @param {string} [apac.wc_video.camera_is_taken] - 您的攝影機已由其他應用程式所佔用，請釋放該權限，然後再試一次。
  * @param {string} [apac.wc_qa.qa_comp_title] - 問答
@@ -2855,9 +3204,25 @@ const LanguageResource = {
  * @param {string} [apac.wc_broadcasting] - 廣播
  * @param {string} [apac.wc_cc_host_assigned] - 主持人已指派您輸入隱藏字幕
  * @param {string} [apac.wc_remote_control.can_control] - 您可以控制{0}的螢幕
+ * @param {string} [apac.wc_remote_control.give_up] - 放棄遠端控制權
  * @param {string} [apac.wc_remote_control.is_controlling] - 您正在控制{0}的螢幕
+ * @param {string} [apac.errorcodes_success] - 成功加盟
+ * @param {string} [apac.errorcodes_fail] - 加入失敗
+ * @param {string} [apac.errorcodes_not_init] - 會議未初始化
+ * @param {string} [apac.errorcodes_register] - 需要註冊
+ * @param {string} [apac.errorcodes_email_require] - 缺少電子郵件
+ * @param {string} [apac.errorcodes_not_exist] - 會議不存在
+ * @param {string} [apac.errorcodes_not_host] - 你是不是主機
+ * @param {string} [apac.errorcodes_wrong_pass] - 密碼錯誤
+ * @param {string} [apac.errorcodes_another_running] - 另一次會議運行
+ * @param {string} [apac.errorcodes_not_start] - 會議未啟動
+ * @param {string} [apac.errorcodes_re_connect] - 會議重新連接
+ * @param {string} [apac.errorcodes_be_removed] - 被移除
+ * @param {string} [apac.errorcodes_disconnect] - 會議斷開
+ * @param {string} [apac.wc_chat.new_msg] - 新訊息
+ * @param {string} [apac.wc_chat.everyone_public] - 所有人以公開方式
+ * @param {string} [apac.wc_chat.everyone_public_private] - 所有人以公開或私下方式
 */
-
 
 module.exports = LanguageResource;
 </code></pre>
@@ -2872,7 +3237,7 @@ module.exports = LanguageResource;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon Sep 09 2019 15:50:54 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Oct 09 2019 17:26:04 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
