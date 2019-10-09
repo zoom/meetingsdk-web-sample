@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## version 1.6.0
+
+## Added
+1. Closed caption feature
+2. Webinar Q&A feature
+3. Remote control feature
+ 
+## Enhancements:
+1. enable/disable error dialog when joining 
+2. sharing feature multi-languages support
+  meeting
+
+## Bug Fixes:
+1. IpadOS and Catalina view video and sharing broken
+
 ## version 1.5.1
 
 ## Added

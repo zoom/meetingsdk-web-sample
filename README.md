@@ -35,7 +35,7 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.5.1.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.6.0.min.js"></script>
 ```
 ### or
 
@@ -45,24 +45,22 @@ China CDN ```jssdk.zoomus.cn```
 npm install zoomus-jssdk
 ```
    
-Please notice, 1.5.1 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.6.0 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
 console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
-
 // it's option if you want to change the jssdk dependency link resources.
-// ZoomMtg.setZoomJSLib('https://dmogdx0jrul3u.cloudfront.net/1.5.1/lib', '/av'); // CDN version default
-// ZoomMtg.setZoomJSLib('https://source.zoom.us/1.5.1/lib', '/av'); // Global use source.zoom.us
-// ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.5.1/lib', '/av'); // China use jssdk.zoomus.cn   
+// ZoomMtg.setZoomJSLib('https://source.zoom.us/1.6.0/lib', '/av'); // CDN version default
+// ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.6.0/lib', '/av'); // china cdn option 
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.5.1
+Go to see sample web app (CDN version) how to update 1.3.5 for 1.6.0
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
