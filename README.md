@@ -2,7 +2,7 @@
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments. 
 
-The web client lets end users join a meeting, receive screen share from other attendees, join the meeting through the phone and leave the meeting. Zoom has added a JS SDK as part of our developer platform to enable developers to embed this into their web apps. Key functions that are exposed include: init meeting config, join meeting, show/hide invite function, show/hide meeting header, get attendees list, call out, invite by phone, mute, unmute, mute all, unmute all, rename, expel, record, lock meeting, leave meeting, end meeting.
+The web client lets end users join a meeting, receive screen share from other attendees, join the meeting through the phone and leave the meeting. Zoom has added a Web SDK as part of our developer platform to enable developers to embed this into their web apps. Key functions that are exposed include: init meeting config, join meeting, show/hide invite function, show/hide meeting header, get attendees list, call out, invite by phone, mute, unmute, mute all, unmute all, rename, expel, record, lock meeting, leave meeting, end meeting.
 
 Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest version
 
@@ -107,7 +107,8 @@ View Sharing | yes | yes | yes | yes | yes| yes | yes
 Screen Sharing | >=72 | >=66 | no | >=17 | no | no | yes
 Chat | yes | yes | yes | yes | yes | yes | yes | yes
 
-notice: if you want use IE10, please use 1.4.2 version, React 16 don't support IE10
+Notice: If you want use IE10, please use WebSDK version 1.4.2. Due to React 16 adoption version 1.5.0 WebSDK doen't support IE10. 
+
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
 
