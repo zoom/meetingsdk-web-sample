@@ -67,7 +67,7 @@ var langArray = ['de-DE', 'es-ES', 'en-US', 'fr-FR', 'jp-JP', 'pt-PT','ru-RU', '
 var userLangTemplate = $.i18n.getAll(&quot;en-US&quot;);
 
 //Define the userLangDict variable, you can use the language-key-value.json file to determine which keys to set the custom language for UI.
-var userLangDict = Object.assign({}, userLangTemplate, {'apac.toolbar_leave': 'Leave Now', 'apac.wc_leave_meeting': '不要会议', 'apac.wc_joining_meeting': 'Join Veeva Meeting', &quot;apac.wc_quality&quot;: &quot;Video Quality&quot;});
+var userLangDict = Object.assign({}, userLangTemplate, {'apac.toolbar_leave': 'Leave Now', 'apac.wc_leave_meeting': '不要会议', 'apac.wc_joining_meeting': 'Join a Meeting', &quot;apac.wc_quality&quot;: &quot;Video Quality&quot;});
 
 //Set the userLangDict and custom code language in the internationalization.load method.
 $.i18n.load(userLangDict, &quot;myLangauge&quot;);
