@@ -1,5 +1,9 @@
 # CHANGELOG
-
+## version 1.6.1
+## Bug Fixes:
+1. showPureSharingContent=true, footer never overlay the share area
+2. only one host in meeting, the video freeze.
+3. update react-dom.min.js fix lost mouseleave event issue.
 ## version 1.6.0
 
 ## Added
