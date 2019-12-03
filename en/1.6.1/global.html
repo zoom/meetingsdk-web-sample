@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Global - Documentation</title>
+    <link rel="icon" href="images/favicon.ico">
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/app.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+
+    <script type="text/javascript">
+    $(document).ready(() => {
+        zoomDocInit();
+    });
+    </script>
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html"><img src="images/ZoomLogo.png" ></a></h2><h3>Namespaces</h3><ul><li><a href="$.i18n.html">i18n</a><ul class='methods'><li data-type='method'><a href="$.i18n.html#load">load</a></li><li data-type='method'><a href="$.i18n.html#reload">reload</a></li><li data-type='method'><a href="$.i18n.html#get">get</a></li><li data-type='method'><a href="$.i18n.html#printf">printf</a></li><li data-type='method'><a href="$.i18n.html#getAll">getAll</a></li></ul></li><li><a href="LanguageResource.html">LanguageResource</a><ul class='methods'><li data-type='method'><a href="LanguageResource.html#en-US">en-US</a></li><li data-type='method'><a href="LanguageResource.html#de-DE">de-DE</a></li><li data-type='method'><a href="LanguageResource.html#es-ES">es-ES</a></li><li data-type='method'><a href="LanguageResource.html#fr-FR">fr-FR</a></li><li data-type='method'><a href="LanguageResource.html#jp-JP">jp-JP</a></li><li data-type='method'><a href="LanguageResource.html#pt-PT">pt-PT</a></li><li data-type='method'><a href="LanguageResource.html#ru-RU">ru-RU</a></li><li data-type='method'><a href="LanguageResource.html#zh-CN">zh-CN</a></li><li data-type='method'><a href="LanguageResource.html#zh-TW">zh-TW</a></li></ul></li><li><a href="ZoomMtg.html">ZoomMtg</a><ul class='methods'><li data-type='method'><a href="ZoomMtg.html#setZoomJSLib">setZoomJSLib</a></li><li data-type='method'><a href="ZoomMtg.html#preLoadWasm">preLoadWasm</a></li><li data-type='method'><a href="ZoomMtg.html#prepareJssdk">prepareJssdk</a></li><li data-type='method'><a href="ZoomMtg.html#generateSignature">generateSignature</a></li><li data-type='method'><a href="ZoomMtg.html#checkSystemRequirements">checkSystemRequirements</a></li><li data-type='method'><a href="ZoomMtg.html#getJSSDKVersion">getJSSDKVersion</a></li><li data-type='method'><a href="ZoomMtg.html#init">init</a></li><li data-type='method'><a href="ZoomMtg.html#join">join</a></li><li data-type='method'><a href="ZoomMtg.html#showInviteFunction">showInviteFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showMeetingHeader">showMeetingHeader</a></li><li data-type='method'><a href="ZoomMtg.html#showRecordFunction">showRecordFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showCalloutFunction">showCalloutFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showJoinAudioFunction">showJoinAudioFunction</a></li><li data-type='method'><a href="ZoomMtg.html#showPureSharingContent">showPureSharingContent</a></li><li data-type='method'><a href="ZoomMtg.html#getAttendeeslist">getAttendeeslist</a></li><li data-type='method'><a href="ZoomMtg.html#callOut">callOut</a></li><li data-type='method'><a href="ZoomMtg.html#getZoomRoomlist">getZoomRoomlist</a></li><li data-type='method'><a href="ZoomMtg.html#inviteByPhone">inviteByPhone</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteCRCDevice">inviteCRCDevice</a></li><li data-type='method'><a href="ZoomMtg.html#inviteZoomRoom">inviteZoomRoom</a></li><li data-type='method'><a href="ZoomMtg.html#mute">mute</a></li><li data-type='method'><a href="ZoomMtg.html#muteAll">muteAll</a></li><li data-type='method'><a href="ZoomMtg.html#rename">rename</a></li><li data-type='method'><a href="ZoomMtg.html#expel">expel</a></li><li data-type='method'><a href="ZoomMtg.html#record">record</a></li><li data-type='method'><a href="ZoomMtg.html#lockMeeting">lockMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#leaveMeeting">leaveMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#endMeeting">endMeeting</a></li><li data-type='method'><a href="ZoomMtg.html#putOnHold">putOnHold</a></li></ul></li></ul><h3>Tutorials</h3><ul><li><a href="tutorial-enable-2way-audio-video.html">Enable 2AV Feature</a></li><li><a href="tutorial-get-start.es5.html">Sample Demo CDN Statement</a></li><li><a href="tutorial-get-start.es6-integration.html">integration with exist nodejs project</a></li><li><a href="tutorial-get-start.es6.html">Sample Demo Local Statement</a></li><li><a href="tutorial-just-enable-sharing.html">IE Join Meeting</a></li><li><a href="tutorial-multi-language.html">Use multi languages</a></li><li><a href="tutorial-register.html">Register ZOOM JSSDK API</a></li><li><a href="tutorial-webinar.html">Join Webinar</a></li></ul><h3>Global</h3><ul><li><a href="global.html#generate_signature">generate_signature</a></li><li><a href="global.html#languages">languages</a></li><li><a href="global.html#errorCodes">errorCodes</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Global</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+        
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="generate_signature"><span class="type-signature"></span>generate_signature<span class="signature">(string, string, int, int)</span><span class="type-signature"> &rarr; {string}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="base.js.html">base.js</a>, <a href="base.js.html#line3">line 3</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Generate signature for ZoomMtg WebSDK. <a href="https://github.com/danharper/hmac-examples">hmac-examples</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>//======================================================================================================
+//PHP example code
+function generate_signature ( $api_key, $api_sercet, $meeting_number, $role){
+
+    $time = time() * 1000; //time in milliseconds (or close enough)
+
+    $data = base64_encode($api_key . $meeting_number . $time . $role);
+
+    $hash = hash_hmac('sha256', $data, $api_sercet, true);
+
+    $_sig = $api_key . "." . $meeting_number . "." . $time . "." . $role . "." . base64_encode($hash);
+
+    //return signature, url safe base64 encoded
+    return rtrim(strtr(base64_encode($_sig), '+/', '-_'), '=');
+}
+
+//======================================================================================================
+//Java example code
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.NoSuchAlgorithmException;
+import java.util.Base64;
+import java.security.InvalidKeyException;
+import javax.xml.bind.DatatypeConverter;
+
+public class test {
+    public static String generateSignature(String apiKey, String apiSecret, String meetingNumber, Integer role) {
+        try {
+            Mac hasher = Mac.getInstance("HmacSHA256");
+            String ts = Long.toString(System.currentTimeMillis());
+            String msg = String.format("%s%s%s%d", apiKey, meetingNumber, ts, role);
+
+            hasher.init(new SecretKeySpec(apiSecret.getBytes(), "HmacSHA256"));
+
+            String message = Base64.getEncoder().encodeToString(msg.getBytes());
+            byte[] hash = hasher.doFinal(message.getBytes());
+
+            String hashBase64Str = DatatypeConverter.printBase64Binary(hash);
+            String tmpString = String.format("%s.%s.%s.%d.%s", apiKey, meetingNumber, ts, role, hashBase64Str);
+            String encodedString = Base64.getEncoder().encodeToString(tmpString.getBytes());
+
+            return encodedString.replaceAll("\\=+$", "");
+
+          }
+          catch (NoSuchAlgorithmException e) {}
+          catch (InvalidKeyException e) {}
+        return "";
+    }
+    public static void main(String[] args) {
+        String signature = test.generateSignature("apiKey", "apiSecret", "meetingNumber", 0);
+        System.out.println(signature);
+    }
+}
+
+//======================================================================================================
+//Python2 example code
+import hashlib
+import hmac
+import base64
+import time
+
+def generateSignature(data):
+    ts = (int(round(time.time() * 1000)));  #ts; // 1544683367752
+    print (ts)
+    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);
+    message = base64.b64encode(bytes(msg).encode('utf-8'));
+    secret = bytes(data['apiSecret']).encode('utf-8')
+    hash = hmac.new(secret, message, hashlib.sha256);
+    hash =  base64.b64encode(hash.digest());
+    hash = hash.decode("utf-8");
+    tmpString = "%s.%s.%s.%s.%s" % (data['apiKey'], str(data['meetingNumber']), str(ts), str(data['role']), hash);
+    signature = base64.b64encode(bytes(tmpString).encode("utf-8"));
+    signature = signature.decode("utf-8");
+    return signature.rstrip("=");
+
+if __name__ == '__main__':
+    data = {'apiKey': "" ,
+                'apiSecret': "",
+                'meetingNumber': 8998,
+                'role': 0}
+    print (generateSignature(data))
+
+//======================================================================================================
+//Python3 example code
+import hashlib
+import hmac
+import base64
+import datetime
+
+def generateSignature(data):
+    ts = int(round(datetime.datetime.utcnow().timestamp() * 1000));
+    msg = data['apiKey'] + str(data['meetingNumber']) + str(ts) + str(data['role']);
+    message = base64.b64encode(bytes(msg, 'utf-8'));
+    # message = message.decode("utf-8");
+    secret = bytes(data['apiSecret'], 'utf-8')
+    hash = hmac.new(secret, message, hashlib.sha256);
+    hash =  base64.b64encode(hash.digest());
+    hash = hash.decode("utf-8");
+    tmpString = "%s.%s.%s.%s.%s" % (data['apiKey'], str(data['meetingNumber']), str(ts), str(data['role']), hash);
+    signature = base64.b64encode(bytes(tmpString, "utf-8"));
+    signature = signature.decode("utf-8");
+    return signature.rstrip("=");
+
+if __name__ == '__main__':
+    data = {'apiKey': "" ,
+                'apiSecret': "",
+                'meetingNumber': 888,
+                'role': 0}
+    print (generateSignature(data))
+
+//======================================================================================================
+//Nodejs
+// npm install --save-dev js-base64 crypto-js
+
+const base64JS = require('js-base64');
+const hmacSha256 = require('crypto-js/hmac-sha256');
+const encBase64 = require('crypto-js/enc-base64');
+
+function generateSignature(data) {
+    let signature = '';
+    const ts = new Date().getTime();
+    const msg = base64JS.Base64.encode(data.apiKey + data.meetingNumber + ts + data.role);
+    const hash = hmacSha256(msg, data.apiSecret);
+    signature = base64JS.Base64.encodeURI(`${data.apiKey}.${data.meetingNumber}.${ts}.${data.role}.${encBase64.stringify(hash)}`);
+    return signature;
+}
+
+const data = {apiKey: "" ,
+apiSecret: "",
+meetingNumber: 888,
+role: 0}
+
+console.log(generateSignature(data));
+
+//======================================================================================================
+// WebSDK us this generateSignature
+// npm install --save-dev js-base64 crypto-js
+import * as base64JS from 'js-base64';
+import * as hmacSha256 from 'crypto-js/hmac-sha256';
+import * as encBase64 from 'crypto-js/enc-base64';
+
+function generateSignature(data) {
+    let signature = '';
+    const ts = new Date().getTime();
+    try {
+        const msg = base64JS.Base64.encode(data.apiKey + data.meetingNumber + ts + data.role);
+        const hash = hmacSha256.default(msg, data.apiSecret);
+        signature = base64JS.Base64.encodeURI(`${data.apiKey}.${data.meetingNumber}.${ts}.${data.role}.${encBase64.stringify(hash)}`);
+    } catch (e) {
+        console.log('error');
+    }
+    return signature;
+}
+
+
+
+//======================================================================================================
+// C#
+// this demo use vscode and .NET Core 2.2.5
+// https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
+// https://dotnet.microsoft.com/download
+// https://www.red-gate.com/simple-talk/dotnet/net-development/jwt-authentication-microservices-net/
+// https://www.jokecamp.com/blog/examples-of-creating-base64-hashes-using-hmac-sha256-in-different-languages/#csharp
+// https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
+
+using System;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace Zoom {
+    class Program {
+        static readonly char[] padding = { '=' };
+
+        static void Main (string[] args) {
+            Console.WriteLine ("Zoom copyright!");
+            Console.WriteLine ("generate websdk token!");
+            string apiKey = "apiKey";
+            string apiSecret = "apiSecret";
+            string meetingNumber = "";
+            String ts = ToTimestamp(DateTime.UtcNow.ToUniversalTime ()).ToString();
+            string role = "1";
+            string token = GenerateToken (apiKey, apiSecret, meetingNumber, ts, role);
+            Console.WriteLine (token);
+        }
+
+        public static long ToTimestamp (DateTime value) {
+            long epoch = (value.Ticks - 621355968000000000) / 10000;
+            return epoch;
+        }
+
+        public static string GenerateToken (string apiKey, string apiSecret, string meetingNumber, string ts, string role) {
+
+            string message = String.Format ("{0}{1}{2}{3}", apiKey, meetingNumber, ts, role);
+            apiSecret = apiSecret ?? "";
+            // Console.WriteLine ("message: " + message + " secret: " + apiSecret);
+            var encoding = new System.Text.ASCIIEncoding ();
+            byte[] keyByte = encoding.GetBytes (apiSecret);
+            byte[] messageBytes = encoding.GetBytes (message);
+            // Console.WriteLine (System.Convert.ToBase64String (messageBytes));
+
+            using (var hmacsha256 = new HMACSHA256 (keyByte)) {
+                byte[] key1 = Encoding.ASCII.GetBytes (apiSecret);
+                byte[] hashmessage = hmacsha256.ComputeHash (messageBytes);
+                string msgHash = System.Convert.ToBase64String (hashmessage);
+                // Console.WriteLine ("msgHash: " + msgHash);
+
+                string token = String.Format ("{0}.{1}.{2}.{3}.{4}", apiKey, meetingNumber, ts, role, msgHash);
+                // Console.WriteLine("token", token, " ", Base64Encode(token));
+
+                var tokenBytes = System.Text.Encoding.UTF8.GetBytes (token);
+                return System.Convert.ToBase64String (tokenBytes).TrimEnd(padding);
+            }
+        }
+
+    }
+}</code></pre>
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>$api_key You REST API Key</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>string</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>$api_secret You REST API Secret</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>int</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>$meeting_number The meeting number you are creating the signature for</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>int</code></td>
+            
+
+            <td class="type">
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>$role Role that this signature is for; 0 for participant, 1 for host</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>Returns the signature string</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="languages"><span class="type-signature"></span>languages<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>en-US</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>English default</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>de-DE</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>German Deutsch</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>es-ES</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Spanish Español</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fr-FR</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>French Français</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>jp-JP</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Japanese 日本語</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pt-PT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Portuguese Portuguese</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ru-RU</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Russian Русский</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>zh-CN</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Chinese 简体中文</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>zh-TW</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Chinese 繁体中文</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<div class="description">
+    <p>Zoom office supported languages, en-US is default</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="errorCodes"><span class="type-signature"></span>errorCodes<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>SUCCESS</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>0</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>invoke function success</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FAIL</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>1</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>invoke function error</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MEETING_NOT_INIT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>2</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>you must be init at first</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>EMAIL_REQUIRED</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3000</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>require email for webinar</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ERROR_NOT_EXIST</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3001</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>error not exist</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ERROR_NOT_HOST</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3003</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>error not host</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WRONG_MEETING_PASSWORD</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3004</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>wrong meeting password</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ANOTHER_MEETING_RUNNING</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3005</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>another meeting running</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MEETING_NOT_START</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>3008</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>meeting not start</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RE_CONNECTING</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>4000</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>reconnecting meeting</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DISCONNECT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    <code>4001</code>
+                
+                </td>
+            
+
+            <td class="description last"><p>disconnect meeting</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 07 2019 15:57:29 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

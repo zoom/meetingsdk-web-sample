@@ -52,7 +52,7 @@
 /**
  * @copyright Zoom 2019
  * @namespace LanguageResource
- * @version JSSDK1.6.1
+ * @version JSSDK1.7.0
 */
 
 
@@ -127,7 +127,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Copy Invitation
  * @param {string} [apac.wc_copied] - Copied
  * @param {string} [apac.wc_copy_url] - Copy URL
- * @param {string} [apac.wc_defalut_email] - Default Email
+ * @param {string} [apac.wc_default_email] - Default Email
  * @param {string} [apac.wc_muteall_desc] - Current and new participants will be muted
  * @param {string} [apac.wc_remote_control.request] - Request remote control
  * @param {string} [apac.wc_remote_control.text1] - You are about to request remote control of {0}'s shared content.
@@ -334,6 +334,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_sharer_request_extension_installation_title] - Install Chrome extension
  * @param {string} [apac.wc_sharer_request_extension_installation_desc] - Install the Zoom Scheduler Chrome extension to share screen.
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Install
+ * @param {string} [apac.wc_sharer_in_progress_desc] - Preview
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Your browser is preventing access to your Share Screen.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - Ok
  * @param {string} [apac.wc_sharer_disabled_share_title] - Disabled Share
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - Host disabled attendee screen sharing.
@@ -431,6 +433,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - new message
  * @param {string} [apac.wc_chat.everyone_public] - Everyone publicly
  * @param {string} [apac.wc_chat.everyone_public_private] - Everyone publicly and privately
+ * @param {string} [apac.rmc.main_header_text] - You are in the meeting control mode
+ * @param {string} [apac.rmc.topic] - Topic
+ * @param {string} [apac.rmc.main_description_text] - No meeting participants can see you in this meeting except the host.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - This meeting is being controlled by an admin.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Admin has stopped controlling the meeting.
+ * @param {string} [apac.rmc.click_to_copied] - Click to copy
+ * @param {string} [apac.wc_unknown_error] - Unknown Error.
+ * @param {string} [apac.wc_unknown_error_btn] - Refresh
+ * @param {string} [apac.wc_unknown_error_action] - An unknown error has occurred, please try to refresh this page to rejoin the meeting.
+ * @param {string} [apac.wc_video.cannot_detect_camera] - Cannot detect your camera, please check the device and connection and try again.
+ * @param {string} [apac.wc_invite_email_subject] - Please join {0} meeting in progress
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Cancel the Spotlight Video
+ * @param {string} [apac.wc_video.spotlight_video] - Spotlight Video
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Share Screen Options
+ * @param {string} [apac.wc_trying_to_reconnect] - Trying to reconnect
+ * @param {string} [apac.meeting_disconnected] - Meeting Disconnected
 */
 
 
@@ -479,7 +498,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Einladung kopieren
  * @param {string} [apac.wc_copied] - Kopiert
  * @param {string} [apac.wc_copy_url] - URL kopieren
- * @param {string} [apac.wc_defalut_email] - Standard-E-Mail
+ * @param {string} [apac.wc_default_email] - Standard-E-Mail
  * @param {string} [apac.wc_muteall_desc] - Aktuelle und neue Teilnehmer stumm geschaltet werden
  * @param {string} [apac.wc_remote_control.request] - Fernsteuerung Anfrage
  * @param {string} [apac.wc_remote_control.text1] - Sie sind im Begriff, die Fernsteuerung der freigegebenen Inhalte von {0} zu beantragen.
@@ -684,6 +703,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - Möchten Sie entfernen
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Installieren
+ * @param {string} [apac.wc_sharer_in_progress_desc] - Vorschau
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Ihr Browser verhindert den Zugriff auf Ihren Bildschirm freigeben.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
  * @param {string} [apac.wc_sharer_disabled_share_title] - Behinderte Teilen
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - Der Host hat die Freigabe des Teilnehmerbildschirms deaktiviert
@@ -780,6 +801,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - Neue Nachricht
  * @param {string} [apac.wc_chat.everyone_public] - Jeder öffentlich
  * @param {string} [apac.wc_chat.everyone_public_private] - Jeder öffentlich und privat
+ * @param {string} [apac.rmc.main_header_text] - Sie befinden sich in der Sitzung Steuerungsmodus
+ * @param {string} [apac.rmc.topic] - Thema
+ * @param {string} [apac.rmc.main_description_text] - Keine Meeting-Teilnehmer können Sie in dieser Sitzung außer dem Host sehen.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - Dieses Treffen wird von einem Admin gesteuert.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Admin hat gestoppt, um die Sitzung zu steuern.
+ * @param {string} [apac.rmc.click_to_copied] - Klicken Sie kopieren
+ * @param {string} [apac.wc_unknown_error] - Unbekannter Fehler.
+ * @param {string} [apac.wc_unknown_error_btn] - Aktualisierung
+ * @param {string} [apac.wc_unknown_error_action] - Ein unbekannter Fehler ist aufgetreten, bitte versuchen Sie diese Seite aktualisieren, um die Sitzung wieder
+ * @param {string} [apac.wc_video.cannot_detect_camera] - Kann Ihre Kamera nicht erkennen, überprüfen Sie das Gerät und die Verbindung und versuchen Sie es erneut.
+ * @param {string} [apac.wc_invite_email_subject] - Bitte besuchen Sie {0} Sitzung im Gange
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Spotlight-Video abbrechen
+ * @param {string} [apac.wc_video.spotlight_video] - Spotlight-Video
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Teilen Bildschirmoptionen
+ * @param {string} [apac.wc_trying_to_reconnect] - Der Versuch, wieder zu verbinden
+ * @param {string} [apac.meeting_disconnected] - Meeting Disconnected
 */
 
 
@@ -828,7 +866,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Copiar invitación
  * @param {string} [apac.wc_copied] - Copiado
  * @param {string} [apac.wc_copy_url] - Copiar URL
- * @param {string} [apac.wc_defalut_email] - E-mail predeterminado
+ * @param {string} [apac.wc_default_email] - E-mail predeterminado
  * @param {string} [apac.wc_muteall_desc] - los participantes actuales y nuevos se silenciarán
  * @param {string} [apac.wc_remote_control.request] - Solicitar control remoto
  * @param {string} [apac.wc_remote_control.text1] - Está a punto de solicitar control remoto del contenido compartido de {0}.
@@ -1033,6 +1071,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - ¿Quiere retirar a?
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Instalar
+ * @param {string} [apac.wc_sharer_in_progress_desc] - Avance
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Su navegador está impidiendo el acceso al recurso compartido de la pantalla.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - Aceptar
  * @param {string} [apac.wc_sharer_disabled_share_title] - Compartir discapacitados
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - El anfitrión inhabilitó la función de compartir las pantallas de los participantes
@@ -1129,6 +1169,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - nuevo mensaje
  * @param {string} [apac.wc_chat.everyone_public] - Todos en público
  * @param {string} [apac.wc_chat.everyone_public_private] - Todos en público y en privado
+ * @param {string} [apac.rmc.main_header_text] - Se encuentra en el modo de control de reunión
+ * @param {string} [apac.rmc.topic] - Tema
+ * @param {string} [apac.rmc.main_description_text] - No hay participantes de la reunión se puede ver en esta reunión, excepto el anfitrión.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - Esta reunión está siendo controlado por un administrador.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Administrador ha dejado de control de la reunión.
+ * @param {string} [apac.rmc.click_to_copied] - Haga clic para copiar
+ * @param {string} [apac.wc_unknown_error] - Error desconocido.
+ * @param {string} [apac.wc_unknown_error_btn] - Actualizar
+ * @param {string} [apac.wc_unknown_error_action] - Se ha producido un error desconocido, intenta volver a cargar esta página para unirse a la reunión.
+ * @param {string} [apac.wc_video.cannot_detect_camera] - No se puede detectar su cámara, compruebe el dispositivo y la conexión y vuelva a intentarlo.
+ * @param {string} [apac.wc_invite_email_subject] - Por favor unirse a {0} reunión en curso
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Cancelar el vídeo destacado
+ * @param {string} [apac.wc_video.spotlight_video] - Vídeo destacado
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Opciones de cuota de pantalla
+ * @param {string} [apac.wc_trying_to_reconnect] - Intentando reconectar
+ * @param {string} [apac.meeting_disconnected] - Desconectado reunión
 */
 
 
@@ -1177,7 +1234,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Copiez l’invitation
  * @param {string} [apac.wc_copied] - Copié
  * @param {string} [apac.wc_copy_url] - Copiez l’URL
- * @param {string} [apac.wc_defalut_email] - E-mail par défaut
+ * @param {string} [apac.wc_default_email] - E-mail par défaut
  * @param {string} [apac.wc_muteall_desc] - Actuels et nouveaux participants seront mis en sourdine
  * @param {string} [apac.wc_remote_control.request] - Demander le contrôle à distance
  * @param {string} [apac.wc_remote_control.text1] - Vous êtes sur le point de demander le contrôle à distance du contenu partagé de {0}.
@@ -1382,6 +1439,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - Souhaitez-vous exclure
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Installer
+ * @param {string} [apac.wc_sharer_in_progress_desc] - Aperçu
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Votre navigateur empêche l'accès à votre écran de partage.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
  * @param {string} [apac.wc_sharer_disabled_share_title] - désactivé Partager
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - L’animateur a désactivé le partage d’écran par les participants
@@ -1478,6 +1537,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - nouveau message
  * @param {string} [apac.wc_chat.everyone_public] - Tout le monde en public
  * @param {string} [apac.wc_chat.everyone_public_private] - Tout le monde en public et en privé
+ * @param {string} [apac.rmc.main_header_text] - Vous êtes dans le mode de contrôle de la réunion
+ * @param {string} [apac.rmc.topic] - Sujet
+ * @param {string} [apac.rmc.main_description_text] - Aucun participants à la réunion peuvent vous voir dans cette réunion, sauf l'hôte.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - Cette réunion est contrôlée par un administrateur.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Admin a cessé de contrôler la réunion.
+ * @param {string} [apac.rmc.click_to_copied] - Cliquez pour copier
+ * @param {string} [apac.wc_unknown_error] - Erreur inconnue.
+ * @param {string} [apac.wc_unknown_error_btn] - Rafraîchir
+ * @param {string} [apac.wc_unknown_error_action] - Une erreur inconnue est survenue, s'il vous plaît essayer de rafraîchir cette page pour rejoindre la réunion.
+ * @param {string} [apac.wc_video.cannot_detect_camera] - Impossible de détecter votre appareil photo, vérifiez le périphérique et la connexion, puis réessayez.
+ * @param {string} [apac.wc_invite_email_subject] - S'il vous plaît joindre {0} réunion en cours
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Annuler la vidéo Spotlight
+ * @param {string} [apac.wc_video.spotlight_video] - Vidéo Spotlight
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Partager Options de l'écran
+ * @param {string} [apac.wc_trying_to_reconnect] - Essayer de se reconnecter
+ * @param {string} [apac.meeting_disconnected] - réunion Disconnected
 */
 
 
@@ -1526,7 +1602,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - 招待状をコピー
  * @param {string} [apac.wc_copied] - コピー済み
  * @param {string} [apac.wc_copy_url] - URLをコピー
- * @param {string} [apac.wc_defalut_email] - デフォルトのメール
+ * @param {string} [apac.wc_default_email] - デフォルトのメール
  * @param {string} [apac.wc_muteall_desc] - 現在、新たな参加者がミュートされます
  * @param {string} [apac.wc_remote_control.request] - リモート制御のリクエスト
  * @param {string} [apac.wc_remote_control.text1] - {0} の共有コンテンツのリモート制御をリクエストしようとしています。
@@ -1731,6 +1807,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - 削除しますか
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - インストール
+ * @param {string} [apac.wc_sharer_in_progress_desc] - プレビュー
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - お使いのブラウザが共有画面へのアクセスを妨げています。
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
  * @param {string} [apac.wc_sharer_disabled_share_title] - 無効シェア
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - ホストは、参加者の画面共有を無効にしました。
@@ -1827,6 +1905,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - 新しいメッセージ
  * @param {string} [apac.wc_chat.everyone_public] - 全員をパブリックに
  * @param {string} [apac.wc_chat.everyone_public_private] - 全員をパブリックおよびプライベートに
+ * @param {string} [apac.rmc.main_header_text] - あなたは会議の制御モードであります
+ * @param {string} [apac.rmc.topic] - トピック
+ * @param {string} [apac.rmc.main_description_text] - いいえ会議の参加者は、ホストを除き、この会議でお会いすることはできません。
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - この会議には、管理者によって制御されています。
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - 管理者は、会議を制御停止しました。
+ * @param {string} [apac.rmc.click_to_copied] - コピーするにはクリックしてください
+ * @param {string} [apac.wc_unknown_error] - 不明なエラー。
+ * @param {string} [apac.wc_unknown_error_btn] - リフレッシュ
+ * @param {string} [apac.wc_unknown_error_action] - 不明なエラーが発生した、会議に再度参加するには、このページをリフレッシュしてください。
+ * @param {string} [apac.wc_video.cannot_detect_camera] - カメラを検出できません。デバイスと接続を確認して、もう一度試してください。
+ * @param {string} [apac.wc_invite_email_subject] - 進行中の{0}ミーティングに参加してください
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - スポットライトビデオをキャンセルする
+ * @param {string} [apac.wc_video.spotlight_video] - スポットライトビデオ
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - 共有画面のオプション
+ * @param {string} [apac.wc_trying_to_reconnect] - 再接続しようとすると
+ * @param {string} [apac.meeting_disconnected] - 会議の切断
 */
 
 
@@ -1875,7 +1970,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Copiar convite
  * @param {string} [apac.wc_copied] - Copiado
  * @param {string} [apac.wc_copy_url] - Copiar URL
- * @param {string} [apac.wc_defalut_email] - E-mail padrão
+ * @param {string} [apac.wc_default_email] - E-mail padrão
  * @param {string} [apac.wc_muteall_desc] - Atuais e novos participantes será silenciado
  * @param {string} [apac.wc_remote_control.request] - Solicitar controle remoto
  * @param {string} [apac.wc_remote_control.text1] - Você está prestes a solicitar controle remoto do conteúdo compartilhado de {0}.
@@ -2080,6 +2175,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - Quer remover %s?
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Instalar
+ * @param {string} [apac.wc_sharer_in_progress_desc] - visualização
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Seu navegador está impedindo o acesso ao seu compartilhamento de tela.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - OK
  * @param {string} [apac.wc_sharer_disabled_share_title] - Disabled Compartilhar
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - O anfitrião desativou o compartilhamento de tela do participante
@@ -2176,6 +2273,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - nova mensagem
  * @param {string} [apac.wc_chat.everyone_public] - Todos em modo público
  * @param {string} [apac.wc_chat.everyone_public_private] - Todos em modo público e privado
+ * @param {string} [apac.rmc.main_header_text] - Você está no modo de controle reunião
+ * @param {string} [apac.rmc.topic] - Tema
+ * @param {string} [apac.rmc.main_description_text] - Nenhum dos participantes de reuniões podem vê-lo neste encontro, exceto o anfitrião.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - Esta reunião está sendo controlado por um administrador.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Administrador parou de controlar o encontro.
+ * @param {string} [apac.rmc.click_to_copied] - Clique para copiar
+ * @param {string} [apac.wc_unknown_error] - Erro desconhecido.
+ * @param {string} [apac.wc_unknown_error_btn] - refrescar
+ * @param {string} [apac.wc_unknown_error_action] - Um erro desconhecido ocorreu, por favor actualize esta página para voltar a participar do encontro.
+ * @param {string} [apac.wc_video.cannot_detect_camera] - Não é possível detectar sua câmera, verifique o dispositivo e a conexão e tente novamente.
+ * @param {string} [apac.wc_invite_email_subject] - Por favor, junte-se {0} reunião em andamento
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Cancelar vídeo de destaque
+ * @param {string} [apac.wc_video.spotlight_video] - Vídeo de destaque
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Opções de compartilhar a tela
+ * @param {string} [apac.wc_trying_to_reconnect] - Tentando reconectar
+ * @param {string} [apac.meeting_disconnected] - Disconnected reunião
 */
 
 
@@ -2224,7 +2338,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - Копировать приглашение
  * @param {string} [apac.wc_copied] - Скопировано
  * @param {string} [apac.wc_copy_url] - Копировать URL
- * @param {string} [apac.wc_defalut_email] - Электронная почта по умолчанию
+ * @param {string} [apac.wc_default_email] - Электронная почта по умолчанию
  * @param {string} [apac.wc_muteall_desc] - Текущие и новые участники будут отключены
  * @param {string} [apac.wc_remote_control.request] - Запрос дистанционного управления
  * @param {string} [apac.wc_remote_control.text1] - Вы собираетесь запросить дистанционное управление совместно используемым содержимым {0}.
@@ -2429,6 +2543,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - Хотите ли вы удалить
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - Установить
+ * @param {string} [apac.wc_sharer_in_progress_desc] - предварительный просмотр
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Ваш браузер не позволяет доступ к экрану Share.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - ОК
  * @param {string} [apac.wc_sharer_disabled_share_title] - Disabled Поделиться
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - Организатор отключил демонстрацию экрана участников
@@ -2525,6 +2641,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - новое сообщение
  * @param {string} [apac.wc_chat.everyone_public] - Все: открыто
  * @param {string} [apac.wc_chat.everyone_public_private] - Все: открыто и конфиденциально
+ * @param {string} [apac.rmc.main_header_text] - Вы находитесь в режиме управления встречей
+ * @param {string} [apac.rmc.topic] - Тема
+ * @param {string} [apac.rmc.main_description_text] - Нет участники встречи не могут видеть вас в этой встрече, кроме хозяина.
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - Это заседание контролируется администратором.
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - Администратор прекратил контролировать встречу.
+ * @param {string} [apac.rmc.click_to_copied] - Нажмите, чтобы скопировать
+ * @param {string} [apac.wc_unknown_error] - Неизвестная ошибка.
+ * @param {string} [apac.wc_unknown_error_btn] - обновление
+ * @param {string} [apac.wc_unknown_error_action] - Произошла неизвестная ошибка, пожалуйста, попробуйте обновить эту страницу, чтобы присоединиться к встрече.
+ * @param {string} [apac.wc_video.cannot_detect_camera] - Не удается обнаружить камеру, проверьте устройство и подключение и повторите попытку.
+ * @param {string} [apac.wc_invite_email_subject] - Пожалуйста, присоединяйтесь к {0} совещание в ходе
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - Отменить режим Видео в центре внимания
+ * @param {string} [apac.wc_video.spotlight_video] - Видео в центре внимания
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - Параметры экрана Доля
+ * @param {string} [apac.wc_trying_to_reconnect] - Попытка восстановить
+ * @param {string} [apac.meeting_disconnected] - Встреча Disconnected
 */
 
 
@@ -2573,7 +2706,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - 复制邀请
  * @param {string} [apac.wc_copied] - 已复制
  * @param {string} [apac.wc_copy_url] - 复制网址
- * @param {string} [apac.wc_defalut_email] - 默认电子邮件
+ * @param {string} [apac.wc_default_email] - 默认电子邮件
  * @param {string} [apac.wc_muteall_desc] - 现有的和新的参与者将被静音
  * @param {string} [apac.wc_remote_control.request] - 请求远程控制
  * @param {string} [apac.wc_remote_control.text1] - 您将要请求控制{0}共享的内容。
@@ -2654,7 +2787,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_stop_video] - 停止视频
  * @param {string} [apac.dialog.presscode] - 会议号
  * @param {string} [apac.meeting_calling] - 正在呼叫
- * @param {string} [apac.wc_stop_recording] - 停止录音
+ * @param {string} [apac.wc_stop_recording] - 停止录制
  * @param {string} [apac.wc_stop_recording_content] - 如果是，当云记录准备好将收到电子邮件通知。
  * @param {string} [apac.wc_record_reminder_title] - 此会议正在录制中
  * @param {string} [apac.wc_record_reminder_webinar_title] - 此网络研讨会正在录制中
@@ -2778,6 +2911,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - 您是否要移除
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - 安装
+ * @param {string} [apac.wc_sharer_in_progress_desc] - 预览
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - 您的浏览器阻止访问您的共享屏幕。
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - 确定
  * @param {string} [apac.wc_sharer_disabled_share_title] - 禁止共享
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - 主持人禁止参会者屏幕共享
@@ -2866,7 +3001,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_not_exist] - 会议不存在
  * @param {string} [apac.errorcodes_not_host] - 你是不是主机
  * @param {string} [apac.errorcodes_wrong_pass] - 密码错误
- * @param {string} [apac.errorcodes_another_running] - 另一次会议运行
+ * @param {string} [apac.errorcodes_another_running] - 另一个会议运行
  * @param {string} [apac.errorcodes_not_start] - 会议未启动
  * @param {string} [apac.errorcodes_re_connect] - 会议重新连接
  * @param {string} [apac.errorcodes_be_removed] - 被移除
@@ -2874,6 +3009,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - 新消息
  * @param {string} [apac.wc_chat.everyone_public] - 所有人公屏聊天
  * @param {string} [apac.wc_chat.everyone_public_private] - 所有人公屏聊天和私聊
+ * @param {string} [apac.rmc.main_header_text] - 你是在会议控制模式
+ * @param {string} [apac.rmc.topic] - 话题
+ * @param {string} [apac.rmc.main_description_text] - 没有会议与会者可以看到你在本次会议上，除了主机。
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - 本次会议是由管理员控制。
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - 管理员已经停止控制会议。
+ * @param {string} [apac.rmc.click_to_copied] - 点击复制
+ * @param {string} [apac.wc_unknown_error] - 未知错误。
+ * @param {string} [apac.wc_unknown_error_btn] - 刷新
+ * @param {string} [apac.wc_unknown_error_action] - 出现未知错误，请尝试刷新此页面重新加入会议。
+ * @param {string} [apac.wc_video.cannot_detect_camera] - 无法检测到您的相机，请检查设备和连接，然后重试。
+ * @param {string} [apac.wc_invite_email_subject] - 请加入正在进行{0}会议
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - 取消焦点视频
+ * @param {string} [apac.wc_video.spotlight_video] - 焦点视频
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - 分享屏幕选项
+ * @param {string} [apac.wc_trying_to_reconnect] - 正尝试重新连接
+ * @param {string} [apac.meeting_disconnected] - 会议断开
 */
 
 
@@ -2922,7 +3074,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_copy_invitation] - 複製邀請
  * @param {string} [apac.wc_copied] - 已複製
  * @param {string} [apac.wc_copy_url] - 複製 URL
- * @param {string} [apac.wc_defalut_email] - 預設電子郵件
+ * @param {string} [apac.wc_default_email] - 預設電子郵件
  * @param {string} [apac.wc_muteall_desc] - 現有的和新的參與者將被靜音
  * @param {string} [apac.wc_remote_control.request] - 請求遠端控制權
  * @param {string} [apac.wc_remote_control.text1] - 您將要請求控制 {0} 共享的內容。
@@ -3127,6 +3279,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_remove_user] - 確定要刪除
  * @param {string} [apac.wc_download] - download
  * @param {string} [apac.wc_sharer_request_extension_installation_button1_label] - 安裝
+ * @param {string} [apac.wc_sharer_in_progress_desc] - 預覽
+ * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - 您的瀏覽器阻止訪問您的共享屏幕。
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - 確定
  * @param {string} [apac.wc_sharer_disabled_share_title] - 禁用共享
  * @param {string} [apac.wc_sharer_disabled_share1_desc] - 主持人禁止參會者螢幕共享
@@ -3215,7 +3369,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_not_exist] - 會議不存在
  * @param {string} [apac.errorcodes_not_host] - 你是不是主機
  * @param {string} [apac.errorcodes_wrong_pass] - 密碼錯誤
- * @param {string} [apac.errorcodes_another_running] - 另一次會議運行
+ * @param {string} [apac.errorcodes_another_running] - 另一個會議運行
  * @param {string} [apac.errorcodes_not_start] - 會議未啟動
  * @param {string} [apac.errorcodes_re_connect] - 會議重新連接
  * @param {string} [apac.errorcodes_be_removed] - 被移除
@@ -3223,6 +3377,23 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.new_msg] - 新訊息
  * @param {string} [apac.wc_chat.everyone_public] - 所有人以公開方式
  * @param {string} [apac.wc_chat.everyone_public_private] - 所有人以公開或私下方式
+ * @param {string} [apac.rmc.main_header_text] - 你是在會議控制模式
+ * @param {string} [apac.rmc.topic] - 話題
+ * @param {string} [apac.rmc.main_description_text] - 沒有會議與會者可以看到你在本次會議上，除了主機。
+ * @param {string} [apac.rmc.exist_notification_for_client_host] - 本次會議是由管理員控制。
+ * @param {string} [apac.rmc.not_exist_notification_for_client_host] - 管理員已經停止控制會議。
+ * @param {string} [apac.rmc.click_to_copied] - 點擊複製
+ * @param {string} [apac.wc_unknown_error] - 未知錯誤。
+ * @param {string} [apac.wc_unknown_error_btn] - 刷新
+ * @param {string} [apac.wc_unknown_error_action] - 出現未知錯誤，請嘗試刷新此頁面重新加入會議。
+ * @param {string} [apac.wc_video.cannot_detect_camera] - 無法檢測到您的相機，請檢查設備和連接，然後重試。
+ * @param {string} [apac.wc_invite_email_subject] - 請加入正在進行{0}會議
+ * @param {string} [apac.wc_brand] - Zoom
+ * @param {string} [apac.wc_video.cancel_spotlight_video] - 取消焦點視訊
+ * @param {string} [apac.wc_video.spotlight_video] - 焦點視訊
+ * @param {string} [apac.wc_sharer_entry_button_options_label] - 分享屏幕選項
+ * @param {string} [apac.wc_trying_to_reconnect] - 正嘗試重新連接
+ * @param {string} [apac.meeting_disconnected] - 會議斷開
 */
 
 module.exports = LanguageResource;
@@ -3238,7 +3409,7 @@ module.exports = LanguageResource;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Nov 07 2019 15:57:29 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue Dec 03 2019 20:29:53 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
