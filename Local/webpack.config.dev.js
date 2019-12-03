@@ -51,7 +51,6 @@ module.exports = {
         'react-dom': 'ReactDOM',
         redux: 'Redux',
         'redux-thunk': 'ReduxThunk',
-        jQuery: 'jQuery',
         lodash: {
             commonjs: 'lodash',
             amd: 'lodash',
