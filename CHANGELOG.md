@@ -1,4 +1,25 @@
 # CHANGELOG
+## version 1.7.0
+## Added
+1. Added network support failover. WebSDK can now quickly reconnect back to servers without degrading the meeting experience.
+2. Support new Audio Encryption Algorithm.
+3. Added notification when remote meeting conrol admin starts or stops.
+4. Added host to remote control meeting allowing users to chat with everyone of privately.
+5. Added Spotlight for the host to choose who to foucs on when speaking instead of active speaker.
+6. Added Video support for iPadOS.
+
+## Enhancements
+1. Enhanced UI visibility for full screen button.
+
+## Bug Fixes
+1. Fixed jquery name within the Web SDK dependencies.
+2. Fixed invite url domain to reflect brand settings.
+3. Fixed bug where video freezes after switching tabs.
+4. Fixed From & To indicator within chat to not overlap.
+5. Fixed hover over chat messages to be localized.
+6. Fixed localized leave meeting button to not be cutoff.
+7. Fixed Chat Window after clicking Pop Out.
+
 ## version 1.6.1
 ## Bug Fixes:
 1. Fixed API for showPureSharingContent so that the footer will not overlay the sharing screen area. 
