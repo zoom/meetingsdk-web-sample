@@ -1,5 +1,5 @@
 {
-  "name": "zoomus-websdk-cdn",
+  "name": "websdk-cdn",
   "version": "1.7.0",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
