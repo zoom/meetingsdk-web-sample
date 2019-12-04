@@ -1,4 +1,4 @@
-import { ZoomMtg } from 'zoomus-jssdk';
+import { ZoomMtg } from '@zoomus/websdk';
 
 console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));

@@ -1,7 +1,7 @@
 {
-  "name": "zoomus-jssdk-cdn",
+  "name": "zoomus-websdk-cdn",
   "version": "1.7.0",
-  "description": "Zoom sample app for web client JSSDK",
+  "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
