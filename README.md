@@ -39,10 +39,8 @@ China CDN ```jssdk.zoomus.cn```
 ```
 ### or
 
-[![NPM](https://nodei.co/npm/zoomus-jssdk.png)](https://nodei.co/npm/zoomus-jssdk/)
-
 ```
-npm install zoomus-jssdk
+npm install @zoomus/websdk
 ```
    
 Please notice, 1.7.0 release with two ways, the normal way and npm way(need babel and webpack).
@@ -55,7 +53,7 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 // it's option if you want to change the jssdk dependency link resources.
 // ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.0/lib', '/av'); // CDN version default
 // ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.0/lib', '/av'); // china cdn option 
-// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/zoomus-jssdk/dist/lib', '/av'); // Local version default
+// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();

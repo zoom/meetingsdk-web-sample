@@ -10,7 +10,8 @@
 
 ## Enhancements
 1. Enhanced UI visibility for full screen button.
-
+2. Changed npm module from zoomus-jssdk -> @zoomus/websdk.
+   
 ## Bug Fixes
 1. Fixed jquery name within the Web SDK dependencies.
 2. Fixed invite url domain to reflect brand settings.
@@ -19,6 +20,7 @@
 5. Fixed hover over chat messages to be localized.
 6. Fixed localized leave meeting button to not be cutoff.
 7. Fixed Chat Window after clicking Pop Out.
+8. Fixed C# generate signature.
 
 ## version 1.6.1
 ## Bug Fixes:
