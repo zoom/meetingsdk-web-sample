@@ -40,7 +40,7 @@ China CDN ```jssdk.zoomus.cn```
 ### or
 
 ```
-npm install @zoomus/websdk
+npm install @zoomus/websdk@1.7.0
 ```
    
 Please notice, 1.7.0 release with two ways, the normal way and npm way(need babel and webpack).

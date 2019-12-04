@@ -19,14 +19,14 @@
   "author": "Jack Yang",
   "license": "ISC",
   "dependencies": {
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "redux": "3.7.2",
-    "react-redux": "7.1.0",
+    "@zoomus/websdk": "^1.7.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.14",
-    "redux-thunk": "2.2.0",
-    "@zoomus/websdk": "1.7.0"
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "react-redux": "7.1.0",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
