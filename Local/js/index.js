@@ -6,8 +6,9 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 // it's option if you want to change the WebSDK dependency link resources.
 // ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.0/lib', '/av'); // CDN version default
 // ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.0/lib', '/av'); // china cdn option 
-// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version defaultZoomMtg.preLoadWasm();
-ZoomMtg.preLoadWasm();ZoomMtg.prepareJssdk();
+// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default
+ZoomMtg.preLoadWasm();
+ZoomMtg.prepareJssdk();
 
 
 const API_KEY = 'YOUR_API_KEY';
