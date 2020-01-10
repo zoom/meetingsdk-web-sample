@@ -110,7 +110,7 @@ View Sharing | yes | yes | yes | yes | yes| yes | yes
 Screen Sharing | >=72 | >=66 | no | >=17 | no | no | yes
 Chat | yes | yes | yes | yes | yes | yes | yes | yes
 
-Notice: If you want use IE10, please use WebSDK version [1.4.3](https://github.com/zoom/sample-app-web/blob/master/CDN/ie10.html). Due to React 16 adoption version 1.5.0 WebSDK doen't support IE10. 
+Notice: If you want use IE10, please use WebSDK version [1.4.3](https://github.com/zoom/sample-app-web/blob/master/CDN/ie10.html). Due to React 16 adoption version 1.5.0 WebSDK doesn't support IE10. 
 
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
