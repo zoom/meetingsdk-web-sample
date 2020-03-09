@@ -4,8 +4,8 @@
 	console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
     // it's option if you want to change the WebSDK dependency link resources.
-    // ZoomMtg.setZoomJSLib('https://source.zoom.us/1.4.3/lib', '/av'); // CDN version default
-    // ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.4.3/lib', '/av'); // china cdn option 
+    // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.4.3/lib', '/av'); // CDN version default
+    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.4.3/lib', '/av'); // china cdn option 
     ZoomMtg.preLoadWasm();
 
     ZoomMtg.prepareJssdk();

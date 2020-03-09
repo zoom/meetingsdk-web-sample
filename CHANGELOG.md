@@ -1,4 +1,16 @@
 # CHANGELOG
+## version 1.7.2
+## Added
+1. Chat Scope support public or privately
+2. New API getCurrentUser
+   
+## Enhancements
+1. Microsoft Edge Chromium Support
+   
+## Bug Fixes
+1. Responsive Menu cut off when resizing
+2. IE block sharing when join a sharing meeting
+
 ## version 1.7.0
 ## Added
 1. Added network support failover. WebSDK can now quickly reconnect back to servers without degrading the meeting experience.
