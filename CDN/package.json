@@ -6,11 +6,11 @@
   "dependencies": {},
   "devDependencies": {
     "concurrently": "^3.5.1",
-    "http-server": "^0.11.1"
+    "http-server": "^0.12.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o http://localhost:9999/index.html\"",
+    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o index.html\"",
     "https": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -S -C localhost.crt -K localhost.key -o https://localhost:9999/index.html\""
   },
   "author": "Yang Jack",
