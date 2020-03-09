@@ -54,7 +54,7 @@ select#sdk-lang {
 
 select#sdk-version {
  color: #fff;
- background-image: url(../images/select_option.png), -webkit-linear-gradient(#2D8CFF, #2D8CFF 40%, #2D8CFF);
+ background-image: url(../images/select_option1.png), -webkit-linear-gradient(#2D8CFF, #2D8CFF 40%, #2D8CFF);
  background-color: #606;
  -webkit-border-radius: 20px;
  -moz-border-radius: 20px;
