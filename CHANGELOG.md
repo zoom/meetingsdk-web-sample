@@ -1,15 +1,14 @@
 # CHANGELOG
 ## version 1.7.2
 ## Added
-1. Chat Scope support public or privately
-2. New API getCurrentUser
-   
-## Enhancements
-1. Microsoft Edge Chromium Support
-   
-## Bug Fixes
-1. Responsive Menu cut off when resizing
-2. IE block sharing when join a sharing meeting
+1. **Added support for Edge Chromium (Min version: v80+)**
+2. Added a new interface `getCurrentUser` to retrieve the user information(such as userId, participantId, userName,etc.) of the current user
+3. Optimized the interface `getAttendeelist` to ensure the user ID at index 0 represents the current user
+4. Enhanced the chat privileges that could be configured by the host or the co-host and add new privilege `Allow Participants to chat with Everyone publicly and privately`
+
+## Changed & Fixed 
+1. Fixed an issue that the responsive menu is being cut off after resizing the window
+2. Fixed an issue that the attendee sees black blocks shown on the screen when viewing the host’s shared content
 
 ## version 1.7.0
 ## Added
