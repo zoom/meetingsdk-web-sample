@@ -28,7 +28,7 @@ select#sdk-version {
    -webkit-padding-end: 20px;
    -webkit-padding-start: 2px;
    -webkit-user-select: none;
-   background-image: url(../images/select_option1.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-image: url(../images/select_option.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
    background-position: 90% center;
    background-repeat: no-repeat;
    border: 1px solid #AAA;
