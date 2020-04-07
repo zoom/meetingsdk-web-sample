@@ -1,5 +1,5 @@
 # Web Client SDK
-## 1.7.4 is an enforce update, old WebSDK don't support anymore.
+## You are required to update to version 1.7.4. Please note that WebSDK version 1.7.2 or below will no longer be operational.
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
