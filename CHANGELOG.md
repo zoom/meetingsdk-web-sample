@@ -1,4 +1,14 @@
 # CHANGELOG
+## version 1.7.4
+   
+## Enhancements
+1. WebSDK < 1.7.4 are not compatible
+2. Update WebSDK AV lib version
+   
+## Bug Fixes
+1. Leave URL is not triggered when clicking ok
+2. Chat string displays string key instead of the actual string
+
 ## version 1.7.2
 ## Added
 1. **Added support for Edge Chromium (Min version: v80+)**

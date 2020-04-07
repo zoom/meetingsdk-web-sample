@@ -4,8 +4,8 @@
 	console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
     // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-    // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.2/lib', '/av'); // CDN version default
-    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.2/lib', '/av'); // china cdn option 
+    // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.4/lib', '/av'); // CDN version default
+    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.4/lib', '/av'); // china cdn option 
     // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
     ZoomMtg.preLoadWasm();
 
@@ -20,6 +20,8 @@
      */
     var API_SECRET = 'YOUR_API_SECRET';
 
+    testTool = window.testTool;
+    document.getElementById('display_name').value = "CDN" + ZoomMtg.getJSSDKVersion()[0] + testTool.detectOS() + "#" + testTool.getBrowserInfo();
 
     document.getElementById('join_meeting').addEventListener('click', function(e){
         e.preventDefault();
@@ -34,9 +36,9 @@
             apiSecret: API_SECRET,
             meetingNumber: parseInt(document.getElementById('meeting_number').value),
             userName: document.getElementById('display_name').value,
-            passWord: "",
+            passWord: document.getElementById('meeting_pwd').value,
             leaveUrl: "https://zoom.us",
-            role: 0
+            role: parseInt(document.getElementById('meeting_role').value, 10)
         };
 
 
@@ -60,7 +62,6 @@
                         userName: meetConfig.userName,
                         signature: signature,
                         apiKey: meetConfig.apiKey,
-                        userEmail: 'email@gmail.com',
                         passWord: meetConfig.passWord,
                         success: function(res){
                             $('#nav-tool').hide();

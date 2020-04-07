@@ -1,8 +1,5 @@
-## Zoom Web SDK affected due to Web Client maintenance
-
-**We are working to get the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client) and [Zoom Web SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) back online. Please keep up with our status page for detailed updates: [status.zoom.us](https://status.zoom.us/).**
-
 # Web Client SDK
+## 1.7.4 is an enforce update, old WebSDK don't support anymore.
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
@@ -41,12 +38,12 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.7.2.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.7.4.min.js"></script>
 ```
 ### or
 
 ```
-npm install @zoomus/websdk@1.7.2
+npm install @zoomus/websdk@1.7.4
 ```
 ### zoomus-jssdk move to @zoomus/websdk
 ```
@@ -54,7 +51,7 @@ import { ZoomMtg } from 'zoomus-jssdk';
 change to
 import { ZoomMtg } from '@zoomus/websdk';
 ```
-Please notice, 1.7.2 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.7.4 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -62,14 +59,14 @@ console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.2/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.2/lib', '/av'); // china cdn option
+// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.4/lib', '/av'); // CDN version default
+// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.4/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.3.5 for 1.7.2
+Go to see sample web app (CDN version) how to update 1.7.4
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
@@ -116,7 +113,7 @@ View Sharing | yes | yes | yes | yes | yes| yes | yes | yes
 Screen Sharing | >=72 | >=66 | no | >=17 | no | no | yes | yes
 Chat | yes | yes | yes | yes | yes | yes | yes | yes | yes
 
-Notice: If you want use IE10, please use WebSDK version [1.4.3](https://github.com/zoom/sample-app-web/blob/master/CDN/ie10.html). Due to React 16 adoption version 1.5.0 WebSDK doesn't support IE10.
+Notice: WebSDK doesn't support IE10 currently.
 
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
