@@ -1,5 +1,5 @@
 # Web Client SDK
-## You are required to update to version 1.7.4. Please note that WebSDK version 1.7.2 or below will no longer be operational.
+## You are required to update to version >= 1.7.4. Please note that WebSDK version 1.7.2 or below will no longer be operational.
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
@@ -38,12 +38,12 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.7.4.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.7.5.min.js"></script>
 ```
 ### or
 
 ```
-npm install @zoomus/websdk@1.7.4
+npm install @zoomus/websdk@1.7.5
 ```
 ### zoomus-jssdk move to @zoomus/websdk
 ```
@@ -51,7 +51,7 @@ import { ZoomMtg } from 'zoomus-jssdk';
 change to
 import { ZoomMtg } from '@zoomus/websdk';
 ```
-Please notice, 1.7.4 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.7.5 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -59,14 +59,14 @@ console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.4/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.4/lib', '/av'); // china cdn option
+// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.5/lib', '/av'); // CDN version default
+// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.5/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.7.4
+Go to see sample web app (CDN version) how to update 1.7.5
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()

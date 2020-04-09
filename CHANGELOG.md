@@ -1,4 +1,13 @@
 # CHANGELOG
+## version 1.7.5
+   
+## Enhancements
+1. Remove rwcEndpoint, 
+2. Add ko-KO Korea language
+
+## Bug Fixes
+1. Fixed waiting room admit issue
+
 ## version 1.7.4
    
 ## Enhancements
