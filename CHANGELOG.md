@@ -1,4 +1,16 @@
 # CHANGELOG
+
+## version 1.7.6
+## Add
+1. Added a new Security Toolbar icon to display meeting security features.
+
+## Enhancements
+1. Display label to users stating that certain browsers do not support VOIP.
+
+## Bug Fixes
+1. Fixed black screen for Webinar users when the host chooses to end the meeting for all.
+2. Fixed required password not showing for users joining by phone.
+
 ## version 1.7.5
    
 ## Enhancements
