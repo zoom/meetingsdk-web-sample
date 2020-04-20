@@ -3,6 +3,7 @@
 ## version 1.7.6
 ## Add
 1. Added a new Security Toolbar icon to display meeting security features.
+2. Added support for data center selection within Account settings.
 
 ## Enhancements
 1. Display label to users stating that certain browsers do not support VOIP.
