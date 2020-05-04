@@ -1,4 +1,16 @@
 # CHANGELOG
+## version 1.7.7
+
+## Add
+1. Added support for for only signed-in users with specified domains can join meetings.
+2. Added support for only Authenicated users to join meetings.
+
+## Enhancements
+1. AES-GCM-256 encryption for meetings.
+2. Meeting Encryption info
+
+## Removed
+1. Don't support Edge browser
 
 ## version 1.7.6
 ## Add

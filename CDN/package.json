@@ -1,6 +1,6 @@
 {
   "name": "websdk-cdn",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "dependencies": {},
