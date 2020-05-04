@@ -10,7 +10,7 @@
 2. Meeting Encryption info
 
 ## Removed
-1. Don't support Edge browser
+1. Disable support for Microsoft Edge in place of Chromium Edge.
 
 ## version 1.7.6
 ## Add
