@@ -10,7 +10,6 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
-
 const API_KEY = 'YOUR_API_KEY';
 
 /**
