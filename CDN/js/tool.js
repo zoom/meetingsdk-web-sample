@@ -103,7 +103,7 @@ var testTool = {
   getRandomInt: function (max) {
     return Math.floor(Math.random() * Math.floor(max));
   },
-  extractHostname(url) {
+  extractHostname: function(url) {
     var hostname;
     if (url.indexOf('//') > -1) {
       hostname = url.split('/')[2];
@@ -114,7 +114,7 @@ var testTool = {
     hostname = hostname.split('?')[0];
     return hostname;
   },
-  getDomainName(hostName) {
+  getDomainName: function(hostName) {
     return hostName.substring(
       hostName.lastIndexOf('.', hostName.lastIndexOf('.') - 1) + 1
     );

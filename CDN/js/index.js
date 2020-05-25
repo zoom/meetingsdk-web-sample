@@ -4,8 +4,8 @@
 	console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
     // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-    // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.7/lib', '/av'); // CDN version default
-    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.7/lib', '/av'); // china cdn option 
+    // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.7.8/lib', '/av'); // CDN version default
+    // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.7.8/lib', '/av'); // china cdn option 
     // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
     ZoomMtg.preLoadWasm();
     ZoomMtg.prepareJssdk();
@@ -28,6 +28,7 @@
     document.getElementById('meeting_lang').addEventListener('change', function(e){
         testTool.setCookie("meeting_lang", document.getElementById('meeting_lang').value);
         $.i18n.reload(document.getElementById('meeting_lang').value);
+        ZoomMtg.reRender({lang: document.getElementById('meeting_lang').value});
     });
     
     document.getElementById('clear_all').addEventListener('click', function(e) {
