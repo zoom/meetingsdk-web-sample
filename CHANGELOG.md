@@ -1,4 +1,21 @@
 # CHANGELOG
+## version 1.7.8
+
+## Add
+1. Added Computer Audio for Firefox version 76+.
+2. New Invite dialog UI.
+3. Added support for Third party audio.
+4. Added support for inviting h323 devices to join meetings.
+
+## Enhancements
+1. Added password validation screen for joining meetings and webinars.
+2. Enhance Invite URL format API.
+3. Disabling joining meetings from Multiple devices.
+
+## Bug Fixes
+1. Fixed issue for Safari not able to open camera.
+2. Fixed issue for removing Session Storage
+
 ## version 1.7.7
 
 ## Add
