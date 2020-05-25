@@ -907,7 +907,7 @@ namespace Zoom {
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line42">line 42</a>
+        <a href="ZoomMtg.js.html">ZoomMtg.js</a>, <a href="ZoomMtg.js.html#line43">line 43</a>
     </li></ul></dd>
     
 
@@ -962,8 +962,6 @@ namespace Zoom {
         
 
         
-        <th>Default</th>
-        
 
         <th class="last">Description</th>
     </tr>
@@ -974,7 +972,7 @@ namespace Zoom {
 
         <tr>
             
-                <td class="name"><code>SUCCESS</code></td>
+                <td class="name"><code>0</code></td>
             
 
             <td class="type">
@@ -996,12 +994,6 @@ namespace Zoom {
                 </td>
             
 
-            
-                <td class="default">
-                
-                    <code>0</code>
-                
-                </td>
             
 
             <td class="description last"><p>invoke function success</p></td>
@@ -1011,7 +1003,7 @@ namespace Zoom {
 
         <tr>
             
-                <td class="name"><code>FAIL</code></td>
+                <td class="name"><code>1</code></td>
             
 
             <td class="type">
@@ -1033,12 +1025,6 @@ namespace Zoom {
                 </td>
             
 
-            
-                <td class="default">
-                
-                    <code>1</code>
-                
-                </td>
             
 
             <td class="description last"><p>invoke function error</p></td>
@@ -1048,7 +1034,7 @@ namespace Zoom {
 
         <tr>
             
-                <td class="name"><code>MEETING_NOT_INIT</code></td>
+                <td class="name"><code>2</code></td>
             
 
             <td class="type">
@@ -1070,12 +1056,6 @@ namespace Zoom {
                 </td>
             
 
-            
-                <td class="default">
-                
-                    <code>2</code>
-                
-                </td>
             
 
             <td class="description last"><p>you must be init at first</p></td>
@@ -1085,7 +1065,7 @@ namespace Zoom {
 
         <tr>
             
-                <td class="name"><code>EMAIL_REQUIRED</code></td>
+                <td class="name"><code>403</code></td>
             
 
             <td class="type">
@@ -1108,21 +1088,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3000</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>require email for webinar</p></td>
+            <td class="description last"><p>apac.errorcodes_offline</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ERROR_NOT_EXIST</code></td>
+                <td class="name"><code>3000</code></td>
             
 
             <td class="type">
@@ -1145,21 +1119,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3001</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>error not exist</p></td>
+            <td class="description last"><p>apac.errorcodes_meeting_has_in_progress</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ERROR_NOT_HOST</code></td>
+                <td class="name"><code>3003</code></td>
             
 
             <td class="type">
@@ -1182,21 +1150,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3003</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>error not host</p></td>
+            <td class="description last"><p>apac.errorcodes_not_host</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>WRONG_MEETING_PASSWORD</code></td>
+                <td class="name"><code>3004</code></td>
             
 
             <td class="type">
@@ -1219,21 +1181,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3004</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>wrong meeting password</p></td>
+            <td class="description last"><p>apac.errorcodes_wrong_pass</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>ANOTHER_MEETING_RUNNING</code></td>
+                <td class="name"><code>3005</code></td>
             
 
             <td class="type">
@@ -1256,21 +1212,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3005</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>another meeting running</p></td>
+            <td class="description last"><p>apac.errorcodes_require_email</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>MEETING_NOT_START</code></td>
+                <td class="name"><code>3008</code></td>
             
 
             <td class="type">
@@ -1293,21 +1243,15 @@ namespace Zoom {
             
 
             
-                <td class="default">
-                
-                    <code>3008</code>
-                
-                </td>
-            
 
-            <td class="description last"><p>meeting not start</p></td>
+            <td class="description last"><p>apac.errorcodes_not_start</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>RE_CONNECTING</code></td>
+                <td class="name"><code>3009</code></td>
             
 
             <td class="type">
@@ -1330,11 +1274,315 @@ namespace Zoom {
             
 
             
-                <td class="default">
+
+            <td class="description last"><p>apac.errorcodes_be_removed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3099</code></td>
+            
+
+            <td class="type">
+            
                 
-                    <code>4000</code>
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
                 
                 </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_register</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3603</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_meeting_not_support_webclient</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3604</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_meeting_should_support_webinar_with_latest_version</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3606</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_meeting_not_support_registration_webinar</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3608</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_meeting_not_support_tsp</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3609</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_meeting_not_allow_start_webinar_from_web</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3610</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_tk_expired</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3620</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_denied_email</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>3630</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>apac.errorcodes_not_support_simulive</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>4000</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
             
 
             <td class="description last"><p>reconnecting meeting</p></td>
@@ -1344,7 +1592,7 @@ namespace Zoom {
 
         <tr>
             
-                <td class="name"><code>DISCONNECT</code></td>
+                <td class="name"><code>4001</code></td>
             
 
             <td class="type">
@@ -1367,14 +1615,39 @@ namespace Zoom {
             
 
             
-                <td class="default">
+
+            <td class="description last"><p>disconnect meeting</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>4003</code></td>
+            
+
+            <td class="type">
+            
                 
-                    <code>4001</code>
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
                 
                 </td>
             
 
-            <td class="description last"><p>disconnect meeting</p></td>
+            
+
+            <td class="description last"><p>apac.invalid_parameter</p></td>
         </tr>
 
     
@@ -1430,7 +1703,7 @@ namespace Zoom {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue May 12 2020 17:38:47 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 25 2020 16:02:20 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

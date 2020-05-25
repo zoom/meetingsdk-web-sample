@@ -71,7 +71,7 @@
 
     
     <dt class="tag-version">Version:</dt>
-    <dd class="tag-version"><ul class="dummy"><li>WebSDK1.7.7</li></ul></dd>
+    <dd class="tag-version"><ul class="dummy"><li>WebSDK1.7.8</li></ul></dd>
     
 
     
@@ -2728,7 +2728,7 @@
 
             
 
-            <td class="description last"><p>Your browser does not support using the computer's Audio device. To use Zoom, install the latest version of a standard browser, such as Chrome or Edge Chromium.</p></td>
+            <td class="description last"><p>Your browser does not support using the computer's Audio device. To use Zoom, install the latest version of a standard browser, such as Chrome, Firefox or Edge Chromium.</p></td>
         </tr>
 
     
@@ -2828,72 +2828,6 @@
             
 
             <td class="description last"><p>Automatically join audio by computer when join a conference</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Already joined by telephone? Press #{0}# on your phone</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>on your phone</p></td>
         </tr>
 
     
@@ -5963,6 +5897,72 @@
             
 
             <td class="description last"><p>Dial in based on your location</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Dial In</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Call Out</p></td>
         </tr>
 
     
@@ -13625,6 +13625,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Please upgrade your Firefox version to 76.0 or higher.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -14120,7 +14153,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -14180,6 +14213,39 @@
             
 
             <td class="description last"><p>Sign in fail</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Trying to sign in</p></td>
         </tr>
 
     
@@ -14249,6 +14315,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Already joined by telephone? Press #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>on your phone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>You</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Please enter a valid password</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Join</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Invite people to join meeting</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>PHONE</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>EMAIL</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ROOM SYSTEMS</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Invitee Name:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Dial in from</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Call a H.323/SIP Room System</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP Address:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -14286,7 +14781,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line472">line 472</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line487">line 487</a>
     </li></ul></dd>
     
 
@@ -16867,7 +17362,7 @@
 
             
 
-            <td class="description last"><p>Ihr Browser unterstützt die Verwendung des Audiogeräts Ihres Computers nicht. Um Zoom zu verwenden, installieren Sie die neueste Version eines gängigen Browsers, zum Beispiel Chrome oder Edge Chromium.</p></td>
+            <td class="description last"><p>Ihr Browser unterstützt die Verwendung des Audiogeräts Ihres Computers nicht. Um Zoom zu verwenden, installieren Sie die neueste Version eines gängigen Browsers, zum Beispiel Chrome, Firefox oder Edge Chromium.</p></td>
         </tr>
 
     
@@ -16967,72 +17462,6 @@
             
 
             <td class="description last"><p>Bei Teilnahme an einer Konferenz Audio über Computer automatisch starten</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Sind Sie bereits per Telefon beigetreten? Drücken Sie #{0}# auf Ihrem Telefon.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>an Ihrem Telefon</p></td>
         </tr>
 
     
@@ -20102,6 +20531,72 @@
             
 
             <td class="description last"><p>Einwahl basierend auf Ihrem Standort</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Einwählen</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Ausgehender Anruf</p></td>
         </tr>
 
     
@@ -23467,7 +23962,7 @@
 
             
 
-            <td class="description last"><p>Teilnehmern erlauben, sich umzubenennen</p></td>
+            <td class="description last"><p>Lassen Sie die Teilnehmer sich umbenennen</p></td>
         </tr>
 
     
@@ -27764,6 +28259,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Bitte aktualisieren Sie Ihren Firefox-Version 76.0 oder höher.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -28259,7 +28787,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -28319,6 +28847,39 @@
             
 
             <td class="description last"><p>Anmeldung fail</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Der Versuch, sich anzumelden</p></td>
         </tr>
 
     
@@ -28388,6 +28949,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Sind Sie bereits über ein Telefon beigetreten? Drücken Sie #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an Ihrem Telefon</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Du</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Bitte geben Sie ein gültiges Passwort ein</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Beitreten</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Laden Sie Personen ein, an dem Meeting teilzunehmen</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>TELEFON</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>E-MAIL</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ROOM-SYSTEME</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Name des Eingeladenen:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Von H.323/SIP Raumsystem anrufen einwählen</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Ein H.323/SIP Raumsystem anrufen</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP-Adresse:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -28425,7 +29415,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line905">line 905</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line935">line 935</a>
     </li></ul></dd>
     
 
@@ -31006,7 +31996,7 @@
 
             
 
-            <td class="description last"><p>Su navegador no admite el uso del dispositivo de audio del ordenador. Para usar Zoom, instale la última versión de un navegador estándar, como por ejemplo Chrome o Edge Chromium.</p></td>
+            <td class="description last"><p>Su navegador no admite el uso del dispositivo de audio del ordenador. Para usar Zoom, instale la última versión de un navegador estándar, como por ejemplo Chrome, Firefox o Edge Chromium.</p></td>
         </tr>
 
     
@@ -31106,72 +32096,6 @@
             
 
             <td class="description last"><p>Automáticamente unirse al audio por ordenador cuando se une a una conferencia</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>¿Ya entró por teléfono? Prensa #{0}# en su teléfono</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>en su teléfono</p></td>
         </tr>
 
     
@@ -34241,6 +35165,72 @@
             
 
             <td class="description last"><p>Marcar según su ubicación</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Marcar</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Llamar</p></td>
         </tr>
 
     
@@ -37606,7 +38596,7 @@
 
             
 
-            <td class="description last"><p>Permitir que los participantes cambien su nombre</p></td>
+            <td class="description last"><p>Permitir a los participantes para cambiar el nombre a sí mismos</p></td>
         </tr>
 
     
@@ -41903,6 +42893,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Por favor, actualice su versión de Firefox a 76.0 o superior.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -42398,7 +43421,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -42458,6 +43481,39 @@
             
 
             <td class="description last"><p>Iniciar sesión en Despiste</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Tratando de sesión</p></td>
         </tr>
 
     
@@ -42527,6 +43583,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>¿Ya se ha unido mediante el teléfono? Pulse #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>en su teléfono</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>usted</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Por favor introduce una contraseña válida</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Unirse</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Invitar personas a entrar a la reunión</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>TELÉFONO</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>CORREO ELECTRÓNICO</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>SISTEMAS DE SALA</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Nombre del invitado:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Marcar desde H.323/SIP Room System</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Llamar a un H.323/SIP Room System</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Dirección IP:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -42564,7 +44049,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line1338">line 1338</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line1383">line 1383</a>
     </li></ul></dd>
     
 
@@ -45145,7 +46630,7 @@
 
             
 
-            <td class="description last"><p>Votre navigateur n’est pas compatible avec le périphérique audio de votre ordinateur. Pour utiliser Zoom, installez la dernière version d’un navigateur courant, tel que Chrome ou Edge Chromium.</p></td>
+            <td class="description last"><p>Votre navigateur n’est pas compatible avec le périphérique audio de votre ordinateur. Pour utiliser Zoom, installez la dernière version d’un navigateur courant, tel que Chrome, Firefox ou Edge Chromium.</p></td>
         </tr>
 
     
@@ -45245,72 +46730,6 @@
             
 
             <td class="description last"><p>Activer automatiquement l’audio via l’ordinateur lors de la participation à une conférence</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Vous avez déjà reçu un appel téléphonique ? Appuyez #{0}# sur votre téléphone.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>sur votre téléphone</p></td>
         </tr>
 
     
@@ -48380,6 +49799,72 @@
             
 
             <td class="description last"><p>Rejoindre par téléphone en fonction de votre emplacement</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Passif avec numéro d’accès</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Appels sortants</p></td>
         </tr>
 
     
@@ -51745,7 +53230,7 @@
 
             
 
-            <td class="description last"><p>Permettre aux participants de se renommer</p></td>
+            <td class="description last"><p>Permettre aux participants de se renomment</p></td>
         </tr>
 
     
@@ -56042,6 +57527,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>S'il vous plaît mettre à jour votre version de Firefox à 76,0 ou plus.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -56537,7 +58055,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -56597,6 +58115,39 @@
             
 
             <td class="description last"><p>Connexion Fail</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Essayer de se connecter</p></td>
         </tr>
 
     
@@ -56666,6 +58217,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Vous avez déjà rejoint par téléphone ? Appuyez sur #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>sur votre téléphone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Vous</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Entrer un mot de passe valide s'il vous plait</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Joindre</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Inviter des gens à rejoindre la réunion</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>TÉLÉPHONE</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>E-MAIL</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>SYSTÈMES DE SALLES</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Nom de l’invité :</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Composer de conférence H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Appeler une salle de conférence H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Adresse IP :</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -56703,7 +58683,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line1771">line 1771</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line1831">line 1831</a>
     </li></ul></dd>
     
 
@@ -59284,7 +61264,7 @@
 
             
 
-            <td class="description last"><p>ブラウザがコンピュータのオーディオデバイスの使用をサポートしていません。Zoomを利用するには、ChromeやEdge Chromiumなどの標準的なブラウザの最新版をインストールしてください。</p></td>
+            <td class="description last"><p>ブラウザがコンピュータのオーディオデバイスの使用をサポートしていません。Zoomを利用するには、Chrome、FirefoxやEdge Chromiumなどの標準的なブラウザの最新版をインストールしてください。</p></td>
         </tr>
 
     
@@ -59384,72 +61364,6 @@
             
 
             <td class="description last"><p>会議に参加するときに自動的にオーディオをコンピュータで作動させる</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>既に電話で参加していますか？? 電話の#{0}#を押してください。</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>電話上</p></td>
         </tr>
 
     
@@ -62519,6 +64433,72 @@
             
 
             <td class="description last"><p>あなたの場所でダイヤルイン</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ダイヤルイン</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>コールアウト</p></td>
         </tr>
 
     
@@ -65884,7 +67864,7 @@
 
             
 
-            <td class="description last"><p>参加者が自分の名前を変更することを許可する</p></td>
+            <td class="description last"><p>参加者は自分の名前を変更することを許可します</p></td>
         </tr>
 
     
@@ -70181,6 +72161,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>76.0以上にあなたのFirefoxのバージョンをアップグレードしてください。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -70676,7 +72689,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -70736,6 +72749,39 @@
             
 
             <td class="description last"><p>フェイルログイン</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>サインインしようとしています</p></td>
         </tr>
 
     
@@ -70805,6 +72851,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電話で既に参加していますか？#を押してください</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電話上</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>君は</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>有効なパスワードを入力して下さい</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>加わります</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ミーティングに参加するように相手を招待</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電話</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電子メール</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ルーム システム</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>招待者名:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>H.323/SIP からダイヤルイン</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>H.323/SIP ルーム システムを呼び出す</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IPアドレス：</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -70842,7 +73317,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line2204">line 2204</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line2279">line 2279</a>
     </li></ul></dd>
     
 
@@ -73423,7 +75898,7 @@
 
             
 
-            <td class="description last"><p>Seu navegador não é compatível com o uso do dispositivo de áudio do computador. Para usar o Zoom, instale a versão mais recente de um navegador padrão, como Chrome ou Edge Chromium.</p></td>
+            <td class="description last"><p>Seu navegador não é compatível com o uso do dispositivo de áudio do computador. Para usar o Zoom, instale a versão mais recente de um navegador padrão, como Chrome, Firefox ou Edge Chromium.</p></td>
         </tr>
 
     
@@ -73523,72 +75998,6 @@
             
 
             <td class="description last"><p>Entrar com o áudio do computador automaticamente ao participar de uma conferência</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Já ingressou por telefone? Pressione #{0}# no seu telefone.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>no seu telefone.</p></td>
         </tr>
 
     
@@ -76658,6 +79067,72 @@
             
 
             <td class="description last"><p>Marcar com base no seu local</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Marcar</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Chamar</p></td>
         </tr>
 
     
@@ -80023,7 +82498,7 @@
 
             
 
-            <td class="description last"><p>Permitir que participantes se renomeiem</p></td>
+            <td class="description last"><p>Permitir aos participantes para renomear-se</p></td>
         </tr>
 
     
@@ -84320,6 +86795,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Por favor, atualize sua versão do Firefox para 76,0 ou superior.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -84815,7 +87323,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -84875,6 +87383,39 @@
             
 
             <td class="description last"><p>Entre falha</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Tentando entrar</p></td>
         </tr>
 
     
@@ -84944,6 +87485,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Já ingressou pelo telefone? Pressione #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>no seu telefone.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Vocês</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>por favor coloque uma senha válida</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Junte-se</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Convide pessoas para ingressar na reunião</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>TELEFONE</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>E-MAIL</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>SISTEMAS DE SALA</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Nome do Convidado:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Discagem de Salas H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Ligar para um Sistema de Salas H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Endereço IP:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -84981,7 +87951,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line2637">line 2637</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line2727">line 2727</a>
     </li></ul></dd>
     
 
@@ -87562,7 +90532,7 @@
 
             
 
-            <td class="description last"><p>Ваш браузер не поддерживает использование аудиоустройства компьютера. Чтобы использовать Zoom, установите последнюю версию стандартного браузера, например Chrome или Edge Chromium.</p></td>
+            <td class="description last"><p>Ваш браузер не поддерживает использование аудиоустройства компьютера. Чтобы использовать Zoom, установите последнюю версию стандартного браузера, например Chrome, Firefox или Edge Chromium.</p></td>
         </tr>
 
     
@@ -87662,72 +90632,6 @@
             
 
             <td class="description last"><p>Автоматически включать аудиоустройство компьютера при подключении к конференции</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>Уже вошли по телефону? Нажмите #{0}# на вашем телефоне.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>на вашем телефоне</p></td>
         </tr>
 
     
@@ -90797,6 +93701,72 @@
             
 
             <td class="description last"><p>Набрать номер в зависимости от вашего местонахождения</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Набрать номер</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Ответный вызов</p></td>
         </tr>
 
     
@@ -94162,7 +97132,7 @@
 
             
 
-            <td class="description last"><p>Разрешить участникам переименовывать себя</p></td>
+            <td class="description last"><p>Разрешить участникам переименовать себя</p></td>
         </tr>
 
     
@@ -98459,6 +101429,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Пожалуйста, обновите версию Firefox до 76.0 или выше.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -98954,7 +101957,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -99014,6 +102017,39 @@
             
 
             <td class="description last"><p>Войти сбою</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Попытка войти в систему</p></td>
         </tr>
 
     
@@ -99083,6 +102119,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Подключение уже выполнено с телефона? Нажмите #</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>на вашем телефоне</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Вы</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Пожалуйста, введите правильный пароль</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Присоединиться</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Пригласить людей присоединиться к конференции</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ТЕЛЕФОН</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>ЭЛ. ПОЧТА</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>КОНФЕРЕНЦ-СИСТЕМА</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Имя приглашенного:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Набрать номер из H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Вызвать конференц-систему H.323/SIP</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP-адрес:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -99120,7 +102585,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line3070">line 3070</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line3175">line 3175</a>
     </li></ul></dd>
     
 
@@ -101701,7 +105166,7 @@
 
             
 
-            <td class="description last"><p>您的浏览器不支持使用计算机的音频设备。要使用Zoom，请安装Chrome或Edge Chromium等标准浏览器的最新版本。</p></td>
+            <td class="description last"><p>您的浏览器不支持使用计算机的音频设备。要使用Zoom，请安装Chrome，FireFox或Edge Chromium等标准浏览器的最新版本。</p></td>
         </tr>
 
     
@@ -101801,72 +105266,6 @@
             
 
             <td class="description last"><p>加入会议时自动开启计算机音频</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>已通过电话加入？输入 #{0}#在您的电话上</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>在您的电话上</p></td>
         </tr>
 
     
@@ -104936,6 +108335,72 @@
             
 
             <td class="description last"><p>根据地点拨入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>拨入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>拨出</p></td>
         </tr>
 
     
@@ -108301,7 +111766,7 @@
 
             
 
-            <td class="description last"><p>允许参会者自己改名</p></td>
+            <td class="description last"><p>让参与者自己改名</p></td>
         </tr>
 
     
@@ -112598,6 +116063,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>请升级您的Firefox版本76.0或更高版本。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -113093,7 +116591,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -113153,6 +116651,39 @@
             
 
             <td class="description last"><p>登錄失敗</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>尝试登陆</p></td>
         </tr>
 
     
@@ -113222,6 +116753,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>已通过电话加入？按#</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>在您的电话上</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>請輸入有效密碼</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>加入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>邀请他人加入会议</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>电话</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>电子邮件</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>会议室系统</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>受邀人姓名：</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>从H.323/SIP会议室系统拨入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>拨打H.323/SIP会议室系统</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP地址：</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -113259,7 +117219,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line3503">line 3503</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line3623">line 3623</a>
     </li></ul></dd>
     
 
@@ -115840,7 +119800,7 @@
 
             
 
-            <td class="description last"><p>您的瀏覽器不支援使用電腦音訊裝置。若要使用Zoom，請安裝Chrome或Edge Chromium等標準瀏覽器的最新版本。</p></td>
+            <td class="description last"><p>您的瀏覽器不支援使用電腦音訊裝置。若要使用Zoom，請安裝Chrome，Firefox或Edge Chromium等標準瀏覽器的最新版本。</p></td>
         </tr>
 
     
@@ -115940,72 +119900,6 @@
             
 
             <td class="description last"><p>加入會議時自動啟動電腦音訊</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>已透過電話加入？按 #{0}# 在電話</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>在電話</p></td>
         </tr>
 
     
@@ -119075,6 +122969,72 @@
             
 
             <td class="description last"><p>基於位置撥入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>撥入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>撥出</p></td>
         </tr>
 
     
@@ -122440,7 +126400,7 @@
 
             
 
-            <td class="description last"><p>允許與會者自行改名</p></td>
+            <td class="description last"><p>讓參與者自己改名</p></td>
         </tr>
 
     
@@ -126737,6 +130697,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>請升級您的Firefox版本76.0或更高版本。</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -127232,7 +131225,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -127292,6 +131285,39 @@
             
 
             <td class="description last"><p>登錄失敗</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>嘗試登錄</p></td>
         </tr>
 
     
@@ -127361,6 +131387,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>已透過電話參加會議？請按#</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>在電話</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>您</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>請輸入有效密碼</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>加入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>邀請他人加入會議</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電話</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>電子郵件</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>會議室系統</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>受邀人姓名：</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>從H.323/SIP會議室系統撥入</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>撥打H.323/SIP會議室系統</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP位址：</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -127398,7 +131853,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="language.js.html">language.js</a>, <a href="language.js.html#line3936">line 3936</a>
+        <a href="language.js.html">language.js</a>, <a href="language.js.html#line4071">line 4071</a>
     </li></ul></dd>
     
 
@@ -129979,7 +134434,7 @@
 
             
 
-            <td class="description last"><p>브라우저가 컴퓨터의 오디오 장치 사용을 지원하지 않습니다. Zoom을 사용하려면 Chrome 또는 Edge Chromium와 같은 표준 브라우저의 최신 버전을 설치합니다.</p></td>
+            <td class="description last"><p>브라우저가 컴퓨터의 오디오 장치 사용을 지원하지 않습니다. Zoom을 사용하려면 Chrome Firefox 또는 Edge Chromium와 같은 표준 브라우저의 최신 버전을 설치합니다.</p></td>
         </tr>
 
     
@@ -130079,72 +134534,6 @@
             
 
             <td class="description last"><p>회의에 참여할 때 컴퓨터로 자동 오디오 참여</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_already_join_by_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>이미 전화기로 참여하셨나요? 전화기에서 #{0}#을(를) 누르십시오.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>apac.wc_on_your_phone</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">string</span>
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>번을 누르십시오.</p></td>
         </tr>
 
     
@@ -133214,6 +137603,72 @@
             
 
             <td class="description last"><p>위치를 기준으로 전화 걸기</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>전화 접속</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_out</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>호출</p></td>
         </tr>
 
     
@@ -136579,7 +141034,7 @@
 
             
 
-            <td class="description last"><p>Allow participants to rename themselves</p></td>
+            <td class="description last"><p>참가자가 자신의 이름을 바꿀 수 있도록 허용</p></td>
         </tr>
 
     
@@ -140876,6 +145331,39 @@
 
         <tr>
             
+                <td class="name"><code>apac.update_firefox</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>76.0 이상으로 파이어 폭스의 버전을 업그레이드하십시오.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>apac.errorcodes_denied_email</code></td>
             
 
@@ -141371,7 +145859,7 @@
 
         <tr>
             
-                <td class="name"><code>apac.sign_in_with</code></td>
+                <td class="name"><code>apac.sign_in</code></td>
             
 
             <td class="type">
@@ -141431,6 +145919,39 @@
             
 
             <td class="description last"><p>실패 로그인</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_trying_to_sign</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>로그인 시도</p></td>
         </tr>
 
     
@@ -141500,6 +146021,435 @@
         </tr>
 
     
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_already_joined_by_telephone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>벌써 전화로 참여하셨나요? #번을 누르십시오.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_on_your_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>번을 누르십시오.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_you</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>당신</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_enter_password</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>올바른 암호를 입력하십시오</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_join</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>붙다</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invite_title</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>회의에 사람들을 초대합니다</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_phone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>전화</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_email</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>이메일</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_room_system</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>회의실 시스템</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_invitee_name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>초대 대상자 이름:</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_dial_in_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>H.323/SIP 에서 전화 걸기</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.wc_call_a_H323</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>H.323/SIP 회의실 시스템에 전화하기</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>apac.ip_address</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>IP 주소:</p></td>
+        </tr>
+
+    
     </tbody>
 </table>
 
@@ -141538,7 +146488,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue May 12 2020 17:38:47 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 25 2020 16:02:20 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

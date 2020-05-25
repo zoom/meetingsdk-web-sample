@@ -52,7 +52,7 @@
 /**
  * @copyright Zoom 2020
  * @namespace LanguageResource
- * @version WebSDK1.7.7
+ * @version WebSDK1.7.8
 */
 
 
@@ -164,12 +164,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - Join Audio by Computer
  * @param {string} [apac.wc_learn] - Learn
  * @param {string} [apac.wc_how_to_allow] - how to allow access to your microphone.
- * @param {string} [apac.wc_change_browser] - Your browser does not support using the computer's Audio device. To use Zoom, install the latest version of a standard browser, such as Chrome or Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Your browser does not support using the computer's Audio device. To use Zoom, install the latest version of a standard browser, such as Chrome, Firefox or Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Your browser doesn't support using computer's Audio device, please upgrade your browser to the latest version.
  * @param {string} [apac.wc_prevent_access_mic] - Your browser is preventing access to your microphone.
  * @param {string} [apac.wc_auto_join_audio] - Automatically join audio by computer when join a conference
- * @param {string} [apac.wc_already_join_by_phone] - Already joined by telephone? Press #{0}# on your phone
- * @param {string} [apac.wc_on_your_phone] - on your phone
  * @param {string} [apac.dialog.tollfree] - Toll Free
  * @param {string} [apac.dialog.toll] - Toll
  * @param {string} [apac.wc_participant_id] - Participant ID
@@ -263,6 +261,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Are you sure you want to leave this meeting now?
  * @param {string} [apac.dialog.end_meeting_confirm] - Are you sure you want to end this meeting now?
  * @param {string} [apac.dialog.dial_in] - Dial in based on your location
+ * @param {string} [apac.wc_dial_in] - Dial In
+ * @param {string} [apac.wc_call_out] - Call Out
  * @param {string} [apac.dialog.remeber_number] - Remember the number on this computer
  * @param {string} [apac.wc_audio.using_audio_tip] - Your audio is connected using Computer Audio
  * @param {string} [apac.wc_phone_connected] - Phone Connected
@@ -495,6 +495,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - Report
  * @param {string} [apac.security.button] - Security
  * @param {string} [apac.invalid_parameter] - Invalid parameter
+ * @param {string} [apac.update_firefox] - Please upgrade your Firefox version to 76.0 or higher.
  * @param {string} [apac.errorcodes_denied_email] - Email be denied
  * @param {string} [apac.errorcodes_tk_expired] - Token expired
  * @param {string} [apac.security.waiting_room_notification_1] - You have enabled the waiting room
@@ -510,10 +511,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Your Browser is not supported
  * @param {string} [apac.wc_browser_not_support2] - Please try one of these options to improve your experience and security.
  * @param {string} [apac.sign_up_free] - Sign Up Free
- * @param {string} [apac.sign_in_with] - Sign in
+ * @param {string} [apac.sign_in] - Sign in
  * @param {string} [apac.wc_sign_in_fail] - Sign in fail
+ * @param {string} [apac.wc_trying_to_sign] - Trying to sign in
  * @param {string} [apac.wc_login_timeout] - Timeout
  * @param {string} [apac.login_register_text] - No Zoom account ?
+ * @param {string} [apac.wc_already_joined_by_telephone] - Already joined by telephone? Press #
+ * @param {string} [apac.wc_on_your_phone] - on your phone
+ * @param {string} [apac.wc_you] - You
+ * @param {string} [apac.wc_enter_password] - Please enter a valid password
+ * @param {string} [apac.wc_join] - Join
+ * @param {string} [apac.wc_invite_title] - Invite people to join meeting
+ * @param {string} [apac.wc_phone] - PHONE
+ * @param {string} [apac.wc_email] - EMAIL
+ * @param {string} [apac.wc_room_system] - ROOM SYSTEMS
+ * @param {string} [apac.wc_invitee_name] - Invitee Name:
+ * @param {string} [apac.wc_dial_in_H323] - Dial in from
+ * @param {string} [apac.wc_call_a_H323] - Call a H.323/SIP Room System
+ * @param {string} [apac.ip_address] - IP Address:
 */
 
 
@@ -597,12 +612,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - An Audio per Computer teilnehmen
  * @param {string} [apac.wc_learn] - Lernen
  * @param {string} [apac.wc_how_to_allow] - wie Sie Zugriff auf Ihr Mikrofon erlauben.
- * @param {string} [apac.wc_change_browser] - Ihr Browser unterstützt die Verwendung des Audiogeräts Ihres Computers nicht. Um Zoom zu verwenden, installieren Sie die neueste Version eines gängigen Browsers, zum Beispiel Chrome oder Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Ihr Browser unterstützt die Verwendung des Audiogeräts Ihres Computers nicht. Um Zoom zu verwenden, installieren Sie die neueste Version eines gängigen Browsers, zum Beispiel Chrome, Firefox oder Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Ihr Browser unterstützt die Verwendung des Audiogeräts Ihres Computers nicht. Bitte aktualisieren Sie Ihren Browser auf die neueste Version.
  * @param {string} [apac.wc_prevent_access_mic] - Ihr Browser verhindert Zugriff auf Ihr Mikrofon.
  * @param {string} [apac.wc_auto_join_audio] - Bei Teilnahme an einer Konferenz Audio über Computer automatisch starten
- * @param {string} [apac.wc_already_join_by_phone] - Sind Sie bereits per Telefon beigetreten? Drücken Sie #{0}# auf Ihrem Telefon.
- * @param {string} [apac.wc_on_your_phone] - an Ihrem Telefon
  * @param {string} [apac.dialog.tollfree] - Gebührenfrei
  * @param {string} [apac.dialog.toll] - Gebühr
  * @param {string} [apac.wc_participant_id] - Teilnehmer-ID
@@ -696,6 +709,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Möchten Sie dieses Meeting jetzt wirklich verlassen?
  * @param {string} [apac.dialog.end_meeting_confirm] - Möchten Sie dieses Meeting jetzt wirklich beenden?
  * @param {string} [apac.dialog.dial_in] - Einwahl basierend auf Ihrem Standort
+ * @param {string} [apac.wc_dial_in] - Einwählen
+ * @param {string} [apac.wc_call_out] - Ausgehender Anruf
  * @param {string} [apac.dialog.remeber_number] - Merken Sie sich die Nummer auf diesem Computer.
  * @param {string} [apac.wc_audio.using_audio_tip] - Ihr Audiosignal wird per Computer-Audiokarte eingespeist
  * @param {string} [apac.wc_phone_connected] - Telefon angeschlossen
@@ -797,7 +812,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - Untertitelgenehmigung widerrufen
  * @param {string} [apac.wc_cc_assign_to] - Zur Type Untertitel zuweisen
  * @param {string} [apac.join_3prty_audio] - Per Audio von Dritten teilnehmen
- * @param {string} [apac.wc_allow_rename] - Teilnehmern erlauben, sich umzubenennen
+ * @param {string} [apac.wc_allow_rename] - Lassen Sie die Teilnehmer sich umbenennen
  * @param {string} [apac.browser_share_dont_support_browser] - Ihre Browserversion kann die folgende Funktion nicht ausführen. Aktualisieren Sie auf die neueste Version und versuchen Sie es erneut.
  * @param {string} [apac.wc_audio_cannot_unmute] - Sie können Ihre eigene Stummschaltung nicht aufheben, weil der Host Sie stummgeschaltet hat.
  * @param {string} [apac.wc_chat.disable_chat] - Der Moderator hat den Teilnehmer-Chat deaktiviert.
@@ -928,6 +943,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - Bericht
  * @param {string} [apac.security.button] - Sicherheit
  * @param {string} [apac.invalid_parameter] - Ungültiger Parameter
+ * @param {string} [apac.update_firefox] - Bitte aktualisieren Sie Ihren Firefox-Version 76.0 oder höher.
  * @param {string} [apac.errorcodes_denied_email] - E-Mail wird verweigert
  * @param {string} [apac.errorcodes_tk_expired] - Token abgelaufen
  * @param {string} [apac.security.waiting_room_notification_1] - Sie haben den Warteraum aktiviert
@@ -943,10 +959,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Ihr Browser wird nicht unterstützt
  * @param {string} [apac.wc_browser_not_support2] - Bitte versuchen Sie eine dieser Optionen, um Ihre Erfahrung und Sicherheit zu verbessern.
  * @param {string} [apac.sign_up_free] - Melde dich kostenlos an
- * @param {string} [apac.sign_in_with] - Anmelden
+ * @param {string} [apac.sign_in] - Anmelden
  * @param {string} [apac.wc_sign_in_fail] - Anmeldung fail
+ * @param {string} [apac.wc_trying_to_sign] - Der Versuch, sich anzumelden
  * @param {string} [apac.wc_login_timeout] - Auszeit
  * @param {string} [apac.login_register_text] - Kein Zoom Konto?
+ * @param {string} [apac.wc_already_joined_by_telephone] - Sind Sie bereits über ein Telefon beigetreten? Drücken Sie #
+ * @param {string} [apac.wc_on_your_phone] - an Ihrem Telefon
+ * @param {string} [apac.wc_you] - Du
+ * @param {string} [apac.wc_enter_password] - Bitte geben Sie ein gültiges Passwort ein
+ * @param {string} [apac.wc_join] - Beitreten
+ * @param {string} [apac.wc_invite_title] - Laden Sie Personen ein, an dem Meeting teilzunehmen
+ * @param {string} [apac.wc_phone] - TELEFON
+ * @param {string} [apac.wc_email] - E-MAIL
+ * @param {string} [apac.wc_room_system] - ROOM-SYSTEME
+ * @param {string} [apac.wc_invitee_name] - Name des Eingeladenen:
+ * @param {string} [apac.wc_dial_in_H323] - Von H.323/SIP Raumsystem anrufen einwählen
+ * @param {string} [apac.wc_call_a_H323] - Ein H.323/SIP Raumsystem anrufen
+ * @param {string} [apac.ip_address] - IP-Adresse:
 */
 
 
@@ -1030,12 +1060,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - Entrar al audio por computadora
  * @param {string} [apac.wc_learn] - Obtenga más información
  * @param {string} [apac.wc_how_to_allow] - cómo permitir el acceso a su micrófono.
- * @param {string} [apac.wc_change_browser] - Su navegador no admite el uso del dispositivo de audio del ordenador. Para usar Zoom, instale la última versión de un navegador estándar, como por ejemplo Chrome o Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Su navegador no admite el uso del dispositivo de audio del ordenador. Para usar Zoom, instale la última versión de un navegador estándar, como por ejemplo Chrome, Firefox o Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Su navegador no admite el uso del dispositivo de audio del ordenador, actualice el navegador a la última versión.
  * @param {string} [apac.wc_prevent_access_mic] - Su navegador no permite el acceso a su micrófono.
  * @param {string} [apac.wc_auto_join_audio] - Automáticamente unirse al audio por ordenador cuando se une a una conferencia
- * @param {string} [apac.wc_already_join_by_phone] - ¿Ya entró por teléfono? Prensa #{0}# en su teléfono
- * @param {string} [apac.wc_on_your_phone] - en su teléfono
  * @param {string} [apac.dialog.tollfree] - Gratuita
  * @param {string} [apac.dialog.toll] - No gratuita
  * @param {string} [apac.wc_participant_id] - ID del participante
@@ -1129,6 +1157,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - ¿Está seguro de que desea abandonar esta reunión ahora?
  * @param {string} [apac.dialog.end_meeting_confirm] - ¿Seguro que desea finalizar esta reunión ahora?
  * @param {string} [apac.dialog.dial_in] - Marcar según su ubicación
+ * @param {string} [apac.wc_dial_in] - Marcar
+ * @param {string} [apac.wc_call_out] - Llamar
  * @param {string} [apac.dialog.remeber_number] - Recordar el número en esta computadora
  * @param {string} [apac.wc_audio.using_audio_tip] - Su audio está conectado usando el audio del equipo
  * @param {string} [apac.wc_phone_connected] - Teléfono conectado
@@ -1230,7 +1260,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - Retirar el permiso de subtítulos
  * @param {string} [apac.wc_cc_assign_to] - Asignar para escribir subtítulos
  * @param {string} [apac.join_3prty_audio] - Unirse por audio de terceros
- * @param {string} [apac.wc_allow_rename] - Permitir que los participantes cambien su nombre
+ * @param {string} [apac.wc_allow_rename] - Permitir a los participantes para cambiar el nombre a sí mismos
  * @param {string} [apac.browser_share_dont_support_browser] - Es posible que la versión del navegador que está utilizando no sea compatible con la siguiente función. Actualice a la versión más reciente e inténtelo de nuevo.
  * @param {string} [apac.wc_audio_cannot_unmute] - Usted no puede reactivar su propio micrófono porque el anfitrión lo silenció.
  * @param {string} [apac.wc_chat.disable_chat] - El anfitrión ha inhabilitado el chat de los asistentes.
@@ -1361,6 +1391,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - Reporte
  * @param {string} [apac.security.button] - Seguridad
  * @param {string} [apac.invalid_parameter] - Parametro invalido
+ * @param {string} [apac.update_firefox] - Por favor, actualice su versión de Firefox a 76.0 o superior.
  * @param {string} [apac.errorcodes_denied_email] - Correo electrónico puede negar
  * @param {string} [apac.errorcodes_tk_expired] - Token caducado
  * @param {string} [apac.security.waiting_room_notification_1] - Ha habilitado la sala de espera
@@ -1376,10 +1407,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Tu navegador no es compatible
  * @param {string} [apac.wc_browser_not_support2] - Por favor, intente una de estas opciones para mejorar su experiencia y seguridad.
  * @param {string} [apac.sign_up_free] - Regístrate gratis
- * @param {string} [apac.sign_in_with] - Registrarse
+ * @param {string} [apac.sign_in] - Registrarse
  * @param {string} [apac.wc_sign_in_fail] - Iniciar sesión en Despiste
+ * @param {string} [apac.wc_trying_to_sign] - Tratando de sesión
  * @param {string} [apac.wc_login_timeout] - Se acabó el tiempo
  * @param {string} [apac.login_register_text] - No Zoom cuenta?
+ * @param {string} [apac.wc_already_joined_by_telephone] - ¿Ya se ha unido mediante el teléfono? Pulse #
+ * @param {string} [apac.wc_on_your_phone] - en su teléfono
+ * @param {string} [apac.wc_you] - usted
+ * @param {string} [apac.wc_enter_password] - Por favor introduce una contraseña válida
+ * @param {string} [apac.wc_join] - Unirse
+ * @param {string} [apac.wc_invite_title] - Invitar personas a entrar a la reunión
+ * @param {string} [apac.wc_phone] - TELÉFONO
+ * @param {string} [apac.wc_email] - CORREO ELECTRÓNICO
+ * @param {string} [apac.wc_room_system] - SISTEMAS DE SALA
+ * @param {string} [apac.wc_invitee_name] - Nombre del invitado:
+ * @param {string} [apac.wc_dial_in_H323] - Marcar desde H.323/SIP Room System
+ * @param {string} [apac.wc_call_a_H323] - Llamar a un H.323/SIP Room System
+ * @param {string} [apac.ip_address] - Dirección IP:
 */
 
 
@@ -1463,12 +1508,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - Rejoindre l’audio par ordinateur
  * @param {string} [apac.wc_learn] - En savoir plus
  * @param {string} [apac.wc_how_to_allow] - comment autoriser l’accès à votre micro.
- * @param {string} [apac.wc_change_browser] - Votre navigateur n’est pas compatible avec le périphérique audio de votre ordinateur. Pour utiliser Zoom, installez la dernière version d’un navigateur courant, tel que Chrome ou Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Votre navigateur n’est pas compatible avec le périphérique audio de votre ordinateur. Pour utiliser Zoom, installez la dernière version d’un navigateur courant, tel que Chrome, Firefox ou Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Votre navigateur ne permet pas d’utiliser le périphérique audio de votre ordinateur, mettez-le à jour en installant la dernière version.
  * @param {string} [apac.wc_prevent_access_mic] - Votre navigateur empêche l’accès à votre micro.
  * @param {string} [apac.wc_auto_join_audio] - Activer automatiquement l’audio via l’ordinateur lors de la participation à une conférence
- * @param {string} [apac.wc_already_join_by_phone] - Vous avez déjà reçu un appel téléphonique ? Appuyez #{0}# sur votre téléphone.
- * @param {string} [apac.wc_on_your_phone] - sur votre téléphone
  * @param {string} [apac.dialog.tollfree] - Numéro gratuit
  * @param {string} [apac.dialog.toll] - Frais d’appel
  * @param {string} [apac.wc_participant_id] - Nº de participant
@@ -1562,6 +1605,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Voulez-vous vraiment quitter cette réunion ?
  * @param {string} [apac.dialog.end_meeting_confirm] - Voulez-vous vraiment mettre fin à cette réunion ?
  * @param {string} [apac.dialog.dial_in] - Rejoindre par téléphone en fonction de votre emplacement
+ * @param {string} [apac.wc_dial_in] - Passif avec numéro d’accès
+ * @param {string} [apac.wc_call_out] - Appels sortants
  * @param {string} [apac.dialog.remeber_number] - Se rappeler le numéro sur cet ordinateur
  * @param {string} [apac.wc_audio.using_audio_tip] - Votre son est connecté à l’aide du son de votre ordinateur
  * @param {string} [apac.wc_phone_connected] - Téléphone connecté
@@ -1663,7 +1708,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - Retirer la permission de sous-titrage
  * @param {string} [apac.wc_cc_assign_to] - Affecter à la saisie des sous-titres
  * @param {string} [apac.join_3prty_audio] - Rejoindre via un audio tiers
- * @param {string} [apac.wc_allow_rename] - Permettre aux participants de se renommer
+ * @param {string} [apac.wc_allow_rename] - Permettre aux participants de se renomment
  * @param {string} [apac.browser_share_dont_support_browser] - La version sur navigateur que vous utilisez peut ne pas prendre en charge la fonctionnalité suivante. Veuillez passer à la dernière version puis réessayez.
  * @param {string} [apac.wc_audio_cannot_unmute] - Vous ne pouvez pas réactiver vous-même votre micro, car c’est l’hôte qui vous a mis en sourdine.
  * @param {string} [apac.wc_chat.disable_chat] - L’animateur a désactivé les conversations des participants.
@@ -1794,6 +1839,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - rapport
  * @param {string} [apac.security.button] - Sécurité
  * @param {string} [apac.invalid_parameter] - Paramètre invalide
+ * @param {string} [apac.update_firefox] - S'il vous plaît mettre à jour votre version de Firefox à 76,0 ou plus.
  * @param {string} [apac.errorcodes_denied_email] - Email nier
  * @param {string} [apac.errorcodes_tk_expired] - jeton a expiré
  * @param {string} [apac.security.waiting_room_notification_1] - Vous avez permis à la salle d'attente
@@ -1809,10 +1855,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Ton navigateur n'est pas supporté
  * @param {string} [apac.wc_browser_not_support2] - S'il vous plaît essayer une de ces options pour améliorer votre expérience et de la sécurité.
  * @param {string} [apac.sign_up_free] - Inscription gratuite
- * @param {string} [apac.sign_in_with] - se connecter
+ * @param {string} [apac.sign_in] - se connecter
  * @param {string} [apac.wc_sign_in_fail] - Connexion Fail
+ * @param {string} [apac.wc_trying_to_sign] - Essayer de se connecter
  * @param {string} [apac.wc_login_timeout] - Temps libre
  * @param {string} [apac.login_register_text] - Non Zoom compte?
+ * @param {string} [apac.wc_already_joined_by_telephone] - Vous avez déjà rejoint par téléphone ? Appuyez sur #
+ * @param {string} [apac.wc_on_your_phone] - sur votre téléphone
+ * @param {string} [apac.wc_you] - Vous
+ * @param {string} [apac.wc_enter_password] - Entrer un mot de passe valide s'il vous plait
+ * @param {string} [apac.wc_join] - Joindre
+ * @param {string} [apac.wc_invite_title] - Inviter des gens à rejoindre la réunion
+ * @param {string} [apac.wc_phone] - TÉLÉPHONE
+ * @param {string} [apac.wc_email] - E-MAIL
+ * @param {string} [apac.wc_room_system] - SYSTÈMES DE SALLES
+ * @param {string} [apac.wc_invitee_name] - Nom de l’invité :
+ * @param {string} [apac.wc_dial_in_H323] - Composer de conférence H.323/SIP
+ * @param {string} [apac.wc_call_a_H323] - Appeler une salle de conférence H.323/SIP
+ * @param {string} [apac.ip_address] - Adresse IP :
 */
 
 
@@ -1896,12 +1956,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - コンピューターでオーディオに参加
  * @param {string} [apac.wc_learn] - 学習
  * @param {string} [apac.wc_how_to_allow] - マイクへのアクセスを許可する方法。
- * @param {string} [apac.wc_change_browser] - ブラウザがコンピュータのオーディオデバイスの使用をサポートしていません。Zoomを利用するには、ChromeやEdge Chromiumなどの標準的なブラウザの最新版をインストールしてください。
+ * @param {string} [apac.wc_change_browser] - ブラウザがコンピュータのオーディオデバイスの使用をサポートしていません。Zoomを利用するには、Chrome、FirefoxやEdge Chromiumなどの標準的なブラウザの最新版をインストールしてください。
  * @param {string} [apac.wc_upgrade_browser] - ブラウザがコンピュータのオーディオデバイスの使用をサポートしていません。ブラウザを最新版に更新してください。
  * @param {string} [apac.wc_prevent_access_mic] - ブラウザによりマイクへのアクセスができなくなっています。
  * @param {string} [apac.wc_auto_join_audio] - 会議に参加するときに自動的にオーディオをコンピュータで作動させる
- * @param {string} [apac.wc_already_join_by_phone] - 既に電話で参加していますか？? 電話の#{0}#を押してください。
- * @param {string} [apac.wc_on_your_phone] - 電話上
  * @param {string} [apac.dialog.tollfree] - フリーダイヤル
  * @param {string} [apac.dialog.toll] - 料金
  * @param {string} [apac.wc_participant_id] - 参加者ID
@@ -1995,6 +2053,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - このミーティングから今すぐ退室してもよろしいですか？
  * @param {string} [apac.dialog.end_meeting_confirm] - このミーティングを今すぐ終了してもよろしいですか？
  * @param {string} [apac.dialog.dial_in] - あなたの場所でダイヤルイン
+ * @param {string} [apac.wc_dial_in] - ダイヤルイン
+ * @param {string} [apac.wc_call_out] - コールアウト
  * @param {string} [apac.dialog.remeber_number] - このコンピューターの番号を記録する
  * @param {string} [apac.wc_audio.using_audio_tip] - オーディオはコンピューターオーディオを使用して接続されます
  * @param {string} [apac.wc_phone_connected] - 電話が接続されました
@@ -2096,7 +2156,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - 字幕許可から退出します。
  * @param {string} [apac.wc_cc_assign_to] - 字幕入力に指定します。
  * @param {string} [apac.join_3prty_audio] - サードパーティのオーディオで参加
- * @param {string} [apac.wc_allow_rename] - 参加者が自分の名前を変更することを許可する
+ * @param {string} [apac.wc_allow_rename] - 参加者は自分の名前を変更することを許可します
  * @param {string} [apac.browser_share_dont_support_browser] - お使いのブラウザバージョンは次の機能をサポートしていません。最新バージョンにアップグレードしてからもう一度お試しください。
  * @param {string} [apac.wc_audio_cannot_unmute] - ホストによりミュートされため、ミュートを解除することはできません。
  * @param {string} [apac.wc_chat.disable_chat] - ホストが参加者チャットを無効にしました。
@@ -2227,6 +2287,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - 報告する
  * @param {string} [apac.security.button] - セキュリティ
  * @param {string} [apac.invalid_parameter] - 無効なパラメーター
+ * @param {string} [apac.update_firefox] - 76.0以上にあなたのFirefoxのバージョンをアップグレードしてください。
  * @param {string} [apac.errorcodes_denied_email] - メールは拒否されます
  * @param {string} [apac.errorcodes_tk_expired] - トークンの有効期限が切れ
  * @param {string} [apac.security.waiting_room_notification_1] - あなたは待合室を有効にしています
@@ -2242,10 +2303,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - あなたのブラウザーはサポート対象外です
  * @param {string} [apac.wc_browser_not_support2] - あなたの経験とセキュリティを向上させるために、これらのオプションのいずれかを試してみてください。
  * @param {string} [apac.sign_up_free] - 無料サインアップ
- * @param {string} [apac.sign_in_with] - サインイン
+ * @param {string} [apac.sign_in] - サインイン
  * @param {string} [apac.wc_sign_in_fail] - フェイルログイン
+ * @param {string} [apac.wc_trying_to_sign] - サインインしようとしています
  * @param {string} [apac.wc_login_timeout] - タイムアウト
  * @param {string} [apac.login_register_text] - ノーZoomのアカウント？
+ * @param {string} [apac.wc_already_joined_by_telephone] - 電話で既に参加していますか？#を押してください
+ * @param {string} [apac.wc_on_your_phone] - 電話上
+ * @param {string} [apac.wc_you] - 君は
+ * @param {string} [apac.wc_enter_password] - 有効なパスワードを入力して下さい
+ * @param {string} [apac.wc_join] - 加わります
+ * @param {string} [apac.wc_invite_title] - ミーティングに参加するように相手を招待
+ * @param {string} [apac.wc_phone] - 電話
+ * @param {string} [apac.wc_email] - 電子メール
+ * @param {string} [apac.wc_room_system] - ルーム システム
+ * @param {string} [apac.wc_invitee_name] - 招待者名:
+ * @param {string} [apac.wc_dial_in_H323] - H.323/SIP からダイヤルイン
+ * @param {string} [apac.wc_call_a_H323] - H.323/SIP ルーム システムを呼び出す
+ * @param {string} [apac.ip_address] - IPアドレス：
 */
 
 
@@ -2329,12 +2404,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - Entrar áudio por computador
  * @param {string} [apac.wc_learn] - Aprender
  * @param {string} [apac.wc_how_to_allow] - como permitir acesso ao microfone.
- * @param {string} [apac.wc_change_browser] - Seu navegador não é compatível com o uso do dispositivo de áudio do computador. Para usar o Zoom, instale a versão mais recente de um navegador padrão, como Chrome ou Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Seu navegador não é compatível com o uso do dispositivo de áudio do computador. Para usar o Zoom, instale a versão mais recente de um navegador padrão, como Chrome, Firefox ou Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Seu navegador não é compatível com o uso do dispositivo de áudio do computador, atualize seu navegador para a versão mais recente.
  * @param {string} [apac.wc_prevent_access_mic] - Seu navegador está evitando acesso ao microfone.
  * @param {string} [apac.wc_auto_join_audio] - Entrar com o áudio do computador automaticamente ao participar de uma conferência
- * @param {string} [apac.wc_already_join_by_phone] - Já ingressou por telefone? Pressione #{0}# no seu telefone.
- * @param {string} [apac.wc_on_your_phone] - no seu telefone.
  * @param {string} [apac.dialog.tollfree] - Gratuito
  * @param {string} [apac.dialog.toll] - Tarifa
  * @param {string} [apac.wc_participant_id] - ID do participante
@@ -2428,6 +2501,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Tem certeza de que deseja sair desta reunião agora?
  * @param {string} [apac.dialog.end_meeting_confirm] - Tem certeza de que deseja encerrar esta reunião agora?
  * @param {string} [apac.dialog.dial_in] - Marcar com base no seu local
+ * @param {string} [apac.wc_dial_in] - Marcar
+ * @param {string} [apac.wc_call_out] - Chamar
  * @param {string} [apac.dialog.remeber_number] - Lembrar o número neste computador
  * @param {string} [apac.wc_audio.using_audio_tip] - Seu áudio está conectado pelo áudio do computador
  * @param {string} [apac.wc_phone_connected] - Telefone conectado
@@ -2529,7 +2604,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - Retirar permissão de Closed Caption
  * @param {string} [apac.wc_cc_assign_to] - Atribuir digitação de Closed Caption
  * @param {string} [apac.join_3prty_audio] - Entrar por áudio de terceiros
- * @param {string} [apac.wc_allow_rename] - Permitir que participantes se renomeiem
+ * @param {string} [apac.wc_allow_rename] - Permitir aos participantes para renomear-se
  * @param {string} [apac.browser_share_dont_support_browser] - A versão do navegador que você está usando pode não ser compatível com o recurso a seguir. Atualize-o para a versão mais recente e tente novamente.
  * @param {string} [apac.wc_audio_cannot_unmute] - Você não pode ativar seu som pois o anfitrião desativou seu som.
  * @param {string} [apac.wc_chat.disable_chat] - O anfitrião desativou o bate-papo do participante.
@@ -2660,6 +2735,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - Relatório
  * @param {string} [apac.security.button] - Segurança
  * @param {string} [apac.invalid_parameter] - Parâmetro inválido
+ * @param {string} [apac.update_firefox] - Por favor, atualize sua versão do Firefox para 76,0 ou superior.
  * @param {string} [apac.errorcodes_denied_email] - Email ser negado
  * @param {string} [apac.errorcodes_tk_expired] - token expirado
  * @param {string} [apac.security.waiting_room_notification_1] - Você habilitou a sala de espera
@@ -2675,10 +2751,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Seu navegador não é suportado
  * @param {string} [apac.wc_browser_not_support2] - Por favor, tente uma destas opções para melhorar sua experiência e segurança.
  * @param {string} [apac.sign_up_free] - Inscreva-se gratuitamente
- * @param {string} [apac.sign_in_with] - assinar em
+ * @param {string} [apac.sign_in] - assinar em
  * @param {string} [apac.wc_sign_in_fail] - Entre falha
+ * @param {string} [apac.wc_trying_to_sign] - Tentando entrar
  * @param {string} [apac.wc_login_timeout] - Tempo esgotado
  * @param {string} [apac.login_register_text] - Nenhum Zoom conta?
+ * @param {string} [apac.wc_already_joined_by_telephone] - Já ingressou pelo telefone? Pressione #
+ * @param {string} [apac.wc_on_your_phone] - no seu telefone.
+ * @param {string} [apac.wc_you] - Vocês
+ * @param {string} [apac.wc_enter_password] - por favor coloque uma senha válida
+ * @param {string} [apac.wc_join] - Junte-se
+ * @param {string} [apac.wc_invite_title] - Convide pessoas para ingressar na reunião
+ * @param {string} [apac.wc_phone] - TELEFONE
+ * @param {string} [apac.wc_email] - E-MAIL
+ * @param {string} [apac.wc_room_system] - SISTEMAS DE SALA
+ * @param {string} [apac.wc_invitee_name] - Nome do Convidado:
+ * @param {string} [apac.wc_dial_in_H323] - Discagem de Salas H.323/SIP
+ * @param {string} [apac.wc_call_a_H323] - Ligar para um Sistema de Salas H.323/SIP
+ * @param {string} [apac.ip_address] - Endereço IP:
 */
 
 
@@ -2762,12 +2852,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - Войти в аудиоконференцию с компьютера
  * @param {string} [apac.wc_learn] - Узнать
  * @param {string} [apac.wc_how_to_allow] - как разрешить доступ к вашему микрофону.
- * @param {string} [apac.wc_change_browser] - Ваш браузер не поддерживает использование аудиоустройства компьютера. Чтобы использовать Zoom, установите последнюю версию стандартного браузера, например Chrome или Edge Chromium.
+ * @param {string} [apac.wc_change_browser] - Ваш браузер не поддерживает использование аудиоустройства компьютера. Чтобы использовать Zoom, установите последнюю версию стандартного браузера, например Chrome, Firefox или Edge Chromium.
  * @param {string} [apac.wc_upgrade_browser] - Ваш браузер не поддерживает использование аудиоустройства компьютера. Обновите браузер до последней версии.
  * @param {string} [apac.wc_prevent_access_mic] - Ваш браузер запрещает доступ к вашему микрофону.
  * @param {string} [apac.wc_auto_join_audio] - Автоматически включать аудиоустройство компьютера при подключении к конференции
- * @param {string} [apac.wc_already_join_by_phone] - Уже вошли по телефону? Нажмите #{0}# на вашем телефоне.
- * @param {string} [apac.wc_on_your_phone] - на вашем телефоне
  * @param {string} [apac.dialog.tollfree] - Бесплатный
  * @param {string} [apac.dialog.toll] - Платный
  * @param {string} [apac.wc_participant_id] - Идентификатор участника
@@ -2861,6 +2949,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Покинуть эту конференцию?
  * @param {string} [apac.dialog.end_meeting_confirm] - Завершить эту конференцию?
  * @param {string} [apac.dialog.dial_in] - Набрать номер в зависимости от вашего местонахождения
+ * @param {string} [apac.wc_dial_in] - Набрать номер
+ * @param {string} [apac.wc_call_out] - Ответный вызов
  * @param {string} [apac.dialog.remeber_number] - Запомнить номер на этом компьютере
  * @param {string} [apac.wc_audio.using_audio_tip] - Для воспроизведения звука используется компьютер
  * @param {string} [apac.wc_phone_connected] - Телефон подключен
@@ -2962,7 +3052,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - Отозвать разрешение субтитров по требованию
  * @param {string} [apac.wc_cc_assign_to] - Назначить для ввода субтитров по требованию
  * @param {string} [apac.join_3prty_audio] - Войти с использованием сторонней программы звука
- * @param {string} [apac.wc_allow_rename] - Разрешить участникам переименовывать себя
+ * @param {string} [apac.wc_allow_rename] - Разрешить участникам переименовать себя
  * @param {string} [apac.browser_share_dont_support_browser] - Версия браузера, которую вы используете, может не поддерживать эту функцию. Выполните обновление до последней версии и повторите попытку.
  * @param {string} [apac.wc_audio_cannot_unmute] - Вы не можете включить звук, потому что звук вам выключил организатор.
  * @param {string} [apac.wc_chat.disable_chat] - Организатор отключил чат участников.
@@ -3093,6 +3183,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - отчет
  * @param {string} [apac.security.button] - Безопасность
  * @param {string} [apac.invalid_parameter] - Неверный параметр
+ * @param {string} [apac.update_firefox] - Пожалуйста, обновите версию Firefox до 76.0 или выше.
  * @param {string} [apac.errorcodes_denied_email] - Электронная почта может быть отказано
  * @param {string} [apac.errorcodes_tk_expired] - Токен истек
  * @param {string} [apac.security.waiting_room_notification_1] - Вы активировали зал ожидания
@@ -3108,10 +3199,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - Ваш браузер не поддерживается
  * @param {string} [apac.wc_browser_not_support2] - Пожалуйста, попробуйте один из этих вариантов, чтобы улучшить свой опыт работы и безопасность.
  * @param {string} [apac.sign_up_free] - Бесплатная регистрация
- * @param {string} [apac.sign_in_with] - войти в систему
+ * @param {string} [apac.sign_in] - войти в систему
  * @param {string} [apac.wc_sign_in_fail] - Войти сбою
+ * @param {string} [apac.wc_trying_to_sign] - Попытка войти в систему
  * @param {string} [apac.wc_login_timeout] - Тайм-аут
  * @param {string} [apac.login_register_text] - Нет Zoom счета?
+ * @param {string} [apac.wc_already_joined_by_telephone] - Подключение уже выполнено с телефона? Нажмите #
+ * @param {string} [apac.wc_on_your_phone] - на вашем телефоне
+ * @param {string} [apac.wc_you] - Вы
+ * @param {string} [apac.wc_enter_password] - Пожалуйста, введите правильный пароль
+ * @param {string} [apac.wc_join] - Присоединиться
+ * @param {string} [apac.wc_invite_title] - Пригласить людей присоединиться к конференции
+ * @param {string} [apac.wc_phone] - ТЕЛЕФОН
+ * @param {string} [apac.wc_email] - ЭЛ. ПОЧТА
+ * @param {string} [apac.wc_room_system] - КОНФЕРЕНЦ-СИСТЕМА
+ * @param {string} [apac.wc_invitee_name] - Имя приглашенного:
+ * @param {string} [apac.wc_dial_in_H323] - Набрать номер из H.323/SIP
+ * @param {string} [apac.wc_call_a_H323] - Вызвать конференц-систему H.323/SIP
+ * @param {string} [apac.ip_address] - IP-адрес:
 */
 
 
@@ -3195,12 +3300,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - 通过计算机加入音频
  * @param {string} [apac.wc_learn] - 学习
  * @param {string} [apac.wc_how_to_allow] - 如何允许访问您的麦克风。
- * @param {string} [apac.wc_change_browser] - 您的浏览器不支持使用计算机的音频设备。要使用Zoom，请安装Chrome或Edge Chromium等标准浏览器的最新版本。
+ * @param {string} [apac.wc_change_browser] - 您的浏览器不支持使用计算机的音频设备。要使用Zoom，请安装Chrome，FireFox或Edge Chromium等标准浏览器的最新版本。
  * @param {string} [apac.wc_upgrade_browser] - 您的浏览器不支持使用计算机的音频设备，请将您的浏览器升级到最新版本。
  * @param {string} [apac.wc_prevent_access_mic] - 您的浏览器正在阻止访问您的麦克风。
  * @param {string} [apac.wc_auto_join_audio] - 加入会议时自动开启计算机音频
- * @param {string} [apac.wc_already_join_by_phone] - 已通过电话加入？输入 #{0}#在您的电话上
- * @param {string} [apac.wc_on_your_phone] - 在您的电话上
  * @param {string} [apac.dialog.tollfree] - 免费电话
  * @param {string} [apac.dialog.toll] - 收费
  * @param {string} [apac.wc_participant_id] - 参与者ID
@@ -3294,6 +3397,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - 是否确定要立即离开此会议？
  * @param {string} [apac.dialog.end_meeting_confirm] - 是否确定要立即结束此会议？
  * @param {string} [apac.dialog.dial_in] - 根据地点拨入
+ * @param {string} [apac.wc_dial_in] - 拨入
+ * @param {string} [apac.wc_call_out] - 拨出
  * @param {string} [apac.dialog.remeber_number] - 在此计算机上记住该号码
  * @param {string} [apac.wc_audio.using_audio_tip] - 通过计算机音频连接音频
  * @param {string} [apac.wc_phone_connected] - 电话已连接
@@ -3395,7 +3500,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - 收回字幕权限
  * @param {string} [apac.wc_cc_assign_to] - 指定输入字幕
  * @param {string} [apac.join_3prty_audio] - 通过第三方音频加入
- * @param {string} [apac.wc_allow_rename] - 允许参会者自己改名
+ * @param {string} [apac.wc_allow_rename] - 让参与者自己改名
  * @param {string} [apac.browser_share_dont_support_browser] - 您使用的浏览器版本可能不支持以下功能。请升级到最新版本，然后重试。
  * @param {string} [apac.wc_audio_cannot_unmute] - 您无法自我解除静音，因为主持人已将您静音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已禁用与会者聊天功能。
@@ -3526,6 +3631,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - 报告
  * @param {string} [apac.security.button] - 安全
  * @param {string} [apac.invalid_parameter] - 无效的参数
+ * @param {string} [apac.update_firefox] - 请升级您的Firefox版本76.0或更高版本。
  * @param {string} [apac.errorcodes_denied_email] - 电子邮件被拒绝
  * @param {string} [apac.errorcodes_tk_expired] - 令牌过期
  * @param {string} [apac.security.waiting_room_notification_1] - 您已启用的候车室
@@ -3541,10 +3647,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - 您的浏览器不支持
  * @param {string} [apac.wc_browser_not_support2] - 请尝试以下选项之一，以提高你的经验和安全性。
  * @param {string} [apac.sign_up_free] - 免費註冊
- * @param {string} [apac.sign_in_with] - 登入
+ * @param {string} [apac.sign_in] - 登入
  * @param {string} [apac.wc_sign_in_fail] - 登錄失敗
+ * @param {string} [apac.wc_trying_to_sign] - 尝试登陆
  * @param {string} [apac.wc_login_timeout] - 超時
  * @param {string} [apac.login_register_text] - 沒有Zoom帳戶？
+ * @param {string} [apac.wc_already_joined_by_telephone] - 已通过电话加入？按#
+ * @param {string} [apac.wc_on_your_phone] - 在您的电话上
+ * @param {string} [apac.wc_you] - 您
+ * @param {string} [apac.wc_enter_password] - 請輸入有效密碼
+ * @param {string} [apac.wc_join] - 加入
+ * @param {string} [apac.wc_invite_title] - 邀请他人加入会议
+ * @param {string} [apac.wc_phone] - 电话
+ * @param {string} [apac.wc_email] - 电子邮件
+ * @param {string} [apac.wc_room_system] - 会议室系统
+ * @param {string} [apac.wc_invitee_name] - 受邀人姓名：
+ * @param {string} [apac.wc_dial_in_H323] - 从H.323/SIP会议室系统拨入
+ * @param {string} [apac.wc_call_a_H323] - 拨打H.323/SIP会议室系统
+ * @param {string} [apac.ip_address] - IP地址：
 */
 
 
@@ -3628,12 +3748,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - 透過電腦加入音訊
  * @param {string} [apac.wc_learn] - 學習
  * @param {string} [apac.wc_how_to_allow] - 如何允許存取麥克風。
- * @param {string} [apac.wc_change_browser] - 您的瀏覽器不支援使用電腦音訊裝置。若要使用Zoom，請安裝Chrome或Edge Chromium等標準瀏覽器的最新版本。
+ * @param {string} [apac.wc_change_browser] - 您的瀏覽器不支援使用電腦音訊裝置。若要使用Zoom，請安裝Chrome，Firefox或Edge Chromium等標準瀏覽器的最新版本。
  * @param {string} [apac.wc_upgrade_browser] - 您的瀏覽器不支援使用電腦音訊裝置，請將您的瀏覽器升級至最新版本。
  * @param {string} [apac.wc_prevent_access_mic] - 瀏覽器已禁止存取您的麥克風。
  * @param {string} [apac.wc_auto_join_audio] - 加入會議時自動啟動電腦音訊
- * @param {string} [apac.wc_already_join_by_phone] - 已透過電話加入？按 #{0}# 在電話
- * @param {string} [apac.wc_on_your_phone] - 在電話
  * @param {string} [apac.dialog.tollfree] - 免費電話號碼
  * @param {string} [apac.dialog.toll] - 付費電話號碼
  * @param {string} [apac.wc_participant_id] - 參與者 ID
@@ -3727,6 +3845,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - 您確定要立即離開此會議嗎？
  * @param {string} [apac.dialog.end_meeting_confirm] - 您確定要立即結束此會議嗎？
  * @param {string} [apac.dialog.dial_in] - 基於位置撥入
+ * @param {string} [apac.wc_dial_in] - 撥入
+ * @param {string} [apac.wc_call_out] - 撥出
  * @param {string} [apac.dialog.remeber_number] - 在該電腦上記住號碼
  * @param {string} [apac.wc_audio.using_audio_tip] - 您是透過電腦音訊連線音訊
  * @param {string} [apac.wc_phone_connected] - 已連線電話
@@ -3828,7 +3948,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - 撤回字幕權限
  * @param {string} [apac.wc_cc_assign_to] - 指派輸入字幕
  * @param {string} [apac.join_3prty_audio] - 透過第三方音訊加入
- * @param {string} [apac.wc_allow_rename] - 允許與會者自行改名
+ * @param {string} [apac.wc_allow_rename] - 讓參與者自己改名
  * @param {string} [apac.browser_share_dont_support_browser] - 您目前使用的瀏覽器版本可能不支持下列功能。請升級至最新版本，然後再試一次。
  * @param {string} [apac.wc_audio_cannot_unmute] - 您無法自我解除靜音，因為主持人已將您靜音。
  * @param {string} [apac.wc_chat.disable_chat] - 主持人已停用出席者聊天。
@@ -3959,6 +4079,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - 報告
  * @param {string} [apac.security.button] - 安全
  * @param {string} [apac.invalid_parameter] - 無效的參數
+ * @param {string} [apac.update_firefox] - 請升級您的Firefox版本76.0或更高版本。
  * @param {string} [apac.errorcodes_denied_email] - 電子郵件被拒絕
  * @param {string} [apac.errorcodes_tk_expired] - 令牌過期
  * @param {string} [apac.security.waiting_room_notification_1] - 您已啟用的候車室
@@ -3974,10 +4095,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - 您的瀏覽器不支持
  * @param {string} [apac.wc_browser_not_support2] - 請嘗試以下選項之一，以提高你的經驗和安全性。
  * @param {string} [apac.sign_up_free] - 免費註冊
- * @param {string} [apac.sign_in_with] - 登入
+ * @param {string} [apac.sign_in] - 登入
  * @param {string} [apac.wc_sign_in_fail] - 登錄失敗
+ * @param {string} [apac.wc_trying_to_sign] - 嘗試登錄
  * @param {string} [apac.wc_login_timeout] - 超時
  * @param {string} [apac.login_register_text] - 沒有Zoom帳戶？
+ * @param {string} [apac.wc_already_joined_by_telephone] - 已透過電話參加會議？請按#
+ * @param {string} [apac.wc_on_your_phone] - 在電話
+ * @param {string} [apac.wc_you] - 您
+ * @param {string} [apac.wc_enter_password] - 請輸入有效密碼
+ * @param {string} [apac.wc_join] - 加入
+ * @param {string} [apac.wc_invite_title] - 邀請他人加入會議
+ * @param {string} [apac.wc_phone] - 電話
+ * @param {string} [apac.wc_email] - 電子郵件
+ * @param {string} [apac.wc_room_system] - 會議室系統
+ * @param {string} [apac.wc_invitee_name] - 受邀人姓名：
+ * @param {string} [apac.wc_dial_in_H323] - 從H.323/SIP會議室系統撥入
+ * @param {string} [apac.wc_call_a_H323] - 撥打H.323/SIP會議室系統
+ * @param {string} [apac.ip_address] - IP位址：
 */
 
 
@@ -4061,12 +4196,10 @@ const LanguageResource = {
  * @param {string} [apac.wc_join_audio_by_pc] - 컴퓨터로 오디오 참여
  * @param {string} [apac.wc_learn] - 알아보기
  * @param {string} [apac.wc_how_to_allow] - 마이크에 대한 액세스를 허용하는 벙법.
- * @param {string} [apac.wc_change_browser] - 브라우저가 컴퓨터의 오디오 장치 사용을 지원하지 않습니다. Zoom을 사용하려면 Chrome 또는 Edge Chromium와 같은 표준 브라우저의 최신 버전을 설치합니다.
+ * @param {string} [apac.wc_change_browser] - 브라우저가 컴퓨터의 오디오 장치 사용을 지원하지 않습니다. Zoom을 사용하려면 Chrome Firefox 또는 Edge Chromium와 같은 표준 브라우저의 최신 버전을 설치합니다.
  * @param {string} [apac.wc_upgrade_browser] - 브라우저가 컴퓨터의 오디오 장치를 지원하지 않습니다. 브라우저를 최신 버전으로 업그레이드하십시오.
  * @param {string} [apac.wc_prevent_access_mic] - 브라우저가 마이크에 대한 액세스를 차단하고 있습니다.
  * @param {string} [apac.wc_auto_join_audio] - 회의에 참여할 때 컴퓨터로 자동 오디오 참여
- * @param {string} [apac.wc_already_join_by_phone] - 이미 전화기로 참여하셨나요? 전화기에서 #{0}#을(를) 누르십시오.
- * @param {string} [apac.wc_on_your_phone] - 번을 누르십시오.
  * @param {string} [apac.dialog.tollfree] - 무료 통화
  * @param {string} [apac.dialog.toll] - 유료
  * @param {string} [apac.wc_participant_id] - 참가자 ID
@@ -4160,6 +4293,8 @@ const LanguageResource = {
  * @param {string} [apac.dialog.leave_meeting_confirm] - Are you sure you want to leave this meeting now?
  * @param {string} [apac.dialog.end_meeting_confirm] - Are you sure you want to end this meeting now?
  * @param {string} [apac.dialog.dial_in] - 위치를 기준으로 전화 걸기
+ * @param {string} [apac.wc_dial_in] - 전화 접속
+ * @param {string} [apac.wc_call_out] - 호출
  * @param {string} [apac.dialog.remeber_number] - 이 컴퓨터의 번호 기억
  * @param {string} [apac.wc_audio.using_audio_tip] - 컴퓨터 오디오를 사용하여 오디오가 연결되었습니다.
  * @param {string} [apac.wc_phone_connected] - 전화 연결됨
@@ -4261,7 +4396,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_cc_withdraw] - 선택 자막 사용 권한 회수
  * @param {string} [apac.wc_cc_assign_to] - 선택 자막 입력 할당
  * @param {string} [apac.join_3prty_audio] - 타사 오디오로 참가
- * @param {string} [apac.wc_allow_rename] - Allow participants to rename themselves
+ * @param {string} [apac.wc_allow_rename] - 참가자가 자신의 이름을 바꿀 수 있도록 허용
  * @param {string} [apac.browser_share_dont_support_browser] - The browser version you\'re using may not support the following feature. Please upgrade to the latest version and try again.
  * @param {string} [apac.wc_audio_cannot_unmute] - You cannot unmute yourself because the host muted you.
  * @param {string} [apac.wc_chat.disable_chat] - 호스트가 참석자 채팅을 비활성화하였습니다.
@@ -4392,6 +4527,7 @@ const LanguageResource = {
  * @param {string} [apac.security.report] - 보고서
  * @param {string} [apac.security.button] - 보안
  * @param {string} [apac.invalid_parameter] - 잘못된 매개 변수
+ * @param {string} [apac.update_firefox] - 76.0 이상으로 파이어 폭스의 버전을 업그레이드하십시오.
  * @param {string} [apac.errorcodes_denied_email] - 이메일 거부
  * @param {string} [apac.errorcodes_tk_expired] - 토큰이 만료
  * @param {string} [apac.security.waiting_room_notification_1] - 당신은 대기실을 사용하도록 설정 한
@@ -4407,10 +4543,24 @@ const LanguageResource = {
  * @param {string} [apac.wc_browser_not_support] - 귀하의 브라우저가 지원되지 않습니다
  * @param {string} [apac.wc_browser_not_support2] - 경험과 보안을 개선하기 위해 다음 옵션 중 하나를 시도하십시오.
  * @param {string} [apac.sign_up_free] - 업 무료 가입
- * @param {string} [apac.sign_in_with] - 로그인
+ * @param {string} [apac.sign_in] - 로그인
  * @param {string} [apac.wc_sign_in_fail] - 실패 로그인
+ * @param {string} [apac.wc_trying_to_sign] - 로그인 시도
  * @param {string} [apac.wc_login_timeout] - 시간 제한
  * @param {string} [apac.login_register_text] - 없음 Zoom 계정 없다?
+ * @param {string} [apac.wc_already_joined_by_telephone] - 벌써 전화로 참여하셨나요? #번을 누르십시오.
+ * @param {string} [apac.wc_on_your_phone] - 번을 누르십시오.
+ * @param {string} [apac.wc_you] - 당신
+ * @param {string} [apac.wc_enter_password] - 올바른 암호를 입력하십시오
+ * @param {string} [apac.wc_join] - 붙다
+ * @param {string} [apac.wc_invite_title] - 회의에 사람들을 초대합니다
+ * @param {string} [apac.wc_phone] - 전화
+ * @param {string} [apac.wc_email] - 이메일
+ * @param {string} [apac.wc_room_system] - 회의실 시스템
+ * @param {string} [apac.wc_invitee_name] - 초대 대상자 이름:
+ * @param {string} [apac.wc_dial_in_H323] - H.323/SIP 에서 전화 걸기
+ * @param {string} [apac.wc_call_a_H323] - H.323/SIP 회의실 시스템에 전화하기
+ * @param {string} [apac.ip_address] - IP 주소:
 */
 
 
@@ -4427,7 +4577,7 @@ module.exports = LanguageResource;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Tue May 12 2020 17:38:47 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Mon May 25 2020 16:02:20 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
