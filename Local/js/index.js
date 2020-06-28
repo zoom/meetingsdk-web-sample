@@ -80,8 +80,8 @@ document.getElementById("join_meeting").addEventListener("click", (e) => {
   e.preventDefault();
 
   const meetingConfig = testTool.getMeetingConfig();
-  if (meetingConfig.mn === "") {
-    alert("Enter Name and Meeting Number");
+  if (!meetingConfig.mn || !meetingConfig.name) {
+    alert("Meeting number or username is empty");
     return false;
   }
   testTool.setCookie("meeting_number", meetingConfig.mn);
@@ -107,7 +107,8 @@ document.getElementById("join_meeting").addEventListener("click", (e) => {
 window.copyJoinLink = function (element) {
   const meetingConfig = testTool.getMeetingConfig();
   if (!meetingConfig.mn || !meetingConfig.name) {
-    alert("meeting number or username is empty");
+    alert("Meeting number or username is empty");
+    return false;
   }
   const signature = ZoomMtg.generateSignature({
     meetingNumber: meetingConfig.mn,
@@ -137,7 +138,8 @@ document.getElementById("join_iframe").addEventListener("click", function (e) {
   e.preventDefault();
   const meetingConfig = testTool.getMeetingConfig();
   if (!meetingConfig.mn || !meetingConfig.name) {
-    alert("meeting number or username is empty");
+    alert("Meeting number or username is empty");
+    return false;
   }
   const signature = ZoomMtg.generateSignature({
     meetingNumber: meetingConfig.mn,
