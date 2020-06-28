@@ -23,7 +23,7 @@ const meetingConfig = {
     );
   })(),
   passWord: tmpArgs.pwd,
-  leaveUrl: "http://127.0.0.1:9999",
+  leaveUrl: "/index.html",
   role: parseInt(tmpArgs.role, 10),
   userEmail: (function () {
     try {

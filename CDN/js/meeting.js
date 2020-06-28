@@ -1,5 +1,6 @@
 (function () {
   var testTool = window.testTool;
+  // get meeting args from url
   var tmpArgs = testTool.parseQuery();
   var meetingConfig = {
     apiKey: tmpArgs.apiKey,
@@ -22,7 +23,7 @@
       );
     })(),
     passWord: tmpArgs.pwd,
-    leaveUrl: "http://127.0.0.1:9999",
+    leaveUrl: "/index.html",
     role: parseInt(tmpArgs.role, 10),
     userEmail: (function () {
       try {
@@ -36,6 +37,7 @@
     china: tmpArgs.china === "1",
   };
 
+  // a tool use debug mobile device
   if (testTool.isMobileDevice()) {
     vConsole = new VConsole();
   }

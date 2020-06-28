@@ -240,8 +240,9 @@ var testTool = {
     var regStr_ff = /firefox\/[\d.]+/gi;
     var regStr_chrome = /chrome\/[\d.]+/gi;
     var regStrChrome2 = /ipad; cpu os (\d+_\d+)/gi;
-    var regStr_saf = /safari\/[\d.]+/gi;
+    var regStr_saf = /version\/[\d.]+/gi;
     var regStr_saf2 = /safari\/[\d.]+/gi;
+  
     var regStr_edg = /edg\/[\d.]+/gi;
 
     // firefox

@@ -73,6 +73,7 @@ document.getElementById("clear_all").addEventListener("click", (e) => {
   document.getElementById("meeting_pwd").value = "";
   document.getElementById("meeting_lang").value = "en-US";
   document.getElementById("meeting_role").value = 0;
+  window.location.href = "/index.html";
 });
 
 document.getElementById("join_meeting").addEventListener("click", (e) => {
