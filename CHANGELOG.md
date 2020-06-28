@@ -1,4 +1,33 @@
 # CHANGELOG
+
+## version 1.7.9
+
+## Add
+1. New Rate limit for joining meetings and webinars.
+2. Added recaptcha feature for joining meetings.
+3. Added Vietnamese language support.
+4. Added Italian language support.
+5. Added Waiting Room notification.
+6. Added Ruby code for generating signature.
+7. Added ability for host to report attendees(only require zoom login meeting and waiting Zoom enable this feature).
+8. Added new API to disable report(disableReport).
+9. Added new API to hide meeting information(meetingInfo).
+10. Added new API to hide VOIP option(disableVoIP).
+11. Host unmute need participant admit, remove host unmute all.
+
+## Enhancements
+1. Enhanced details for error messages.
+2. Ensure WASM files are downloaded before joining meetings.
+3. Include version number within JSMedia file to prevent caching issues.
+
+## Bug Fixes
+1. Fixed issue when cannot unmute when joining audio.
+2. Fixed issue when an webinar attendee cannot join audio using Safari browser.
+3. Fixed a tag issue for starting video.
+4. Fixed issue for user sees Black screen on iOS device.
+5. Fixed attendee Closed Caption don't show
+6. Fixed Chrome 74 audio bad issue.
+
 ## version 1.7.8
 
 ## Add
