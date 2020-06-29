@@ -75,18 +75,32 @@
       <div class="helpCenterText">Help center</div>
     </div>
     <div class="container">
-      <h1 class="Header">
-        Zoom WebSDK Recaptcha Need Cross-site Tracking
-      </h1>
+      <h2>
+        1. Need Cross-site Tracking.
+      </h2>
+      <p>Zoom Recaptcha feature need write third-party cookie.</p>
+      <img class="image2" src="./img/_zm_sdk_origin.png" />
       <p>
-       1. IOS/IpadOS Safari. Settings -> Safari
+       1.1 IOS/IpadOS Safari. Settings -> Safari
       </p>
       <img class="image2" src="./img/safari_ios_tracking.png" />
-      <p>2. Mac Safari. Safari -> Preference -> Privacy</p>
+      <p>1.2 Mac Safari. Safari -> Preference -> Privacy</p>
       <img class="image1" src="./img/safari_mac_tracking.jpg" />
-      <p>3. Chrome >= 83 Incognito Mode, allow third-party-cookie or don't use Incognito Mode  </p>
+      <p>1.3 Chrome >= 83 Incognito Mode, allow third-party-cookie or don't use Incognito Mode  </p>
       <img class="image2" src="./img/c83-cookies-private-browsing.png" />
+    </div>
+    <div class="container">
       
+      <h1 class="Header">
+        2. Google Recaptcha click Cancel/Continue no response
+      </h1>
+      <p>2.1 use inspect tool</p>
+      <img class="image2" src="./img/google_recaptcha_inspect.png" />
+      <p>2.2 open network pannel. refresh page and find a google continue link </p>
+      <img class="image2" src="./img/google_recaptcha_continue.png" />
+      <p>2.3 open the link and pass google rebot check</p>
+      <img class="image2" src="./img/google_recaptcha_pass.png" />
+      <p>2.4 back to zoom recaptcha and click continue</p>
     </div>
   </body>
 </html>
