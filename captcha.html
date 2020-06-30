@@ -120,6 +120,21 @@
     <a href="https://raw.githubusercontent.com/zoom/sample-app-web/master/CDN/js/zoom-meeting-1.7.9.1.min.js" target="_blank">https://raw.githubusercontent.com/zoom/sample-app-web/master/CDN/js/zoom-meeting-1.7.9.1.min.js</a>
     </div>
 
+    <div class="container">
+      
+      <h1 class="Header">
+        4. Use iFrame recaptcha don't work
+      </h1>
+      <p>
+      WebSDK use popup window to check Recaptcha, so you need add blow sandbox when use iFrame.
+      </p>
+<pre>
+  sandbox = "allow-forms allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+</pre>
+    
+  
+    </div>
+
 
   </body>
 </html>
