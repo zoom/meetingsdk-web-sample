@@ -1,4 +1,28 @@
 # CHANGELOG
+## version 1.8.0
+## Add
+1. Webinar Panelist/Host support
+2. Webinar promote/depromote
+3. Multi participant sharing
+4. Search box for attendee list
+5. meeting/webinar co-host
+6. Registration Webinar
+7. Webinar attendee Allow to talk
+8. Merge attendee's phone call and video
+9. Start Webinar(role=1, require host/alternative email), other email try to start will show "Not allow to start webinar from web."
+10. inMeetingServiceListener API
+12. Support Play Chime for Enter/Exit and Chat Message/Raise Hand
+13. ajax call use axios(dependence)
+
+## Bug Fixes
+1. Reconnecting uses a different participant id
+2. Black screen when Web SDK user is spotlighted
+
+## Enhancements
+1. fix with noise
+2. Simd support import performance(https://developers.chrome.com/origintrials/#/trials/active)
+3. Waiting room notice(sound and browser notice)
+
 ## version 1.7.10
 ## Bug Fixes
 1. Fixed random video black screen in meeting.
