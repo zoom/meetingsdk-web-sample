@@ -20,7 +20,7 @@
 
 ## Enhancements
 1. fix with noise
-2. Simd support import performance(https://developers.chrome.com/origintrials/#/trials/active)
+2. Simd support(need apply try https://developers.chrome.com/origintrials/#/trials/active)
 3. Waiting room notice(sound and browser notice)
 
 ## version 1.7.10

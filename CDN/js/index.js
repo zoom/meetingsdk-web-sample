@@ -10,7 +10,7 @@
   // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.0/lib', '/av'); // CDN version default
   // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.8.0/lib', '/av'); // china cdn option
   // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
-  ZoomMtg.preLoadWasm();
+  ZoomMtg.preLoadWasm(); // pre download wasm file to save time.
 
   var API_KEY = "YOUR_API_KEY";
 
