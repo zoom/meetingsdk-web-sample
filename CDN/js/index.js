@@ -112,7 +112,7 @@
       });
     });
 
-  // click copy jon link button
+  // click copy join link button
   window.copyJoinLink = function (element) {
     var meetingConfig = testTool.getMeetingConfig();
     if (!meetingConfig.mn || !meetingConfig.name) {
