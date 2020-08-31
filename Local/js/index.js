@@ -133,28 +133,3 @@ window.copyJoinLink = function (element) {
   });
 };
 
-// click join iframe buttong
-document.getElementById("join_iframe").addEventListener("click", function (e) {
-  e.preventDefault();
-  const meetingConfig = testTool.getMeetingConfig();
-  if (!meetingConfig.mn || !meetingConfig.name) {
-    alert("Meeting number or username is empty");
-    return false;
-  }
-  const signature = ZoomMtg.generateSignature({
-    meetingNumber: meetingConfig.mn,
-    apiKey: API_KEY,
-    apiSecret: API_SECRET,
-    role: meetingConfig.role,
-    success: function (res) {
-      console.log(res.result);
-      meetingConfig.signature = res.result;
-      meetingConfig.apiKey = API_KEY;
-      const joinUrl =
-        testTool.getCurrentDomain() +
-        "/meeting.html?" +
-        testTool.serialize(meetingConfig);
-      testTool.createZoomNode("websdk-iframe", joinUrl);
-    },
-  });
-});
