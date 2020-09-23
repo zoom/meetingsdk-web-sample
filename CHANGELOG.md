@@ -1,4 +1,17 @@
 # CHANGELOG
+## version 1.8.1
+## Bug Fixes
+1. Fixed bug that prevents attendees from Disable or Enable video receiving.
+2. Fixed sharing content resolution compression. 
+3. Fixed CSS issue where Zooms scrollbar css styles are overwritten by browser global styles. 
+4. Fixed bug where the onMeetingStatus api does not throw connected and disconnected callback events. 
+5. Fixed bug where audio does not work after successfully reconnecting and rejoining the meeting
+6. Fixed video resolution bug where the default video resolution should be 360p instead of 180p.
+ 
+## Add
+1. Added new API getCurrentMeetingInfo to return meeting information.  
+2. Show dialog to use E2E meetings for either Desktop or Mobile clients.
+
 ## version 1.8.0
 ## Add
 1. Webinar Panelist/Host support
