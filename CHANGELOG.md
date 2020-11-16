@@ -1,4 +1,15 @@
 # CHANGELOG
+## version 1.8.3
+## Bug Fixes
+1. Fixed phone Passcode Missing
+2. Fixed enter/exit fullscreen after leaving meeting in safari(ipad)
+3. Fixed text overflows issue for some language
+4. Fixed enhance download wasm files timeout issue.
+5. Fixed auto hide "talk" text area for IE11
+6. Fixed automatically sort raised hands to the top(me->host->co-host->raised->others)
+7. Fixed unexcept "The host unmuted you" after call me success
+8. Fixed Japanese translation for the waiting room.
+
 ## version 1.8.1
 ## Bug Fixes
 1. Fixed bug that prevents attendees from Disable or Enable video receiving.
