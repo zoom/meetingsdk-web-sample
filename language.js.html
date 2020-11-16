@@ -52,7 +52,7 @@
 /**
  * @copyright Zoom 2020
  * @namespace LanguageResource
- * @version WebSDK1.8.1
+ * @version WebSDK1.8.3
 */
 
 
@@ -338,7 +338,7 @@ const LanguageResource = {
  * @param {string} [apac.wc_waiting_room_title4] - people are on hold
  * @param {string} [apac.wc_remove_user] - Do you want to remove
  * @param {string} [apac.wc_device_not_support_title] - Your browser does not support feature - Screen Share
- * @param {string} [apac.wc_device_not_support_desc] -
+ * @param {string} [apac.wc_device_not_support_desc] - 
  * @param {string} [apac.wc_sharer_in_progress_desc] - Preview
  * @param {string} [apac.wc_sharer_device_disabled_by_device_dec] - Your browser is preventing access to your Share Screen.
  * @param {string} [apac.wc_sharer_disabled_share_button_label] - Ok
@@ -487,6 +487,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - Cannot not host another meeting concurrently.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Signature is invalid.
  * @param {string} [apac.errorcodes_pac_no_permission] - No permission.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Could not get a response from the web server.
  * @param {string} [apac.errorcodes_rwc_error] - Could not connect to Web Server error.
  * @param {string} [apac.errorcodes_frequent_call] - You have reached the API limit for this call.
@@ -543,28 +544,28 @@ const LanguageResource = {
  * @param {string} [apac.wc_dial_in_H323] - Dial in from
  * @param {string} [apac.wc_call_a_H323] - Call a H.323/SIP Room System
  * @param {string} [apac.ip_address] - IP Address:
- * @param {string} [apac.wc_security.report_select_reporter_title] -
- * @param {string} [apac.wc_security.report_problem_title] -
- * @param {string} [apac.wc_security.report_title] -
- * @param {string} [apac.security.upload_file] -
- * @param {string} [apac.wc_security.report_problem1] -
- * @param {string} [apac.wc_security.report_problem2] -
- * @param {string} [apac.wc_security.report_problem3] -
- * @param {string} [apac.wc_security.report_problem4] -
- * @param {string} [apac.wc_security.report_problem5] -
- * @param {string} [apac.wc_security.report_problem6] -
- * @param {string} [apac.wc_security.report_comments_title] -
- * @param {string} [apac.wc_security.report_additional_comments] -
- * @param {string} [apac.wc_security.report_send] -
- * @param {string} [apac.wc_security.report_privacy_policy] -
- * @param {string} [apac.wc_security.report_all_privacy_policy] -
- * @param {string} [apac.wc_security.report_file_size_limit_error1] -
- * @param {string} [apac.wc_security.report_file_size_limit_error2] -
- * @param {string} [apac.wc_security.report_file_upload_error] -
- * @param {string} [apac.wc_security.report_file_format_error] -
- * @param {string} [apac.wc_security.report_participants_left_label] -
- * @param {string} [apac.wc_security.report_feedback_title] -
- * @param {string} [apac.wc_security.report_feedback_tips] -
+ * @param {string} [apac.wc_security.report_select_reporter_title] - 
+ * @param {string} [apac.wc_security.report_problem_title] - 
+ * @param {string} [apac.wc_security.report_title] - 
+ * @param {string} [apac.security.upload_file] - 
+ * @param {string} [apac.wc_security.report_problem1] - 
+ * @param {string} [apac.wc_security.report_problem2] - 
+ * @param {string} [apac.wc_security.report_problem3] - 
+ * @param {string} [apac.wc_security.report_problem4] - 
+ * @param {string} [apac.wc_security.report_problem5] - 
+ * @param {string} [apac.wc_security.report_problem6] - 
+ * @param {string} [apac.wc_security.report_comments_title] - 
+ * @param {string} [apac.wc_security.report_additional_comments] - 
+ * @param {string} [apac.wc_security.report_send] - 
+ * @param {string} [apac.wc_security.report_privacy_policy] - 
+ * @param {string} [apac.wc_security.report_all_privacy_policy] - 
+ * @param {string} [apac.wc_security.report_file_size_limit_error1] - 
+ * @param {string} [apac.wc_security.report_file_size_limit_error2] - 
+ * @param {string} [apac.wc_security.report_file_upload_error] - 
+ * @param {string} [apac.wc_security.report_file_format_error] - 
+ * @param {string} [apac.wc_security.report_participants_left_label] - 
+ * @param {string} [apac.wc_security.report_feedback_title] - 
+ * @param {string} [apac.wc_security.report_feedback_tips] - 
  * @param {string} [apac.security.unmute_themselves] - Unmute themselves
  * @param {string} [apac.captcha] - Captcha
  * @param {string} [apac.check_captcha] - Check Captcha
@@ -599,8 +600,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Change Role to Attendee
  * @param {string} [apac.wc_webinar_takeoffhold] - Take off hold
  * @param {string} [apac.dialog.call_your_number] - Call your phone number to join the audio conference
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} entered the waiting room
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} people entered the waiting room
  * @param {string} [apac.wc_view] - View
  * @param {string} [apac.merge_video_audio] - Merge {0}'s Video with Audio
  * @param {string} [apac.merge_audio_video] - Merge {0} with Video
@@ -614,6 +613,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - in Meeting
  * @param {string} [apac.wc_chat.in_waiting_room] - in Waiting Room
 */
+
+
 
 
 /**
@@ -1015,6 +1016,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - Kann nicht nicht ein weiteres Treffen gleichzeitig hosten.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Unterschrift ist ungültig.
  * @param {string} [apac.errorcodes_pac_no_permission] - Keine Erlaubnis.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Es kann keine Antwort vom Web-Server.
  * @param {string} [apac.errorcodes_rwc_error] - Kann nicht zum Web-Server Fehler verbinden.
  * @param {string} [apac.errorcodes_frequent_call] - Sie haben das API Limit für diesen Anruf erreicht.
@@ -1127,8 +1129,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Rolle zu Teilnehmer ändern
  * @param {string} [apac.wc_webinar_takeoffhold] - Warteschleife entfernen
  * @param {string} [apac.dialog.call_your_number] - Wählen Sie Ihre Telefonnummer zur Teilnahme an der Audiokonferenz
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} trat in das Wartezimmer
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} people betrat den Warteraum
  * @param {string} [apac.wc_view] - Aussicht
  * @param {string} [apac.merge_video_audio] - Merge {0} 's Video mit Audio
  * @param {string} [apac.merge_audio_video] - Merge {0} mit Video
@@ -1142,6 +1142,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - in Meeting
  * @param {string} [apac.wc_chat.in_waiting_room] - in Wartezimmer
 */
+
+
 
 
 /**
@@ -1543,6 +1545,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - No se puede no celebrar otra reunión al mismo tiempo.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Firma no es válida.
  * @param {string} [apac.errorcodes_pac_no_permission] - Sin autorización.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - No se pudo obtener una respuesta del servidor web.
  * @param {string} [apac.errorcodes_rwc_error] - No se puede conectar a un error del servidor Web.
  * @param {string} [apac.errorcodes_frequent_call] - Has alcanzado el límite API para esta llamada.
@@ -1655,8 +1658,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Cambiar rol a Asistente
  * @param {string} [apac.wc_webinar_takeoffhold] - Quitar de espera
  * @param {string} [apac.dialog.call_your_number] - Llame a su número de teléfono para unirse a la conferencia de audio
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} entraron en la sala de espera
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} personas entraron en la sala de espera
  * @param {string} [apac.wc_view] - Ver
  * @param {string} [apac.merge_video_audio] - Combinar {0} 's de vídeo con audio
  * @param {string} [apac.merge_audio_video] - Combinar {0} con vídeo
@@ -1670,6 +1671,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - en reunión
  * @param {string} [apac.wc_chat.in_waiting_room] - en sala de espera
 */
+
+
 
 
 /**
@@ -2071,6 +2074,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - Ne peut pas ne pas organiser une autre réunion en même temps.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - La signature est invalide.
  * @param {string} [apac.errorcodes_pac_no_permission] - Aucune autorisation.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Impossible d'obtenir une réponse du serveur Web.
  * @param {string} [apac.errorcodes_rwc_error] - Impossible de se connecter à une erreur du serveur Web.
  * @param {string} [apac.errorcodes_frequent_call] - Vous avez atteint la limite de l'API pour cet appel.
@@ -2183,8 +2187,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Changer le rôle au Participant
  * @param {string} [apac.wc_webinar_takeoffhold] - Enlever attente
  * @param {string} [apac.dialog.call_your_number] - Appeler votre numéro de téléphone pour participer à l’audioconférence
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} est entré dans la salle d'attente
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} personnes sont entrées dans la salle d'attente
  * @param {string} [apac.wc_view] - Vue
  * @param {string} [apac.merge_video_audio] - Fusion {0} 'de la vidéo avec audio
  * @param {string} [apac.merge_audio_video] - Fusion {0} avec vidéo
@@ -2198,6 +2200,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - en réunion
  * @param {string} [apac.wc_chat.in_waiting_room] - dans la salle d'attente
 */
+
+
 
 
 /**
@@ -2599,6 +2603,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - 同時に別の会議をホストしていないことができます。
  * @param {string} [apac.errorcodes_pac_invalid_signature] - 署名は無効です。
  * @param {string} [apac.errorcodes_pac_no_permission] - 全く許可しません。
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Webサーバからの応答を取得できませんでした。
  * @param {string} [apac.errorcodes_rwc_error] - Webサーバーエラーのため接続できませんでした。
  * @param {string} [apac.errorcodes_frequent_call] - あなたはこのコールのためのAPIの上限に達しています。
@@ -2711,8 +2716,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - 出席者に対する役割を変更します。
  * @param {string} [apac.wc_webinar_takeoffhold] - 保留から外す
  * @param {string} [apac.dialog.call_your_number] - 電話番号に発信して、オーディオ会議に参加します
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0}は待合室に入っ
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0}の人が待っている部屋に入って
  * @param {string} [apac.wc_view] - 見る
  * @param {string} [apac.merge_video_audio] - オーディオとマージ{0}の動画
  * @param {string} [apac.merge_audio_video] - ビデオでマージ{0}
@@ -2726,6 +2729,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - 会議中
  * @param {string} [apac.wc_chat.in_waiting_room] - 待合室で
 */
+
+
 
 
 /**
@@ -3127,6 +3132,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - não pode não hospedar outra reunião simultaneamente.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Assinatura é inválida.
  * @param {string} [apac.errorcodes_pac_no_permission] - Sem permissão.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Não foi possível obter uma resposta do servidor web.
  * @param {string} [apac.errorcodes_rwc_error] - Não foi possível conectar ao erro Web Server.
  * @param {string} [apac.errorcodes_frequent_call] - Você alcançou o limite de API para esta chamada.
@@ -3239,8 +3245,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Alterar função do participante
  * @param {string} [apac.wc_webinar_takeoffhold] - Retirar espera
  * @param {string} [apac.dialog.call_your_number] - Chame seu número de telefone para ingressar na audioconferência
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} entrou na sala de espera
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} pessoas entrou na sala de espera
  * @param {string} [apac.wc_view] - Visão
  * @param {string} [apac.merge_video_audio] - Fundir {0} 's de vídeo com áudio
  * @param {string} [apac.merge_audio_video] - Fundir {0} com vídeo
@@ -3254,6 +3258,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - em reunião
  * @param {string} [apac.wc_chat.in_waiting_room] - na sala de espera
 */
+
+
 
 
 /**
@@ -3655,6 +3661,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - Не могу не провести еще одну встречу одновременно.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Подпись является недействительной.
  * @param {string} [apac.errorcodes_pac_no_permission] - Нет разрешения.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Не удалось получить ответ от веб-сервера.
  * @param {string} [apac.errorcodes_rwc_error] - Не удалось подключиться к ошибке веб-сервера.
  * @param {string} [apac.errorcodes_frequent_call] - Вы достигли лимита API для этого вызова.
@@ -3767,8 +3774,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Изменить роль на участника
  * @param {string} [apac.wc_webinar_takeoffhold] - Вывести из режима ожидания
  * @param {string} [apac.dialog.call_your_number] - Позвоните на свой номер телефона, чтобы подключиться к аудиоконференции
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} вошел в зал ожидания
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} люди вошли в зал ожидания
  * @param {string} [apac.wc_view] - Посмотреть
  * @param {string} [apac.merge_video_audio] - Merge {0} 'S Video с аудио
  * @param {string} [apac.merge_audio_video] - Merge {0} с видео
@@ -3782,6 +3787,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - на встрече
  * @param {string} [apac.wc_chat.in_waiting_room] - в зале ожидания
 */
+
+
 
 
 /**
@@ -4183,6 +4190,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - 不可不同时举办另一次会议。
  * @param {string} [apac.errorcodes_pac_invalid_signature] - 签名是无效的。
  * @param {string} [apac.errorcodes_pac_no_permission] - 无权限。
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - 无法获取来自Web服务器的响应。
  * @param {string} [apac.errorcodes_rwc_error] - 无法连接到Web服务器错误。
  * @param {string} [apac.errorcodes_frequent_call] - 您已达到该呼叫的API限制。
@@ -4295,8 +4303,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - 将角色更换为参会者
  * @param {string} [apac.wc_webinar_takeoffhold] - 取消暂停
  * @param {string} [apac.dialog.call_your_number] - 拨打你的电话号码以加入音频会议
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0}输入的等候室
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0}人进入候车室
  * @param {string} [apac.wc_view] - 查看
  * @param {string} [apac.merge_video_audio] - 合并{0}的有声短片
  * @param {string} [apac.merge_audio_video] - 合并{0}视频
@@ -4310,6 +4316,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - 在会议
  * @param {string} [apac.wc_chat.in_waiting_room] - 在等候室中
 */
+
+
 
 
 /**
@@ -4711,6 +4719,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - 不可不同時舉辦另一次會議。
  * @param {string} [apac.errorcodes_pac_invalid_signature] - 簽名是無效的。
  * @param {string} [apac.errorcodes_pac_no_permission] - 無權限。
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - 無法獲取來自Web服務器的響應。
  * @param {string} [apac.errorcodes_rwc_error] - 無法連接到Web服務器錯誤。
  * @param {string} [apac.errorcodes_frequent_call] - 您已達到該呼叫的API限制。
@@ -4823,8 +4832,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - 將角色變更為出席者
  * @param {string} [apac.wc_webinar_takeoffhold] - 解除暫候
  * @param {string} [apac.dialog.call_your_number] - 撥打您的電話號碼以加入語音會議
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0}輸入的等候室
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0}人進入候車室
  * @param {string} [apac.wc_view] - 查看
  * @param {string} [apac.merge_video_audio] - 合併{0}的有聲短片
  * @param {string} [apac.merge_audio_video] - 合併{0}視頻
@@ -4838,6 +4845,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - 在會議
  * @param {string} [apac.wc_chat.in_waiting_room] - 在等候室中
 */
+
+
 
 
 /**
@@ -5239,6 +5248,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - 동시에 또 다른 회의를 호스팅하지 수 없습니다.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - 서명이 잘못되었습니다.
  * @param {string} [apac.errorcodes_pac_no_permission] - 비허가.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - 웹 서버에서 응답을 가져올 수 없습니다.
  * @param {string} [apac.errorcodes_rwc_error] - 웹 서버 오류에 연결할 수 없습니다.
  * @param {string} [apac.errorcodes_frequent_call] - 이 호출에 대한 API의 한계에 도달했습니다.
@@ -5351,8 +5361,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - 참석자로 역할 변경
  * @param {string} [apac.wc_webinar_takeoffhold] - 대기 상태에서 벗어나기
  * @param {string} [apac.dialog.call_your_number] - 오디오 회의에 참가하려면 귀하의 전화번호를 호출하세요
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0}는 대기실을 입력
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} 사람들은 대기실을 입력
  * @param {string} [apac.wc_view] - 전망
  * @param {string} [apac.merge_video_audio] - 오디오와 병합 {0}의 비디오
  * @param {string} [apac.merge_audio_video] - 비디오와 병합 {0}
@@ -5366,6 +5374,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - 회의 중
  * @param {string} [apac.wc_chat.in_waiting_room] - 의 대기실
 */
+
+
 
 
 /**
@@ -5767,6 +5777,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - không thể không tổ chức một cuộc họp khác đồng thời.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - Chữ ký không hợp lệ.
  * @param {string} [apac.errorcodes_pac_no_permission] - Không cho phép.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Không thể có được một phản hồi từ máy chủ web.
  * @param {string} [apac.errorcodes_rwc_error] - Không thể kết nối với lỗi Web Server.
  * @param {string} [apac.errorcodes_frequent_call] - Bạn đã đạt đến giới hạn API cho cuộc gọi này.
@@ -5879,8 +5890,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Thay đổi vai trò thành người dự thính
  * @param {string} [apac.wc_webinar_takeoffhold] - Bỏ giữ
  * @param {string} [apac.dialog.call_your_number] - Gọi đến số điện thoại của bạn để tham gia hội nghị âm thanh
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} bước vào phòng chờ
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} người bước vào phòng chờ
  * @param {string} [apac.wc_view] - Lượt xem
  * @param {string} [apac.merge_video_audio] - Merge {0} 's video với âm thanh
  * @param {string} [apac.merge_audio_video] - Merge {0} với Video
@@ -5894,6 +5903,8 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_meeting] - trong hội nghị
  * @param {string} [apac.wc_chat.in_waiting_room] - trong phòng chờ
 */
+
+
 
 
 /**
@@ -6295,6 +6306,7 @@ const LanguageResource = {
  * @param {string} [apac.errorcodes_pac_cant_host_other_mn] - Non si può controllare un’altra Riunione contemporaneamente.
  * @param {string} [apac.errorcodes_pac_invalid_signature] - La firma non è valida.
  * @param {string} [apac.errorcodes_pac_no_permission] - Nessun permesso.
+ * @param {string} [apac.errorcodes_need_use_zoom_desktop_or_mobile] - Unable join from browser, please join using the Zoom desktop client or mobile app.
  * @param {string} [apac.errorcodes_rwc_empty] - Impossibile ottenere una risposta dal server web.
  * @param {string} [apac.errorcodes_rwc_error] - Impossibile connettersi al server Web - errore.
  * @param {string} [apac.errorcodes_frequent_call] - Hai raggiunto il limite di API per questa chiamata.
@@ -6407,8 +6419,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_webinar.change_to_attendee] - Modifica ruolo in spettatore
  * @param {string} [apac.wc_webinar_takeoffhold] - Riprendi
  * @param {string} [apac.dialog.call_your_number] - Chiama il tuo numero di telefono per entrare nella conferenza audio
- * @param {string} [apac.wc_waitingroom_tip_msg1] - {0} entrato nella sala d'attesa
- * @param {string} [apac.wc_waitingroom_tip_msg2] - {0} persone entrarono nella sala d'attesa
  * @param {string} [apac.wc_view] - Visualizza
  * @param {string} [apac.merge_video_audio] - Unisci {0} 's il video con audio
  * @param {string} [apac.merge_audio_video] - Unisci {0} con Video
@@ -6423,7 +6433,6 @@ const LanguageResource = {
  * @param {string} [apac.wc_chat.in_waiting_room] - nella sala di attesa
 */
 
-
 module.exports = LanguageResource;
 </code></pre>
         </article>
@@ -6437,7 +6446,7 @@ module.exports = LanguageResource;
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Sep 23 2020 15:57:54 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Nov 16 2020 17:28:15 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

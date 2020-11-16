@@ -49,13 +49,17 @@
 
 <article>
     <p><a href="https://github.com/zoom/sample-app-web/tree/master/CDN">Sample Demo CDN Statement</a></p>
-<h3>Run demo</h3><pre class="prettyprint source"><code>git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
+<h3>Run demo</h3>
+<pre class="prettyprint source"><code>git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
 cd sample-app-web/CDN
 npm install
-npm run start</code></pre><p>open <a href="http://localhost:9999">http://localhost:9999</a></p>
-<h2>packages.json</h2><pre class="prettyprint source lang-json"><code>{
+npm run start
+</code></pre>
+<p>open <a href="http://localhost:9999">http://localhost:9999</a></p>
+<h2>packages.json</h2>
+<pre class="prettyprint source lang-json"><code>{
   &quot;name&quot;: &quot;websdk-cdn&quot;,
-  &quot;version&quot;: &quot;1.8.1&quot;,
+  &quot;version&quot;: &quot;1.8.3&quot;,
   &quot;description&quot;: &quot;Zoom sample app for web client WebSDK&quot;,
   &quot;main&quot;: &quot;index.js&quot;,
   &quot;dependencies&quot;: {},
@@ -69,32 +73,38 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
   },
   &quot;author&quot;: &quot;Yang Jack&quot;,
   &quot;license&quot;: &quot;ISC&quot;
-}</code></pre><h2>meeting.html</h2><pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
+}
+</code></pre>
+<h2>meeting.html</h2>
+<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
 
 &lt;head>
     &lt;title>Zoom WebSDK&lt;/title>
     &lt;meta charset=&quot;utf-8&quot; />
-    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://source.zoom.us/1.8.1/css/bootstrap.css&quot; />
-    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://source.zoom.us/1.8.1/css/react-select.css&quot; />
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://source.zoom.us/1.8.3/css/bootstrap.css&quot; />
+    &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;https://source.zoom.us/1.8.3/css/react-select.css&quot; />
     &lt;meta name=&quot;format-detection&quot; content=&quot;telephone=no&quot;>
     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no&quot;>
 &lt;/head>
 
 &lt;body>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/react.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/react-dom.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/redux.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/redux-thunk.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/jquery.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/1.8.1/lib/vendor/lodash.min.js&quot;>&lt;/script>
-    &lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.8.1.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/react.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/react-dom.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/redux.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/redux-thunk.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/jquery.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/1.8.3/lib/vendor/lodash.min.js&quot;>&lt;/script>
+    &lt;script src=&quot;https://source.zoom.us/zoom-meeting-1.8.3.min.js&quot;>&lt;/script>
     &lt;script src=&quot;js/tool.js&quot;>&lt;/script>
     &lt;script src=&quot;js/vconsole.min.js&quot;>&lt;/script>
     &lt;script src=&quot;js/meeting.js&quot;>&lt;/script>
 &lt;/body>
 
 &lt;/html>
-</code></pre><h3>js/meeting.js</h3><pre class="prettyprint source lang-javascript"><code>(function () {
+
+</code></pre>
+<h3>js/meeting.js</h3>
+<pre class="prettyprint source lang-javascript"><code>(function () {
   // tool.js
   var testTool = window.testTool;
   // get meeting args from url
@@ -142,9 +152,9 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
   console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
   // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-  // ZoomMtg.setZoomJSLib(&quot;https://source.zoom.us/1.8.1/lib&quot;, &quot;/av&quot;); // CDN version defaul
+  // ZoomMtg.setZoomJSLib(&quot;https://source.zoom.us/1.8.3/lib&quot;, &quot;/av&quot;); // CDN version defaul
   if (meetingConfig.china)
-    ZoomMtg.setZoomJSLib(&quot;https://jssdk.zoomus.cn/1.8.1/lib&quot;, &quot;/av&quot;); // china cdn option
+    ZoomMtg.setZoomJSLib(&quot;https://jssdk.zoomus.cn/1.8.3/lib&quot;, &quot;/av&quot;); // china cdn option
   ZoomMtg.preLoadWasm();
   ZoomMtg.prepareJssdk();
   function beginJoin(signature) {
@@ -186,7 +196,10 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
   beginJoin(meetingConfig.signature);
 })();
 
-</code></pre><h3><a href="https://raw.githubusercontent.com/zoom/sample-app-web/master/CDN/js/tool.js">tool.js</a></h3><h3><a href="https://raw.githubusercontent.com/Tencent/vConsole/dev/dist/vconsole.min.js">vconsole.min.js</a></h3>
+
+</code></pre>
+<h3><a href="https://raw.githubusercontent.com/zoom/sample-app-web/master/CDN/js/tool.js">tool.js</a></h3>
+<h3><a href="https://raw.githubusercontent.com/Tencent/vConsole/dev/dist/vconsole.min.js">vconsole.min.js</a></h3>
 </article>
 
 </section>
@@ -196,7 +209,7 @@ npm run start</code></pre><p>open <a href="http://localhost:9999">http://localho
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Sep 23 2020 15:57:54 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Mon Nov 16 2020 17:28:15 GMT+0800 (China Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
