@@ -105,15 +105,15 @@ userEmail: "hello@zoom.us",
 
 
 ### Video, Computer Audio and Sharing Supported browser
-Feature | Chrome | firefox | Safari | Edge | IE >=11 | Opera | Vivaldi | Edge(Chromium)
------------- | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------ | ------------
-Video | yes| yes | yes | NULL | no | yes | yes | yes
-Computer Audio | yes | only linux | no | NULL | no | no | yes | yes
-View Sharing | yes | yes | yes | NULL | yes| yes | yes | yes
-Screen Sharing | >=72 | >=66 | no | NULL | no | no | yes | yes
-Chat | yes | yes | yes | NULL | yes | yes | yes | yes | yes
+Feature | Chrome | Firefox | Safari | Edge (Chromium) | IE >=11 | Opera | Vivaldi
+------------ | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
+Video | yes| yes | yes | yes | no | yes | yes 
+Computer Audio | yes | yes | no | yes | no | no | yes 
+View Sharing | yes | yes | yes | yes | yes| yes | yes 
+Screen Sharing | >=72 | >=66 | no | yes | no | no | yes 
+Chat | yes | yes | yes | ywa | yes | yes | yes | yes
 
-Notice: WebSDK doesn't support IE10 and Edge currently.  
+Please note: The WebSDK doesn't support IE10 and Edge Legacy currently.  
 
 ### Support
 For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
