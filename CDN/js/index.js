@@ -1,4 +1,9 @@
-(function () {
+window.addEventListener('DOMContentLoaded', function(event) {
+  console.log('DOM fully loaded and parsed');
+  websdkready();
+});
+
+function websdkready() {
   var testTool = window.testTool;
   if (testTool.isMobileDevice()) {
     vConsole = new VConsole();
@@ -12,14 +17,14 @@
   // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
   ZoomMtg.preLoadWasm(); // pre download wasm file to save time.
 
-  var API_KEY = "YOUR_API_KEY";
+  var API_KEY = "z7qxWw09Rhmq2_uszO50tA";
 
   /**
    * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
    * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature
    */
-  var API_SECRET = "YOUR_API_SECRET";
+  var API_SECRET = "3awNCSIpM0a1LnxEyj56JL65wVLYvdZryk8L";
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
@@ -132,15 +137,8 @@
           testTool.getCurrentDomain() +
           "/meeting.html?" +
           testTool.serialize(meetingConfig);
-        $(element).attr("link", joinUrl);
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).attr("link")).select();
-        document.execCommand("copy");
-        $temp.remove();
       },
     });
   };
 
-
-})();
+}

@@ -1,4 +1,35 @@
 # CHANGELOG
+## version 1.8.5
+
+## Add
+1. support for Breakout Rooms.
+2. support for Polling.
+3. support for Live Transcription.
+4. support for the host to use the Host key to claim the meeting as a host when meeting no host
+5. support reclaim host for joined use (role=1)
+6. support to assign new hosts before leaving the meeting.
+7. support for authentication names for starting and joining meetings from China.
+8. new AES-GCM encryption and decryption audio support.
+9. support for logging out integrating within Zoom for authentication meeting.
+10. init API add Enable/Disable Breakout Rooms and Polling option
+
+## Enhancements
+1. Redesigned the Report a user in-meeting form.
+2. Remove Jquery. all $.i18n -> ZoomMtg.i18n
+3. Provided es5 support within the npm version.
+
+   
+## Bug Fixes
+1. Fixed bug that displays black screen when host starts screen sharing.
+2. Fixed UI issues where the Join Computer Audio button does not display properly within the small window.
+3. Fixed UI issue where Active speaker is covered by speaker name within the small window.
+4. Fixed issue where a user clicks Leave meeting and leave url does not work.
+5. Fixed issue where clicking Phone call buttons returns error & black screen.
+6. Fixed API issue where isSupportVA false.
+7. Fixed API showMeetingHeader false in waiting room black screen
+8. Fixed UI issue where “Guest” title shows for all non hosts.
+
+
 ## version 1.8.3
 ## Bug Fixes
 1. Fixed phone Passcode Missing
@@ -92,10 +123,11 @@
 1. Added password validation screen for joining meetings and webinars.
 2. Enhance Invite URL format API.
 3. Disabling joining meetings from Multiple devices.
+4. Enhance language parameter wc_already_joined_by_telephone.
 
 ## Bug Fixes
-1. Fixed issue for Safari not able to open camera.
-2. Fixed issue for removing Session Storage
+Fixed issue for Safari not able to open camera.
+Fixed issue for removing Session Storage
 
 ## version 1.7.7
 
@@ -125,7 +157,7 @@
 ## version 1.7.5
    
 ## Enhancements
-1. Remove rwcEndpoint, 
+1. Remove rwcEndpoint
 2. Add ko-KO Korea language
 
 ## Bug Fixes

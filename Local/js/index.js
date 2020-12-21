@@ -11,7 +11,6 @@ ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
 const API_KEY = "YOUR_API_KEY";
-
 /**
  * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
  * The below generateSignature should be done server side as not to expose your api secret in public
@@ -42,7 +41,8 @@ document.getElementById("meeting_lang").addEventListener("change", (e) => {
     "meeting_lang",
     document.getElementById("meeting_lang").value
   );
-  $.i18n.reload(document.getElementById("meeting_lang").value);
+  ZoomMtg.i18n.load(document.getElementById("meeting_lang").value);
+  ZoomMtg.i18n.reload(document.getElementById("meeting_lang").value);
   ZoomMtg.reRender({ lang: document.getElementById("meeting_lang").value });
 });
 
@@ -123,12 +123,7 @@ window.copyJoinLink = function (element) {
         testTool.getCurrentDomain() +
         "/meeting.html?" +
         testTool.serialize(meetingConfig);
-      $(element).attr("link", joinUrl);
-      const $temp = $("<input>");
-      $("body").append($temp);
-      $temp.val($(element).attr("link")).select();
-      document.execCommand("copy");
-      $temp.remove();
+     
     },
   });
 };

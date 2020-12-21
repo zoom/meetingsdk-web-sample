@@ -49,7 +49,8 @@ function beginJoin(signature) {
     success: function () {
       console.log(meetingConfig);
       console.log("signature", signature);
-      $.i18n.reload(meetingConfig.lang);
+      ZoomMtg.i18n.load(meetingConfig.lang);
+      ZoomMtg.i18n.reload(meetingConfig.lang);
       ZoomMtg.join({
         meetingNumber: meetingConfig.meetingNumber,
         userName: meetingConfig.userName,
