@@ -61,8 +61,8 @@ function websdkready() {
       success: function () {
         console.log(meetingConfig);
         console.log("signature", signature);
-        // ZoomMtg.i18n.load(meetingConfig.lang);
-        // ZoomMtg.i18n.reload(meetingConfig.lang);
+        ZoomMtg.i18n.load(meetingConfig.lang);
+        ZoomMtg.i18n.reload(meetingConfig.lang);
         ZoomMtg.join({
           meetingNumber: meetingConfig.meetingNumber,
           userName: meetingConfig.userName,

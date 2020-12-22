@@ -1,5 +1,6 @@
 # Web Client SDK
-## Please Note: It is strongly recommended to upgrade to version 1.7.7 before May 30th. Otherwise version 1.7.6 and below will no longer be operational. Using Web SDK 1.7.6 or below you will be able to join meetings but you will not be able to access audio, video, screen sharing, chat, or closed caption. 
+
+## Please note that as of January 10th, all older versions of the Web SDK (versions 1.8.3 and below) will no longer have computer audio functionality within meetings. Please upgrade to version 1.8.5 or above to avoid service disruption.
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
@@ -16,6 +17,34 @@ Refer to the [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/native
 
 [Upcoming changes](https://marketplace.zoom.us/docs/guides/getting-started/stay-up-to-date/upcoming-changes/web-sdk)
 
+### Upgrading from 1.8.3 to 1.8.5
+
+Since we replaced jQuery with Axios, you will need to change the following line.
+
+default [en-US.json](https://source.zoom.us/1.8.5/lib/lang/en-US.json)
+```
+$.i18n -> ZoomMtg.i18n
+
+case 1: load en-US, jp-JP, zh-CN, but use jp-JP by default
+
+ZoomMtg.i18n.load('en-US');
+ZoomMtg.i18n.load('jp-JP');
+ZoomMtg.i18n.load('zh-CN');
+ZoomMtg.i18n.reload('jp-JP');
+
+case 2: only load jp-JP
+ZoomMtg.i18n.load('jp-JP');
+ZoomMtg.i18n.reload('jp-JP');
+
+case 3: load youself json file
+
+ZoomMtg.i18n.load('you jason url', 'you-lang-name');
+ZoomMtg.i18n.reload('you-lang-name');
+
+other: if you joined meeting and want change language, you need add another api
+ZoomMtg.reRender({lang: 'zoom support language or you-lang-name' });
+```
+
 ### Dependencies
 
 ```package.json
@@ -24,7 +53,6 @@ Refer to the [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/native
 	"react-dom": "16.8.6",
 	"redux": "3.7.2",
 	"react-redux": "7.1.0",
-	"jquery": "^3.4.1",
 	"lodash": "^4.17.14",
 	"redux-thunk": "2.2.0"
 }
@@ -38,12 +66,12 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.8.3.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.8.5.min.js"></script>
 ```
 ### or
 
 ```
-npm install @zoomus/websdk@1.8.3
+npm install @zoomus/websdk@1.8.5
 ```
 ### zoomus-jssdk move to @zoomus/websdk
 ```
@@ -51,7 +79,7 @@ import { ZoomMtg } from 'zoomus-jssdk';
 change to
 import { ZoomMtg } from '@zoomus/websdk';
 ```
-Please notice, 1.8.3 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.8.5 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -59,14 +87,14 @@ console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.3/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.8.3/lib', '/av'); // china cdn option
+// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.5/lib', '/av'); // CDN version default
+// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.8.5/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.8.3
+Go to see sample web app (CDN version) how to update 1.8.5
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
