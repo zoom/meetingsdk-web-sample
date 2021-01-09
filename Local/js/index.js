@@ -50,7 +50,7 @@ document.getElementById("meeting_lang").addEventListener("change", (e) => {
 document
   .getElementById("meeting_number")
   .addEventListener("input", function (e) {
-    let tmpMn = e.target.value.replace(/([^0-9])+/i, "");
+    let tmpMn = e.target.value.replace(/([^0-9])+/ig, "");
     if (tmpMn.match(/([0-9]{9,11})/)) {
       tmpMn = tmpMn.match(/([0-9]{9,11})/)[1];
     }

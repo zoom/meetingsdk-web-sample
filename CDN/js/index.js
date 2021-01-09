@@ -60,7 +60,7 @@ function websdkready() {
   document
     .getElementById("meeting_number")
     .addEventListener("input", function (e) {
-      var tmpMn = e.target.value.replace(/([^0-9])+/i, "");
+      var tmpMn = e.target.value.replace(/([^0-9])+/ig, "");
       if (tmpMn.match(/([0-9]{9,11})/)) {
         tmpMn = tmpMn.match(/([0-9]{9,11})/)[1];
       }
