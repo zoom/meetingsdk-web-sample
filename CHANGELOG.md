@@ -1,4 +1,21 @@
 # CHANGELOG
+## version 1.8.6
+## Bug Fixes
+1. Fixed Attendee cannot join in to BreakOut Room when "Enable Waiting Room" is enabled
+2. Fixed Attendee Leaves meeting show 'trying to reconect'
+3. Fixed Joined audio user can't show wating room when be put on hold
+4. Fixed Android Chrome Audio don't work
+5. Fixed Audio stops working when High-Fidelity/Stereo Mode is Enabled
+6. Fixed Start Video Black Screen in Mac When Only One attendee
+7. Fixed "The host mute/unmuted you" when call me success/hangeup
+8. Fixed definition of ZooMtg.i18n wrong
+9. Fixed co-host call rename/muteAll/expel/record/lockMeeting/putOnHold API no privilege
+
+## Enhancements
+1. polling switcher split meeting and webinar
+2. remove default load language resource cause 404
+3. Add setSupportLanguage api
+  
 ## version 1.8.5
 
 ## Add
