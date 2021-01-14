@@ -19,7 +19,7 @@
   "author": "Jack Yang",
   "license": "ISC",
   "dependencies": {
-    "@zoomus/websdk": "^1.8.3",
+    "@zoomus/websdk": "^1.8.6",
     "lodash": "^4.17.14",
     "react": "16.8.6",
     "react-dom": "16.8.6",
