@@ -1,4 +1,23 @@
 # CHANGELOG
+## version 1.9.0
+## Add
+1. Added support for Gallery View.
+2. Added support for meeting hosts to send messages to participants in a Waiting Room.
+3. Added support for pausing recordings.
+
+## Enhancements
+1. Enhanced display message for blocking participants from certain regions to join meetings.
+2. Enhanced messaging to update WebSDK version.
+3. Enhanced JSmedia file for Gallery View support, fixing audio issues, and errors within the browsers console.
+
+## Bug Fixes
+1. Fixed invite email length to open email client.
+2. Fixed Share privileges in Breakout Rooms to match the main Meeting session.
+3. Fixed Chat privileges in Breakout Room to match the main meeting session.
+4. Fixed grammatical errors for polling results.
+5. Fixed German translation errors.
+6. Fixed UI issue where Q&A comments covering participants name.
+7. 
 ## version 1.8.6
 ## Bug Fixes
 1. Fixed Attendee cannot join in to BreakOut Room when "Enable Waiting Room" is enabled
