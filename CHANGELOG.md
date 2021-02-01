@@ -17,7 +17,7 @@
 4. Fixed grammatical errors for polling results.
 5. Fixed German translation errors.
 6. Fixed UI issue where Q&A comments covering participants name.
-7. 
+
 ## version 1.8.6
 ## Bug Fixes
 1. Fixed Attendee cannot join in to BreakOut Room when "Enable Waiting Room" is enabled
