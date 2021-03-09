@@ -1,4 +1,17 @@
 # CHANGELOG
+
+## version 1.9.1
+## Add
+1. Host Ability to Delete Inappropriate Chats messages for in-meeting chats (Meetings & Webinar)
+2. provide option for chrome feature origin try
+3. Support Open Source Software License Requirements
+4. remove Non-verbal feedback more option, more option change to Meeting Reactions
+5. WebSDK get notice update notice before zoom enforce update to mini version.
+
+## Enhancements
+1. don't show audio dialog after be admit
+2. init args control UI not be respect
+
 ## version 1.9.0
 ## Add
 1. Added support for Gallery View.
