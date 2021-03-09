@@ -1,16 +1,21 @@
 # CHANGELOG
 
 ## version 1.9.1
-## Add
-1. Host Ability to Delete Inappropriate Chats messages for in-meeting chats (Meetings & Webinar)
-2. provide option for chrome feature origin try
-3. Support Open Source Software License Requirements
-4. remove Non-verbal feedback more option, more option change to Meeting Reactions
-5. WebSDK get notice update notice before zoom enforce update to mini version.
-
+## Additions
+1. Added support for hosts to delete chat messages for in meeting or Webinar  chats. 
+2. Added support for Chrome Origin Trials within the WebSDK.
+ 
+ 
 ## Enhancements
-1. don't show audio dialog after be admit
-2. init args control UI not be respect
+1. Removed more option button that contain non verbal feedback. 
+2. Added support dialog informing customers to update WebSDK version
+ 
+ 
+## Bug Fixes
+1. Fixed init parameters that were not working. 
+2. Fixed issue where users can escalate their own privilege. 
+3. Fixed audio issue after users are admitted from the waiting room. 
+
 
 ## version 1.9.0
 ## Add
