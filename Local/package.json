@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "websdk-local",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "author": "Jack Yang",
   "license": "ISC",
   "dependencies": {
-    "@zoomus/websdk": "1.9.0",
+    "@zoomus/websdk": "1.9.1",
     "lodash": "^4.17.14",
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -38,7 +38,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-airbnb": "^3.0.1",
     "css-loader": "^1.0.1",
-    "eslint": "^6.8.0",
+    "eslint": "^4.12.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
