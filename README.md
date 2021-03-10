@@ -191,3 +191,10 @@ open browser https://localhost:9999
 Use of this software is subject to important terms and conditions as set forth in the License file
 
 Please refer to [LICENSE.md](LICENSE.md) file for details
+
+
+
+## Error : The Signature has expired
+
+Go to your Date and time -> Syncronize your clock -> Click on 'Sync now'.
+That's it 
