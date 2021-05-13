@@ -1,5 +1,10 @@
 # Web Client SDK
+
 Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
+## Please note on Jul 20, Chrome 92 will release. Start from chrome92, [SharedArrayBuffer](https://web.dev/coop-coep/) only work for cross-origin isolation. it make WebSDK broken if you don't do any thing when user use Chrome 91.
+
+1. Apply `SharedArrayBuffers` [origintrials](https://developer.chrome.com/origintrials/#/trials/active) for you domain, it works until Chrome 94 release.
+2. Seting you WebSDK/VideoSDK web isolation and update to >= 1.9.5.
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
@@ -64,12 +69,12 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.8.6.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.9.5.min.js"></script>
 ```
 ### or
 
 ```
-npm install @zoomus/websdk@1.8.6
+npm install @zoomus/websdk@1.9.5
 ```
 ### zoomus-jssdk move to @zoomus/websdk
 ```
@@ -77,7 +82,7 @@ import { ZoomMtg } from 'zoomus-jssdk';
 change to
 import { ZoomMtg } from '@zoomus/websdk';
 ```
-Please notice, 1.8.6 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.9.5 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -85,14 +90,14 @@ console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.8.6/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.8.6/lib', '/av'); // china cdn option
+// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.5/lib', '/av'); // CDN version default
+// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.9.5/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.8.6
+Go to see sample web app (CDN version) how to update 1.9.5
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
@@ -183,3 +188,9 @@ notice: the certification signed by localhost. don't use in your production.
 npm run https
 ```
 open browser https://localhost:9999
+### run demo with CORP(Web isolation, chrome91)
+we provide a corp options to test chrome 91 web isolation mode
+
+```
+npm run corp
+```

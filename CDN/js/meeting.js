@@ -58,6 +58,8 @@ function websdkready() {
     ZoomMtg.init({
       leaveUrl: meetingConfig.leaveUrl,
       webEndpoint: meetingConfig.webEndpoint,
+      disableCORP: !window.crossOriginIsolated, // default true
+      // disablePreview: false, // default false
       success: function () {
         console.log(meetingConfig);
         console.log("signature", signature);
