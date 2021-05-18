@@ -1,20 +1,42 @@
 # CHANGELOG
+## version 1.9.5
+## Added
+1. Support language interpretation for participants.
+2. Support for audio and video preview before joining a meeting or webinar.
+3. Support for auto and manually approved registered Meetings.
+4. Support meeting and webinar registrations using the “tk” parameter.
+5. Support for panelists to join registration webinars in Practice mode using the "tk" parameter.
+6. Support for automatically joining a webinar as a panelist.
+7. Support for joining manually-approved webinars.
+8. Support for reordering gallery and speaker view within webinars.
+9. Add helper.html to support Web SDK isolation for changes related to Chrome 92. See [announcement] for details.
+10. Support Audio quality of service (QOS).
+11. setLogLevel API to print logs. To use this API, set debug to true and use setLogLevel('info').
+12. Support for pre-assigned breakout rooms.
+13. Ability to disable audio and video preview within the initialize function.
+
+## Enhanced
+1. UI improvements for styles, such as meeting info icons, updated label for the stop recording dialog, updated raise hand icon position for active speaker mode.
+2. Participants can choose the breakout room that they want to join.
+3. When entering or leaving a breakout room, the SDK auto enables audio and video.
+
+## Fixed
+1. Chrome 90 issue where video freezes when WebCodecs is turned on.
+
 
 ## version 1.9.1
 ## Additions
 1. Added support for hosts to delete chat messages for in meeting or Webinar  chats. 
 2. Added support for Chrome Origin Trials within the WebSDK.
  
- 
 ## Enhancements
 1. Removed more option button that contain non verbal feedback. 
 2. Added support dialog informing customers to update WebSDK version
  
- 
 ## Bug Fixes
 1. Fixed init parameters that were not working. 
 2. Fixed issue where users can escalate their own privilege. 
-3. Fixed audio issue after users are admitted from the waiting room. 
+3. Fixed audio issue after users are admitted from the waiting room.
 
 
 ## version 1.9.0
@@ -36,6 +58,7 @@
 5. Fixed German translation errors.
 6. Fixed UI issue where Q&A comments covering participants name.
 
+
 ## version 1.8.6
 ## Bug Fixes
 1. Fixed Attendee cannot join in to BreakOut Room when "Enable Waiting Room" is enabled
@@ -52,9 +75,9 @@
 1. polling switcher split meeting and webinar
 2. remove default load language resource cause 404
 3. Add setSupportLanguage api
-  
-## version 1.8.5
 
+
+## version 1.8.5
 ## Add
 1. support for Breakout Rooms.
 2. support for Polling.
@@ -71,7 +94,7 @@
 1. Redesigned the Report a user in-meeting form.
 2. Remove Jquery. all $.i18n -> ZoomMtg.i18n
 3. Provided es5 support within the npm version.
-
+4. multi-lang need manual load
    
 ## Bug Fixes
 1. Fixed bug that displays black screen when host starts screen sharing.
@@ -95,6 +118,7 @@
 7. Fixed unexcept "The host unmuted you" after call me success
 8. Fixed Japanese translation for the waiting room.
 
+
 ## version 1.8.1
 ## Bug Fixes
 1. Fixed bug that prevents attendees from Disable or Enable video receiving.
@@ -107,6 +131,7 @@
 ## Add
 1. Added new API getCurrentMeetingInfo to return meeting information.  
 2. Show dialog to use E2E meetings for either Desktop or Mobile clients.
+
 
 ## version 1.8.0
 ## Add
@@ -132,13 +157,14 @@
 2. Simd support(need apply try https://developers.chrome.com/origintrials/#/trials/active)
 3. Waiting room notice(sound and browser notice)
 
+
 ## version 1.7.10
 ## Bug Fixes
 1. Fixed random video black screen in meeting.
 2. Fixed recaptcha don't work on some domain.
 
-## version 1.7.9
 
+## version 1.7.9
 ## Add
 1. New Rate limit for joining meetings and webinars.
 2. Added recaptcha feature for joining meetings.
@@ -165,8 +191,8 @@
 5. Fixed attendee Closed Caption don't show
 6. Fixed Chrome 74 audio bad issue.
 
-## version 1.7.8
 
+## version 1.7.8
 ## Add
 1. Added Computer Audio for Firefox version 76+.
 2. New Invite dialog UI.
@@ -183,8 +209,8 @@
 Fixed issue for Safari not able to open camera.
 Fixed issue for removing Session Storage
 
-## version 1.7.7
 
+## version 1.7.7
 ## Add
 1. Added support for for only signed-in users with specified domains can join meetings.
 2. Added support for only Authenicated users to join meetings.
@@ -195,6 +221,7 @@ Fixed issue for removing Session Storage
 
 ## Removed
 1. Disable support for Microsoft Edge in place of Chromium Edge.
+
 
 ## version 1.7.6
 ## Add
@@ -208,8 +235,8 @@ Fixed issue for removing Session Storage
 1. Fixed black screen for Webinar users when the host chooses to end the meeting for all.
 2. Fixed required password not showing for users joining by phone.
 
+
 ## version 1.7.5
-   
 ## Enhancements
 1. Remove rwcEndpoint
 2. Add ko-KO Korea language
@@ -217,8 +244,8 @@ Fixed issue for removing Session Storage
 ## Bug Fixes
 1. Fixed waiting room admit issue
 
+
 ## version 1.7.4
-   
 ## Enhancements
 1. WebSDK < 1.7.4 are not compatible
 2. Update WebSDK AV lib version
@@ -226,6 +253,7 @@ Fixed issue for removing Session Storage
 ## Bug Fixes
 1. Leave URL is not triggered when clicking ok
 2. Chat string displays string key instead of the actual string
+
 
 ## version 1.7.2
 ## Added

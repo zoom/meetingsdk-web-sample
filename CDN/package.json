@@ -1,18 +1,19 @@
 {
   "name": "websdk-cdn",
-  "version": "1.9.1",
+  "version": "1.9.5",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "concurrently": "^3.5.1",
-    "http-server": "^0.12.1"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -o index.html\"",
-    "https": "concurrently \"http-server -a 0.0.0.0 -p 9999 -c-1 -S -C localhost.crt -K localhost.key -o https://localhost:9999/index.html\""
+    "start": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js",
+    "https": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js --https",
+    "corp": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
   },
-  "author": "Yang Jack",
-  "license": "ISC"
+  "author": "Jack Jack",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "5.28.0",
+    "webpack-cli": "4.5.0",
+    "webpack-dev-server": "3.11.2"
+  }
 }
