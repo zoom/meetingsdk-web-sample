@@ -45,8 +45,6 @@ ZoomMtg.prepareJssdk();
 function beginJoin(signature) {
   ZoomMtg.init({
     leaveUrl: meetingConfig.leaveUrl,
-    webEndpoint: meetingConfig.webEndpoint,
-    webEndpoint: meetingConfig.webEndpoint,
     disableCORP: !window.crossOriginIsolated, // default true
     // disablePreview: false, // default false
     success: function () {
