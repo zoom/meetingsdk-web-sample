@@ -146,16 +146,6 @@ Chat | yes | yes | yes | ywa | yes | yes | yes | yes
 
 Please note: The WebSDK doesn't support IE10 and Edge Legacy currently.  
 
-### Support
-For any issues regarding our Web Client SDK, please visit our new Community Support Forum at
-
-[https://devforum.zoom.us/](https://devforum.zoom.us/)
-
-[Register your API Key/Secret](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/prerequisites)
-
-[Transitioning-your-developer-apps-to-zooms-marketplace](https://medium.com/zoom-developer-blog/transitioning-your-developer-apps-to-zooms-marketplace-6a8de3386716)
-
-
 ## Quick start
 ### More detail
 [https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk)
@@ -194,3 +184,7 @@ we provide a corp options to test chrome 91 web isolation mode
 ```
 npm run corp
 ```
+
+## Need help?
+
+If you're looking for help, try [Developer Support](https://devsupport.zoom.us) or our [Developer Forum](https://devforum.zoom.us). Priority support is also available with [Premier Developer Support](https://zoom.us/docs/en-us/developer-support-plans.html) plans.
