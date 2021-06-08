@@ -12,8 +12,8 @@ function websdkready() {
   console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
   // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-  // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.5/lib', '/av'); // CDN version default
-  // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.9.5/lib', '/av'); // china cdn option
+  // if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.6/lib', '/av'); // CDN version default
+  // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.9.6/lib', '/av'); // china cdn option
   // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
   ZoomMtg.preLoadWasm(); // pre download wasm file to save time.
 
