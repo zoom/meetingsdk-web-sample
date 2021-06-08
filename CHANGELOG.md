@@ -1,4 +1,19 @@
 # CHANGELOG
+## version 1.9.6
+## Added
+1. Active Apps Notifier.
+
+When someone in a meeting or webinar is utilizing any app that has access to real-time content or personal information during a meeting, participants are given real-time notice of usage. Details of which apps have access and which participant is using the app are displayed. Clicking the app opens the Marketplace page to provide more information.
+
+Note: This feature is dependent on a web release scheduled for June 16, 2021, and will not work until then.
+
+## Enhanced
+1. Panelists can join webinars by entering the tk token value in a dialog box
+
+## Fixed
+1. Removed the assistant Breakout Room button
+2. Support for attendees joining via new registration flow, where attendees are required to verify their email via correct tk
+
 ## version 1.9.5
 ## Added
 1. Support language interpretation for participants.
