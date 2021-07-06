@@ -1,5 +1,5 @@
-window.addEventListener('DOMContentLoaded', function(event) {
-  console.log('DOM fully loaded and parsed');
+window.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM fully loaded and parsed");
   websdkready();
 });
 
@@ -17,14 +17,14 @@ function websdkready() {
   // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
   ZoomMtg.preLoadWasm(); // pre download wasm file to save time.
 
-  var API_KEY = "YOUR_API_KEY";
+  var API_KEY = "2fl04EbZRseynvITbreR6Q";
 
   /**
    * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
    * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature
    */
-  var API_SECRET = "YOUR_API_SECRET";
+  var API_SECRET = "J1yV0ccehKVPQQqziz86osh9lHLS68QciGN0";
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
@@ -33,16 +33,13 @@ function websdkready() {
     testTool.detectOS() +
     "#" +
     testTool.getBrowserInfo();
-  document.getElementById("meeting_number").value = testTool.getCookie(
-    "meeting_number"
-  );
-  document.getElementById("meeting_pwd").value = testTool.getCookie(
-    "meeting_pwd"
-  );
+  document.getElementById("meeting_number").value =
+    testTool.getCookie("meeting_number");
+  document.getElementById("meeting_pwd").value =
+    testTool.getCookie("meeting_pwd");
   if (testTool.getCookie("meeting_lang"))
-    document.getElementById("meeting_lang").value = testTool.getCookie(
-      "meeting_lang"
-    );
+    document.getElementById("meeting_lang").value =
+      testTool.getCookie("meeting_lang");
 
   document
     .getElementById("meeting_lang")
@@ -97,7 +94,6 @@ function websdkready() {
         return false;
       }
 
-      
       testTool.setCookie("meeting_number", meetingConfig.mn);
       testTool.setCookie("meeting_pwd", meetingConfig.pwd);
 
@@ -119,13 +115,16 @@ function websdkready() {
 
   function copyToClipboard(elementId) {
     var aux = document.createElement("input");
-    aux.setAttribute("value", document.getElementById(elementId).getAttribute('link'));
-    document.body.appendChild(aux);  
+    aux.setAttribute(
+      "value",
+      document.getElementById(elementId).getAttribute("link")
+    );
+    document.body.appendChild(aux);
     aux.select();
     document.execCommand("copy");
     document.body.removeChild(aux);
   }
-    
+
   // click copy jon link button
   window.copyJoinLink = function (element) {
     var meetingConfig = testTool.getMeetingConfig();
@@ -146,11 +145,11 @@ function websdkready() {
           testTool.getCurrentDomain() +
           "/meeting.html?" +
           testTool.serialize(meetingConfig);
-        document.getElementById('copy_link_value').setAttribute('link', joinUrl);
-        copyToClipboard('copy_link_value');
-        
+        document
+          .getElementById("copy_link_value")
+          .setAttribute("link", joinUrl);
+        copyToClipboard("copy_link_value");
       },
     });
   };
-
 }
