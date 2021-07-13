@@ -19,12 +19,7 @@ function websdkready() {
         }
       }
       return (
-        "CDN#" +
-        tmpArgs.version +
-        "#" +
-        testTool.detectOS() +
-        "#" +
-        testTool.getBrowserInfo()
+        "Anônimo"
       );
     })(),
     passWord: tmpArgs.pwd,
@@ -37,7 +32,7 @@ function websdkready() {
         return tmpArgs.email;
       }
     })(),
-    lang: tmpArgs.lang,
+    lang: "pt-BR",
     signature: tmpArgs.signature || "",
     china: tmpArgs.china === "1",
   };

@@ -28,11 +28,7 @@ function websdkready() {
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
-    "CDN" +
-    ZoomMtg.getJSSDKVersion()[0] +
-    testTool.detectOS() +
-    "#" +
-    testTool.getBrowserInfo();
+    "Anonimo";
   document.getElementById("meeting_number").value =
     testTool.getCookie("meeting_number");
   document.getElementById("meeting_pwd").value =
@@ -78,7 +74,7 @@ function websdkready() {
     document.getElementById("display_name").value = "";
     document.getElementById("meeting_number").value = "";
     document.getElementById("meeting_pwd").value = "";
-    document.getElementById("meeting_lang").value = "en-US";
+    document.getElementById("meeting_lang").value = "pt-BR";
     document.getElementById("meeting_role").value = 0;
     window.location.href = "/index.html";
   });
