@@ -1,10 +1,11 @@
 # CHANGELOG
 ## version 1.9.7
 ## Added
-1. Notice that Zoom support for IE11 will terminate following its EOL announcement
+1. Notice that Zoom support for IE11 will end following its EOL announcement
 
 ## Fixed
 1. Bug where participants could control meeting recording functionality
+2. Screen sharing issue when using WebCodecs Origin Trial
 
 
 ## version 1.9.6
