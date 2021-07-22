@@ -1,4 +1,13 @@
 # CHANGELOG
+## version 1.9.7
+## Added
+1. Notice that Zoom support for IE11 will end following its EOL announcement
+
+## Fixed
+1. Bug where participants could control meeting recording functionality
+2. Screen sharing issue when using WebCodecs Origin Trial
+
+
 ## version 1.9.6
 ## Added
 1. Active Apps Notifier.
@@ -13,6 +22,7 @@ Note: This feature is dependent on a web release scheduled for June 16, 2021, an
 ## Fixed
 1. Removed the assistant Breakout Room button
 2. Support for attendees joining via new registration flow, where attendees are required to verify their email via correct tk
+
 
 ## version 1.9.5
 ## Added

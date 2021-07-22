@@ -1,10 +1,16 @@
 # Web Client SDK
 
 Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
-## Please note on Jul 20, Chrome 92 will release. Start from chrome92, [SharedArrayBuffer](https://web.dev/coop-coep/) only work for cross-origin isolation. it make WebSDK broken if you don't do any thing when user use Chrome 91.
 
-1. Apply `SharedArrayBuffers` [origintrials](https://developer.chrome.com/origintrials/#/trials/active) for you domain, it works until Chrome 94 release.
-2. Seting you WebSDK/VideoSDK web isolation and update to >= 1.9.6.
+## Please note that BREAKING CHANGES are coming to Web SDK on Jul 20 with the release of Chrome 92, after which [SharedArrayBuffers](https://web.dev/coop-coep/) will no longer work by default. You must either make your web site cross-origin isolated, or exempt it from cross-origin isolation requirements by applying for Origin Trials. Note that functionality will break even if users continue using older versions such as Chrome 91
+We recommend to either:
+1. Apply `SharedArrayBuffers` [origin trials](https://developer.chrome.com/origintrials/#/trials/active) for your domain, which will work until Chrome 94
+2. Set your WebSDK/VideoSDK web isolation and update to >= 1.9.6.
+
+## Zoom ending support of Microsoft Internet Explorer
+Microsoft is ending support for Internet Explorer (IE) 11 on August 17, 2021. Based on this date, Zoom is ending support for IE on September 30, 2021. Users can still use Zoom on IE after this date but we will no longer be supporting IE, fixing issues related to IE, or offering any customer support related to IE.
+
+___
 
 Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
@@ -69,12 +75,12 @@ China CDN ```jssdk.zoomus.cn```
 ### Include the source
 
 ```
-<script src="https://source.zoom.us/zoom-meeting-1.9.6.min.js"></script>
+<script src="https://source.zoom.us/zoom-meeting-1.9.7.min.js"></script>
 ```
 ### or
 
 ```
-npm install @zoomus/websdk@1.9.6
+npm install @zoomus/websdk@1.9.7
 ```
 ### zoomus-jssdk move to @zoomus/websdk
 ```
@@ -82,7 +88,7 @@ import { ZoomMtg } from 'zoomus-jssdk';
 change to
 import { ZoomMtg } from '@zoomus/websdk';
 ```
-Please notice, 1.9.6 release with two ways, the normal way and npm way(need babel and webpack).
+Please notice, 1.9.7 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -90,14 +96,14 @@ console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.6/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.9.6/lib', '/av'); // china cdn option
+// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/1.9.7/lib', '/av'); // CDN version default
+// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/1.9.7/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 1.9.6
+Go to see sample web app (CDN version) how to update 1.9.7
 
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
