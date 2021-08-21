@@ -148,7 +148,7 @@ Video | yes| yes | yes | yes | no | yes | yes
 Computer Audio | yes | yes | no | yes | no | no | yes 
 View Sharing | yes | yes | yes | yes | yes| yes | yes 
 Screen Sharing | >=72 | >=66 | no | yes | no | no | yes 
-Chat | yes | yes | yes | ywa | yes | yes | yes | yes
+Chat | yes | yes | yes | yes | yes | yes | yes | yes
 
 Please note: The WebSDK doesn't support IE10 and Edge Legacy currently.  
 
