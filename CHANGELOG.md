@@ -1,4 +1,10 @@
 # CHANGELOG
+## version 1.9.8
+## Fixed
+1. Bug where after "XMPP disconnected!" error shows in console, webinar attendees find the attendee list empty and both Q&A and Raise Hand buttons disabled  
+2. WebCodecs send-video errors due to breaking changes to the WebCodecs API in Chrome 93
+
+
 ## version 1.9.7
 ## Added
 1. Notice that Zoom support for IE11 will end following its EOL announcement
