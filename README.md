@@ -2,6 +2,9 @@
 
 Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
 
+## Chrome 93 Breaking Changes
+The release of Chrome 93 on August 31st will result in [breaking changes to WebCodecs due to API updates](https://groups.google.com/a/chromium.org/g/blink-dev/c/7D3kMROZrqw), which breaks the WebSDK's ability to send video. To use Chrome 93+, you must upgrade to Web Client SDK 1.9.8+
+
 ## Please note that BREAKING CHANGES are coming to Web SDK on Jul 20 with the release of Chrome 92, after which [SharedArrayBuffers](https://web.dev/coop-coep/) will no longer work by default. You must either make your web site cross-origin isolated, or exempt it from cross-origin isolation requirements by applying for Origin Trials. Note that functionality will break even if users continue using older versions such as Chrome 91
 We recommend to either:
 1. Apply `SharedArrayBuffers` [origin trials](https://developer.chrome.com/origintrials/#/trials/active) for your domain, which will work until Chrome 94
