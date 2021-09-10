@@ -9,6 +9,6 @@ export const devConfig = {
   email: `${getExploreName()}-${Math.floor(Math.random() * 1000)}@zoom.us`,
   role: 0,
   signature: "",
-  customerKey: "customerKey2",
-  webEndpoint: "zoomdev.us"
+  customerKey: "",
+  webEndpoint: "zoom.us"
 };
