@@ -1,15 +1,13 @@
 # Web Meeting-SDK Component View Sample App
-## Quickstart
+
+## How to run
+* Add your API_KEY and API_SECRET in `tools/nav.js`, then:   
 ```
 cd sample-app-web/widget
 npm install && npm run
 ```
-
-Open [http://localhost:3000](http://localhost:3000)
-
-## How to run
-1. Add your API_KEY and API_SECRET in `tools/nav.js`
-2. Navigate to `public/nav.html`
+* Open [http://localhost:3000](http://localhost:3000)  
+* Navigate using `public/nav.html`
 
 ## CDN Demo
 Access through `public/cdn.html`  
