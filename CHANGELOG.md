@@ -3,13 +3,13 @@
 ## WebSDK Client View
 ## Added
 1. [Mask Background feature](https://support.zoom.us/hc/articles/214629443#h_01FGW73VTDNVJ3VDKP7YQGVQNZ)
-Setting to “Mirror my Video”
-2. [Meeting Reactions](https://support.zoom.us/hc/articles/115001286183-Nonverbal-feedback-during-meetings)
-3. Side-by-side layout support when screen sharing in Chrome
-4. Ability to customize recording disclaimer content
-5. Support for showing the user a notice when archiving and live streaming
-6. dialog for attendees to first provide consent when being promoted to a panelist in webinars
-7. Getty Show legal notices
+2. Setting to “Mirror my Video”
+3. [Meeting Reactions](https://support.zoom.us/hc/articles/115001286183-Nonverbal-feedback-during-meetings)
+4. Side-by-side layout support when screen sharing in Chrome
+5. Ability to customize recording disclaimer content
+6. Support for showing the user a notice when archiving and live streaming
+7. Dialog for attendees to first provide consent when being promoted to a panelist in webinars
+8. Privacy notices for various features
 
 ## Enhanced
 1. Waiting page when a meeting has not yet started
@@ -19,7 +19,7 @@ Setting to “Mirror my Video”
 2. The “TypeError: I.isMatchingType is not a function” bug from ~v1.9.5
 
 ## WebSDK Component View
-Added
+## Added
 1. Joining, leaving, and ending meetings and webinars
 2. Reconnecting when connection state changes
 3. Privacy notices to various features such as chat and recording
@@ -46,6 +46,7 @@ Added
 24. Multiple languages (i18n)
 25. Adding custom buttons to the toolbar dropdown
 26. APIs to safely and programmatically interact with a meeting or webinar
+
 
 ## version 1.9.9
 ## Fixed
