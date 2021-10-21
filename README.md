@@ -178,22 +178,6 @@ npm run start
 
 open browser http://localhost:9999
 
-### run demo with https
-we provide a https option, other machines can join the demo and test audio and video feature.
-
-notice: the certification signed by localhost. don't use in your production.
-
-```
-npm run https
-```
-open browser https://localhost:9999
-### run demo with CORP(Web isolation, chrome91)
-we provide a corp options to test chrome 91 web isolation mode
-
-```
-npm run corp
-```
-
 ## Need help?
 
 If you're looking for help, try [Developer Support](https://devsupport.zoom.us) or our [Developer Forum](https://devforum.zoom.us). Priority support is also available with [Premier Developer Support](https://zoom.us/docs/en-us/developer-support-plans.html) plans.
