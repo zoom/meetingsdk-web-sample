@@ -1,13 +1,11 @@
 {
   "name": "websdk-cdn",
-  "version": "1.9.9",
+  "version": "2.0.0",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js",
-    "https": "set NODE_ENV=development && set BABEL_ENV=development && webpack serve --config webpack.config.dev.js --https",
-    "corp": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
+    "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
   },
   "author": "Jack Jack",
   "license": "ISC",
