@@ -58,7 +58,7 @@ function websdkready() {
   zmClient.init({
     debug: true,
     zoomAppRoot: rootElement,
-    // assetPath: 'https://source.zoom.us/2.0.0/lib/av', default
+    // assetPath: 'https://websdk.zoomdev.us/2.0.0/lib/av', //default
     webEndpoint: meetingConfig.webEndpoint,
     language: meetingConfig.lang,
     customize: {
