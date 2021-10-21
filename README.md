@@ -1,4 +1,3 @@
-# This Branch not avaliable untill 2.0.0 release
 # Web Client SDK
 
 Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
