@@ -176,6 +176,14 @@ npm install
 npm run start
 ```
 
+### Component View demo
+Details go to see Components/readme.md
+```
+git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
+cd sample-app-web/Components
+npm install && npm run
+```
+
 open browser http://localhost:9999
 
 ## Need help?
