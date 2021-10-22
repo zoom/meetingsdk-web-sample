@@ -1,5 +1,5 @@
 # CHANGELOG
-## version 2.0.0
+## version 2.0.1
 ## WebSDK Client View
 ## Added
 1. [Mask Background feature](https://support.zoom.us/hc/articles/214629443#h_01FGW73VTDNVJ3VDKP7YQGVQNZ)
@@ -15,8 +15,7 @@
 1. Waiting page when a meeting has not yet started
 
 ## Fixed
-1. Receiving video in 720p from the native client (requirements include needing “Speaker” view, a video height >= 720p, and a high-performance PC)
-2. The “TypeError: I.isMatchingType is not a function” bug from ~v1.9.5
+1. The “TypeError: I.isMatchingType is not a function” bug from ~v1.9.5
 
 ## WebSDK Component View
 ## Added
