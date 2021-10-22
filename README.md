@@ -171,7 +171,8 @@ npm install
 npm run start
 ```
 
-### Component View demo
+### [Component View demo](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view)
+
 Details go to see Components/readme.md
 ```
 git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
