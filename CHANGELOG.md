@@ -1,5 +1,5 @@
 # CHANGELOG
-## version 2.0.0
+## version 2.0.1
 ## WebSDK Client View
 ## Added
 1. [Mask Background feature](https://support.zoom.us/hc/articles/214629443#h_01FGW73VTDNVJ3VDKP7YQGVQNZ)
