@@ -85,12 +85,7 @@ China CDN ```jssdk.zoomus.cn```
 ```
 npm install @zoomus/websdk@2.0.0
 ```
-### zoomus-jssdk move to @zoomus/websdk
-```
-import { ZoomMtg } from 'zoomus-jssdk';
-change to
-import { ZoomMtg } from '@zoomus/websdk';
-```
+
 Please notice, 2.0.0 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
