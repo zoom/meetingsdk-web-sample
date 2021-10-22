@@ -1,7 +1,7 @@
-# Web Meeting-SDK Component View Sample App
-
+# Web Meeting-SDK [Component View](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view) Sample App
+[API reference](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/reference)
 ## How to run
-* Add your API_KEY and API_SECRET in `tools/nav.js`, then:   
+   
 ```
 cd sample-app-web/Components
 npm install && npm run
@@ -9,11 +9,13 @@ npm install && npm run
 * Open [http://localhost:3000](http://localhost:3000)  
 * Navigate using `public/nav.html`
 
-## CDN Demo
+## CDN Demo(javascript)
+Add your API_KEY and API_SECRET in `tools/nav.js`, 
 Access through `public/cdn.html`  
 Corresponding JavaScript file: `tools/cdn.js`  
 
-## Local Demo
+## Local Demo(typescript)
+Add your API_KEY and API_SECRET in `src/config/dev.ts`, 
 Access through `public/index.html`  
 Corresponding TypeScript file: `src/index.tsx`  
 

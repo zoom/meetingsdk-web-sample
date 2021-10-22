@@ -85,13 +85,8 @@ China CDN ```jssdk.zoomus.cn```
 ```
 npm install @zoomus/websdk@2.0.1
 ```
-### zoomus-jssdk move to @zoomus/websdk
-```
-import { ZoomMtg } from 'zoomus-jssdk';
-change to
-import { ZoomMtg } from '@zoomus/websdk';
-```
-Please notice, 2.0.1 release with two ways, the normal way and npm way(need babel and webpack).
+
+Please notice, 2.0.0 release with two ways, the normal way and npm way(need babel and webpack).
 
 At first, you invoke those three API to init jssdk.
 ```
@@ -174,6 +169,15 @@ git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
 cd sample-app-web/Local
 npm install
 npm run start
+```
+
+### [Component View demo](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view)
+
+Details go to see Components/readme.md
+```
+git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
+cd sample-app-web/Components
+npm install && npm run
 ```
 
 open browser http://localhost:9999
