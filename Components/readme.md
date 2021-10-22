@@ -1,5 +1,5 @@
-# Web Meeting-SDK Component View Sample App
-
+# Web Meeting-SDK [Component View](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view) Sample App
+[API reference](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/reference)
 ## How to run
    
 ```
