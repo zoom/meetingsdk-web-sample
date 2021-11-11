@@ -61,12 +61,12 @@ ZoomMtg.reRender({lang: 'zoom support language or you-lang-name' });
 
 ```package.json
 "dependencies": {
-	"react": "16.8.6",
-	"react-dom": "16.8.6",
-	"redux": "3.7.2",
-	"react-redux": "7.1.0",
-	"lodash": "^4.17.14",
-	"redux-thunk": "2.2.0"
+     "react": "16.8.6",
+    "react-dom": "16.8.6",
+    "redux": "3.7.2",
+    "react-redux": "7.1.0",
+    "lodash": "^4.17.21",
+    "redux-thunk": "2.2.0"
 }
 ```
 ### CDN Accelerated
