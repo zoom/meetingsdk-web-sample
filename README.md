@@ -1,37 +1,38 @@
-# Web Client SDK
+# Web Meeting SDK
 
-Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html)
+Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
+___
+## Chrome 93 WebCodecs breaking changes
+The release of Chrome 93 on August 31, 2021 resulted in [breaking changes to WebCodecs due to API updates](https://groups.google.com/a/chromium.org/g/blink-dev/c/7D3kMROZrqw), which breaks the WebSDK's ability to send video. To use Chrome 93+, you must upgrade to Web Client SDK 1.9.8 or higher.
 
-## Chrome 93 Breaking Changes
-The release of Chrome 93 on August 31st will result in [breaking changes to WebCodecs due to API updates](https://groups.google.com/a/chromium.org/g/blink-dev/c/7D3kMROZrqw), which breaks the WebSDK's ability to send video. To use Chrome 93+, you must upgrade to Web Client SDK 1.9.8+
-
-## Please note that BREAKING CHANGES are coming to Web SDK on Jul 20 with the release of Chrome 92, after which [SharedArrayBuffers](https://web.dev/coop-coep/) will no longer work by default. You must either make your web site cross-origin isolated, or exempt it from cross-origin isolation requirements by applying for Origin Trials. Note that functionality will break even if users continue using older versions such as Chrome 91
-We recommend to either:
-1. Apply `SharedArrayBuffers` [origin trials](https://developer.chrome.com/origintrials/#/trials/active) for your domain, which will work until Chrome 94
-2. Set your WebSDK/VideoSDK web isolation and update to >= 1.9.6.
+## Chrome 92 SharedArrayBuffers breaking changes
+The release of Chrome 92 on July 20, 2021 resulted in **BREAKING CHANGES** and as a result, [SharedArrayBuffers](https://web.dev/coop-coep/) no longer works by default. You must either **make your web site cross-origin isolated**, or **exempt it from cross-origin isolation requirements by applying for Origin Trials**. Note that functionality will break even if users continue using older versions such as Chrome 91. We recommend that you do one of the following:
+* **Apply `SharedArrayBuffers` [origin trials](https://developer.chrome.com/origintrials/#/trials/active) for your domain**, which will work [until Chrome 103](https://developer.chrome.com/blog/enabling-shared-array-buffer/).
+* Set your WebSDK/VideoSDK web isolation and update to version 1.9.6 or higher.
 
 ## Zoom ending support of Microsoft Internet Explorer
-Microsoft is ending support for Internet Explorer (IE) 11 on August 17, 2021. Based on this date, Zoom is ending support for IE on September 30, 2021. Users can still use Zoom on IE after this date but we will no longer be supporting IE, fixing issues related to IE, or offering any customer support related to IE.
-
+Microsoft is ending support for Internet Explorer (IE) 11 on August 17, 2021. Based on this date, Zoom has ended support for IE on September 30, 2021. Users can still use Zoom on IE after this date but we will no longer be supporting IE, fixing issues related to IE, or offering any customer support related to IE.
 ___
 
-Zoom offers a web based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
+Zoom offers a web-based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
 
 The web client lets end users join a meeting, receive screen share from other attendees, join the meeting through the phone, and leave the meeting. Zoom has added a Web SDK as part of our developer platform to enable developers to embed this into their web apps. Key functions that are exposed include: init meeting config, join meeting, show/hide invite function, show/hide meeting header, get attendees list, call out, invite by phone, mute, unmute, mute all, unmute all, rename, expel, record, lock meeting, leave meeting, end meeting.
 
-Supported Browsers: Google Chrome, Safari, and Mozilla Firefox with their latest version
+Supported Browsers are the latest versions of Google Chrome, Safari, and Mozilla Firefox.
 
 ### Getting Started with Meetings
-[Web-Client-SDK Overview](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/overview)
+See the [Zoom Web Meeting SDK documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to get started.
 
 ### Using the SDK
-Refer to the [Web SDK Documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/api-reference)
+For the Component View, see the [Zoom Web SDK Component view reference documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/reference). 
 
-[Upcoming changes](https://marketplace.zoom.us/docs/guides/getting-started/stay-up-to-date/upcoming-changes/web-sdk)
+For the Client View, see the [Zoom Web SDK Client view reference documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/reference).
+
+See [Upcoming changes](https://marketplace.zoom.us/docs/guides/stay-up-to-date/upcoming-changes/web-sdk) for details about upcoming releases.
 
 ### Upgrading from 1.8.3 to 1.8.6
 
-Since we replaced jQuery with Axios, you will need to change the following line.
+Since we replaced jQuery with Axios, you will need to change the following.
 
 default [en-US.json](https://source.zoom.us/1.8.6/lib/lang/en-US.json)
 ```
@@ -86,9 +87,9 @@ China CDN ```jssdk.zoomus.cn```
 npm install @zoomus/websdk@2.0.1
 ```
 
-Please notice, 2.0.0 release with two ways, the normal way and npm way(need babel and webpack).
+Please note, 2.0.1 was released with two ways to include the source, the normal way and the npm way. For npm, you need babel and webpack.
 
-At first, you invoke those three API to init jssdk.
+First, invoke these three API to init jssdk.
 ```
 console.log('checkSystemRequirements');
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
@@ -101,8 +102,8 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 ```
-Go to see sample web app (CDN version) how to update 2.0.1
 
+See the sample web app (CDN version) for how to update 2.0.1
 
 [![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
 
@@ -110,7 +111,7 @@ Go to see sample web app (CDN version) how to update 2.0.1
 ```
 ZoomMtg.init({
 ...
-screenShare: true, // default, and it also require account's sharing setting enabled.
+screenShare: true, // default, also requires that you enable the account's sharing setting.
 ...    
 })
 ```
@@ -119,13 +120,13 @@ screenShare: true, // default, and it also require account's sharing setting ena
 ```
 ZoomMtg.init({
 ...
-isSupportChat: true, // default, and it also require account's sharing setting enabled.
+isSupportChat: true, // default, also requires that you enable the account's sharing setting.
 ...    
 })
 ```
 
 ## Webinar notice
-If you want to join webinar you will need to add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function.
+If you want to join a webinar you must add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function.
 
 ```
 ZoomMtg.join({
@@ -139,20 +140,17 @@ userEmail: "hello@zoom.us",
  ```
 
 
-### Video, Computer Audio and Sharing Supported browser
-Feature | Chrome | Firefox | Safari | Edge (Chromium) | IE >=11 | Opera | Vivaldi
------------- | ------------- | ------------ | ------------- | ------------ |  ------------- | ------------ | ------------
-Video | yes| yes | yes | yes | no | yes | yes 
-Computer Audio | yes | yes | no | yes | no | no | yes 
-View Sharing | yes | yes | yes | yes | yes| yes | yes 
-Screen Sharing | >=72 | >=66 | no | yes | no | no | yes 
-Chat | yes | yes | yes | ywa | yes | yes | yes | yes
-
-Please note: The WebSDK doesn't support IE10 and Edge Legacy currently.  
+### Video, Computer Audio, and Sharing Supported browsers
+Feature | Chrome | Firefox | Safari | Opera | Vivaldi
+------------ | ------------- | ------------ | ------------- | ------------ | ------------
+Video | yes| yes | yes | yes | yes 
+Computer Audio | yes | yes | no | no | yes 
+View Sharing | yes | yes | yes | yes | yes 
+Screen Sharing | >=72 | >=66 | no | no | yes 
+Chat | yes | yes | yes | yes | yes | yes
 
 ## Quick start
-### More detail
-[https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk](https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/getting-started/integrate-the-sdk)
+See the sample apps to quickly get started.
 
 ###  sample web app (CDN version) with dependecies.
 
@@ -172,8 +170,6 @@ npm run start
 ```
 
 ### [Component View demo](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view)
-
-Details go to see Components/readme.md
 ```
 git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
 cd sample-app-web/Components
@@ -181,6 +177,8 @@ npm install && npm run
 ```
 
 open browser http://localhost:9999
+
+For details, see Components/readme.md.
 
 ## Need help?
 
