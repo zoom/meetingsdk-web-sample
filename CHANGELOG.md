@@ -1,4 +1,36 @@
 # CHANGELOG
+# version 2.1.0
+## Common
+### Added
+1. Support for WebCodec Encode API to improve audio/video/sharing quality and experience
+2. Browser-console messages to clarify Gallery View requirements when insufficient – such as SharedArrayBuffer Origin Trial or cross-origin isolation status
+
+### Enhanced
+1. “Chrome Tab” screen share option to include “Share audio” checkbox
+
+## WebSDK Client View
+### Added
+1. Focus mode
+
+### Fixed
+1. Bug where both audio tracks can be heard when using Language Interpretation
+2. Meeting crashes when spotlighting 4+ people
+3. Broken “Learn More” link in Screen Sharing popup when attempting to share without browser access
+4. Inability to change reaction skin tone
+5. “join()” function not returning error codes when password is incorrect
+
+## WebSDK Component View
+### Added:
+1. “Tk” parameter to “join()” function to allow users to join Webinars with registration
+
+### Enhanced:
+1. Code architecture quality and robustness
+
+### Fixed
+1. Issue where the Gallery View page-change buttons could be positioned incorrectly
+2. Not all hands being lowered properly when clicking “Lower Hand” button
+
+
 ## version 2.0.1
 ## WebSDK Client View
 ## Added
