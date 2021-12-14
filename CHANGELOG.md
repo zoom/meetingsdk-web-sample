@@ -1,6 +1,18 @@
 # CHANGELOG
-# version 2.1.0
-## Common
+## version 2.1.1
+## General
+### Fixed
+1. A bug that prevented self-view from working correctly in Chromium browsers without SharedArrayBuffer support
+2. An issue that prevented video turning on without SharedArrayBuffer support in Chromium browsers
+
+## Component View
+### Added:
+1. `checkSystemRequirements` API
+2. `stopAudio` API
+
+
+## version 2.1.0
+## General
 ### Added
 1. Support for WebCodec Encode API to improve audio/video/sharing quality and experience
 2. Browser-console messages to clarify Gallery View requirements when insufficient – such as SharedArrayBuffer Origin Trial or cross-origin isolation status
