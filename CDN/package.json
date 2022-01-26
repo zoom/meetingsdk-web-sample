@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
   },
-  "author": "Jack Jack",
+  "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "webpack": "5.28.0",

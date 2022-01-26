@@ -15,7 +15,7 @@
     "webclient",
     "WebSDK"
   ],
-  "author": "Jack Yang",
+  "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "@zoomus/websdk": "2.2.0",
