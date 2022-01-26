@@ -1,4 +1,25 @@
 # CHANGELOG
+## version 2.2.0
+## Client View
+### Added
+1. Additional languages to the Language Interpretation feature
+
+### Enhanced
+1. Toolbar look-and-feel and style
+
+## Component View
+### Added:
+1. Closed caption and live transcription feature
+2. Settings dropdown menu to the participant panel
+3. Chat notifications
+4. Chat unread count and message indicator
+
+### Fixed
+1. Participant videos not being ordered as intended
+2. Active speaker not being bumped to the top of the Ribbon or Gallery View
+3. Issue where the cloud recording setting in the web portal was not respected
+
+
 ## version 2.1.1
 ## General
 ### Fixed
@@ -6,7 +27,7 @@
 2. An issue that prevented video turning on without SharedArrayBuffer support in Chromium browsers
 
 ## Component View
-### Added:
+### Added
 1. `checkSystemRequirements` API
 2. `stopAudio` API
 
@@ -32,10 +53,10 @@
 5. “join()” function not returning error codes when password is incorrect
 
 ## WebSDK Component View
-### Added:
+### Added
 1. “Tk” parameter to “join()” function to allow users to join Webinars with registration
 
-### Enhanced:
+### Enhanced
 1. Code architecture quality and robustness
 
 ### Fixed

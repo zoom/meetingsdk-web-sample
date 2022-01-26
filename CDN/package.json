@@ -1,6 +1,6 @@
 {
   "name": "websdk-cdn",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
   },
   "author": "Jack Jack",
-  "license": "ISC",
+  "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "webpack": "5.28.0",
     "webpack-cli": "4.5.0",
