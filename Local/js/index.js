@@ -10,13 +10,13 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
-const API_KEY = "YOUR_API_KEY";
+const SDK_KEY = "YOUR_SDK_KEY";
 /**
- * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
- * The below generateSignature should be done server side as not to expose your api secret in public
+ * NEVER PUT YOUR ACTUAL SDK SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
+ * The below generateSignature should be done server side as not to expose your sdk secret in public
  * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
  */
-const API_SECRET = "YOUR_API_SECRET";
+const SDK_SECRET = "YOUR_SDK_SECRET";
 
 testTool = window.testTool;
 document.getElementById("display_name").value =
@@ -87,15 +87,15 @@ document.getElementById("join_meeting").addEventListener("click", (e) => {
   testTool.setCookie("meeting_number", meetingConfig.mn);
   testTool.setCookie("meeting_pwd", meetingConfig.pwd);
 
-  const signature = ZoomMtg.generateSignature({
+  const signature = ZoomMtg.generateSDKSignature({
     meetingNumber: meetingConfig.mn,
-    apiKey: API_KEY,
-    apiSecret: API_SECRET,
+    sdkKey: SDK_KEY,
+    sdkSecret: SDK_SECRET,
     role: meetingConfig.role,
     success: function (res) {
       console.log(res.result);
       meetingConfig.signature = res.result;
-      meetingConfig.apiKey = API_KEY;
+      meetingConfig.sdkKey = SDK_KEY;
       const joinUrl = "/meeting.html?" + testTool.serialize(meetingConfig);
       console.log(joinUrl);
       window.open(joinUrl, "_blank");
@@ -119,15 +119,15 @@ window.copyJoinLink = function (element) {
     alert("Meeting number or username is empty");
     return false;
   }
-  const signature = ZoomMtg.generateSignature({
+  const signature = ZoomMtg.generateSDKSignature({
     meetingNumber: meetingConfig.mn,
-    apiKey: API_KEY,
-    apiSecret: API_SECRET,
+    sdkKey: SDK_KEY,
+    sdkSecret: SDK_SECRET,
     role: meetingConfig.role,
     success: function (res) {
       console.log(res.result);
       meetingConfig.signature = res.result;
-      meetingConfig.apiKey = API_KEY;
+      meetingConfig.sdkKey = SDK_KEY;
       const joinUrl =
         testTool.getCurrentDomain() +
         "/meeting.html?" +

@@ -3,7 +3,7 @@ const testTool = window.testTool;
 // get meeting args from url
 const tmpArgs = testTool.parseQuery();
 const meetingConfig = {
-  apiKey: tmpArgs.apiKey,
+  sdkKey: tmpArgs.sdkKey,
   meetingNumber: tmpArgs.mn,
   userName: (function () {
     if (tmpArgs.name) {
@@ -56,7 +56,7 @@ function beginJoin(signature) {
         meetingNumber: meetingConfig.meetingNumber,
         userName: meetingConfig.userName,
         signature: signature,
-        apiKey: meetingConfig.apiKey,
+        sdkKey: meetingConfig.sdkKey,
         userEmail: meetingConfig.userEmail,
         passWord: meetingConfig.passWord,
         success: function (res) {
