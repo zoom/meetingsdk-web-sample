@@ -8,7 +8,7 @@ function websdkready() {
   // get meeting args from url
   var tmpArgs = testTool.parseQuery();
   var meetingConfig = {
-    apiKey: tmpArgs.apiKey,
+    sdkKey: tmpArgs.sdkKey,
     meetingNumber: tmpArgs.mn,
     userName: (function () {
       if (tmpArgs.name) {
@@ -49,9 +49,9 @@ function websdkready() {
   console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
   // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-  // ZoomMtg.setZoomJSLib("https://source.zoom.us/2.2.0/lib", "/av"); // CDN version defaul
+  // ZoomMtg.setZoomJSLib("https://source.zoom.us/2.3.0/lib", "/av"); // CDN version defaul
   if (meetingConfig.china)
-    ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/2.2.0/lib", "/av"); // china cdn option
+    ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/2.3.0/lib", "/av"); // china cdn option
   ZoomMtg.preLoadWasm();
   ZoomMtg.prepareJssdk();
   function beginJoin(signature) {
@@ -69,7 +69,7 @@ function websdkready() {
           meetingNumber: meetingConfig.meetingNumber,
           userName: meetingConfig.userName,
           signature: signature,
-          apiKey: meetingConfig.apiKey,
+          sdkKey: meetingConfig.sdkKey,
           userEmail: meetingConfig.userEmail,
           passWord: meetingConfig.passWord,
           success: function (res) {

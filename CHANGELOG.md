@@ -1,4 +1,40 @@
 # CHANGELOG
+## version 2.3.0
+## General
+### Added
+1. Support to use SDK key and secret to generate tokens to join meetings (documentation forthcoming)
+
+### Enhanced
+1. Overall video quality of service when in poor or lossy network conditions
+
+### Fixed
+1. Issue where the Chrome browser version was not correctly read if it were greater than version 100
+
+## Client View
+### Added
+1. Support for account/group/user-level settings for controlling webinar chat settings and permissions
+2. Support for smart gallery view for Zoom Room devices
+Remove SharedArrayBuffer (SAB) notification for end users if SAB is not available.
+
+### Enhanced
+1. Overall quality of service for video streams
+2. getBreakoutRooms API function signature to be consistent with other developer platforms
+
+### Fixed
+1. New registration flow not correctly enforcing the ‘tk’ token requirement for joining attendees. 
+2. Incorrect Japanese translations for certain words
+3. Issue where messages in chat history changed lines
+4. Issue where the Breakout room (BO) title changed lines
+
+## Component View
+### Added 
+1. Support for resizing. See [the documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/positioning) for details.
+2. Support for allowing the attendee to talk
+
+### Enhanced
+1. Ability to support Join Before Host and Waiting Room features simultaneously
+
+
 ## version 2.2.0
 ## Client View
 ### Added
@@ -8,7 +44,7 @@
 1. Toolbar look-and-feel and style
 
 ## Component View
-### Added:
+### Added
 1. Closed caption and live transcription feature
 2. Settings dropdown menu to the participant panel
 3. Chat notifications
