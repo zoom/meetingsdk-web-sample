@@ -10,31 +10,29 @@
 ### Fixed
 1. Issue where the Chrome browser version was not correctly read if it were greater than version 100
 
-# Client View
-
-## Added
-Support for account/group/user-level settings for controlling webinar chat settings and permissions
-Support for smart gallery view for Zoom Room devices
+## Client View
+### Added
+1. Support for account/group/user-level settings for controlling webinar chat settings and permissions
+2. Support for smart gallery view for Zoom Room devices
 Remove SharedArrayBuffer (SAB) notification for end users if SAB is not available.
 
-## Enhanced
-   1. Overall quality of service for video streams
-   2. getBreakoutRooms API function signature to be consistent with other developer platforms
+### Enhanced
+1. Overall quality of service for video streams
+2. getBreakoutRooms API function signature to be consistent with other developer platforms
 
-## Fixed
-  1. New registration flow not correctly enforcing the ‘tk’ token requirement for joining attendees. 
-  2. Incorrect Japanese translations for certain words
-  3. Issue where messages in chat history changed lines
-  4. Issue where the Breakout room (BO) title changed lines
+### Fixed
+1. New registration flow not correctly enforcing the ‘tk’ token requirement for joining attendees. 
+2. Incorrect Japanese translations for certain words
+3. Issue where messages in chat history changed lines
+4. Issue where the Breakout room (BO) title changed lines
 
-# Component View
+## Component View
+### Added 
+1. Support for resizing. See [the documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/positioning) for details.
+2. Support for allowing the attendee to talk
 
-## Added 
-Support for resizing. See [the documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/positioning) for details.
-Support for allowing the attendee to talk
-
-## Enhanced
-Ability to support Join Before Host and Waiting Room features simultaneously
+### Enhanced
+1. Ability to support Join Before Host and Waiting Room features simultaneously
 
 
 ## version 2.2.0
