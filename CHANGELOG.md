@@ -1,4 +1,18 @@
 # CHANGELOG
+## version 2.3.5
+## General
+### Enhanced
+1. Increased "customerKey” max length to 36 characters
+
+### Fixed
+1. Missing participant poll button in the sample app
+2. “React not found” issue in the sample app
+
+## Component View
+### Added
+1. Support to also share audio when screen sharing a Chrome tab
+
+
 ## version 2.3.0
 ## General
 ### Added
