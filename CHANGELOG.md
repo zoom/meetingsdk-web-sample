@@ -7,6 +7,7 @@
 3. API to decorate and customize the meeting invite URL on the frontend
 4. Statistics for meeting audio/video data
 5. Support for tr-TR(Turkey-Türkçe) and pl-PL(Poland-Polski) languages
+
 ### Fixed
 1. Audio delays and distortion on Safari 15.4
 2. Issue where the `customer_key` would be empty on admit or failover
@@ -14,6 +15,7 @@
 ## Client View
 ### Added
 1. Support for [Webinar reactions](https://support.zoom.us/hc/en-us/articles/4803536268429-Using-Webinar-Reactions)
+
 ### Fixed
 1. Issue where the copied meeting invitation would not show the right URL when customized
 2. Issue where the participant’s name would sometimes be pushed to the top of the screen
@@ -22,6 +24,7 @@
 ## Component View
 ### Added
 1. Support for [ZAK Token](https://marketplace.zoom.us/docs/sdk/native-sdks/auth/#get-a-user-zak-token) in the `client.join()` function. See [Meetings](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/meetings) for details
+
 ### Fixed
 1. Issue where css with certain names would be overwritten
 2. Issue where global Material UI styles with certain names would be overwritten in <head>
