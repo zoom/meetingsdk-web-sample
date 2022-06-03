@@ -1,184 +1,71 @@
-# Web Meeting SDK
+# Zoom Meeting SDK Sample App - Web
 
-Use of this SDK is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
-___
-## Chrome 93 WebCodecs breaking changes
-The release of Chrome 93 on August 31, 2021 resulted in [breaking changes to WebCodecs due to API updates](https://groups.google.com/a/chromium.org/g/blink-dev/c/7D3kMROZrqw), which breaks the WebSDK's ability to send video. To use Chrome 93+, you must upgrade to Web Client SDK 1.9.8 or higher.
+Use of this sample app is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
 
-## Chrome 92 SharedArrayBuffers breaking changes
-The release of Chrome 92 on July 20, 2021 resulted in **BREAKING CHANGES** and as a result, [SharedArrayBuffers](https://web.dev/coop-coep/) no longer works by default. You must either **make your web site cross-origin isolated**, or **exempt it from cross-origin isolation requirements by applying for Origin Trials**. Note that functionality will break even if users continue using older versions such as Chrome 91. We recommend that you do one of the following:
-* **Apply `SharedArrayBuffers` [origin trials](https://developer.chrome.com/origintrials/#/trials/active) for your domain**, which will work [until Chrome 103](https://developer.chrome.com/blog/enabling-shared-array-buffer/).
-* Set your WebSDK/VideoSDK web isolation and update to version 1.9.6 or higher.
+The [Zoom Meeting SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) embeds the Zoom Meeting and Webinar experience in a website through a highly optimized WebAssembly module.
 
-## Zoom ending support of Microsoft Internet Explorer
-Microsoft is ending support for Internet Explorer (IE) 11 on August 17, 2021. Based on this date, Zoom has ended support for IE on September 30, 2021. Users can still use Zoom on IE after this date but we will no longer be supporting IE, fixing issues related to IE, or offering any customer support related to IE.
-___
+![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-client-view.gif)
 
-Zoom offers a web-based HTML5 client that is used in environments where the end users cannot download zoom desktop clients due to internal IT restrictions or in very low bandwidth environments.
+## Installation
 
-The web client lets end users join a meeting, receive screen share from other attendees, join the meeting through the phone, and leave the meeting. Zoom has added a Web SDK as part of our developer platform to enable developers to embed this into their web apps. Key functions that are exposed include: init meeting config, join meeting, show/hide invite function, show/hide meeting header, get attendees list, call out, invite by phone, mute, unmute, mute all, unmute all, rename, expel, record, lock meeting, leave meeting, end meeting.
+To get started, clone the repo:
 
-Supported Browsers are the latest versions of Google Chrome, Safari, and Mozilla Firefox.
+`$ git clone https://github.com/zoom/sample-app-web.git`
 
-### Getting Started with Meetings
-See the [Zoom Web Meeting SDK documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web) to get started.
+## Setup
 
-### Using the SDK
-For the Component View, see the [Zoom Web SDK Component view reference documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view/reference). 
+1. Once cloned, navigate to the `sample-app-web/CDN` directory for the Client View CDN sample, or `sample-app-web/Local` for the Client View NPM sample, or `sample-app-web/Components` for the Component View NPM sample:
 
-For the Client View, see the [Zoom Web SDK Client view reference documentation](https://marketplace.zoom.us/docs/sdk/native-sdks/web/client-view/reference).
+   `$ cd sample-app-web/CDN` or `$ cd sample-app-web/Local` or `$ cd sample-app-web/Components`
 
-See [Upcoming changes](https://marketplace.zoom.us/docs/guides/stay-up-to-date/upcoming-changes/web-sdk) for details about upcoming releases.
+1. Then install the dependencies:
 
-### Upgrading from 1.8.3 to 1.8.6
+   `$ npm install`
 
-Since we replaced jQuery with Axios, you will need to change the following.
+1. Open the directory in your code editor.
 
-default [en-US.json](https://source.zoom.us/1.8.6/lib/lang/en-US.json)
-```
-$.i18n -> ZoomMtg.i18n
+1. Open the `sample-app-web/CDN/js/index.js` or `sample-app-web/Local/js/index.js` or `sample-app-web/Components/tools/nav.js` file respectively, and enter required values for the variables:
 
-case 1: load en-US, jp-JP, zh-CN, but use jp-JP by default
+   | Key                   | Value Description |
+   | -----------------------|-------------|
+   | `SDK_KEY`     | Your SDK Key. Required. |
+   | `SDK_SECRET`  | Your SDK Secret. Required. |
 
-ZoomMtg.i18n.load('en-US');
-ZoomMtg.i18n.load('jp-JP');
-ZoomMtg.i18n.load('zh-CN');
-ZoomMtg.i18n.reload('jp-JP');
+   Example:
 
-case 2: only load jp-JP
-ZoomMtg.i18n.load('jp-JP');
-ZoomMtg.i18n.reload('jp-JP');
+   ```js
+   var SDK_KEY = "YOUR_SDK_KEY"
+   var SDK_SECRET = "YOUR_SDK_SECRET"
+   ```
 
-case 3: load youself json file
+   > Reminder to not publish this sample app as is. Replace the frontend signature generator with a [backend signature generator](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generate-the-sdk-jwt) to keep your SDK Secret safe.
 
-ZoomMtg.i18n.load('you jason url', 'you-lang-name');
-ZoomMtg.i18n.reload('you-lang-name');
+1. Save `index.js` or `nav.js` respectively.
 
-other: if you joined meeting and want change language, you need add another api
-ZoomMtg.reRender({lang: 'zoom support language or you-lang-name' });
-```
+1. Run the app:
 
-### Dependencies
+   `$ npm start`
 
-```package.json
-"dependencies": {
-     "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "redux": "3.7.2",
-    "react-redux": "7.1.0",
-    "lodash": "^4.17.21",
-    "redux-thunk": "2.2.0"
-}
-```
-### CDN Accelerated
+## Usage
 
-Global CDN ```source.zoom.us```
+1. Navigate to http://localhost:9999 for the `CDN` or
+`Local` sample, or http://localhost:3000 for the `Components` sample. Then, enter in a Meeting or Webinar number and passcode, choose host or attendee (participant), and, click "join".
 
-China CDN ```jssdk.zoomus.cn```
+   ### Client View
 
-### Include the source
+   ![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-client-view.gif)
 
-```
-<script src="https://source.zoom.us/zoom-meeting-2.4.0.min.js"></script>
-```
-### or
+   > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page.
 
-```
-npm install @zoomus/websdk@2.4.0
-```
+   ### Component View
 
-Please note, 2.4.0 was released with two ways to include the source, the normal way and the npm way. For npm, you need babel and webpack.
+   ![Zoom Meeting SDK Component View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-component-view.gif)
 
-First, invoke these three API to init jssdk.
-```
-console.log('checkSystemRequirements');
-console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
+   > The Component View provides the option to display the Meeting SDK in components on your page. This allows for a more flexible design.
 
-// it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/2.4.0/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/2.4.0/lib', '/av'); // china cdn option
-// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
+> Learn more about [Gallery View requirements](https://marketplace.zoom.us/docs/sdk/overview/improve-performance) and [see more product screenshots](https://marketplace.zoom.us/docs/sdk/overview/websdk-gallery-view/#how-views-look-with-and-without-sharedarraybuffer).
 
-ZoomMtg.preLoadWasm();
-ZoomMtg.prepareJssdk();
-```
-
-See the sample web app (CDN version) for how to update 2.4.0
-
-[![sample](https://zoom.github.io/sample-app-web/img/participent-joined-meeting.png)]()
-
-## Screen share
-```
-ZoomMtg.init({
-...
-screenShare: true, // default, also requires that you enable the account's sharing setting.
-...    
-})
-```
-
-## Chat
-```
-ZoomMtg.init({
-...
-isSupportChat: true, // default, also requires that you enable the account's sharing setting.
-...    
-})
-```
-
-## Webinar notice
-If you want to join a webinar you must add your email to the userEmail property within the join method and set the role to 0 within the meetingConfig function.
-
-```
-ZoomMtg.join({
-...
-userEmail: "hello@zoom.us",
-...    
-})
- ```
- ```
-  role: 0
- ```
-
-
-### Video, Computer Audio, and Sharing Supported browsers
-Feature | Chrome | Firefox | Safari | Opera | Vivaldi
------------- | ------------- | ------------ | ------------- | ------------ | ------------
-Video | yes| yes | yes | yes | yes 
-Computer Audio | yes | yes | no | no | yes 
-View Sharing | yes | yes | yes | yes | yes 
-Screen Sharing | >=72 | >=66 | no | no | yes 
-Chat | yes | yes | yes | yes | yes | yes
-
-## Quick start
-See the sample apps to quickly get started.
-
-###  sample web app (CDN version) with dependecies.
-
-```javascript
-git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
-cd sample-app-web/CDN
-npm install
-npm run start
-```
-
-### sample web app (local version)
-```javascript
-git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
-cd sample-app-web/Local
-npm install
-npm run start
-```
-
-### [Component View demo](https://marketplace.zoom.us/docs/sdk/native-sdks/web/component-view)
-```
-git clone https://github.com/zoom/sample-app-web.git --branch master --depth 1
-cd sample-app-web/Components
-npm install && npm run
-```
-
-open browser http://localhost:9999
-
-For details, see Components/readme.md.
+For the full list of features and event listeners, as well as additional guides, see our [Meeting SDK docs](https://marketplace.zoom.us/docs/sdk/native-sdks/web).
 
 ## Need help?
 
