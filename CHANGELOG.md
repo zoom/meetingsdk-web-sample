@@ -1,4 +1,32 @@
 # CHANGELOG
+## version 2.4.5
+## General
+### Added
+1. Support for pronouns
+1. Labels to video tiles showing participants’ audio connection status
+
+### Fixed
+1. Conflicts between 720p and virtual backgrounds running at the same time
+
+## Client View
+### Added
+1. Support for [Webinar Session Branding](https://support.zoom.us/hc/en-us/articles/4836268732045-Using-Webinar-Session-Branding)
+
+### Fixed
+1. Preview page sometimes not remembering the user’s audio or video preference
+1. “NEW: Mask your Background” notice showing when it should not
+1. Recording notification not showing properly for panelists in webinars
+1. Post-poll result strings unintentionally showing {0} to attendees
+1. Issues with the Report feature’s UI and reports failing when the reporter’s email does not match the join email
+1. Avatar not showing correctly in the Q&A menu
+1. “Back” button not working in the “Unencrypted Connections” panel
+
+## Component View
+### Added
+1. Webinar-specific chat control options
+1. Notifications of recordings in progress when toggled or restarted in webinars
+
+
 ## version 2.4.0
 ## General
 ### Added
