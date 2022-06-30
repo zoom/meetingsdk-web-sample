@@ -1,4 +1,31 @@
 # CHANGELOG
+## version 2.5.0
+## Client View
+### Added
+1. Support for testing mics and speakers
+1. Parameter in `init` to enable and configure an intermediary page for users clicking external hyperlinks
+1. Event listener for “Sharing has Started” events
+1. Functional and UI support for new Live Transcription feature
+1. Notifications that recommend upgrading Web SDK version if below the recommend version
+1. Support for preventing device going to sleep when in-meeting
+
+### Enhanced
+1. 720p video subscription logic
+1. Number of Gallery View participants from 9 to 25 (3x3 to 5x5)
+1. “Settings” panel UI and functionality
+
+### Fixed
+1. Issue where an “unrecognized speaker” entry will be shown in the speaker selection list if microphone permissions are not enabled
+1. “Phone Call” panel not showing participant ID and cutting off passcode in webinars
+
+## Component View
+### Added
+1. Archiving privacy notices
+1. Event listener for “Meeting has Ended” events
+### Enhanced
+1. Upgraded package dependency versions
+
+
 ## version 2.4.5
 ## General
 ### Added
