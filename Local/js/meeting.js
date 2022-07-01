@@ -47,6 +47,7 @@ function beginJoin(signature) {
     leaveUrl: meetingConfig.leaveUrl,
     disableCORP: !window.crossOriginIsolated, // default true
     // disablePreview: false, // default false
+    externalLinkPage: './externalLinkPage.html',
     success: function () {
       console.log(meetingConfig);
       console.log("signature", signature);
