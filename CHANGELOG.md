@@ -1,4 +1,28 @@
 # CHANGELOG
+## version 2.6.0
+## General
+### Fixed
+1. Reverted audio-handling changes in v2.5.0 to support the Chrome 104 beta
+
+## Client View
+### Added
+1. In-session resource (sidecar) support; details forthcoming
+1. Waiting room customizability 
+1. Email watermark support
+1. Support for sending 720p videos on Macs using Intel/AMD chips
+1. Live Transcription and Translation support
+
+### Fixed
+1. Waiting room showing incorrect time when the meeting or webinar had not started
+1. Incorrect string being shown when hovering the join button on the preview page
+1. 404 error when clicking “Learn More” on the screen share permission dialog
+1. Virtual background state not being preserved on page refresh
+1. Inconsistent audio/video settings for attendee promotion and demotion
+
+## Component View
+### Added
+1. Webinar Q&A support
+
 ## version 2.5.0
 ## Client View
 ### Added
