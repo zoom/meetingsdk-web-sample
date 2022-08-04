@@ -18,7 +18,7 @@ function websdkready() {
   /**
    * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
-   * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature
+   * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/signature
    */
   var SDK_SECRET = "YOUR_SDK_SECRET";
   // some help code, remember mn, pwd, lang to cookie, and autofill.
@@ -103,7 +103,7 @@ function websdkready() {
         success: function (res) {
           console.log(res);
           meetingConfig.signature = res;
-          meetingConfig.apiKey = API_KEY;
+          meetingConfig.sdkKey = SDK_KEY;
           if (document.getElementById('demoType').value === 'cdn') {
           var joinUrl = "/cdn.html?" + testTool.serialize(meetingConfig);
           console.log(joinUrl);
@@ -139,9 +139,9 @@ function websdkready() {
       sdkSecret: SDK_SECRET,
       role: meetingConfig.role,
       success: function (res) {
-        console.log(res.result);
-        meetingConfig.signature = res.result;
-        meetingConfig.apiKey = API_KEY;
+        console.log(res);
+        meetingConfig.signature = res;
+        meetingConfig.sdkKey = SDK_KEY;
         if (document.getElementById('demoType').value === 'cdn') {
           var joinUrl =
           testTool.getCurrentDomain() +
