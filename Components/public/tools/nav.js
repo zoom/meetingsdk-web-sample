@@ -13,14 +13,14 @@ function websdkready() {
   console.log("checkSystemRequirements");
   // console.log(JSON.stringify(ZoomMtgEmbedded.checkSystemRequirements()));
 
-  var API_KEY = "YOUR_API_KEY";
+  var SDK_KEY = "YOUR_SDK_KEY";
 
   /**
    * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
    * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature
    */
-  var API_SECRET = "YOUR_API_SECRET";
+  var SDK_SECRET = "YOUR_SDK_SECRET";
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
     testTool.detectOS() +
@@ -94,11 +94,11 @@ function websdkready() {
       testTool.setCookie("meeting_number", meetingConfig.mn);
       testTool.setCookie("meeting_pwd", meetingConfig.pwd);
 
-      // generateSignature define in token-tool.js
-      var signature = generateSignature({
+      // generateSDKSignature define in token-tool.js
+      var signature = generateSDKSignature({
         meetingNumber: meetingConfig.mn,
-        apiKey: API_KEY,
-        apiSecret: API_SECRET,
+        sdkKey: SDK_KEY,
+        sdkSecret: SDK_SECRET,
         role: meetingConfig.role,
         success: function (res) {
           console.log(res);
@@ -133,10 +133,10 @@ function websdkready() {
       alert("Meeting number or username is empty");
       return false;
     }
-    var signature = generateSignature({
+    var signature = generateSDKSignature({
       meetingNumber: meetingConfig.mn,
-      apiKey: API_KEY,
-      apiSecret: API_SECRET,
+      sdkKey: SDK_KEY,
+      sdkSecret: SDK_SECRET,
       role: meetingConfig.role,
       success: function (res) {
         console.log(res.result);

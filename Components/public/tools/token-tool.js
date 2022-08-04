@@ -40,6 +40,35 @@ window.generateSignature = function(props) {
   return signature
 }
 
+window.generateSDKSignature = function(data) {
+  var signature = '';
+  const {
+    sdkKey, sdkSecret, meetingNumber, role
+  } = data;
+  // try {
+  const iat = Math.round(new Date().getTime() / 1000) - 30;
+  const exp = iat + 60 * 60 * 2;
+
+  // Header
+  const oHeader = { alg: 'HS256', typ: 'JWT' };
+  // Payload
+  const oPayload = {
+    sdkKey,
+    iat,
+    exp,
+    mn: meetingNumber,
+    role
+  };
+  // Sign JWT
+  const sHeader = JSON.stringify(oHeader);
+  const sPayload = JSON.stringify(oPayload);
+  signature = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, sdkSecret);
+  if ('success' in data && data.success){
+    data.success(signature);
+  }
+
+  return signature;
+}
 
 
 }).call(this)}).call(this,require("buffer").Buffer)
