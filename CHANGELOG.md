@@ -1,4 +1,48 @@
 # CHANGELOG
+## version 2.7.0
+## General
+### Removed
+1. API Key property. [Migrate to SDK Key for versions 2.7.0 and above](https://marketplace.zoom.us/docs/guides/build/jwt-app/jwt-app-migration/#jwt-app-type-to-sdk-app-type-migration)
+
+## Client View
+### Added
+1. Live stream support
+1. Live transcription event listeners
+1. Quality of service (audio/video statistics data) event listeners
+
+### Enhanced
+1. Participant list scroll performance (virtualization)
+1. Participant in-meeting ID to be consistent and persistent across main session and breakout rooms
+1. Support host/co-host edit resources in Webinar
+1. Footer look-and-feel, and code structure
+
+### Fixed
+1. Captions not showing properly in v2.6.0
+1. Issues showing participants’ name tags when using no-branding wallpapers
+1. Panelists not being able to chat when chat is disabled for attendees
+1. “Settings” panel not closing after leaving a meeting
+1. Issues changing to the “Resource” tab from the “Chat” tab when clicked on by panelists and attendees in webinars
+1. “Claim Host” and “Cancel” buttons being missing from the “Claim Host” dialog
+1. Inability to click “Join” button when showing the audio/video preview page in a small iframe
+
+## Component View
+### Added
+1. 5x5 gallery view support
+1. Support for customized waiting rooms
+1. Option in “Settings” panel to toggle sending video in 720p when there are no hardware/account limitations
+1. Quality of service (audio/video statistics data) event listeners
+1. Support for panelists to delete or dismiss Q&A questions in webinars
+
+### Enhanced
+1. Component View demo to use SDK Key + Secret instead of API Key + Secret
+
+### Fixed
+1. Self-view resizing issues in Firefox, Safari, and Chrome without SharedArrayBuffer access
+1. Virtual background images files not loading properly when waiting room is enabled
+1. Placeholder tips not showing in Q&A panel
+1. Attendee’s question being removed in “My Questions” tab when dismissed by host
+1. Host being able to chat when chat is disabled
+
 ## version 2.6.0
 ## General
 ### Fixed
