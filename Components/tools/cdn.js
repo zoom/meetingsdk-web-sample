@@ -9,7 +9,7 @@ function websdkready() {
   // get meeting args from url
   var tmpArgs = testTool.parseQuery();
   var meetingConfig = {
-    apiKey: tmpArgs.apiKey,
+    sdkKey: tmpArgs.sdkKey,
     meetingNumber: tmpArgs.mn,
     userName: (function () {
       if (tmpArgs.name) {
@@ -58,7 +58,6 @@ function websdkready() {
   zmClient.init({
     debug: true,
     zoomAppRoot: rootElement,
-    // assetPath: 'https://websdk.zoomdev.us/2.0.0/lib/av', //default
     webEndpoint: meetingConfig.webEndpoint,
     language: meetingConfig.lang,
     customize: {
@@ -83,7 +82,7 @@ function websdkready() {
 
   // WebSDK Embedded join 
   zmClient.join({
-    apiKey: meetingConfig.apiKey,
+    sdkKey: meetingConfig.sdkKey,
     signature: meetingConfig.signature,
     meetingNumber: meetingConfig.meetingNumber,
     userName: meetingConfig.userName,
