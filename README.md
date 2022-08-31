@@ -53,7 +53,7 @@ To get started, clone the repo:
 
    ### Client View
    
-   ![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/images/sdk/msdk-web-client-view.gif)
+   ![Zoom Meeting SDK Client View](https://zoom.github.io/meetingsdk-web-sample/img/msdk-web-client-view.gif)
 
    > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page.
 
