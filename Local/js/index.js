@@ -10,13 +10,13 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
-const SDK_KEY = "YOUR_SDK_KEY";
+const SDK_KEY = "6V8X5gwmS7lhH6EcVpCPXY0bBduD7Vnwx4QV";
 /**
  * NEVER PUT YOUR ACTUAL SDK SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
  * The below generateSignature should be done server side as not to expose your sdk secret in public
  * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
  */
-const SDK_SECRET = "YOUR_SDK_SECRET";
+const SDK_SECRET = "5rhbIcREYBTAEsm7KP9Kdi49mWe4C80G";
 
 testTool = window.testTool;
 document.getElementById("display_name").value =

@@ -17,13 +17,13 @@ function websdkready() {
   // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
   ZoomMtg.preLoadWasm(); // pre download wasm file to save time.
 
-  var SDK_KEY = "YOUR_SDK_KEY";
+  var SDK_KEY = "6V8X5gwmS7lhH6EcVpCPXY0bBduD7Vnwx4QV";
   /**
    * NEVER PUT YOUR ACTUAL SDK SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your SDK SECRET in public
    * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/essential/signature
    */
-  var SDK_SECRET = "YOUR_SDK_SECRET";
+  var SDK_SECRET = "5rhbIcREYBTAEsm7KP9Kdi49mWe4C80G";
 
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =

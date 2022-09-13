@@ -13,14 +13,17 @@ function websdkready() {
   console.log("checkSystemRequirements");
   // console.log(JSON.stringify(ZoomMtgEmbedded.checkSystemRequirements()));
 
-  var SDK_KEY = "YOUR_SDK_KEY";
+  var SDK_KEY = "6V8X5gwmS7lhH6EcVpCPXY0bBduD7Vnwx4QV";  //  Web SDK
+  // var SDK_KEY = "r2_L02gOSWKDqkmZGRahWw"; //  JWT API Key
 
   /**
    * NEVER PUT YOUR ACTUAL API SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
    * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/signature
    */
-  var SDK_SECRET = "YOUR_SDK_SECRET";
+  var SDK_SECRET = "5rhbIcREYBTAEsm7KP9Kdi49mWe4C80G";  //  Web SDK
+  // var SDK_SECRET = "UlO3YOBGi3C6MRaQoqR6lDw5HFDJa9akc6y0";  //  JWT API Secret
+  
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
     testTool.detectOS() +
