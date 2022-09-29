@@ -1,35 +1,54 @@
 # CHANGELOG
 ## version 2.8.0
+## General
+The following release notes apply to the Meeting SDK for Web client view and component view.
+
+### Fixed
+1. Poor-quality audio issues on Safari in certain cases.
+
 ## Client View
+The following release notes apply to the Meeting SDK for Web client view.
 ### Added
-1. Support sharing audio/video to Breakout Room
-1. Support host control Interpretation
-1. Support audio/video setting in audio/video menu
-1. Support webinar new Captions
+1. Support for sharing audio and video to breakout rooms.
+1. Support for audio and video settings in audio and video menus.
+1. Support for captions in webinars.
 
 ### Enhanced
-1. new API reference document
-1. enable gallery same as zoom webclient
-1. support M1/M2 send 720P on chrome when enabled gallery view mode.
+1. Gallery View support on all devices, including low-end devices.
+1. Camera to remain off if the user turns it off on the preview page, even when the host requires video to be on.
+1. Screen sharing to include sharing to all breakout rooms as an option.
+1. Interpretation feature to include host controls.
+1. API reference documentation.
+1. Support for sending 720p video on macOS devices using an M1 or M2 chip when gallery view enabled.
+1. “Copy invite link” support for Zoom Events.
+1. Dropdown menu options offered by chevron buttons on audio and video toolbar buttons.
 
 ### Fixed
-1. Auto turn on camera when host schedule meeting turn on host/participant video option(2.6.0/2.7.0)
-1. Audio not work on Ipad safari.
-1. Active speaker in main view can't change correctly
-1. keep the last frame afterimage when start focus mode
-1. miss view change button when user is sharing
-1. audio status display not right in participants list
-1. keep the black when change to speaker view in full screen
-1. be assign bo show pop window not show bo name.
-1. after add bo room. The bo room list not contain index number 
+1. View button not correctly showing when the user screen shares in a meeting or webinar.
+1. Black rectangle afterimage when changing to speaker view in full screen.
+1. Last frame afterimage when starting focus mode in certain cases.
+1. Inconsistent mic animation between toolbar and participant list.
+1. Active speaker not changing correctly in speaker view.
+1. “Is livestream enabled” flag not being set properly for Zoom Events.
+1. Incorrect active speaker when selecting “See myself as the active speaker” in certain cases.
+1. Breakout rooms not being numbered when created by co-hosts with the automatically-assign option.
+1. Incorrect text in the join-breakout-room pop-up window in certain cases.
+1. Automatically turn on camera when the host schedules a meeting with the turn on host and participant video option (v2.6.0 and v2.7.0).
+1. Audio did not work on Safari for iPadOS.
+1. Audio status display incorrect in participants list.
+1. When assigned to a breakout room, shows a popup window but no breakout room name.
 
 ## Component View
+The following release notes apply to the Meeting SDK for Web component view.
 ### Added
-1. Audio not work on Ipad safari.
-1. Support audio speaker/mic local test.
+1. Support for local audio speaker and mic test.
+
+### Enhanced
+1. Settings panel to include audio testing.
+1. Q&A feature to sort by upvoted questions.
 
 ### Fixed
-1. Support Q&A sort upvote questions
+1. Audio did not work on Safari for iPadOS.
 
 ## version 2.7.0
 ## General
