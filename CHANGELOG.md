@@ -1,4 +1,36 @@
 # CHANGELOG
+## version 2.8.0
+## Client View
+### Added
+1. Support sharing audio/video to Breakout Room
+1. Support host control Interpretation
+1. Support audio/video setting in audio/video menu
+1. Support webinar new Captions
+
+### Enhanced
+1. new API reference document
+1. enable gallery same as zoom webclient
+1. support M1/M2 send 720P on chrome when enabled gallery view mode.
+
+### Fixed
+1. Auto turn on camera when host schedule meeting turn on host/participant video option(2.6.0/2.7.0)
+1. Audio not work on Ipad safari.
+1. Active speaker in main view can't change correctly
+1. keep the last frame afterimage when start focus mode
+1. miss view change button when user is sharing
+1. audio status display not right in participants list
+1. keep the black when change to speaker view in full screen
+1. be assign bo show pop window not show bo name.
+1. after add bo room. The bo room list not contain index number 
+
+## Component View
+### Added
+1. Audio not work on Ipad safari.
+1. Support audio speaker/mic local test.
+
+### Fixed
+1. Support Q&A sort upvote questions
+
 ## version 2.7.0
 ## General
 ### Removed
