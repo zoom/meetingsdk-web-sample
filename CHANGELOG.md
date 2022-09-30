@@ -20,7 +20,6 @@ The following release notes apply to the Meeting SDK for Web client view.
 1. Interpretation feature to include host controls.
 1. API reference documentation.
 1. Support for sending 720p video on macOS devices using an M1 or M2 chip when gallery view enabled.
-1. “Copy invite link” support for Zoom Events.
 1. Dropdown menu options offered by chevron buttons on audio and video toolbar buttons.
 
 ### Fixed
@@ -29,7 +28,6 @@ The following release notes apply to the Meeting SDK for Web client view.
 1. Last frame afterimage when starting focus mode in certain cases.
 1. Inconsistent mic animation between toolbar and participant list.
 1. Active speaker not changing correctly in speaker view.
-1. “Is livestream enabled” flag not being set properly for Zoom Events.
 1. Incorrect active speaker when selecting “See myself as the active speaker” in certain cases.
 1. Breakout rooms not being numbered when created by co-hosts with the automatically-assign option.
 1. Incorrect text in the join-breakout-room pop-up window in certain cases.
