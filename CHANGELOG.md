@@ -1,4 +1,37 @@
 # CHANGELOG
+## version 2.9.0
+## General
+### Added
+1. API for managing virtual background.
+1. Free meeting end dialog.
+
+## Client View
+### Added
+1. American Sign Language (ASL) support.
+1. API for customizing the polling link (`setCustomizedPollingUrl`).
+1. Support for sending emojis in chat.
+
+### Enhanced
+1. `leaveMeeting` API by adding a `cancelCallback` option.
+
+### Fixed
+1. A bug where the audio device would unintentionally switch to “Microsoft Teams Audio Device (Virtual)”, resulting in audio cut-off.
+1. Links in chat not redirecting users properly due to improper URL encoding.
+1. Safari audio issues due to auto-join, by disabling auto-join.
+1. Incorrect labels on the waiting page when the meeting had, in fact, started.
+1. `Video` settings unintentionally being shown to webinar attendees in certain cases.
+1. Attendee view in webinar not properly following host’s view when set accordingly.
+
+### Removed
+1. SDK key length check.
+
+## Component View
+### Added
+1. API for sending a private chat.
+
+### Enhanced
+1. Video view toggle (gallery view, speaker view, etc.) from tabs to dropdown.
+
 ## version 2.8.0
 ## General
 The following release notes apply to the Meeting SDK for Web client view and component view.
