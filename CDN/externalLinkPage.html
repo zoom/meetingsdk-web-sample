@@ -105,14 +105,11 @@
   </body>
   <script>
     var address ='';
-    function getQueryString(name) {
-      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-      var r = window.location.search.substr(1).match(reg);
-      if (r != null) return unescape(r[2]); return null;
+    function getQueryString() {
+      var tmpArr = window.location.href.split('?ref=');
+      return tmpArr.slice(1, tmpArr.length).join('?ref=');
     }
     function isURL(str) {
-    //  var urlRegex = '(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})';
-    //  var url = new RegExp(urlRegex, 'i');
      var url = /^https:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/i;
      return url.test(str);
     }
