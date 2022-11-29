@@ -70,7 +70,6 @@ window.generateSDKSignature = function(data) {
   return signature;
 }
 
-
 }).call(this)}).call(this,require("buffer").Buffer)
 },{"buffer":66,"crypto":76,"njwt":156,"secure-random":182}],2:[function(require,module,exports){
 
