@@ -1,13 +1,13 @@
 {
   "name": "websdk-component-demo",
-  "version": "2.9.0",
+  "version": "2.9.5",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
-    "@zoomus/websdk": "2.9.0",
+    "@zoomus/websdk": "2.9.5",
     "antd": "^4.14.1",
     "classnames": "^2.2.6",
     "crypto-js": "^4.0.0",
