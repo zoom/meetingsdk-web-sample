@@ -1,4 +1,36 @@
 # CHANGELOG
+## version 2.9.5
+## Client View
+### Added
+1. Gallery view support for Firefox with SharedArrayBuffer enabled.
+1. Electron web view screen sharing support via `shareSource` option.
+1. Support for broadcasting audio messages to breakout rooms.
+1. Support to send or receive files in chat messages.
+
+### Enhanced
+1. Waiting page to auto join meeting or webinar when started.
+1. `onRetryCallback` to provide the meeting UID, such that it can be used to end a meeting via REST API when a “meeting cannot be started because another meeting is running” error is encountered.
+
+### Fixed
+1. Subtitle blocked when showing captions.
+1. An issue where promoting an attendee or demoting a panelist would cause the QA and raise-hand buttons to be unclickable.
+1. Missing options in sign language view.
+1. Issue where sign language view sometimes dropped to an invisible area.
+1. Meeting password unintentionally visible to attendees in certain cases.
+1. Error code 1005 message to correctly read as “No response from web, try again later.” when encountering issues joining webinars.
+1. Webinar UI not resizing correctly for attendees after the host stops screen sharing.
+
+## Component View
+### Added
+1. Gallery View support for Firefox with SharedArrayBuffer enabled.
+1. Support for the host to start a breakout room automatically or manually..
+1. Support for a participant to join a breakout room.
+1. Support for broadcasting chat messages to breakout rooms.
+1. Multi-language transcription feature.  
+1. Caption, transcription, and translation support.
+1. `caption-message`, `recording-change`, and `local-recording-change` events callbacks.
+
+
 ## version 2.9.0
 ## General
 ### Added
