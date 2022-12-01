@@ -107,7 +107,12 @@
     var address ='';
     function getQueryString() {
       var tmpArr = window.location.href.split('?ref=');
-      return tmpArr.slice(1, tmpArr.length).join('?ref=');
+      var tmpUrl = tmpArr.slice(1, tmpArr.length).join('?ref=');
+      try {
+        return decodeURIComponent(tmpUrl);
+      } catch(e) {
+        return tmpUrl;
+      }
     }
     function isURL(str) {
      var url = /^https:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/i;
