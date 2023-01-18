@@ -1,4 +1,40 @@
 # CHANGELOG
+## version 2.9.7
+## General
+### Added
+1. APIs for host and co-host status management. See API reference for details.
+1. “Camera not connected” icon for when the user does not have a camera connected.
+1. Support for recording with Zoom IQ.
+
+## Client View
+### Added
+1. “Optimize for Video Clip” feature, which shares video with higher frames per second (fps).
+1. Network quality indication to active speaker view.
+
+### Fixed
+1. An issue where attendees could submit a poll without adding responses, resulting in a polling error.
+1. Participants not having “Collapse All“ and “Expand All” options when self-selecting a Breakout Room.
+1. Users not being taken correctly to the post-meeting survey URL.
+1. Inability to properly scroll up on the caption language-selection menu when the screen was too small.
+1. Video being displayed in unintentional ways when switching to focus mode.
+1. Participants’ view not reverting to their previous view mode when spotlight is removed.
+1. Webinar attendees being unable to hear audio on mobile browsers in certain cases.
+1. ‘disableJoinAudio’ argument in ‘init()’ function not being properly read.
+
+## Component view
+### Added
+1. API to destroy the Component View client to allow re-creation from scratch.
+1. Event listener API for listening to screen share-related events.
+1. Event listener API for listening to Participant-related events.
+
+### Enhanced
+1. Toolbar to show more icons when in Gallery View.
+1. Chat privilege dropdown menu with a clarifying header.
+
+### Fixed
+1. Unintended distortions to screen-share content size.
+1. Incorrect “Email is Blocked by Administrator” errors when joining a meeting or webinar requiring registration in certain cases.
+
 ## version 2.9.5
 ## Client View
 ### Added
@@ -29,7 +65,6 @@
 1. Multi-language transcription feature.  
 1. Caption, transcription, and translation support.
 1. `caption-message`, `recording-change`, and `local-recording-change` events callbacks.
-
 
 ## version 2.9.0
 ## General
