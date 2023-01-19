@@ -32,7 +32,6 @@
 1. Chat privilege dropdown menu with a clarifying header.
 
 ### Fixed
-1. Unintended distortions to screen-share content size.
 1. Incorrect “Email is Blocked by Administrator” errors when joining a meeting or webinar requiring registration in certain cases.
 
 ## version 2.9.5
