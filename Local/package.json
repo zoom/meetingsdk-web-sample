@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "websdk-local",
-  "version": "2.9.7",
+  "version": "2.10.0",
   "description": "Zoom sample app for web client WebSDK",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoomus/websdk": "2.9.7",
+    "@zoomus/websdk": "2.10.0",
     "lodash": "^4.17.14",
     "react": "16.8.6",
     "react-dom": "16.8.6",
