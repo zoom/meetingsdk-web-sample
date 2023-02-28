@@ -10,13 +10,13 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareJssdk();
 
-const SDK_KEY = "YOUR_SDK_KEY";
+const CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 /**
- * NEVER PUT YOUR ACTUAL SDK SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
+ * NEVER PUT YOUR ACTUAL SDK SECRET OR CLIENT SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
  * The below generateSignature should be done server side as not to expose your sdk secret in public
  * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/Web-Client-SDK/tutorial/generate-signature
  */
-const SDK_SECRET = "YOUR_SDK_SECRET";
+const CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET";
 
 testTool = window.testTool;
 document.getElementById("display_name").value =
@@ -89,13 +89,13 @@ document.getElementById("join_meeting").addEventListener("click", (e) => {
 
   const signature = ZoomMtg.generateSDKSignature({
     meetingNumber: meetingConfig.mn,
-    sdkKey: SDK_KEY,
-    sdkSecret: SDK_SECRET,
+    sdkKey: CLIENT_ID,
+    sdkSecret: CLIENT_SECRET,
     role: meetingConfig.role,
     success: function (res) {
       console.log(res.result);
       meetingConfig.signature = res.result;
-      meetingConfig.sdkKey = SDK_KEY;
+      meetingConfig.sdkKey = CLIENT_ID;
       const joinUrl = "/meeting.html?" + testTool.serialize(meetingConfig);
       console.log(joinUrl);
       window.open(joinUrl, "_blank");
@@ -121,13 +121,13 @@ window.copyJoinLink = function (element) {
   }
   const signature = ZoomMtg.generateSDKSignature({
     meetingNumber: meetingConfig.mn,
-    sdkKey: SDK_KEY,
-    sdkSecret: SDK_SECRET,
+    sdkKey: CLIENT_ID,
+    sdkSecret: CLIENT_SECRET,
     role: meetingConfig.role,
     success: function (res) {
       console.log(res.result);
       meetingConfig.signature = res.result;
-      meetingConfig.sdkKey = SDK_KEY;
+      meetingConfig.sdkKey = CLIENT_ID;
       const joinUrl =
         testTool.getCurrentDomain() +
         "/meeting.html?" +

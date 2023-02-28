@@ -28,14 +28,14 @@ To get started, clone the repo:
 
    | Key                   | Value Description |
    | -----------------------|-------------|
-   | `SDK_KEY`     | Your SDK Key. Required. |
-   | `SDK_SECRET`  | Your SDK Secret. Required. |
+   | `CLIENT_ID`     | Your Client ID or SDK Key. Required. |
+   | `CLIENT_SECRET`  | Your Client Secret or SDK Secret. Required. |
 
    Example:
 
    ```js
-   var SDK_KEY = "YOUR_SDK_KEY"
-   var SDK_SECRET = "YOUR_SDK_SECRET"
+   var CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY"
+   var CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET"
    ```
 
    > Reminder to not publish this sample app as is. Replace the frontend signature generator with a [backend signature generator](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generate-the-sdk-jwt) to keep your SDK Secret safe.
