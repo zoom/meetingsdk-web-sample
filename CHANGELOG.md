@@ -1,4 +1,32 @@
 # CHANGELOG
+## version 2.10.0
+## General
+### Added
+1. New option to the `init` function to set users’ default view (e.g. Gallery/Speaker), and hide the share audio option for Chrome tabs. See API reference for details
+
+## Client View
+### Added
+1. New network quality event: `onNetworkQualityChange`
+
+### Enhanced
+1. Mobile device styling
+
+### Fixed
+1. Regression that caused issues subscribing to videos in 720p
+1. Clarity of an error message for when the host has been disabled or removed
+
+## Component view
+### Added
+1. “Speaker View” as a new view option
+1. New network quality icon for participants when on speaker view
+1. Support for webinar practice mode and option to start live broadcasts
+1. Support for subscribing to “active-speaker” events
+
+### Fixed
+1. An issue where the ZAK token was unintentionally cached from a previous join
+1. Certain edge cases that caused participant tiles to not show properly after resizing the view container, or after a participant left the meeting
+1. Unintentional errors with subsequent calls to `init` after leaving a meeting, destroying the client, and recreating the client
+
 ## version 2.9.7
 ## General
 ### Added
