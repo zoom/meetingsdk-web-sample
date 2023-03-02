@@ -1,4 +1,13 @@
 # CHANGELOG
+## version 2.10.1
+## General
+### Fixed
+1. An issue where customers with special symbols in their email address could not join webinars
+
+## Component view
+### Fixed
+1. Vanity URL meeting links being truncated when dashes "-" are present
+
 ## version 2.10.0
 ## General
 ### Added
