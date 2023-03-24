@@ -8,7 +8,7 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/2.10.1/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 ZoomMtg.preLoadWasm();
-ZoomMtg.prepareJssdk();
+ZoomMtg.prepareWebSDK();
 
 const CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 /**
@@ -21,7 +21,7 @@ const CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET";
 testTool = window.testTool;
 document.getElementById("display_name").value =
   "Local" +
-  ZoomMtg.getJSSDKVersion()[0] +
+  ZoomMtg.getWebSDKVersion()[0] +
   testTool.detectOS() +
   "#" +
   testTool.getBrowserInfo();

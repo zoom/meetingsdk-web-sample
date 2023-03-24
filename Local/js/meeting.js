@@ -41,7 +41,7 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
 ZoomMtg.preLoadWasm();
-ZoomMtg.prepareJssdk();
+ZoomMtg.prepareWebSDK();
 function beginJoin(signature) {
   ZoomMtg.init({
     leaveUrl: meetingConfig.leaveUrl,

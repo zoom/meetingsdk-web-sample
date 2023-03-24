@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp"
+    "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp",
+    "https": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp --https"
   },
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "webpack": "5.28.0",
+    "webpack": "^5.76.3",
     "webpack-cli": "4.5.0",
-    "webpack-dev-server": "3.11.2"
+    "webpack-dev-server": "^4.13.1"
   }
 }

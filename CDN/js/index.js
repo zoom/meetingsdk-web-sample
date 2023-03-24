@@ -28,7 +28,7 @@ function websdkready() {
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
     "CDN" +
-    ZoomMtg.getJSSDKVersion()[0] +
+    ZoomMtg.getWebSDKVersion()[0] +
     testTool.detectOS() +
     "#" +
     testTool.getBrowserInfo();
