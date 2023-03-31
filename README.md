@@ -2,7 +2,7 @@
 
 Use of this sample app is subject to our [Terms of Use](https://zoom.us/docs/en-us/zoom_api_license_and_tou.html).
 
-The [Zoom Meeting SDK](https://marketplace.zoom.us/docs/sdk/native-sdks/web) embeds the Zoom Meeting and Webinar experience in a website through a highly optimized WebAssembly module.
+The [Zoom Meeting SDK](https://developers.zoom.us/docs/meeting-sdk/web/) embeds the Zoom Meeting and Webinar experience in a website through a highly optimized WebAssembly module.
 
 ![Zoom Meeting SDK Client View](https://marketplace.zoom.us/docs/static/msdk-web-client-view-6276487add553e9849f39a7cec9ac7c7.gif)
 
@@ -38,7 +38,7 @@ To get started, clone the repo:
    var CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET"
    ```
 
-   > Reminder to not publish this sample app as is. Replace the frontend signature generator with a [backend signature generator](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generate-the-sdk-jwt) to keep your SDK Secret safe.
+   > Reminder to not publish this sample app as is. Replace the frontend signature generator with a [backend signature generator](https://developers.zoom.us/docs/meeting-sdk/auth/) to keep your SDK Secret safe.
 
 1. Save `index.js` or `nav.js` respectively.
 
@@ -63,9 +63,9 @@ To get started, clone the repo:
 
    > The Component View provides the option to display the Meeting SDK in components on your page. This allows for a more flexible design.
 
-> Learn more about [Gallery View requirements](https://marketplace.zoom.us/docs/sdk/overview/improve-performance) and [see more product screenshots](https://marketplace.zoom.us/docs/sdk/overview/websdk-gallery-view/#how-views-look-with-and-without-sharedarraybuffer).
+> Learn more about [Gallery View requirements](https://developers.zoom.us/docs/meeting-sdk/web/gallery-view/) and [see more product screenshots](https://developers.zoom.us/docs/meeting-sdk/web/gallery-view/#how-views-look-with-and-without-sharedarraybuffer).
 
-For the full list of features and event listeners, as well as additional guides, see our [Meeting SDK docs](https://marketplace.zoom.us/docs/sdk/native-sdks/web).
+For the full list of features and event listeners, as well as additional guides, see our [Meeting SDK docs](https://developers.zoom.us/docs/meeting-sdk/web/).
 
 ## Need help?
 
