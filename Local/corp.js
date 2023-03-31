@@ -29,6 +29,9 @@ new WebpackDevServer(
       'Cross-Origin-Resource-Policy': 'cross-origin'
     },
     historyApiFallback: true,
+    client: {
+      overlay: false,
+    },
     proxy: [
       {
         path: '/meeting.html',
@@ -51,7 +54,10 @@ new WebpackDevServer(
       'Cross-Origin-Resource-Policy': 'cross-origin'
     },
     historyApiFallback: true,
-    static: './'
+    static: './',
+    client: {
+      overlay: false,
+    },
   },
   webpack(webpackConfig)
 ).start(9998, '0.0.0.0', runFunc);
