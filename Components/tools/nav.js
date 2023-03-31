@@ -18,7 +18,7 @@ function websdkready() {
   /**
    * NEVER PUT YOUR ACTUAL SDK SECRET OR CLIENT SECRET IN CLIENT SIDE CODE, THIS IS JUST FOR QUICK PROTOTYPING
    * The below generateSignature should be done server side as not to expose your api secret in public
-   * You can find an eaxmple in here: https://marketplace.zoom.us/docs/sdk/native-sdks/web/signature
+   * You can find an example in here: https://developers.zoom.us/docs/meeting-sdk/auth/#signature
    */
   var CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET";
   // some help code, remember mn, pwd, lang to cookie, and autofill.
