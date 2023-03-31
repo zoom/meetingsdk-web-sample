@@ -1,4 +1,37 @@
 # CHANGELOG
+## version 2.11.0
+## General
+### Added
+1. Screen sharing QOS statistics in the Settings panel.
+1. Indonesian (id-ID) and Netherlands (nl-NL) language and localization support.
+
+### Enhanced
+1. Audio decoder in the audio-worklet.
+
+## Client view
+### Added
+1. stopIncomingAudio API to stop incoming audio.
+1. checkFeatureRequirements API to check browser compatibility with supported features.
+1. Support to allow attendees to talk via phone in webinars.
+1. Watermark support for when video isn't playing.
+1. Support for moving participants to the waiting room if the host drops unexpectedly.
+
+### Enhanced
+1. Preview and waiting room with Zoom's new experience.
+1. Styling and UI on mobile.
+
+### Fixed
+1. User unable to change audio status when screen sharing with audio.
+1. i18n issues in transcription menu and report dialog.
+1. Consistency issues with persistentID with respect to other SDKs.
+
+## Component view
+### Added
+Pin and spotlight support in speaker view.
+
+### Fixed
+Inability to properly tap on the leave button to leave the meeting.
+
 ## version 2.10.1
 ## General
 ### Fixed
