@@ -1,4 +1,13 @@
 # CHANGELOG
+## version 2.11.5
+## General
+### Enhanced
+1. Video share with audio can unmute mic when chrome>=111.
+
+## Client view
+### Fixed
+1. Video share A/V keep sync when enable "Optimize for Video Clip".
+
 ## version 2.11.0
 ## General
 ### Added
