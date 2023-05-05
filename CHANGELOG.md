@@ -1,4 +1,39 @@
 # CHANGELOG
+## version 2.12.0
+## General
+### Added
+1. APIs for "Sharing" QoS data.
+
+### Changed
+1. Return values of getAttendeeslist() and getCurrentUser() by adding customerKey attribute.
+
+### Fixed 
+1. Issue where screen share would not work properly in certain cases.
+
+## Client view
+### Added
+1. Option for the host to disable live transcription.
+1. Smart summary support.
+
+### Changed
+1. Live streaming to include an option to follow host's view.
+1. Better support to customize watermark location.
+1. Waiting Room details and customization options.
+
+### Fixed
+1. Issue where users would not be able to mute the original audio when using interpretation.
+
+## Component view
+### Added
+1. APIs for pinning users.
+1. "Optimize for Video Clip" support when screen sharing.
+
+### Changed
+1. UX and flow of screen share permission warnings UX.
+
+### Fixed
+1. Issue where defaultViewType would not work correctly when isResizable is set to false.
+
 ## version 2.11.5
 ## General
 ### Enhanced
