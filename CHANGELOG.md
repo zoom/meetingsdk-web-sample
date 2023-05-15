@@ -1,4 +1,9 @@
 # CHANGELOG
+## version 2.12.2
+## General
+### Fixed 
+1. An issue where video captured and rendered from iOS Mobile Web Browsers (Safari and Chrome) were unintentionally stretched and skewed.
+
 ## version 2.12.0
 ## General
 ### Added
