@@ -1,4 +1,35 @@
 # CHANGELOG
+## version 2.13.0
+## General
+### Fixed
+1. Removed "optimize for video clip" option in Firefox/Safari.
+
+## Client view
+### Added
+1. Support for Meetings Q&A.
+1. New API "mediaCapture" for recording permission and disclosure for bots.
+
+### Enhanced
+1. Waiting room: The chat style is now compatible with mobile devices and supports reply back.
+1. Support for stopping incoming audio on mobile.
+1. Webinar resource support for i18n (internationalization).
+
+### Fixed
+1. The issue of sending empty files in PMC meetings.
+1. The issue of strange pop-up windows appearing and disappearing due to browser version upgrade.
+1. The participant display style on iPad.
+1. The issue where members returning to the main session while the provider closes the breakout rooms couldn't see the captions.
+1. An issue where the chat receiver list would unintentionally show phone users.
+
+## Component view
+### Added
+1. Support for Meeting Reactions.
+
+### Enhanced
+1. Attendee attribute return object.
+1. Screen sharing to ensure constant video size when viewing a screen share.
+1. i18n API support.
+
 ## version 2.12.2
 ## General
 ### Fixed 
