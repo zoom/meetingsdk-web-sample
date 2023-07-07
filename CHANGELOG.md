@@ -1,4 +1,27 @@
 # CHANGELOG
+## version 2.14.0
+## General
+### Added
+1. APIs for Breakout Rooms.
+
+## Client view
+### Added
+1. Support to pin and spotlight a user programmatically.
+1. Settings for "background noise suppression", "sync buttons on headset", and "display your reactions above toolbar".
+
+### Enhanced
+1. Support for the `participant_jbh_waiting_left` webhook event.
+
+### Fixed
+1. Fixed the issue where re-entering the same room unexpectedly unmuted the camera when disabling preview.
+
+## Component view
+### Added
+1. Smart Summary support.
+
+### Enhanced
+1. Toolbar: added new buttons, rearranged layout, and expanded toolbar buttons when receiving screen share.
+
 ## version 2.13.0
 ## General
 ### Fixed
