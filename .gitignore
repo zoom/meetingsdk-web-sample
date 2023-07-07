@@ -5,3 +5,5 @@
 /CDN/yarn.lock
 /Local/.vscode
 update-version.js
+export.sh
+/export
