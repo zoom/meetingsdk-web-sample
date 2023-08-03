@@ -11,8 +11,8 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "webpack": "^5.76.3",
-    "webpack-cli": "4.5.0",
-    "webpack-dev-server": "^4.13.1"
+    "webpack": "5.88.2",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "4.15.1"
   }
 }
