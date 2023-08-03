@@ -50,7 +50,6 @@ module.exports = {
   target: 'web',
   mode: 'development',
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development'),
       'process.env.BABEL_ENV': JSON.stringify('development'),

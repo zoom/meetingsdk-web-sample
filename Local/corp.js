@@ -19,12 +19,13 @@ new WebpackDevServer(
     port: 9999,
     host: '0.0.0.0',
     open: https ? 'https://localhost:9999/' : 'http://127.0.0.1:9999/',
-    https: https
-      ? {
-          cert: fs.readFileSync('./localhost.crt'),
+    server: {
+      type: https ? 'https' : 'http',
+      options: {
+        cert: fs.readFileSync('./localhost.crt'),
           key: fs.readFileSync('./localhost.key')
-        }
-      : false,
+      },
+    },
     headers: {
       'Cross-Origin-Resource-Policy': 'cross-origin'
     },
