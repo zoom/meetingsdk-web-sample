@@ -156,11 +156,8 @@ function websdkready() {
           testTool.serialize(meetingConfig);
           document.getElementById('copy_link_value').setAttribute('link', joinUrl);
           copyToClipboard('copy_link_value');
-        }
-        
-        
+        }        
       },
     });
   };
-
 }
