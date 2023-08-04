@@ -1,8 +1,8 @@
 import { getExploreName } from "../utils/platform";
 
 export const devConfig = {
-  apiKey: "",
-  apiSecret: "",
+  sdkKey: "",
+  sdkSecret: "",
   meetingNumber: "",
   name: `${getExploreName()}-${Math.floor(Math.random() * 1000)}`,
   passcode: "zoom",
