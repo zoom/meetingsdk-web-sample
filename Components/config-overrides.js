@@ -16,7 +16,11 @@ const addDevServerCOOPReponseHeader = (config) => {
     ...config.headers,
     "Cross-Origin-Embedder-Policy": "require-corp",
     "Cross-Origin-Opener-Policy": "same-origin"
-  }
+  };
+  config.devMiddleware = {
+    ...config.devMiddleware,
+    writeToDisk: true,
+  };
   return config
 }
 
