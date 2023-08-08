@@ -3,23 +3,22 @@
   "version": "2.14.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^5.2.4",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
+    "@ant-design/icons": "^4.6.2",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.8.3",
     "@zoomus/websdk": "2.14.0",
-    "antd": "^5.8.1",
-    "classnames": "^2.3.2",
-    "crypto-js": "^4.1.1",
-    "immer": "^10.0.2",
-    "js-base64": "^3.7.5",
-    "jsrsasign": "^10.8.6",
-    "react-router-dom": "^6.14.2",
-    "react-scripts": "5.0.1",
-    "web-vitals": "3.4.0"
+    "antd": "^4.14.1",
+    "classnames": "^2.2.6",
+    "crypto-js": "^4.0.0",
+    "immer": "^8.0.1",
+    "js-base64": "^3.6.0",
+    "jsrsasign": "^10.3.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.2",
+    "web-vitals": "1.1.1"
   },
   "scripts": {
-    "preinstall": "npx npm-force-resolutions",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
@@ -27,7 +26,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app"
+      "react-app",
+      "react-app/jest"
     ]
   },
   "browserslist": {
@@ -42,21 +42,18 @@
       "last 1 safari version"
     ]
   },
-  "resolutions": {
-    "nth-check": "2.1.1"
-  },
   "devDependencies": {
-    "@types/classnames": "^2.3.1",
-    "@types/crypto-js": "^4.1.1",
-    "@types/jest": "^29.5.3",
-    "@types/jsrsasign": "^10.5.8",
-    "@types/lodash": "^4.14.196",
+    "@types/classnames": "^2.2.11",
+    "@types/crypto-js": "^4.0.1",
+    "@types/jest": "^26.0.21",
+    "@types/jsrsasign": "^8.0.10",
+    "@types/lodash": "^4.14.168",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
-    "@types/react-router-dom": "^5.3.3",
-    "@typescript-eslint/eslint-plugin": "^6.2.1",
-    "@typescript-eslint/parser": "^6.2.1",
-    "copy-webpack-plugin": "11.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
+    "@typescript-eslint/parser": "^4.19.0",
+    "copy-webpack-plugin": "6.2.1",
     "customize-cra": "1.0.0",
     "react-app-rewired": "2.2.1",
     "sass": "1.64.2",
