@@ -20,12 +20,12 @@
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
     "@zoomus/websdk": "2.15.0",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "redux": "3.7.2",
-    "react-redux": "7.2.4",
+    "react-redux": "7.2.9",
     "lodash": "^4.17.21",
-    "redux-thunk": "2.3.0"
+    "redux-thunk": "2.4.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.9",
