@@ -1,4 +1,30 @@
 # CHANGELOG
+## version 2.15.0
+## General
+### Added
+1. Improved virtual background performance.
+
+## Client view
+### Added
+1. Support for chat etiquette.
+1. Recording permission - support for the local recording token.
+1. `admitAll` API for the waiting room.
+1. `changeRedirectUrl` API.
+
+### Enhanced
+1. Improved audio and video sync on mobile platforms.
+1. Improved audio quality (Opus codec).
+1. Improved audio delay on mobile browsers.
+
+### Fixed
+1. Webinar attendees could not receive audio on mobile Safari.
+1. Missing `onMeetingStatus` and `onUserLeave` events when you (yourself) left the meeting.
+
+## Component view
+### Added
+1. APIs for media capture.
+1. Support for sending chat messages to all in the `sendChat` API.
+
 ## version 2.14.0
 ## General
 ### Added
