@@ -1,6 +1,6 @@
 {
   "name": "websdk-component-demo",
-  "version": "2.15.2",
+  "version": "2.16.0",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
