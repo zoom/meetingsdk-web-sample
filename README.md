@@ -55,7 +55,9 @@ To get started, clone the repo:
    
    ![Zoom Meeting SDK Client View](/images/meetingsdk-web-client-view.gif)
 
-   > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page.
+   > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page. 
+   #### Nodejs 16
+   If you are using Nodejs 16, please use `npm install --force` to proceed with the installation.
 
    ### Component View
 
