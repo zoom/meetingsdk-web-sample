@@ -44,7 +44,9 @@ ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
+
 function beginJoin(signature) {
+  ZoomMtg.i18n.load(meetingConfig.lang);
   ZoomMtg.init({
     leaveUrl: meetingConfig.leaveUrl,
     disableCORP: !window.crossOriginIsolated, // default true
@@ -52,9 +54,7 @@ function beginJoin(signature) {
     externalLinkPage: './externalLinkPage.html',
     success: function () {
       console.log(meetingConfig);
-      console.log("signature", signature);
-      ZoomMtg.i18n.load(meetingConfig.lang);
-      ZoomMtg.i18n.reload(meetingConfig.lang);
+      console.log("signature", signature);      
       ZoomMtg.join({
         meetingNumber: meetingConfig.meetingNumber,
         userName: meetingConfig.userName,
