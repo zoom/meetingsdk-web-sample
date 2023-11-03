@@ -40,6 +40,8 @@ const meetingConfig = {
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
+ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
+
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
 function beginJoin(signature) {
