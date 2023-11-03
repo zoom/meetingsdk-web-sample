@@ -53,7 +53,9 @@ function websdkready() {
   if (meetingConfig.china)
     ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/2.17.0/lib", "/av"); // china cdn option
   ZoomMtg.preLoadWasm();
-  ZoomMtg.prepareJssdk();
+  ZoomMtg.prepareWebSDK();
+  ZoomMtg.i18n.load(meetingConfig.lang);
+  ZoomMtg.i18n.reload(meetingConfig.lang);
   function beginJoin(signature) {
     ZoomMtg.init({
       leaveUrl: meetingConfig.leaveUrl,
@@ -64,8 +66,7 @@ function websdkready() {
       success: function () {
         console.log(meetingConfig);
         console.log("signature", signature);
-        ZoomMtg.i18n.load(meetingConfig.lang);
-        ZoomMtg.i18n.reload(meetingConfig.lang);
+       
         ZoomMtg.join({
           meetingNumber: meetingConfig.meetingNumber,
           userName: meetingConfig.userName,

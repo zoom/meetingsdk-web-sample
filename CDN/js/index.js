@@ -106,8 +106,8 @@ function websdkready() {
         sdkSecret: CLIENT_SECRET,
         role: meetingConfig.role,
         success: function (res) {
-          console.log(res.result);
-          meetingConfig.signature = res.result;
+          console.log(res);
+          meetingConfig.signature = res;
           meetingConfig.sdkKey = CLIENT_ID;
           var joinUrl = "/meeting.html?" + testTool.serialize(meetingConfig);
           console.log(joinUrl);
