@@ -29,7 +29,11 @@ module.exports = {
           {
             from: path.resolve(__dirname, 'node_modules', '@zoomus', 'websdk', 'dist', 'lib', 'av'),
             to: path.resolve(__dirname, 'public', 'lib')
-          }
+          },
+          {
+            from: path.resolve(__dirname, 'node_modules', '@zoomus', 'websdk', 'dist', 'lib', 'image'),
+            to: path.resolve(__dirname, 'public', 'image')
+          },
         ]
       })
     )
