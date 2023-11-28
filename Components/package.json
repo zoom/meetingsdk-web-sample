@@ -1,11 +1,11 @@
 {
   "name": "websdk-component-demo",
-  "version": "2.18.0",
+  "version": "2.18.2",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.8.1",
     "@testing-library/jest-dom": "^5.17.0",
-    "@zoomus/websdk": "2.18.0",
+    "@zoomus/websdk": "2.18.2",
     "antd": "^4.24.14",
     "classnames": "^2.3.2",
     "crypto-js": "^4.2.0",
