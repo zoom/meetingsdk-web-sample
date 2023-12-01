@@ -1,6 +1,10 @@
-const { override, addWebpackPlugin, overrideDevServer } = require('customize-cra');
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
+const {
+  override,
+  addWebpackPlugin,
+  overrideDevServer,
+} = require("customize-cra");
+const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin");
 const addDevServerCOOPReponseHeader = (config) => {
   config.client = {
     overlay: {
@@ -11,8 +15,8 @@ const addDevServerCOOPReponseHeader = (config) => {
   };
   config.headers = {
     ...config.headers,
-    'Cross-Origin-Embedder-Policy': 'require-corp',
-    'Cross-Origin-Opener-Policy': 'same-origin'
+    "Cross-Origin-Embedder-Policy": "require-corp",
+    "Cross-Origin-Opener-Policy": "same-origin",
   };
   config.devMiddleware = {
     ...config.devMiddleware,
@@ -27,12 +31,20 @@ module.exports = {
       new CopyPlugin({
         patterns: [
           {
-            from: path.resolve(__dirname, 'node_modules', '@zoomus', 'websdk', 'dist', 'lib', 'av'),
-            to: path.resolve(__dirname, 'public', 'lib')
-          }
-        ]
+            from: path.resolve(
+              __dirname,
+              "node_modules",
+              "@zoom",
+              "meetingsdk",
+              "dist",
+              "lib",
+              "av"
+            ),
+            to: path.resolve(__dirname, "public", "lib"),
+          },
+        ],
       })
     )
   ),
-  devServer: overrideDevServer(addDevServerCOOPReponseHeader)
+  devServer: overrideDevServer(addDevServerCOOPReponseHeader),
 };
