@@ -1,4 +1,4 @@
-import { ZoomMtg } from "@zoomus/websdk";
+import { ZoomMtg } from "@zoom/meetingsdk";
 const testTool = window.testTool;
 // get meeting args from url
 const tmpArgs = testTool.parseQuery();
@@ -40,7 +40,7 @@ const meetingConfig = {
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
+// ZoomMtg.setZoomJSLib
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -51,10 +51,10 @@ function beginJoin(signature) {
     leaveUrl: meetingConfig.leaveUrl,
     disableCORP: !window.crossOriginIsolated, // default true
     // disablePreview: false, // default false
-    externalLinkPage: './externalLinkPage.html',
+    externalLinkPage: "./externalLinkPage.html",
     success: function () {
       console.log(meetingConfig);
-      console.log("signature", signature);      
+      console.log("signature", signature);
       ZoomMtg.join({
         meetingNumber: meetingConfig.meetingNumber,
         userName: meetingConfig.userName,
@@ -82,22 +82,21 @@ function beginJoin(signature) {
     },
   });
 
-  ZoomMtg.inMeetingServiceListener('onUserJoin', function (data) {
-    console.log('inMeetingServiceListener onUserJoin', data);
+  ZoomMtg.inMeetingServiceListener("onUserJoin", function (data) {
+    console.log("inMeetingServiceListener onUserJoin", data);
   });
 
-  ZoomMtg.inMeetingServiceListener('onUserLeave', function (data) {
-    console.log('inMeetingServiceListener onUserLeave', data);
+  ZoomMtg.inMeetingServiceListener("onUserLeave", function (data) {
+    console.log("inMeetingServiceListener onUserLeave", data);
   });
 
-  ZoomMtg.inMeetingServiceListener('onUserIsInWaitingRoom', function (data) {
-    console.log('inMeetingServiceListener onUserIsInWaitingRoom', data);
+  ZoomMtg.inMeetingServiceListener("onUserIsInWaitingRoom", function (data) {
+    console.log("inMeetingServiceListener onUserIsInWaitingRoom", data);
   });
 
-  ZoomMtg.inMeetingServiceListener('onMeetingStatus', function (data) {
-    console.log('inMeetingServiceListener onMeetingStatus', data);
+  ZoomMtg.inMeetingServiceListener("onMeetingStatus", function (data) {
+    console.log("inMeetingServiceListener onMeetingStatus", data);
   });
-  
 }
 
 beginJoin(meetingConfig.signature);

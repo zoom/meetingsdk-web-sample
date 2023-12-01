@@ -1,8 +1,8 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "websdk-local",
-  "version": "2.17.0",
-  "description": "Zoom sample app for web client WebSDK",
+  "version": "3.0.0",
+  "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,7 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoomus/websdk": "2.17.0",
+    "@zoom/meetingsdk": "https://d27xp8zu78jmsf.cloudfront.net/jssdk/3.0.0-2023-12-01-n8l7k6-install.tar.gz",
     "lodash": "^4.17.21",
     "react": "16.14.0",
     "react-dom": "16.14.0",

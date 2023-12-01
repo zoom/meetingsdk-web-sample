@@ -1,4 +1,4 @@
-import { ZoomMtg } from "@zoomus/websdk";
+import { ZoomMtg } from "@zoom/meetingsdk";
 
 console.log("checkSystemRequirements");
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
@@ -8,7 +8,10 @@ console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 // else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/2.17.0/lib', '/av'); // china cdn option
 // ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
 
-ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
+ZoomMtg.setZoomJSLib(
+  "http://localhost:9999/node_modules/@zoomus/websdk/dist/lib",
+  "/av"
+); // Local version default, Angular Project change to use cdn version
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
 
@@ -27,16 +30,13 @@ document.getElementById("display_name").value =
   testTool.detectOS() +
   "#" +
   testTool.getBrowserInfo();
-document.getElementById("meeting_number").value = testTool.getCookie(
-  "meeting_number"
-);
-document.getElementById("meeting_pwd").value = testTool.getCookie(
-  "meeting_pwd"
-);
+document.getElementById("meeting_number").value =
+  testTool.getCookie("meeting_number");
+document.getElementById("meeting_pwd").value =
+  testTool.getCookie("meeting_pwd");
 if (testTool.getCookie("meeting_lang"))
-  document.getElementById("meeting_lang").value = testTool.getCookie(
-    "meeting_lang"
-  );
+  document.getElementById("meeting_lang").value =
+    testTool.getCookie("meeting_lang");
 
 document.getElementById("meeting_lang").addEventListener("change", (e) => {
   testTool.setCookie(
@@ -107,8 +107,11 @@ document.getElementById("join_meeting").addEventListener("click", (e) => {
 
 function copyToClipboard(elementId) {
   var aux = document.createElement("input");
-  aux.setAttribute("value", document.getElementById(elementId).getAttribute('link'));
-  document.body.appendChild(aux);  
+  aux.setAttribute(
+    "value",
+    document.getElementById(elementId).getAttribute("link")
+  );
+  document.body.appendChild(aux);
   aux.select();
   document.execCommand("copy");
   document.body.removeChild(aux);
@@ -134,9 +137,8 @@ window.copyJoinLink = function (element) {
         testTool.getCurrentDomain() +
         "/meeting.html?" +
         testTool.serialize(meetingConfig);
-      document.getElementById('copy_link_value').setAttribute('link', joinUrl);
-      copyToClipboard('copy_link_value');
+      document.getElementById("copy_link_value").setAttribute("link", joinUrl);
+      copyToClipboard("copy_link_value");
     },
   });
 };
-
