@@ -3,15 +3,10 @@ import { ZoomMtg } from "@zoom/meetingsdk";
 console.log("checkSystemRequirements");
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
-// it's option if you want to change the WebSDK dependency link resources. setZoomJSLib must be run at first
-// if (!china) ZoomMtg.setZoomJSLib('https://source.zoom.us/2.17.0/lib', '/av'); // CDN version default
-// else ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/2.17.0/lib', '/av'); // china cdn option
-// ZoomMtg.setZoomJSLib('http://localhost:9999/node_modules/@zoomus/websdk/dist/lib', '/av'); // Local version default, Angular Project change to use cdn version
+// it's option if you want to change the MeetingSDK-Web dependency link resources. setZoomJSLib must be run at first
+// ZoomMtg.setZoomJSLib("https://source.zoom.us/{VERSION}/lib", "/av"); // default, don't need call it
+// ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/{VERSION}/lib", "/av"); // china cdn option
 
-ZoomMtg.setZoomJSLib(
-  "http://localhost:9999/node_modules/@zoomus/websdk/dist/lib",
-  "/av"
-); // Local version default, Angular Project change to use cdn version
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
 
