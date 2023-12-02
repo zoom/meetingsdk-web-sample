@@ -24,7 +24,7 @@ To get started, clone the repo:
 
 1. Open the directory in your code editor.
 
-1. Open the `sample-app-web/CDN/js/index.js` or `sample-app-web/Local/js/index.js` or `sample-app-web/Components/tools/nav.js` file respectively, and insert your Zoom Meeting SDK Key and Secret or Client ID and Client Secret for Meeting SDK app type's created after February 11, 2023, found on the App Credentials page in the Zoom App Marketplace:
+1. Open the `sample-app-web/CDN/js/index.js` or `sample-app-web/Local/js/index.js` or `sample-app-web/Components/public/tools/nav.js` file respectively, and insert your Zoom Meeting SDK Key and Secret or Client ID and Client Secret for Meeting SDK app type's created after February 11, 2023, found on the App Credentials page in the Zoom App Marketplace:
 
    | Key                   | Value Description |
    | -----------------------|-------------|
