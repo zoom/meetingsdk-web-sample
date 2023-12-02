@@ -3,20 +3,10 @@
   "version": "3.0.0",
   "private": true,
   "dependencies": {
-    "@ant-design/icons": "^4.6.2",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.8.3",
-    "@zoom/meetingsdk": "https://d27xp8zu78jmsf.cloudfront.net/jssdk/3.0.0-2023-12-01-na57gz-install.tar.gz",
-    "antd": "^4.14.1",
-    "classnames": "^2.2.6",
-    "crypto-js": "^4.0.0",
-    "immer": "^8.0.1",
-    "js-base64": "^3.6.0",
-    "jsrsasign": "^10.3.0",
-    "react-router-dom": "^5.2.0",
+    "@zoom/meetingsdk": "https://d27xp8zu78jmsf.cloudfront.net/jssdk/3.0.0-2023-12-02-ncdt1m-install.tar.gz",
+    "jsrsasign": "^10.9.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "1.1.1"
+    "web-vitals": "3.5.0"
   },
   "scripts": {
     "start": "react-app-rewired start",
