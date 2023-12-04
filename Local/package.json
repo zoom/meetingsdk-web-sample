@@ -20,7 +20,7 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "https://d27xp8zu78jmsf.cloudfront.net/jssdk/3.0.0-2023-12-04-r76yy2-install.tar.gz",
+    "@zoom/meetingsdk": "3.0.0-rc",
     "lodash": "^4.17.21",
     "react": "16.14.0",
     "react-dom": "16.14.0",
