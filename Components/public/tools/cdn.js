@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-window.addEventListener('DOMContentLoaded', function (event) {
-  console.log('DOM fully loaded and parsed');
+window.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM fully loaded and parsed");
   websdkready();
 });
 
@@ -51,47 +51,69 @@ function websdkready() {
   if (!meetingConfig.signature) {
     window.location.href = "./nav.html";
   }
-  // WebSDK Embedded init 
-  var rootElement = document.getElementById('ZoomEmbeddedApp');
+  // WebSDK Embedded init
+  var rootElement = document.getElementById("ZoomEmbeddedApp");
   var zmClient = ZoomMtgEmbedded.createClient();
+  var tmpPort = window.location.port === "" ? "" : ":" + window.location.port;
+  var avLibUrl =
+    window.location.protocol +
+    "//" +
+    window.location.hostname +
+    tmpPort +
+    "/lib";
+  zmClient
+    .init({
+      debug: true,
+      zoomAppRoot: rootElement,
+      webEndpoint: meetingConfig.webEndpoint,
+      language: meetingConfig.lang,
+      assetPath: avLibUrl,
+      customize: {
+        meetingInfo: [
+          "topic",
+          "host",
+          "mn",
+          "pwd",
+          "telPwd",
+          "invite",
+          "participant",
+          "dc",
+          "enctype",
+        ],
+        toolbar: {
+          buttons: [
+            {
+              text: "CustomizeButton",
+              className: "CustomizeButton",
+              onClick: () => {
+                console.log("click Customer Button");
+              },
+            },
+          ],
+        },
+      },
+    })
+    .then((e) => {
+      console.log("success", e);
+    })
+    .catch((e) => {
+      console.log("error", e);
+    });
 
-  zmClient.init({
-    debug: true,
-    zoomAppRoot: rootElement,
-    webEndpoint: meetingConfig.webEndpoint,
-    language: meetingConfig.lang,
-    customize: {
-      meetingInfo: ['topic', 'host', 'mn', 'pwd', 'telPwd', 'invite', 'participant', 'dc', 'enctype'],
-      toolbar: {
-        buttons: [
-          {
-            text: 'CustomizeButton',
-            className: 'CustomizeButton',
-            onClick: () => {
-              console.log('click Customer Button');
-            }
-          }
-        ]
-      }
-    }
-  }).then((e) => {
-    console.log('success', e);
-  }).catch((e) => {
-    console.log('error', e);
-  });
-
-  // WebSDK Embedded join 
-  zmClient.join({
-    sdkKey: meetingConfig.sdkKey,
-    signature: meetingConfig.signature,
-    meetingNumber: meetingConfig.meetingNumber,
-    userName: meetingConfig.userName,
-    password: meetingConfig.passWord,
-    userEmail: meetingConfig.userEmail,
-  }).then((e) => {
-    console.log('success', e);
-  }).catch((e) => {
-    console.log('error', e);
-  });
-};
-
+  // WebSDK Embedded join
+  zmClient
+    .join({
+      sdkKey: meetingConfig.sdkKey,
+      signature: meetingConfig.signature,
+      meetingNumber: meetingConfig.meetingNumber,
+      userName: meetingConfig.userName,
+      password: meetingConfig.passWord,
+      userEmail: meetingConfig.userEmail,
+    })
+    .then((e) => {
+      console.log("success", e);
+    })
+    .catch((e) => {
+      console.log("error", e);
+    });
+}

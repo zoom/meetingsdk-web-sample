@@ -22,24 +22,6 @@ window.decodeAccessToken = function(apiSecret, signature) {
   return nJwt.verify(signature, apiSecret, 'HS256');
 }
 
-
-window.generateSignature = function(props) {
-  const apiKey = props.apiKey;
-  const apiSecret = props.apiSecret;
-  const meetingNumber = props.meetingNumber;
-  const role = props.role;
-  // Prevent time sync issue between client signature generation and zoom 
-  const timestamp = new Date().getTime() - 30000
-  const msg = Buffer.from(apiKey + meetingNumber + timestamp + role).toString('base64')
-  const hash = crypto.createHmac('sha256', apiSecret).update(msg).digest('base64')
-  const signature = Buffer.from(`${apiKey}.${meetingNumber}.${timestamp}.${role}.${hash}`).toString('base64')
-  if ('success' in props && props.success){
-    props.success(signature);
-  }
-  
-  return signature
-}
-
 window.generateSDKSignature = function(data) {
   var signature = '';
   const {

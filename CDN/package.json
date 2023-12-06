@@ -1,7 +1,7 @@
 {
   "name": "websdk-cdn",
-  "version": "2.18.2",
-  "description": "Zoom sample app for web client WebSDK",
+  "version": "3.0.0",
+  "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "webpack": "5.89.0",
+    "webpack": "^5.89.0",
     "webpack-cli": "5.1.4",
     "webpack-dev-server": "4.15.1"
   }

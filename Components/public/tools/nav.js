@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-window.addEventListener('DOMContentLoaded', function(event) {
-  console.log('DOM fully loaded and parsed');
+window.addEventListener("DOMContentLoaded", function (event) {
+  console.log("DOM fully loaded and parsed");
   websdkready();
 });
 
@@ -23,19 +23,14 @@ function websdkready() {
   var CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET";
   // some help code, remember mn, pwd, lang to cookie, and autofill.
   document.getElementById("display_name").value =
-    testTool.detectOS() +
-    "#" +
-    testTool.getBrowserInfo();
-  document.getElementById("meeting_number").value = testTool.getCookie(
-    "meeting_number"
-  );
-  document.getElementById("meeting_pwd").value = testTool.getCookie(
-    "meeting_pwd"
-  );
+    testTool.detectOS() + "#" + testTool.getBrowserInfo();
+  document.getElementById("meeting_number").value =
+    testTool.getCookie("meeting_number");
+  document.getElementById("meeting_pwd").value =
+    testTool.getCookie("meeting_pwd");
   if (testTool.getCookie("meeting_lang"))
-    document.getElementById("meeting_lang").value = testTool.getCookie(
-      "meeting_lang"
-    );
+    document.getElementById("meeting_lang").value =
+      testTool.getCookie("meeting_lang");
 
   document
     .getElementById("meeting_lang")
@@ -90,7 +85,6 @@ function websdkready() {
         return false;
       }
 
-      
       testTool.setCookie("meeting_number", meetingConfig.mn);
       testTool.setCookie("meeting_pwd", meetingConfig.pwd);
 
@@ -104,10 +98,10 @@ function websdkready() {
           console.log(res);
           meetingConfig.signature = res;
           meetingConfig.sdkKey = CLIENT_ID;
-          if (document.getElementById('demoType').value === 'cdn') {
-          var joinUrl = "/cdn.html?" + testTool.serialize(meetingConfig);
-          console.log(joinUrl);
-          window.open(joinUrl, "_blank");
+          if (document.getElementById("demoType").value === "cdn") {
+            var joinUrl = "/cdn.html?" + testTool.serialize(meetingConfig);
+            console.log(joinUrl);
+            window.open(joinUrl, "_blank");
           } else {
             var joinUrl = "/index.html?" + testTool.serialize(meetingConfig);
             console.log(joinUrl);
@@ -119,13 +113,16 @@ function websdkready() {
 
   function copyToClipboard(elementId) {
     var aux = document.createElement("input");
-    aux.setAttribute("value", document.getElementById(elementId).getAttribute('link'));
-    document.body.appendChild(aux);  
+    aux.setAttribute(
+      "value",
+      document.getElementById(elementId).getAttribute("link")
+    );
+    document.body.appendChild(aux);
     aux.select();
     document.execCommand("copy");
     document.body.removeChild(aux);
   }
-    
+
   // click copy jon link button
   window.copyJoinLink = function (element) {
     var meetingConfig = testTool.getMeetingConfig();
@@ -142,25 +139,26 @@ function websdkready() {
         console.log(res);
         meetingConfig.signature = res;
         meetingConfig.sdkKey = CLIENT_ID;
-        if (document.getElementById('demoType').value === 'cdn') {
+        if (document.getElementById("demoType").value === "cdn") {
           var joinUrl =
-          testTool.getCurrentDomain() +
-          "/cdn.html?" +
-          testTool.serialize(meetingConfig);
-          document.getElementById('copy_link_value').setAttribute('link', joinUrl);
-          copyToClipboard('copy_link_value');
-        } else{
+            testTool.getCurrentDomain() +
+            "/cdn.html?" +
+            testTool.serialize(meetingConfig);
+          document
+            .getElementById("copy_link_value")
+            .setAttribute("link", joinUrl);
+          copyToClipboard("copy_link_value");
+        } else {
           var joinUrl =
-          testTool.getCurrentDomain() +
-          "/index.html?" +
-          testTool.serialize(meetingConfig);
-          document.getElementById('copy_link_value').setAttribute('link', joinUrl);
-          copyToClipboard('copy_link_value');
+            testTool.getCurrentDomain() +
+            "/index.html?" +
+            testTool.serialize(meetingConfig);
+          document
+            .getElementById("copy_link_value")
+            .setAttribute("link", joinUrl);
+          copyToClipboard("copy_link_value");
         }
-        
-        
       },
     });
   };
-
 }
