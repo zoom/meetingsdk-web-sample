@@ -7,3 +7,7 @@
 update-version.js
 export.sh
 /export
+/Components/package-lock.json
+/CDN/package-lock.json
+/Components/node_modules
+/Components/yarn.lock
