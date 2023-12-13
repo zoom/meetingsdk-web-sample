@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "dependencies": {
-    "@zoom/meetingsdk": "3.0.0",
+    "@zoom/meetingsdk": "3.0.1",
     "jsrsasign": "^10.9.0",
     "react-scripts": "5.0.1",
     "web-vitals": "3.5.0"
