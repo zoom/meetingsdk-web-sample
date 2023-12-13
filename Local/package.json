@@ -20,7 +20,7 @@
   "author": "Zoom Video Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "3.0.0-rc",
+    "@zoom/meetingsdk": "3.0.0",
     "lodash": "^4.17.21",
     "react": "16.14.0",
     "react-dom": "16.14.0",
