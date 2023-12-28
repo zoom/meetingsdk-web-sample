@@ -1,1 +1,1 @@
-The Changelog can be found [here](https://devsupport.zoom.us/hc/en-us/sections/9220917097869-web)
+The Changelog can be found [here](https://developers.zoom.us/changelog/meeting-sdk/web/)
