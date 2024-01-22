@@ -1,0 +1,53 @@
+{
+  "name": "@zoom/meetingsdk",
+  "version": "3.5.0",
+  "description": "Zoom MeetingSDK-Web Client",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoom/meetingsdk-web"
+  },
+  "keywords": [
+    "zoom",
+    "meetingsdk",
+    "websdk",
+    "web"
+  ],
+  "author": "Jack Yang",
+  "license": "MIT",
+  "homepage": "https://github.com/zoom/meetingsdk-web#readme",
+  "bugs": {
+    "url": "https://github.com/zoom/meetingsdk-web/issues"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "redux": "4.2.1",
+    "react-redux": "8.1.2",
+    "lodash": "^4.17.21",
+    "redux-thunk": "2.4.2"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "redux": "4.2.1",
+    "react-redux": "8.1.2",
+    "lodash": "^4.17.21",
+    "redux-thunk": "2.4.2"
+  },
+  "files": [
+    "dist/*",
+    "types/*",
+    "embedded.js",
+    "embedded.d.ts",
+    "index.d.ts",
+    "CHANGELOG.md",
+    "LICENSE.pdf",
+    "README.md",
+    "oss_attribution.txt"
+  ]
+}
