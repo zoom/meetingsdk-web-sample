@@ -1,9 +1,9 @@
 {
   "name": "websdk-component-demo",
-  "version": "3.1.4",
+  "version": "3.1.6",
   "private": true,
   "dependencies": {
-    "@zoom/meetingsdk": "3.1.4",
+    "@zoom/meetingsdk": "3.1.6",
     "jsrsasign": "^10.9.0",
     "react-scripts": "5.0.1",
     "web-vitals": "3.5.0"
