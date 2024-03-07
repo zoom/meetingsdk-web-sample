@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "@zoom/meetingsdk": "3.5.0",
-    "jsrsasign": "^10.9.0",
+    "jsrsasign": "11.1.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "3.5.0"
+    "web-vitals": "3.5.2"
   },
   "scripts": {
     "preinstall": "npx force-resolutions || echo 1",
