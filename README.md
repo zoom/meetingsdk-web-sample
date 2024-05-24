@@ -4,7 +4,7 @@ Use of this sample app is subject to our [Terms of Use](https://explore.zoom.us/
 
 The [Zoom Meeting SDK for web](https://developers.zoom.us/docs/meeting-sdk/web/) embeds the Zoom Meeting and Zoom Webinar experiences on a webpage through a highly optimized WebAssembly module.
 
-![Zoom Meeting SDK Client View](/images/meetingsdk-web-client-view.gif)
+![Zoom Meeting SDK Client View](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ClientView/meetingsdk-web-client-view.gif)
 
 ## Installation
 
@@ -52,16 +52,16 @@ To get started, clone the repo:
 `Local` sample, or http://localhost:3000 for the `Components` sample. Then, enter in a Meeting or Webinar number and passcode, choose host or attendee (participant), and, click "join".
 
    ### Client View
-   
-   ![Zoom Meeting SDK Client View](/images/meetingsdk-web-client-view.gif)
 
-   > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page. 
+   ![Zoom Meeting SDK Client View](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ClientView/meetingsdk-web-client-view.gif)
+
+   > The Client View provides the option to display the Meeting SDK as a full page. This allows for a familiar Zoom Meeting experience because the Client View is the same as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client), except it lives inside your own web page.
    #### Nodejs 16
    If you are using Nodejs 16, please use `npm install --force` to proceed with the installation.
 
    ### Component View
 
-   ![Zoom Meeting SDK Component View](/images/meetingsdk-web-component-view.gif)
+   ![Zoom Meeting SDK Component View](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ComponentView/meetingsdk-web-component-view.gif)
 
    > The Component View provides the option to display the Meeting SDK in components on your page. This allows for a more flexible design.
 
