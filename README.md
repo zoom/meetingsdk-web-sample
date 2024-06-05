@@ -75,7 +75,7 @@ For the full list of features and event listeners, as well as additional guides,
 "@zoom/meetingsdk": "3.6.1-zfg"
 ```
 
-### option2 webEndpoint use ZFG [Client View](https://marketplacefront.zoom.us/sdk/meeting/web/functions/ZoomMtg.init.html) option [Component View](https://marketplacefront.zoom.us/sdk/meeting/web/components/interfaces/InitOptions.html#webEndpoint) 
+### option2 change webEndpoint use ZFG [Client View](https://marketplacefront.zoom.us/sdk/meeting/web/functions/ZoomMtg.init.html) [Component View](https://marketplacefront.zoom.us/sdk/meeting/web/components/interfaces/InitOptions.html#webEndpoint) 
 ```
 #Client view
 ZoomMtg.setZoomJSLib("https://source.zoomgov.com/{VERSION}/lib", "/av");
