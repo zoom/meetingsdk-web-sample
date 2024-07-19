@@ -72,7 +72,7 @@ For the full list of features and event listeners, as well as additional guides,
 ## Use ZFG(Zoom For Government). You need apply new sdk key for [ZFG](https://marketplace.zoomgov.com/).
 ### option1 change package.json and use zfg specific version
 ```
-"@zoom/meetingsdk": "3.6.1-zfg"
+"@zoom/meetingsdk": "3.7.0-zfg"
 ```
 
 ### option2 change webEndpoint use ZFG [Client View](https://marketplacefront.zoom.us/sdk/meeting/web/functions/ZoomMtg.init.html) [Component View](https://marketplacefront.zoom.us/sdk/meeting/web/components/interfaces/InitOptions.html#webEndpoint) 
