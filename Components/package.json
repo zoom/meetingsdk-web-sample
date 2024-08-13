@@ -82,7 +82,6 @@
     "lint:style": "stylelint **/*.scss --max-warnings 4000",
     "prepare": "husky install",
     "preview": "vite preview",
-    "start": "cross-env NODE_ENV=development && cross-env production=development && node corp.js",
     "stylelint": "npx stylelint \"**/*.scss\""
   }
 }
