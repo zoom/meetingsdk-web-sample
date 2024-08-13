@@ -64,3 +64,7 @@ client
     });
 
 ```
+
+## update
+npx npm-check -u
+
