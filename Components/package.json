@@ -76,7 +76,7 @@
   "scripts": {
     "build": "tsc && vite build",
     "commit": "cz",
-    "dev": "node script.js && vite",
+    "start": "node script.js && vite",
     "lint": "eslint --ext ts,tsx ./src  --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint --ext ts,tsx ./src --fix",
     "lint:style": "stylelint **/*.scss --max-warnings 4000",
