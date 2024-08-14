@@ -18,7 +18,7 @@ Access through `public/cdn.html`
 Corresponding JavaScript file: `tools/cdn.js`  
 
 ## Local Demo(typescript)
-Access through `public/index.html`  
+Access through `index.html`  
 Corresponding TypeScript file: `src/index.tsx`  
 
 ## Basics
