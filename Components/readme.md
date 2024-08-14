@@ -4,7 +4,7 @@
    
 ```
 cd sample-app-web/Components
-npm install && npm run
+npm install && npm run start
 ```
 Add your API_KEY and API_SECRET in `tools/nav.js`, 
 * Open [http://localhost:3000](http://localhost:3000)  
@@ -64,3 +64,7 @@ client
     });
 
 ```
+
+## update
+npx npm-check -u
+

@@ -1,6 +1,6 @@
 import ZoomMtgEmbedded from "@zoom/meetingsdk/embedded";
 const rootElement: HTMLElement = document.getElementById(
-  "ZoomEmbeddedApp"
+  "ZoomEmbeddedApp",
 ) as HTMLElement;
 
 declare global {
