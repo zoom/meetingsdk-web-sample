@@ -9,26 +9,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
 
-<body>
+<body class="bg-dark">
+    
     <style>
-     
         .navbar {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             padding: 1rem 0;
+            min-height: auto;
+            transition: all 0.3s ease;
         }
 
         .form-container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 12px;
-            align-items: center;
-            justify-content: flex-end;
             width: 100%;
+            padding: 16px 0;
+            position: relative;
         }
 
-        .form-control, .sdk-select {
+        .form-control,
+        .sdk-select {
             height: 44px;
             border-radius: 8px;
             border: 1px solid rgba(0, 0, 0, 0.1);
@@ -40,11 +43,13 @@
         }
 
         @media (max-width: 768px) {
-            .form-control, .sdk-select {
+
+            .form-control,
+            .sdk-select {
                 width: 100%;
                 min-width: unset;
             }
-            
+
             .form-group {
                 width: 100%;
                 margin-right: 0;
@@ -83,27 +88,8 @@
             z-index: 1000;
         }
 
-        #show-test-tool {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 99999;
-        }
-
         #display_name {
             min-width: 200px;
-        }
-
-        #websdk-iframe {
-            width: 700px;
-            height: 500px;
-            border: 2px solid rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand {
@@ -128,17 +114,21 @@
 
         .sdk-select {
             min-width: 120px;
+            position: relative;
         }
 
         .button-group {
             display: flex;
             gap: 8px;
             align-items: center;
+            grid-column: 1 / -1;
+            z-index: 10;
         }
 
         .btn {
             white-space: nowrap;
         }
+
         .copy-status {
             position: relative;
         }
@@ -163,73 +153,187 @@
         .copy-status.show-status::after {
             opacity: 1;
         }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.5rem 0;
+            }
+
+            .navbar-brand {
+                margin-bottom: 8px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .form-container {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .button-group {
+                margin-top: 8px;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .sdk-select {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .button-group {
+                justify-content: flex-end;
+                flex-wrap: nowrap;
+            }
+
+            .form-container {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                align-items: start;
+            }
+        }
+
+        #meeting_lang {
+            z-index: 1;
+        }
+
+        body.bg-dark {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        body.bg-dark .navbar {
+            background-color: rgba(33, 33, 33, 0.95);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.bg-dark .navbar-brand {
+            color: #fff;
+            background: rgba(0, 122, 255, 0.2);
+        }
+
+        body.bg-dark .form-control,
+        body.bg-dark .sdk-select {
+            background-color: rgba(45, 45, 45, 0.8);
+            border-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        body.bg-dark .form-control:focus {
+            box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2);
+            border-color: #007AFF;
+        }
+
+        body.bg-dark .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        body.bg-dark select option {
+            background-color: #2d2d2d;
+            color: #fff;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .theme-toggle::after {
+            content: "🌓";
+        }
+
+        body.force-light .theme-toggle::after {
+            content: "🌞";
+        }
+
+        body.force-dark .theme-toggle::after {
+            content: "🌙";
+        }
     </style>
 
     <nav id="nav-tool" class="navbar navbar-light fixed-top">
+        <button class="theme-toggle" onclick="toggleTheme()"></button>
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center w-100">
-                <a class="navbar-brand" href="#">Zoom MeetingSDK-Web</a>
-                <div id="navbar" class="flex-grow-1">
-                    <form class="form-container" id="meeting_form">
-                        <div class="form-group">
-                            <input type="text" name="display_name" id="display_name" value="3.11.0#CDN" 
-                                maxLength="100" placeholder="Name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="meeting_number" id="meeting_number" value="" 
-                                maxLength="200" placeholder="Meeting Number" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="meeting_pwd" id="meeting_pwd" value="" 
-                                maxLength="32" placeholder="Meeting Password" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" name="meeting_email" id="meeting_email" value="" 
-                                maxLength="32" placeholder="Email option" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <select id="meeting_role" class="sdk-select">
-                                <option value=0>Attendee</option>
-                                <option value=1>Host</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="meeting_china" class="sdk-select">
-                                <option value=0>Global</option>
-                                <option value=1>China</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="meeting_lang" class="sdk-select">
-                                <option value="en-US">English</option>
-                                <option value="de-DE">German Deutsch</option>
-                                <option value="es-ES">Spanish Español</option>
-                                <option value="fr-FR">French Français</option>
-                                <option value="jp-JP">Japanese 日本語</option>
-                                <option value="pt-PT">Portuguese Portuguese</option>
-                                <option value="ru-RU">Russian Русский</option>
-                                <option value="zh-CN">Chinese 简体中文</option>
-                                <option value="zh-TW">Chinese 繁体中文</option>
-                                <option value="ko-KO">Korean 한국어</option>
-                                <option value="vi-VN">Vietnamese Tiếng Việt</option>
-                                <option value="it-IT">Italian italiano</option>
-                                <option value="tr-TR">Turkey-Türkçe</option>
-	                            <option value="pl-PL">Poland-Polski</option>
-								<option value="id-ID">Indonesian Bahasa Indonesia</option>
-								<option value="nl-NL">Dutch Nederlands</option>
-                                <option value="sv-SE">Swedish Svenska</option>
-                            </select>
-                        </div>
+            <a class="navbar-brand" href="https://marketplacefront.zoom.us/sdk/meeting/web/index.html" target="_blank">Zoom MeetingSDK-Web</a>
+            <div id="navbar" class="flex-grow-1">
+                <form class="form-container" id="meeting_form">
+                    <div class="form-group">
+                        <input type="text" name="display_name" id="display_name" value="3.11.0#CDN" maxLength="100"
+                            placeholder="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="meeting_number" id="meeting_number" value maxLength="200"
+                            placeholder="Meeting Number" class="form-control" required>
+                    </div>
 
-                        <input type="hidden" value="" id="copy_link_value" />
-                        <div class="button-group">
-                            <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-                            <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
-                            <button type="button" class="btn btn-primary copy-status" id="copy_join_link" 
-                                onclick="handleCopyClick('#copy_join_link')">Copy Link</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="form-group">
+                        <input type="text" name="meeting_pwd" id="meeting_pwd" value maxLength="32"
+                            placeholder="Meeting Password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="meeting_email" id="meeting_email" value maxLength="32"
+                            placeholder="Email option" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <select id="meeting_role" class="sdk-select">
+                            <option value=0>Attendee</option>
+                            <option value=1>Host</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="meeting_china" class="sdk-select">
+                            <option value=0>Global</option>
+                            <option value=1>China</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="meeting_lang" class="sdk-select">
+                            <option value="en-US">English</option>
+                            <option value="de-DE">German Deutsch</option>
+                            <option value="es-ES">Spanish Español</option>
+                            <option value="fr-FR">French Français</option>
+                            <option value="jp-JP">Japanese 日本語</option>
+                            <option value="pt-PT">Portuguese Portuguese</option>
+                            <option value="ru-RU">Russian Русский</option>
+                            <option value="zh-CN">Chinese 简体中文</option>
+                            <option value="zh-TW">Chinese 繁体中文</option>
+                            <option value="ko-KO">Korean 한국어</option>
+                            <option value="vi-VN">Vietnamese Tiếng Việt</option>
+                            <option value="it-IT">Italian italiano</option>
+                            <option value="tr-TR">Turkey-Türkçe</option>
+                            <option value="pl-PL">Poland-Polski</option>
+                            <option value="id-ID">Indonesian Bahasa Indonesia</option>
+                            <option value="nl-NL">Dutch Nederlands</option>
+                            <option value="sv-SE">Swedish Svenska</option>
+                        </select>
+                    </div>
+                    <div class="button-group">
+                        <input type="hidden" value id="copy_link_value" />
+                        <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                        <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
+                        <button type="button" onclick="handleCopyClick('#copy_join_link')"
+                            class="btn btn-primary copy-status" id="copy_join_link">
+                            Copy Direct join link
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>
@@ -255,6 +359,74 @@
                 button.classList.remove('show-status');
             }, 2000);
         }
+
+        function toggleTheme() {
+            // Remove auto theme
+            if (document.body.classList.contains('auto-theme')) {
+                document.body.classList.remove('auto-theme');
+                document.body.classList.add('force-light');
+            }
+            // Toggle between light and dark
+            else if (document.body.classList.contains('force-light')) {
+                document.body.classList.remove('force-light');
+                document.body.classList.add('force-dark');
+            }
+            // Go back to auto
+            else {
+                document.body.classList.remove('force-dark');
+                document.body.classList.add('auto-theme');
+            }
+
+            // Save the current theme preference
+            localStorage.setItem('theme-preference',
+                document.body.classList.contains('force-dark') ? 'dark' :
+                    document.body.classList.contains('force-light') ? 'light' : 'auto'
+            );
+
+            updateTheme();
+        }
+
+        function updateTheme() {
+            // Remove bg-dark class first
+            document.body.classList.remove('bg-dark');
+
+            // Check if system is in dark mode
+            const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            // Apply dark mode if:
+            // 1. Force dark is set, or
+            // 2. Auto theme is set and system is in dark mode
+            if (document.body.classList.contains('force-dark') ||
+                (document.body.classList.contains('auto-theme') && systemDarkMode)) {
+                document.body.classList.add('bg-dark');
+            }
+        }
+
+        // Initialize theme based on saved preference or default to auto
+        function initializeTheme() {
+            const savedPreference = localStorage.getItem('theme-preference') || 'auto';
+
+            if (savedPreference === 'dark') {
+                document.body.classList.add('force-dark');
+            } else if (savedPreference === 'light') {
+                document.body.classList.add('force-light');
+            } else {
+                document.body.classList.add('auto-theme');
+            }
+
+            updateTheme();
+        }
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', () => {
+                if (document.body.classList.contains('auto-theme')) {
+                    updateTheme();
+                }
+            });
+
+        // Initialize theme on page load
+        initializeTheme();
     </script>
 
 </body>
