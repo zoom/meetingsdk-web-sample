@@ -20,7 +20,7 @@
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "/Users/jackyang/SourceCode/Github/meetingsdk-web/zoom-meetingsdk-3.11.0.tgz",
+    "@zoom/meetingsdk": "3.11.0",
     "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
