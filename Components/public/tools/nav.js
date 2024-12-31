@@ -137,7 +137,6 @@ function websdkready() {
       role: meetingConfig.role,
       success: function (res) {
         console.log(res);
-        debugger;
         meetingConfig.signature = res;
         meetingConfig.sdkKey = CLIENT_ID;
         if (document.getElementById("demoType").value === "cdn") {
