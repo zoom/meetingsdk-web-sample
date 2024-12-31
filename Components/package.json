@@ -8,7 +8,7 @@
     }
   },
   "dependencies": {
-    "@zoom/meetingsdk": "3.11.0",
+    "@zoom/meetingsdk": "/Users/jackyang/SourceCode/Github/meetingsdk-web/zoom-meetingsdk-3.11.0.tgz",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "redux": "4.2.1",

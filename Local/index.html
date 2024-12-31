@@ -3,7 +3,7 @@
 <head>
     <title>Zoom MeetingSDK Local</title>
     <meta charset="utf-8" />
-    <link type="text/css" rel="stylesheet" href="node_modules/@zoom/meetingsdk/dist/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/3.11.0/css/bootstrap.css" />
 
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -11,129 +11,230 @@
 
 <body>
     <style>
-        .sdk-select {
-            height: 34px;
-            border-radius: 4px;
+     
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
         }
 
-		.websdktest button {
-            float: right;
-            margin-left: 5px;
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
         }
+
+        .form-control, .sdk-select {
+            height: 44px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 0 16px;
+            font-size: 15px;
+            min-width: 150px;
+        }
+
+        @media (max-width: 768px) {
+            .form-control, .sdk-select {
+                width: 100%;
+                min-width: unset;
+            }
+            
+            .form-group {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .button-group {
+                width: 100%;
+                display: flex;
+                gap: 8px;
+                justify-content: flex-end;
+            }
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.1);
+            border-color: #007AFF;
+        }
+
+        .btn-primary {
+            background-color: #007AFF;
+            border: none;
+            border-radius: 8px;
+            height: 44px;
+            padding: 0 20px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0063CC;
+            transform: translateY(-1px);
+        }
+
         #nav-tool {
-            margin-bottom: 0px;
+            position: relative;
+            z-index: 1000;
         }
 
         #show-test-tool {
-            position: absolute;
-            top: 100px;
-            left: 0;
-            display: block;
+            position: fixed;
+            top: 20px;
+            left: 20px;
             z-index: 99999;
         }
-        #display_name {
-            width: 250px;
-        }
 
+        #display_name {
+            min-width: 200px;
+        }
 
         #websdk-iframe {
             width: 700px;
             height: 500px;
-            border: 1px;
-            border-color: red;
-            border-style: dashed;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            left: 50%;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            font-size: 20px;
+            color: #000;
+            padding: 8px 16px;
+            background: rgba(0, 122, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .navbar-brand:hover {
+            background: rgba(0, 122, 255, 0.2);
+            color: #007AFF;
+        }
+
+        .form-group {
             margin: 0;
+            flex-grow: 0;
+        }
+
+        .sdk-select {
+            min-width: 120px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .btn {
+            white-space: nowrap;
+        }
+        .copy-status {
+            position: relative;
+        }
+
+        .copy-status::after {
+            content: 'Copied!';
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.2s;
+            pointer-events: none;
+            margin-bottom: 8px;
+        }
+
+        .copy-status.show-status::after {
+            opacity: 1;
         }
     </style>
 
-    <nav id="nav-tool" class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="nav-tool" class="navbar navbar-light fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">Zoom MeetingSDK Local</a>
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <a class="navbar-brand" href="#">Zoom MeetingSDK-Web</a>
+                <div id="navbar" class="flex-grow-1">
+                    <form class="form-container" id="meeting_form">
+                        <div class="form-group">
+                            <input type="text" name="display_name" id="display_name" value="3.11.0#CDN" 
+                                maxLength="100" placeholder="Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="meeting_number" id="meeting_number" value="" 
+                                maxLength="200" placeholder="Meeting Number" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="meeting_pwd" id="meeting_pwd" value="" 
+                                maxLength="32" placeholder="Meeting Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="meeting_email" id="meeting_email" value="" 
+                                maxLength="32" placeholder="Email option" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <select id="meeting_role" class="sdk-select">
+                                <option value=0>Attendee</option>
+                                <option value=1>Host</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="meeting_china" class="sdk-select">
+                                <option value=0>Global</option>
+                                <option value=1>China</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select id="meeting_lang" class="sdk-select">
+                                <option value="en-US">English</option>
+                                <option value="de-DE">German Deutsch</option>
+                                <option value="es-ES">Spanish Español</option>
+                                <option value="fr-FR">French Français</option>
+                                <option value="jp-JP">Japanese 日本語</option>
+                                <option value="pt-PT">Portuguese Portuguese</option>
+                                <option value="ru-RU">Russian Русский</option>
+                                <option value="zh-CN">Chinese 简体中文</option>
+                                <option value="zh-TW">Chinese 繁体中文</option>
+                                <option value="ko-KO">Korean 한국어</option>
+                                <option value="vi-VN">Vietnamese Tiếng Việt</option>
+                                <option value="it-IT">Italian italiano</option>
+                                <option value="tr-TR">Turkey-Türkçe</option>
+	                            <option value="pl-PL">Poland-Polski</option>
+								<option value="id-ID">Indonesian Bahasa Indonesia</option>
+								<option value="nl-NL">Dutch Nederlands</option>
+                                <option value="sv-SE">Swedish Svenska</option>
+                            </select>
+                        </div>
+
+                        <input type="hidden" value="" id="copy_link_value" />
+                        <div class="button-group">
+                            <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
+                            <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
+                            <button type="button" class="btn btn-primary copy-status" id="copy_join_link" 
+                                onclick="handleCopyClick('#copy_join_link')">Copy Link</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div id="navbar" class="websdktest">
-                <form class="navbar-form navbar-right" id="meeting_form">
-                    <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" value="3.11.0#Local" maxLength="100"
-                            placeholder="Name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="meeting_number" id="meeting_number" value="" maxLength="200"
-                            style="width:150px" placeholder="Meeting Number" class="form-control" required> </div>
-                    <div class="form-group">
-                        <input type="text" name="meeting_pwd" id="meeting_pwd" value="" style="width:150px"
-                            maxLength="32" placeholder="Meeting Password" class="form-control"> </div>
-                    <div class="form-group">
-                        <input type="text" name="meeting_email" id="meeting_email" value="" style="width:150px"
-                            maxLength="32" placeholder="Email option" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <select id="meeting_role" class="sdk-select">
-                            <option value=0>Attendee</option>
-                            <option value=1>Host</option>
-                        </select>
-                    </div>
-										<div class="form-group">
-                        <select id="meeting_china" class="sdk-select">
-                            <option value=0>Global</option>
-                            <option value=1>China</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select id="meeting_lang" class="sdk-select">
-                            <option value="en-US">English</option>
-                            <option value="de-DE">German Deutsch</option>
-                            <option value="es-ES">Spanish Español</option>
-                            <option value="fr-FR">French Français</option>
-                            <option value="jp-JP">Japanese 日本語</option>
-                            <option value="pt-PT">Portuguese Portuguese</option>
-                            <option value="ru-RU">Russian Русский</option>
-                            <option value="zh-CN">Chinese 简体中文</option>
-                            <option value="zh-TW">Chinese 繁体中文</option>
-                            <option value="ko-KO">Korean 한국어</option>
-                            <option value="vi-VN">Vietnamese Tiếng Việt</option>
-                            <option value="it-IT">Italian italiano</option>
-                            <option value="tr-TR">Turkey-Türkçe</option>
-	                        <option value="pl-PL">Poland-Polski</option>
-							<option value="id-ID">Indonesian Bahasa Indonesia</option>
-							<option value="nl-NL">Dutch Nederlands</option>
-                            <option value="sv-SE">Swedish Svenska</option>
-                        </select>
-                    </div>
-
-                    <input type="hidden" value="" id="copy_link_value"/>
-                    <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-                    <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
-                    <button type="button" link="" onclick="window.copyJoinLink('#copy_join_link')" class="btn btn-primary" id="copy_join_link">Copy Direct join link</button>
-
-
-                </form>
-            </div>
-            <!--/.navbar-collapse -->
         </div>
     </nav>
 
-    <div id="show-test-tool">
-        <button type="submit" class="btn btn-primary" id="show-test-tool-btn" title="show or hide top test tool">Show</button>
-    </div>
-    <script>
-        document.getElementById('show-test-tool-btn').addEventListener("click", function(e){
-            var textContent = e.target.textContent;
-            if (textContent === 'Show') {
-                document.getElementById('nav-tool').style.display = 'block';
-                document.getElementById('show-test-tool-btn').textContent = 'Hide';
-            }
-            else {
-                document.getElementById('nav-tool').style.display = 'none';
-                document.getElementById('show-test-tool-btn').textContent = 'Show';
-            }
-        })
-    </script>
+   
     <script src="node_modules/react/umd/react.production.min.js"></script>
     <script src="node_modules/react-dom/umd/react-dom.production.min.js"></script>
     <script src="node_modules/redux/dist/redux.min.js"></script>
@@ -142,6 +243,19 @@
 
     <script src="./js/tool.js"></script>
     <script src="./static/index.min.js"></script>
+
+    <script>
+        function handleCopyClick(selector) {
+            window.copyJoinLink(selector);
+            const button = document.querySelector(selector);
+            button.classList.add('show-status');
+            
+            // Remove the status after 2 seconds
+            setTimeout(() => {
+                button.classList.remove('show-status');
+            }, 2000);
+        }
+    </script>
 
 </body>
 
