@@ -1,6 +1,6 @@
 {
   "name": "websdk-cdn",
-  "version": "3.10.0",
+  "version": "3.11.0",
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp",
     "https": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp --https"
   },
-  "author": "Zoom Video Communications, Inc.",
+  "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
     "webpack": "^5.90.3",

@@ -37,11 +37,11 @@ function websdkready() {
     .addEventListener("change", function (e) {
       testTool.setCookie(
         "meeting_lang",
-        document.getElementById("meeting_lang").value
+        document.getElementById("meeting_lang").value,
       );
       testTool.setCookie(
         "_zm_lang",
-        document.getElementById("meeting_lang").value
+        document.getElementById("meeting_lang").value,
       );
     });
   // copy zoom invite link to mn, autofill mn and pwd.
@@ -60,7 +60,7 @@ function websdkready() {
       document.getElementById("meeting_number").value = tmpMn;
       testTool.setCookie(
         "meeting_number",
-        document.getElementById("meeting_number").value
+        document.getElementById("meeting_number").value,
       );
     });
 
@@ -115,7 +115,7 @@ function websdkready() {
     var aux = document.createElement("input");
     aux.setAttribute(
       "value",
-      document.getElementById(elementId).getAttribute("link")
+      document.getElementById(elementId).getAttribute("link"),
     );
     document.body.appendChild(aux);
     aux.select();
