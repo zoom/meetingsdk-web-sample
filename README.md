@@ -26,8 +26,8 @@ To get started, clone the repo:
    `$ git clone https://github.com/zoom/meetingsdk-auth-endpoint-sample --depth 1 && cd meetingsdk-auth-endpoint-sample && npm install && npm run start && cp .env.example .env`
    | Key                   | Value Description |
    | -----------------------|-------------|
-   | `CLIENT_ID`     | Your Client ID or SDK Key. Required. |
-   | `CLIENT_SECRET`  | Your Client Secret or SDK Secret. Required. |
+   | `CLIENT_ID/ZOOM_MEETING_SDK_KEY`     | Your Client ID or SDK Key. Required. |
+   | `CLIENT_SECRET/ZOOM_MEETING_SDK_SECRET`  | Your Client Secret or SDK Secret. Required. |
 
    > [backend Meeting SDK JWT generator](https://developers.zoom.us/docs/meeting-sdk/auth/#generate-a-meeting-sdk-jwt)
 1. Run the app:
