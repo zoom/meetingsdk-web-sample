@@ -22,26 +22,14 @@ To get started, clone the repo:
 
    `$ npm install`
 
-1. Open the directory in your code editor.
-
-1. Open the `sample-app-web/CDN/js/index.js` or `sample-app-web/Local/js/index.js` or `sample-app-web/Components/public/tools/nav.js` file respectively, and insert your Zoom Meeting SDK Key and Secret or Client ID and Client Secret for Meeting SDK app type's created after February 11, 2023, found on the App Credentials page in the Zoom App Marketplace:
-
+1. Get signature from backend https://github.com/zoom/meetingsdk-auth-endpoint-sample and modify .env with you key
+   `$ git clone https://github.com/zoom/meetingsdk-auth-endpoint-sample --depth 1 && cd meetingsdk-auth-endpoint-sample && npm install && npm run start && cp .env.example .env`
    | Key                   | Value Description |
    | -----------------------|-------------|
    | `CLIENT_ID`     | Your Client ID or SDK Key. Required. |
    | `CLIENT_SECRET`  | Your Client Secret or SDK Secret. Required. |
 
-   Example:
-
-   ```js
-   var CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY"
-   var CLIENT_SECRET = "YOUR_CLIENT_SECRET_OR_SDK_SECRET"
-   ```
-
-   > Reminder to not publish this sample app as is. Replace the Meeting SDK JWT generator with a [backend Meeting SDK JWT generator](https://developers.zoom.us/docs/meeting-sdk/auth/#generate-a-meeting-sdk-jwt) to keep your SDK Secret safe.
-
-1. Save `index.js` or `nav.js` respectively.
-
+   > [backend Meeting SDK JWT generator](https://developers.zoom.us/docs/meeting-sdk/auth/#generate-a-meeting-sdk-jwt)
 1. Run the app:
 
    `$ npm start`
@@ -72,7 +60,7 @@ For the full list of features and event listeners, as well as additional guides,
 ## Use ZFG(Zoom For Government). You need apply new sdk key for [ZFG](https://marketplace.zoomgov.com/).
 ### option1 change package.json and use zfg specific version
 ```
-"@zoom/meetingsdk": "3.7.0-zfg"
+"@zoom/meetingsdk": "3.11.2-zfg"
 ```
 
 ### option2 change webEndpoint use ZFG [Client View](https://marketplacefront.zoom.us/sdk/meeting/web/functions/ZoomMtg.init.html) [Component View](https://marketplacefront.zoom.us/sdk/meeting/web/components/interfaces/InitOptions.html#webEndpoint) 

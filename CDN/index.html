@@ -269,7 +269,8 @@
     <nav id="nav-tool" class="navbar navbar-light fixed-top">
         <button class="theme-toggle" onclick="toggleTheme()"></button>
         <div class="container">
-            <a class="navbar-brand" href="https://marketplacefront.zoom.us/sdk/meeting/web/index.html" target="_blank">Zoom MeetingSDK-Web</a>
+            <a class="navbar-brand" href="https://marketplacefront.zoom.us/sdk/meeting/web/index.html"
+                target="_blank">Zoom MeetingSDK-Web</a>
             <div id="navbar" class="flex-grow-1">
                 <form class="form-container" id="meeting_form">
                     <div class="form-group">
@@ -325,8 +326,8 @@
                     </div>
                     <div class="button-group">
                         <input type="hidden" value id="copy_link_value" />
-                        <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-                        <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
+                        <button type="button" class="btn btn-primary" id="join_meeting">Join</button>
+                        <button type="button" class="btn btn-primary" id="clear_all">Clear</button>
                         <button type="button" onclick="handleCopyClick('#copy_join_link')"
                             class="btn btn-primary copy-status" id="copy_join_link">
                             Copy Direct join link
@@ -336,7 +337,6 @@
             </div>
         </div>
     </nav>
-
 
     <script src="https://source.zoom.us/3.11.2/lib/vendor/react.min.js"></script>
     <script src="https://source.zoom.us/3.11.2/lib/vendor/react-dom.min.js"></script>
