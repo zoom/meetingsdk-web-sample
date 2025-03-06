@@ -23,7 +23,9 @@ To get started, clone the repo:
    `$ npm install`
 
 1. Get signature from backend https://github.com/zoom/meetingsdk-auth-endpoint-sample and modify .env with you key
-   `$ git clone https://github.com/zoom/meetingsdk-auth-endpoint-sample --depth 1 && cd meetingsdk-auth-endpoint-sample && npm install && npm run start && cp .env.example .env`
+   ```bash 
+   git clone https://github.com/zoom/meetingsdk-auth-endpoint-sample --depth 1 && cd meetingsdk-auth-endpoint-sample && npm install && npm run start && cp .env.example .env
+   ```
    | Key                   | Value Description |
    | -----------------------|-------------|
    | `CLIENT_ID/ZOOM_MEETING_SDK_KEY`     | Your Client ID or SDK Key. Required. |
