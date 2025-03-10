@@ -10,9 +10,6 @@ function websdkready() {
     // eslint-disable-next-line no-undef
     var vConsole = new VConsole();
   }
-  console.log("checkSystemRequirements");
-  // console.log(JSON.stringify(ZoomMtgEmbedded.checkSystemRequirements()));
-
   const authEndpoint = "http://127.0.0.1:4000";
   let CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 
