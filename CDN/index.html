@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/3.11.2/css/bootstrap.css" />
+    <link type="text/css" rel="stylesheet" href="https://source.zoom.us/3.12.0/css/bootstrap.css" />
 </head>
 
 <body class="bg-dark">
@@ -269,11 +269,12 @@
     <nav id="nav-tool" class="navbar navbar-light fixed-top">
         <button class="theme-toggle" onclick="toggleTheme()"></button>
         <div class="container">
-            <a class="navbar-brand" href="https://marketplacefront.zoom.us/sdk/meeting/web/index.html" target="_blank">Zoom MeetingSDK-Web</a>
+            <a class="navbar-brand" href="https://marketplacefront.zoom.us/sdk/meeting/web/index.html"
+                target="_blank">Zoom MeetingSDK-Web</a>
             <div id="navbar" class="flex-grow-1">
                 <form class="form-container" id="meeting_form">
                     <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" value="3.11.2#CDN" maxLength="100"
+                        <input type="text" name="display_name" id="display_name" value="3.12.0#CDN" maxLength="100"
                             placeholder="Name" class="form-control" required>
                     </div>
                     <div class="form-group">
@@ -325,8 +326,8 @@
                     </div>
                     <div class="button-group">
                         <input type="hidden" value id="copy_link_value" />
-                        <button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-                        <button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
+                        <button type="button" class="btn btn-primary" id="join_meeting">Join</button>
+                        <button type="button" class="btn btn-primary" id="clear_all">Clear</button>
                         <button type="button" onclick="handleCopyClick('#copy_join_link')"
                             class="btn btn-primary copy-status" id="copy_join_link">
                             Copy Direct join link
@@ -337,13 +338,12 @@
         </div>
     </nav>
 
-
-    <script src="https://source.zoom.us/3.11.2/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/3.11.2/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/3.11.2/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/3.11.2/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/3.11.2/lib/vendor/lodash.min.js"></script>
-    <script src="https://source.zoom.us/3.11.2/zoom-meeting-3.11.2.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/lib/vendor/react.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/lib/vendor/react-dom.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/lib/vendor/redux.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/lib/vendor/redux-thunk.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/lib/vendor/lodash.min.js"></script>
+    <script src="https://source.zoom.us/3.12.0/zoom-meeting-3.12.0.min.js"></script>
     <script src="js/tool.js"></script>
     <script src="js/vconsole.min.js"></script>
     <script src="js/index.js"></script>
