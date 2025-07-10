@@ -11,3 +11,4 @@ export.sh
 /CDN/package-lock.json
 /Components/node_modules
 /Components/yarn.lock
+CLAUDE.md
