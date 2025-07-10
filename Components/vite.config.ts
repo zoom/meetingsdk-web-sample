@@ -21,7 +21,14 @@ export default defineConfig(async () => {
       react(),
       svgr()
     ],
-    server: serverConfig
+    server: serverConfig,
+    optimizeDeps: {
+      include: ['@zoom/meetingsdk/embedded']
+    },
+    build: {
+      commonjsOptions: {
+        include: [/@zoom\/meetingsdk/, /node_modules/]
+      }
+    }
   };
 });
-

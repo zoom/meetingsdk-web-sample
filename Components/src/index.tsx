@@ -1,4 +1,4 @@
-import ZoomMtgEmbedded from "@zoom/meetingsdk/embedded";
+import * as ZoomMtgEmbedded from "@zoom/meetingsdk/embedded";
 const rootElement: HTMLElement = document.getElementById(
   "ZoomEmbeddedApp",
 ) as HTMLElement;
@@ -50,7 +50,7 @@ const meetingConfig = {
 if (!meetingConfig.signature) {
   window.location.href = "./nav.html";
 } else {
-  const zmClient = ZoomMtgEmbedded.createClient();
+  const zmClient = (ZoomMtgEmbedded as any).default.createClient();
 
   const tmpPort = window.location.port === "" ? "" : ":" + window.location.port;
   const avLibUrl =
