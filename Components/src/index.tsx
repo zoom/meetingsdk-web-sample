@@ -12,7 +12,6 @@ const testTool = window.testTool;
 // get meeting args from url
 const tmpArgs = testTool.parseQuery();
 const meetingConfig = {
-  sdkKey: tmpArgs.sdkKey,
   meetingNumber: tmpArgs.mn,
   userName: (function () {
     if (tmpArgs.name) {
@@ -77,7 +76,6 @@ if (!meetingConfig.signature) {
   // WebSDK Embedded join
   zmClient
     .join({
-      sdkKey: meetingConfig.sdkKey,
       signature: meetingConfig.signature,
       meetingNumber: meetingConfig.meetingNumber,
       userName: meetingConfig.userName,

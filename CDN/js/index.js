@@ -9,7 +9,6 @@ function websdkready() {
     const vConsole = new VConsole();
   }
   const authEndpoint = "http://127.0.0.1:4000";
-  let CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 
   //https://developers.zoom.us/docs/meeting-sdk/auth/#signature
   async function getSignature(meetingNumber, role) {
@@ -24,9 +23,6 @@ function websdkready() {
       });
       const data = await response.json();
       console.log(data);
-      if (data.sdkKey) {
-        CLIENT_ID = data.sdkKey;
-      }
       return data.signature;
     } catch (error) {
       console.log(error);
@@ -112,7 +108,6 @@ function websdkready() {
         );
         console.log(signature);
         meetingConfig.signature = signature;
-        meetingConfig.sdkKey = CLIENT_ID;
         const joinUrl = "/meeting.html?" + testTool.serialize(meetingConfig);
         console.log(joinUrl);
         window.open(joinUrl, "_blank");
@@ -149,7 +144,6 @@ function websdkready() {
     const signature = await getSignature(meetingConfig.mn, meetingConfig.role);
     console.log(signature);
     meetingConfig.signature = signature;
-    meetingConfig.sdkKey = CLIENT_ID;
 
     var joinUrl =
       testTool.getCurrentDomain() +

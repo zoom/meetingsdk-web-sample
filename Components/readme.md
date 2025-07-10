@@ -46,7 +46,6 @@ const initParams = {
 
 // Set your join params
 const joinParams = {
-  sdkKey: 'MY_SDK_KEY',
   // ...
 };
 

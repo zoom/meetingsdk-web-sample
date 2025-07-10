@@ -11,7 +11,6 @@ function websdkready() {
     var vConsole = new VConsole();
   }
   const authEndpoint = "http://127.0.0.1:4000";
-  let CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 
   //https://developers.zoom.us/docs/meeting-sdk/auth/#signature
   async function getSignature(meetingNumber, role) {
@@ -26,9 +25,6 @@ function websdkready() {
       });
       const data = await response.json();
       console.log(data);
-      if (data.sdkKey) {
-        CLIENT_ID = data.sdkKey;
-      }
       return data.signature;
     } catch (error) {
       console.log(error);
@@ -107,7 +103,6 @@ function websdkready() {
       var signature = await getSignature(meetingConfig.mn, meetingConfig.role);
 
       meetingConfig.signature = signature;
-      meetingConfig.sdkKey = CLIENT_ID;
       if (document.getElementById("demoType").value === "cdn") {
         var joinUrl = "/cdn.html?" + testTool.serialize(meetingConfig);
         console.log(joinUrl);
@@ -140,24 +135,19 @@ function websdkready() {
     }
     var signature = await getSignature(meetingConfig.mn, meetingConfig.role);
     meetingConfig.signature = signature;
-    meetingConfig.sdkKey = CLIENT_ID;
     if (document.getElementById("demoType").value === "cdn") {
       var joinUrl =
         testTool.getCurrentDomain() +
         "/cdn.html?" +
         testTool.serialize(meetingConfig);
-      document
-        .getElementById("copy_link_value")
-        .setAttribute("link", joinUrl);
+      document.getElementById("copy_link_value").setAttribute("link", joinUrl);
       copyToClipboard("copy_link_value");
     } else {
       var joinUrl =
         testTool.getCurrentDomain() +
         "/index.html?" +
         testTool.serialize(meetingConfig);
-      document
-        .getElementById("copy_link_value")
-        .setAttribute("link", joinUrl);
+      document.getElementById("copy_link_value").setAttribute("link", joinUrl);
       copyToClipboard("copy_link_value");
     }
   };

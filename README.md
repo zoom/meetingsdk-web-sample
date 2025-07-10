@@ -28,11 +28,10 @@ To get started, clone the repo:
    ```
    | Key                   | Value Description |
    | -----------------------|-------------|
-   | `CLIENT_ID/ZOOM_MEETING_SDK_KEY`     | Your Client ID or SDK Key. Required. |
    | `CLIENT_SECRET/ZOOM_MEETING_SDK_SECRET`  | Your Client Secret or SDK Secret. Required. |
 
    > [backend Meeting SDK JWT generator](https://developers.zoom.us/docs/meeting-sdk/auth/#generate-a-meeting-sdk-jwt)
-1. Run the app:
+2. Run the app:
 
    `$ npm start`
 

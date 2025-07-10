@@ -8,7 +8,6 @@ function websdkready() {
   // get meeting args from url
   var tmpArgs = testTool.parseQuery();
   var meetingConfig = {
-    sdkKey: tmpArgs.sdkKey,
     meetingNumber: tmpArgs.mn,
     userName: (function () {
       if (tmpArgs.name) {
@@ -74,7 +73,6 @@ function websdkready() {
             meetingNumber: meetingConfig.meetingNumber,
             userName: meetingConfig.userName,
             signature: signature,
-            sdkKey: meetingConfig.sdkKey,
             userEmail: meetingConfig.userEmail,
             passWord: meetingConfig.passWord,
             success: function (res) {
