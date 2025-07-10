@@ -57,58 +57,64 @@ function websdkready() {
   ZoomMtg.prepareWebSDK();
 
   function beginJoin(signature) {
+    //  https://developers.zoom.us/docs/meeting-sdk/web/client-view/multi-language/
     ZoomMtg.i18n.load(meetingConfig.lang);
-    ZoomMtg.init({
-      leaveUrl: meetingConfig.leaveUrl,
-      webEndpoint: meetingConfig.webEndpoint,
-      disableCORP: !window.crossOriginIsolated, // default true
-      // disablePreview: false, // default false
-      externalLinkPage: "./externalLinkPage.html",
-      success: function () {
-        console.log(meetingConfig);
-        console.log("signature", signature);
+    ZoomMtg.i18n.onLoad(function () {
+      ZoomMtg.init({
+        leaveUrl: meetingConfig.leaveUrl,
+        webEndpoint: meetingConfig.webEndpoint,
+        disableCORP: !window.crossOriginIsolated, // default true
+        // disablePreview: false, // default false
+        externalLinkPage: "./externalLinkPage.html",
+        success: function () {
+          console.log(meetingConfig);
+          console.log("signature", signature);
 
-        ZoomMtg.join({
-          meetingNumber: meetingConfig.meetingNumber,
-          userName: meetingConfig.userName,
-          signature: signature,
-          sdkKey: meetingConfig.sdkKey,
-          userEmail: meetingConfig.userEmail,
-          passWord: meetingConfig.passWord,
-          success: function (res) {
-            console.log("join meeting success");
-            console.log("get attendeelist");
-            ZoomMtg.getAttendeeslist({});
-            ZoomMtg.getCurrentUser({
-              success: function (res) {
-                console.log("success getCurrentUser", res.result.currentUser);
-              },
-            });
-          },
-          error: function (res) {
-            console.log(res);
-          },
-        });
-      },
-      error: function (res) {
-        console.log(res);
-      },
-    });
+          ZoomMtg.join({
+            meetingNumber: meetingConfig.meetingNumber,
+            userName: meetingConfig.userName,
+            signature: signature,
+            sdkKey: meetingConfig.sdkKey,
+            userEmail: meetingConfig.userEmail,
+            passWord: meetingConfig.passWord,
+            success: function (res) {
+              console.log("join meeting success");
+              console.log("get attendeelist");
+              ZoomMtg.getAttendeeslist({});
+              ZoomMtg.getCurrentUser({
+                success: function (res) {
+                  console.log("success getCurrentUser", res.result.currentUser);
+                },
+              });
+            },
+            error: function (res) {
+              console.log(res);
+            },
+          });
+        },
+        error: function (res) {
+          console.log(res);
+        },
+      });
 
-    ZoomMtg.inMeetingServiceListener("onUserJoin", function (data) {
-      console.log("inMeetingServiceListener onUserJoin", data);
-    });
+      ZoomMtg.inMeetingServiceListener("onUserJoin", function (data) {
+        console.log("inMeetingServiceListener onUserJoin", data);
+      });
 
-    ZoomMtg.inMeetingServiceListener("onUserLeave", function (data) {
-      console.log("inMeetingServiceListener onUserLeave", data);
-    });
+      ZoomMtg.inMeetingServiceListener("onUserLeave", function (data) {
+        console.log("inMeetingServiceListener onUserLeave", data);
+      });
 
-    ZoomMtg.inMeetingServiceListener("onUserIsInWaitingRoom", function (data) {
-      console.log("inMeetingServiceListener onUserIsInWaitingRoom", data);
-    });
+      ZoomMtg.inMeetingServiceListener(
+        "onUserIsInWaitingRoom",
+        function (data) {
+          console.log("inMeetingServiceListener onUserIsInWaitingRoom", data);
+        }
+      );
 
-    ZoomMtg.inMeetingServiceListener("onMeetingStatus", function (data) {
-      console.log("inMeetingServiceListener onMeetingStatus", data);
+      ZoomMtg.inMeetingServiceListener("onMeetingStatus", function (data) {
+        console.log("inMeetingServiceListener onMeetingStatus", data);
+      });
     });
   }
 
