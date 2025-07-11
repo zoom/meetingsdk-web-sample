@@ -125,7 +125,7 @@ client.init({
 });
 ```
 
-## 🆘 Need Help?
+## 💬 Need Help?
 
 - [Developer Support](https://developers.zoom.us/support/) - Technical support
 - [Developer Forum](https://devforum.zoom.us) - Community discussions  
