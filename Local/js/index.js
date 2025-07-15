@@ -1,30 +1,26 @@
 import { ZoomMtg } from "@zoom/meetingsdk";
 
 const authEndpoint = "http://127.0.0.1:4000";
-let CLIENT_ID = "YOUR_CLIENT_ID_OR_SDK_KEY";
 
-  //https://developers.zoom.us/docs/meeting-sdk/auth/#signature
-  async function getSignature(meetingNumber, role) {
-    try {
-      const response = await fetch(authEndpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          meetingNumber: meetingNumber,
-          role: role,
-        }),
-      });
-      const data = await response.json();
-      console.log(data);
-      if (data.sdkKey) {
-        CLIENT_ID = data.sdkKey;
-      }
-      return data.signature;
-    } catch (error) {
-      console.log(error);
-      throw error;
-    }
+//https://developers.zoom.us/docs/meeting-sdk/auth/#signature
+async function getSignature(meetingNumber, role) {
+  try {
+    const response = await fetch(authEndpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        meetingNumber: meetingNumber,
+        role: role,
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    return data.signature;
+  } catch (error) {
+    console.log(error);
+    throw error;
   }
+}
 
 testTool = window.testTool;
 document.getElementById("display_name").value =
@@ -94,7 +90,6 @@ document.getElementById("join_meeting").addEventListener("click", async (e) => {
 
   const signature = await getSignature(meetingConfig.mn, meetingConfig.role);
   meetingConfig.signature = signature;
-  meetingConfig.sdkKey = CLIENT_ID;
   const joinUrl = "/meeting.html?" + testTool.serialize(meetingConfig);
   console.log(joinUrl);
   window.open(joinUrl, "_blank");
@@ -122,7 +117,6 @@ window.copyJoinLink = async function (element) {
   const signature = await getSignature(meetingConfig.mn, meetingConfig.role);
   console.log(signature);
   meetingConfig.signature = signature;
-  meetingConfig.sdkKey = CLIENT_ID;
   const joinUrl =
     testTool.getCurrentDomain() +
     "/meeting.html?" +
