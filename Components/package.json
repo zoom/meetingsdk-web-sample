@@ -53,7 +53,7 @@
     "sass-loader": "^16.0.5",
     "stylelint": "^16.21.1",
     "stylelint-config-sass-guidelines": "^12.1.0",
-    "stylelint-config-standard-scss": "^14.0.5",
+    "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-order": "^7.0.0",
     "targz": "^1.0.1",
     "typescript": "^5.8.3",
