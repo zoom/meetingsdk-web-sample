@@ -35,7 +35,7 @@
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^16.2.0",
-    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-promise": "^6.2.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
@@ -49,16 +49,16 @@
     "prettier-eslint": "^16.4.2",
     "regenerator-runtime": "^0.14.1",
     "rimraf": "^6.0.1",
-    "sass": "^1.89.2",
+    "sass": "^1.91.0",
     "sass-loader": "^16.0.5",
-    "stylelint": "^16.21.1",
+    "stylelint": "^16.23.1",
     "stylelint-config-sass-guidelines": "^12.1.0",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-order": "^7.0.0",
     "targz": "^1.0.1",
-    "typescript": "^5.8.3",
-    "vite": "^7.0.4",
-    "vite-plugin-svgr": "^4.3.0"
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4",
+    "vite-plugin-svgr": "^4.5.0"
   },
   "husky": {
     "hooks": {
