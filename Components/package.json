@@ -1,6 +1,6 @@
 {
   "name": "websdk-component-demo",
-  "version": "4.0.6",
+  "version": "4.0.5",
   "type": "module",
   "config": {
     "commitizen": {
@@ -8,7 +8,7 @@
     }
   },
   "dependencies": {
-    "@zoom/meetingsdk": "4.0.6",
+    "@zoom/meetingsdk": "4.0.5",
     "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
