@@ -63,7 +63,7 @@ if (!meetingConfig.signature) {
     .init({
       debug: true,
       zoomAppRoot: rootElement,
-      assetPath: avLibUrl,
+      // assetPath: avLibUrl,
       language: meetingConfig.lang,
     })
     .then((e: any) => {
