@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "websdk-local",
-  "version": "5.0.2",
+  "version": "5.0.4",
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "5.0.2",
+    "@zoom/meetingsdk": "5.0.4",
     "lodash": "^4.17.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
