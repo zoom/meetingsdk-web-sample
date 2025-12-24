@@ -39,12 +39,9 @@ const meetingConfig = {
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the MeetingSDK-Web dependency link resources. setZoomJSLib must be run at first
-// ZoomMtg.setZoomJSLib("https://source.zoom.us/{VERSION}/lib", "/av"); // default, don't need call it
-if (meetingConfig.china)
-  ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/5.0.4/lib", "/av"); // china cdn option
+ZoomMtg.setZoomJSLib(location.origin + "/cdn/lib", "/av"); // default, don't need call it
 
-ZoomMtg.preLoadWasm();
-ZoomMtg.prepareWebSDK();
+
 
 function beginJoin(signature) {
   // https://developers.zoom.us/docs/meeting-sdk/web/client-view/multi-language/
