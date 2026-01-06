@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx force-resolutions || echo 1",
+    "postinstall": "node postinstall.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp",
     "https": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp --https"
