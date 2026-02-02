@@ -12,3 +12,7 @@ export.sh
 /Components/node_modules
 /Components/yarn.lock
 CLAUDE.md
+.npmrc
+CDN/.npmrc
+Local/.npmrc
+Components/.npmrc
