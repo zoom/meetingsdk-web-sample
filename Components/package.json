@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@zoom/meetingsdk": "5.1.2",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-redux": "8.1.2",
@@ -42,7 +42,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "mkdirp": "^3.0.1",
     "ncp": "^2.0.0",
     "prettier": "^3.6.2",
