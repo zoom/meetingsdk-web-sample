@@ -86,6 +86,8 @@ npm start
 **Full-page meeting experience** - Displays the Meeting SDK as a complete interface, providing the same experience as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client) within your web page.
 
 ### Component View  
+The [component view](https://developers.zoom.us/docs/meeting-sdk/web/component-view/) provides the option to display the Meeting SDK for web in components on your page. This allows for a more flexible design. Component view is designed specifically for desktop browser use cases, not mobile environments. For mobile use cases, use [client view](https://developers.zoom.us/docs/meeting-sdk/web/client-view/).
+
 ![Component View Demo](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ComponentView/meetingsdk-web-component-view.gif)
 
 **Flexible component integration** - Embed individual meeting components within your existing page layout for custom designs and user experiences.
