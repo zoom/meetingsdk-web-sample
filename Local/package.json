@@ -21,13 +21,7 @@
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "6.0.2",
-    "lodash": "^4.18.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-redux": "8.1.2",
-    "redux": "4.2.1",
-    "redux-thunk": "2.4.2"
+    "@zoom/meetingsdk": "6.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
