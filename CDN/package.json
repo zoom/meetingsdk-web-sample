@@ -1,6 +1,6 @@
 {
   "name": "websdk-cdn",
-  "version": "6.0.2",
+  "version": "6.1.0",
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
