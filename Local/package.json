@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/coffeelint",
   "name": "websdk-local",
-  "version": "6.2.0",
+  "version": "6.5.0",
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "6.2.0"
+    "@zoom/meetingsdk": "6.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
@@ -44,7 +44,7 @@
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "file-loader": "6.2.0",
+    "file-loader": "6.5.0",
     "node-polyfill-webpack-plugin": "^4.1.0",
     "style-loader": "^4.0.0",
     "url-loader": "4.1.1",
