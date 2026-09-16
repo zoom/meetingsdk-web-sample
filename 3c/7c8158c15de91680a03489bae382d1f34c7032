@@ -1,0 +1,14 @@
+.gitignore
+  h_caeb496b5dd51a 19-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "3c7c8158c15de91680a03489bae382d1f34c7032",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
