@@ -1,0 +1,60 @@
+.gitignore
+  h_caeb496b5dd51a 19-21
+esm/.gitignore
+  s_3cf81ecfb067fc::t_90d273787200c5 1-4
+esm/LICENSE.md
+  s_3cf81ecfb067fc::t_8543cdaa8be270 1
+esm/index.html
+  s_3cf81ecfb067fc::t_6b06b6d3f16300 1-428
+esm/js/index.js
+  s_3cf81ecfb067fc::t_9184e785204fa2 1-122
+esm/js/meeting.js
+  s_3cf81ecfb067fc::t_5c4314960f57a9 1-102
+esm/js/tool.js
+  s_3cf81ecfb067fc::t_e9ec74ff9bac40 1-331
+esm/meeting.html
+  s_3cf81ecfb067fc::t_86f65d8924614d 1-22
+esm/package-lock.json
+  s_3cf81ecfb067fc::t_3fcbb14caaf801 1-1558
+esm/package.json
+  s_3cf81ecfb067fc::t_a8ec0e32539e2a 1-54
+esm/public/externalLinkPage.html
+  s_3cf81ecfb067fc::t_f743b0d18a89a2 1-184
+esm/public/helper.html
+  s_3cf81ecfb067fc::t_6489df36a5b9e9 1
+esm/src/index.ts
+  s_3cf81ecfb067fc::t_76e503d339d29b 1-2
+esm/tests/server.test.js
+  s_3cf81ecfb067fc::t_ab79023dd7cb5c 1-29
+esm/tests/tool.test.js
+  s_3cf81ecfb067fc::t_356ab1f4f5cb39 1-16
+esm/tsconfig.json
+  s_3cf81ecfb067fc::t_26381d6f151d4e 1-15
+esm/tsconfig.lib.json
+  s_3cf81ecfb067fc::t_6d66cf4f582b5b 1-11
+esm/vite.config.ts
+  s_3cf81ecfb067fc::t_2cc987c1363709 1-41
+esm/vite.lib.config.ts
+  s_3cf81ecfb067fc::t_67f8b23d8dc9c2 1-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "2b041e5164c9d56202521a326963c8c56b4f5ecc",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  },
+  "sessions": {
+    "s_3cf81ecfb067fc": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a087aa-28b3-7f21-8547-609eea4ce5a0",
+        "model": "unknown"
+      },
+      "human_author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
