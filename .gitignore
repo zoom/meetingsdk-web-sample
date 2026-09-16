@@ -16,3 +16,5 @@ CLAUDE.md
 CDN/.npmrc
 Local/.npmrc
 Components/.npmrc
+esm
+.serena
