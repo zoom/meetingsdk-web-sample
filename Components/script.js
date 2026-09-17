@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import ncp from "ncp";
 import path from "path";
 import { exec } from "child_process";

@@ -1,6 +1,6 @@
 import ZoomMtgEmbedded from "@zoom/meetingsdk/embedded";
 const rootElement: HTMLElement = document.getElementById(
-  "ZoomEmbeddedApp",
+  "ZoomEmbeddedApp"
 ) as HTMLElement;
 
 declare global {
@@ -17,7 +17,7 @@ const meetingConfig = {
     if (tmpArgs.name) {
       try {
         return testTool.b64DecodeUnicode(tmpArgs.name);
-      } catch (e) {
+      } catch {
         return tmpArgs.name;
       }
     }
@@ -36,14 +36,14 @@ const meetingConfig = {
   userEmail: (function () {
     try {
       return testTool.b64DecodeUnicode(tmpArgs.email);
-    } catch (e) {
+    } catch {
       return tmpArgs.email;
     }
   })(),
   lang: tmpArgs.lang,
   signature: tmpArgs.signature || "",
   china: tmpArgs.china === "1",
-  webEndpoint: "zoom.us",
+  webEndpoint: "zoom.us"
 };
 
 if (!meetingConfig.signature) {
@@ -51,20 +51,12 @@ if (!meetingConfig.signature) {
 } else {
   const zmClient = ZoomMtgEmbedded.createClient();
 
-  const tmpPort = window.location.port === "" ? "" : ":" + window.location.port;
-  const avLibUrl =
-    window.location.protocol +
-    "//" +
-    window.location.hostname +
-    tmpPort +
-    "/lib";
-
   zmClient
     .init({
       debug: true,
       zoomAppRoot: rootElement,
-      // assetPath: avLibUrl,
-      language: meetingConfig.lang,
+      // assetPath: `${window.location.origin}/lib`,
+      language: meetingConfig.lang
     })
     .then((e: any) => {
       console.log("init success", e);
@@ -80,7 +72,7 @@ if (!meetingConfig.signature) {
       meetingNumber: meetingConfig.meetingNumber,
       userName: meetingConfig.userName,
       password: meetingConfig.password,
-      userEmail: meetingConfig.userEmail,
+      userEmail: meetingConfig.userEmail
     })
     .then((e: any) => {
       console.log("join success", e);

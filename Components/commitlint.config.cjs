@@ -1,6 +1,5 @@
 const configBase = require("./commitlint.base.cjs");
 
-// eslint-disable-next-line no-undef
 const isRunningInCI = !!process.env.GITLAB_CI;
 const level = isRunningInCI ? 1 : 2;
 

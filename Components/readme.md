@@ -67,3 +67,21 @@ client
 ## update
 npx npm-check -u
 
+## Development checks
+
+Use Node.js 22.12+ for the development tools, including Commitlint 21.
+
+```sh
+npm run lint       # Oxlint, including type-aware checks
+npm run lint:fix   # Apply safe lint fixes
+npm run format    # Format src and vite.config.ts with Oxfmt
+npm run format:check # Check formatting without modifying files
+npm run build      # TypeScript 7 type check and Vite 8 production build
+```
+
+Oxlint rules are configured in `.oxlintrc.json`, with correctness checks and
+React Hooks rules enabled. This replaces the previous ESLint/Airbnb/Standard
+configuration; it does not reproduce every rule from those presets. Oxfmt
+handles formatting through `.oxfmtrc.json` and lint-staged, including TypeScript
+files. Vite 8 and `@vitejs/plugin-react` 6 use Oxc for JavaScript/TypeScript and
+React transforms.
