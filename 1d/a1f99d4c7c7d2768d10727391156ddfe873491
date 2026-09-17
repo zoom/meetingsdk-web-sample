@@ -1,0 +1,43 @@
+Local/index.html
+  s_fdfaae1cfd02ca::t_4aeb9720434ac2 371
+  s_fdfaae1cfd02ca::t_5db389e64efe10 118,122-124
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 370,372-375
+CDN/js/tool.js
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 48
+Local/js/meeting.js
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 29,47,51-62,93-119
+  s_fdfaae1cfd02ca::t_f042660ade2de0 63-90
+CDN/index.html
+  s_fdfaae1cfd02ca::t_e993aa02b4c612 301,307,328,332-333
+  s_fdfaae1cfd02ca::t_4aeb9720434ac2 331
+  s_fdfaae1cfd02ca::t_5db389e64efe10 112,116-118
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 330
+  s_fdfaae1cfd02ca::t_92fba82242a86d 329
+CDN/js/meeting.js
+  s_fdfaae1cfd02ca::t_e993aa02b4c612 75,131,134
+  s_fdfaae1cfd02ca::t_f042660ade2de0 80-103,105-109
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 40,63,69-74,76-79,110-130,132-133,135-136
+Local/js/tool.js
+  s_fdfaae1cfd02ca::t_46a4a83d061bd5 41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "1da1f99d4c7c7d2768d10727391156ddfe873491",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  },
+  "sessions": {
+    "s_fdfaae1cfd02ca": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b142-754d-7b61-a1f2-1473af3b8aea",
+        "model": "gpt-5.5"
+      },
+      "human_author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
