@@ -1,0 +1,66 @@
+Local/index.html
+  s_4540eecfee5069::t_9d18eb685f3663 3-9,11,13-15,17-57,61-96,165-167,171-172,176-178,182-187,190-192,197-270,272-291,293-297,310-480
+  s_4540eecfee5069::t_3cd785ebd13d70 1-2,10,12,16,58-60,97-164,168-170,173-175,179-181,188-189,193-196,271,292,298-309
+Local/vite.config.mjs
+  s_4540eecfee5069::t_1bce6b99cc0bdb 30
+  s_4540eecfee5069::t_4d90df8ae0986d 62-68,80,83-90,93-99
+  s_4540eecfee5069::t_90ac0e88d65738 1-3,5-12,14-15,26,28,38-40,43-54,56-57,69-74,78-79,100,103-113
+  s_4540eecfee5069::t_09efb8f1621fa2 16-18,23-25
+  s_4540eecfee5069::t_631841f65f55f1 27
+  s_4540eecfee5069::t_8ec805aa3c7a6a 29
+  s_4540eecfee5069::t_30dcb302e28071 31-33,35-37
+  s_4540eecfee5069::t_0d9b280f405ec3 75-76
+  s_4540eecfee5069::t_c08c6a1ab0f5f4 81
+  s_4540eecfee5069::t_1bbb63344512f4 91-92
+Local/js/tool.js
+  s_4540eecfee5069::t_4d90df8ae0986d 7-8,16,18,20,35-42,46,49-50,52-53,60,65,67,69-70,77,99,106,127-128,131,137,139-147,150-151,153-154,156-157,159-160,162-163,165-166,168,187,190,193,196-197,200,203,217,222-223,228,231,242,246,253-254,256,258-259,263,269-270,273,275,278,285,288,291,293,295
+Local/.gitignore
+  s_4540eecfee5069::t_90ac0e88d65738 1
+  s_4540eecfee5069::t_495c9f67afda0a 2
+README.md
+  s_4540eecfee5069::t_7d721c871d6aa2 160
+  s_4540eecfee5069::t_86e8aedcb83b4b 28-29,32,38,56,64,70,90,95-96,114,126,130,135,139-140,147,155-159,161
+  s_4540eecfee5069::t_357d348611baa7 162
+  s_4540eecfee5069::t_165faa375c055d 15,25-26
+Local/js/meeting.js
+  s_4540eecfee5069::t_4d90df8ae0986d 2,12,16,19,24,29-30,37,50,53,60-62,66-67,72,77,80-81,84-85,88-89,92-93
+  s_4540eecfee5069::t_9d18eb685f3663 1
+Local/postinstall.js
+  s_4540eecfee5069::t_4d90df8ae0986d 9
+Local/js/index.js
+  s_4540eecfee5069::t_9d18eb685f3663 1,26
+  s_4540eecfee5069::t_4d90df8ae0986d 2,4,10-11,14-15,27-32,35-38,42-54,58-63,66,71,74-75,79,81,85-86,89,94,97,104-106
+  s_4540eecfee5069::t_aec1c92a6e7568 34,56
+Local/meeting.html
+  s_4540eecfee5069::t_9d18eb685f3663 22
+  s_4540eecfee5069::t_55651ec64486c2 1-3,6-12,14,21,24-33,35-36
+Local/package.json
+  s_4540eecfee5069::t_9d18eb685f3663 8-15,30-32,36-37
+  s_4540eecfee5069::t_c0e58c96d6a6c3 38
+Local/.oxlintrc.json
+  s_4540eecfee5069::t_90ac0e88d65738 1-6
+Local/.oxfmtrc.json
+  s_4540eecfee5069::t_90ac0e88d65738 2-6
+  s_4540eecfee5069::t_4d90df8ae0986d 7-13
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "50376f4995ac9ed7873d3aaa9f1a7f078fdcd5ba",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  },
+  "sessions": {
+    "s_4540eecfee5069": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b0ce-c699-7e20-9029-fec5e1142314",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
