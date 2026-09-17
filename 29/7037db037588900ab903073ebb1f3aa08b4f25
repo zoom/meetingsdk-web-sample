@@ -1,0 +1,34 @@
+README.md
+  s_c236b5387e2662::t_a956bd0184a693 28,138-140,142-143
+  s_c236b5387e2662::t_70d4649dd34ea8 141
+CDN/.gitignore
+  s_c236b5387e2662::t_367992e252009b 1
+CDN/corp.js
+  s_c236b5387e2662::t_367992e252009b 1-2,4-9,11-48,52,54-67
+CDN/package.json
+  s_c236b5387e2662::t_367992e252009b 7-9,14-16
+  s_c236b5387e2662::t_70d4649dd34ea8 17
+CDN/vite.config.mjs
+  s_c236b5387e2662::t_367992e252009b 1-36
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "297037db037588900ab903073ebb1f3aa08b4f25",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  },
+  "sessions": {
+    "s_c236b5387e2662": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a0b0c8-e458-7013-9e9f-d4cad2ee5df2",
+        "model": "gpt-6-astra"
+      },
+      "human_author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
