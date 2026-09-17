@@ -25,7 +25,7 @@ This repository contains three different implementation approaches:
 |---|---|---|---|---|
 | **Components** | React + TypeScript + Vite | 3000 | Component View | Modern, flexible component-based integration |
 | **Local** | React + Webpack + NPM | 9999 | Client View | Traditional client view with npm packages |
-| **CDN** | Vanilla JS + Webpack + CDN | 9999 | Client View | Simple CDN-based integration |
+| **CDN** | Vanilla JS + Vite 8 + CDN | 9999 | Client View | Simple CDN-based integration |
 
 Navigate to your preferred implementation:
 ```bash
@@ -135,3 +135,9 @@ client.init({
 - [Developer Support](https://developers.zoom.us/support/) - Technical support
 - [Developer Forum](https://devforum.zoom.us) - Community discussions  
 - [Premier Developer Support](https://www.zoom.com/en/support-plans/developer/) - Priority support plans
+
+### CDN development with Vite 8
+
+The CDN sample uses Node.js 22 (22.12 or newer). Run `nvm install` and `nvm use` inside `CDN` to select it. Run `npm install` in `CDN`, then `npm start` for HTTP or `npm run https` to use the included local certificate. The main server uses port 9999 and the meeting isolation server uses port 9998.
+
+Run `npm test` for server and build checks, or `npm run build` to generate `CDN/dist`. When hosting the build, configure `Cross-Origin-Resource-Policy: cross-origin` and add `Cross-Origin-Embedder-Policy: require-corp` and `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`. Local CDN scripts retain their classic script ordering.

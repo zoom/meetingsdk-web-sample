@@ -1,58 +1,67 @@
-const webpack = require('webpack');
-const fs = require('fs');
-const WebpackDevServer = require('webpack-dev-server');
-const webpackConfig = require('./webpack.config.dev');
+const fs = require('node:fs');
+const path = require('node:path');
 
-const args = process.argv.slice(2);
-let https = false;
-if (args.includes('--https')) https = true;
+const resourceHeaders = { 'Cross-Origin-Resource-Policy': 'cross-origin' };
+const isolationHeaders = {
+  ...resourceHeaders,
+  'Cross-Origin-Embedder-Policy': 'require-corp',
+  'Cross-Origin-Opener-Policy': 'same-origin',
+};
 
-function runFunc(err) {
-  if (err) {
-    console.log(err);
+async function startServers({ https = false, open = true } = {}) {
+  const { createServer } = await import('vite');
+  const configFile = path.join(__dirname, 'vite.config.mjs');
+  const meetingServer = await createServer({
+    configFile,
+    server: {
+      port: 9998,
+      strictPort: true,
+      host: '0.0.0.0',
+      headers: isolationHeaders,
+      hmr: false,
+    },
+  });
+  let mainServer;
+  try {
+    await meetingServer.listen();
+    mainServer = await createServer({
+      configFile,
+      server: {
+        port: 9999,
+        strictPort: true,
+        host: '0.0.0.0',
+        open: open ? `${https ? 'https://localhost' : 'http://127.0.0.1'}:9999/` : false,
+        https: https ? {
+          cert: fs.readFileSync(path.join(__dirname, 'localhost.crt')),
+          key: fs.readFileSync(path.join(__dirname, 'localhost.key')),
+        } : undefined,
+        headers: resourceHeaders,
+        proxy: {
+          '^/meeting\\.html(?:\\?|$)': { target: 'http://127.0.0.1:9998' },
+        },
+      },
+    });
+    await mainServer.listen();
+    return [mainServer, meetingServer];
+  } catch (error) {
+    await Promise.all([meetingServer.close(), mainServer?.close()]);
+    throw error;
   }
-  console.log('Listening at http://127.0.0.1:9999/index.html');
 }
 
-new WebpackDevServer(
-  {
-    port: 9999,
-    host: '0.0.0.0',
-    open: https ? 'https://localhost:9999/' : 'http://127.0.0.1:9999/',
-    server: {
-      type: https ? 'https' : 'http',
-      options: {
-        cert: fs.readFileSync('./localhost.crt'),
-          key: fs.readFileSync('./localhost.key')
-      },
-    },
-    headers: {
-      'Cross-Origin-Resource-Policy': 'cross-origin'
-    },
-    historyApiFallback: true,
-    proxy: [
-      {
-        path: '/meeting.html',
-        target: 'http://127.0.0.1:9998/'
-      }
-    ],
-    static: './',
-    allowedHosts: 'all'
-  },
-  webpack(webpackConfig)
-).start(9999, '0.0.0.0', runFunc);
+module.exports = { startServers };
 
-new WebpackDevServer(
-  {
-    port: 9998,
-    host: '0.0.0.0',
-    headers: {
-      'Cross-Origin-Embedder-Policy': 'require-corp',
-      'Cross-Origin-Opener-Policy': 'same-origin',
-      'Cross-Origin-Resource-Policy': 'cross-origin'
-    },
-    historyApiFallback: true,
-    static: './'
-  },
-  webpack(webpackConfig)
-).start(9998, '0.0.0.0', runFunc);
+if (require.main === module) {
+  startServers({ https: process.argv.includes('--https') }).then(servers => {
+    servers[0].printUrls();
+    for (const signal of ['SIGINT', 'SIGTERM']) {
+      process.once(signal, async () => {
+        await Promise.all(servers.map(server => server.close()));
+        process.exit(0);
+      });
+    }
+  }).catch(error => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

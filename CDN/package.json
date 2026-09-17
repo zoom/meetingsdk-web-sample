@@ -4,15 +4,16 @@
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp",
-    "https": "set NODE_ENV=development && set BABEL_ENV=development && node corp.js --corp --https"
+    "start": "node corp.js --corp",
+    "https": "node corp.js --corp --https",
+    "build": "vite build"
   },
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "devDependencies": {
-    "webpack": "^5.106.2",
-    "webpack-cli": "^7.0.2",
-    "webpack-dev-server": "^5.2.3"
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": "^22.12.0"
   }
 }
