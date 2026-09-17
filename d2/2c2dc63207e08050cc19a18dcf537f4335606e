@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "d22c2dc63207e08050cc19a18dcf537f4335606e",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
