@@ -1,0 +1,20 @@
+CDN/index.html
+  h_caeb496b5dd51a 346
+Local/meeting.html
+  h_caeb496b5dd51a 18
+CDN/meeting.html
+  h_caeb496b5dd51a 17
+Local/index.html
+  h_caeb496b5dd51a 347-348
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.16",
+  "base_commit_sha": "fbe423ccbd6f7e09ac323169459866136208189c",
+  "prompts": {},
+  "humans": {
+    "h_caeb496b5dd51a": {
+      "author": "Jack Yang <jack.yang@zoom.us>"
+    }
+  }
+}
