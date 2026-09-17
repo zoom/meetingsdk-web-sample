@@ -1,4 +1,5 @@
-import { ZoomMtg } from "@zoom/meetingsdk";
+import './tool.js';
+import { ZoomMtg } from '@zoom/meetingsdk';
 const testTool = window.testTool;
 // get meeting args from url
 const tmpArgs = testTool.parseQuery();
@@ -8,40 +9,32 @@ const meetingConfig = {
     if (tmpArgs.name) {
       try {
         return testTool.b64DecodeUnicode(tmpArgs.name);
-      } catch (e) {
+      } catch {
         return tmpArgs.name;
       }
     }
-    return (
-      "CDN#" +
-      tmpArgs.version +
-      "#" +
-      testTool.detectOS() +
-      "#" +
-      testTool.getBrowserInfo()
-    );
+    return 'CDN#' + tmpArgs.version + '#' + testTool.detectOS() + '#' + testTool.getBrowserInfo();
   })(),
   passWord: tmpArgs.pwd,
-  leaveUrl: "/index.html",
+  leaveUrl: '/index.html',
   role: parseInt(tmpArgs.role, 10),
   userEmail: (function () {
     try {
       return testTool.b64DecodeUnicode(tmpArgs.email);
-    } catch (e) {
+    } catch {
       return tmpArgs.email;
     }
   })(),
   lang: tmpArgs.lang,
-  signature: tmpArgs.signature || "",
-  china: tmpArgs.china === "1",
+  signature: tmpArgs.signature || '',
+  china: tmpArgs.china === '1'
 };
 
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the MeetingSDK-Web dependency link resources. setZoomJSLib must be run at first
 // ZoomMtg.setZoomJSLib("https://source.zoom.us/{VERSION}/lib", "/av"); // default, don't need call it
-if (meetingConfig.china)
-  ZoomMtg.setZoomJSLib("https://jssdk.zoomus.cn/6.5.0/lib", "/av"); // china cdn option
+if (meetingConfig.china) ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/6.5.0/lib', '/av'); // china cdn option
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -54,50 +47,50 @@ function beginJoin(signature) {
       leaveUrl: meetingConfig.leaveUrl,
       disableCORP: !window.crossOriginIsolated, // default true
       // disablePreview: false, // default false
-      externalLinkPage: "./externalLinkPage.html",
+      externalLinkPage: './externalLinkPage.html',
       success: function () {
         console.log(meetingConfig);
-        console.log("signature", signature);
+        console.log('signature', signature);
         ZoomMtg.join({
           meetingNumber: meetingConfig.meetingNumber,
           userName: meetingConfig.userName,
           signature: signature,
           userEmail: meetingConfig.userEmail,
           passWord: meetingConfig.passWord,
-          success: function (res) {
-            console.log("join meeting success");
-            console.log("get attendeelist");
+          success: function () {
+            console.log('join meeting success');
+            console.log('get attendeelist');
             ZoomMtg.getAttendeeslist({});
             ZoomMtg.getCurrentUser({
               success: function (res) {
-                console.log("success getCurrentUser", res.result.currentUser);
-              },
+                console.log('success getCurrentUser', res.result.currentUser);
+              }
             });
           },
           error: function (res) {
             console.log(res);
-          },
+          }
         });
       },
       error: function (res) {
         console.log(res);
-      },
+      }
     });
 
-    ZoomMtg.inMeetingServiceListener("onUserJoin", function (data) {
-      console.log("inMeetingServiceListener onUserJoin", data);
+    ZoomMtg.inMeetingServiceListener('onUserJoin', function (data) {
+      console.log('inMeetingServiceListener onUserJoin', data);
     });
 
-    ZoomMtg.inMeetingServiceListener("onUserLeave", function (data) {
-      console.log("inMeetingServiceListener onUserLeave", data);
+    ZoomMtg.inMeetingServiceListener('onUserLeave', function (data) {
+      console.log('inMeetingServiceListener onUserLeave', data);
     });
 
-    ZoomMtg.inMeetingServiceListener("onUserIsInWaitingRoom", function (data) {
-      console.log("inMeetingServiceListener onUserIsInWaitingRoom", data);
+    ZoomMtg.inMeetingServiceListener('onUserIsInWaitingRoom', function (data) {
+      console.log('inMeetingServiceListener onUserIsInWaitingRoom', data);
     });
 
-    ZoomMtg.inMeetingServiceListener("onMeetingStatus", function (data) {
-      console.log("inMeetingServiceListener onMeetingStatus", data);
+    ZoomMtg.inMeetingServiceListener('onMeetingStatus', function (data) {
+      console.log('inMeetingServiceListener onMeetingStatus', data);
     });
   });
 }

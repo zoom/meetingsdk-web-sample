@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "semi": true,
+  "trailingComma": "none",
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "dist/**",
+    "node_modules/**",
+    "package-lock.json",
+    "helper.html",
+    "externalLinkPage.html"
+  ]
+}

@@ -12,6 +12,7 @@ The [Zoom Meeting SDK for web](https://developers.zoom.us/docs/meeting-sdk/web/)
 ## 🚀 Quick Start
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/zoom/sample-app-web.git
 cd sample-app-web
@@ -21,18 +22,20 @@ cd sample-app-web
 
 This repository contains three different implementation approaches:
 
-| Implementation | Technology | Port | UI | Use Case |
-|---|---|---|---|---|
+| Implementation | Technology                | Port | UI             | Use Case                                     |
+| -------------- | ------------------------- | ---- | -------------- | -------------------------------------------- |
 | **Components** | React + TypeScript + Vite | 3000 | Component View | Modern, flexible component-based integration |
-| **Local** | React + Webpack + NPM | 9999 | Client View | Traditional client view with npm packages |
-| **CDN** | Vanilla JS + Vite 8 + CDN | 9999 | Client View | Simple CDN-based integration |
+| **Local**      | Vite 8 + Oxc + NPM        | 9999 | Client View    | Traditional client view with npm packages    |
+| **CDN**        | Vanilla JS + Vite 8 + CDN | 9999 | Client View    | Simple CDN-based integration                 |
 
 Navigate to your preferred implementation:
+
 ```bash
 cd Components    # or Local, or CDN
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 npm install
 ```
@@ -50,6 +53,7 @@ cp .env.example .env
 ```
 
 Edit `.env` with your credentials:
+
 ```env
 CLIENT_SECRET=your_client_secret_here
 # or
@@ -57,11 +61,13 @@ ZOOM_MEETING_SDK_SECRET=your_sdk_secret_here
 ```
 
 Start the auth backend:
+
 ```bash
 npm install && npm run start
 ```
 
 ### 5. Run the Sample App
+
 ```bash
 npm start
 ```
@@ -81,11 +87,13 @@ npm start
 ## 🎯 Implementation Types
 
 ### Client View
+
 ![Client View Demo](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ClientView/meetingsdk-web-client-view.gif)
 
 **Full-page meeting experience** - Displays the Meeting SDK as a complete interface, providing the same experience as the [Zoom Web Client](https://support.zoom.us/hc/en-us/articles/214629443-Zoom-Web-Client) within your web page.
 
-### Component View  
+### Component View
+
 The [component view](https://developers.zoom.us/docs/meeting-sdk/web/component-view/) provides the option to display the Meeting SDK for web in components on your page. This allows for a more flexible design. Component view is designed specifically for desktop browser use cases, not mobile environments. For mobile use cases, use [client view](https://developers.zoom.us/docs/meeting-sdk/web/client-view/).
 
 ![Component View Demo](https://zoom.github.io/meetingsdk-web-sample/images/6.0/ComponentView/meetingsdk-web-component-view.gif)
@@ -103,6 +111,7 @@ The [component view](https://developers.zoom.us/docs/meeting-sdk/web/component-v
 For government applications, you need to apply for a new SDK key at [ZFG Marketplace](https://marketplace.zoomgov.com/).
 
 ### Option 1: Use ZFG-specific SDK version
+
 ```json
 {
   "dependencies": {
@@ -114,26 +123,28 @@ For government applications, you need to apply for a new SDK key at [ZFG Marketp
 ### Option 2: Configure ZFG endpoints
 
 **Client View:**
+
 ```javascript
 ZoomMtg.setZoomJSLib("https://source.zoomgov.com/{VERSION}/lib", "/av");
 ZoomMtg.init({
-   webEndpoint: "www.zoomgov.com",
+  webEndpoint: "www.zoomgov.com",
 });
 ```
 
 **Component View:**
+
 ```javascript
 const client = ZoomMtgEmbedded.createClient();
 client.init({
- assetPath: 'https://source.zoomgov.com/{VERSION}/lib/av',
- webEndpoint: "www.zoomgov.com"
+  assetPath: "https://source.zoomgov.com/{VERSION}/lib/av",
+  webEndpoint: "www.zoomgov.com",
 });
 ```
 
 ## 💬 Need Help?
 
 - [Developer Support](https://developers.zoom.us/support/) - Technical support
-- [Developer Forum](https://devforum.zoom.us) - Community discussions  
+- [Developer Forum](https://devforum.zoom.us) - Community discussions
 - [Premier Developer Support](https://www.zoom.com/en/support-plans/developer/) - Priority support plans
 
 ### CDN development with Vite 8
@@ -141,3 +152,11 @@ client.init({
 The CDN sample uses Node.js 22 (22.12 or newer). Run `nvm install` and `nvm use` inside `CDN` to select it. Run `npm install` in `CDN`, then `npm start` for HTTP or `npm run https` to use the included local certificate. The main server uses port 9999 and the meeting isolation server uses port 9998.
 
 Run `npm test` for server and build checks, or `npm run build` to generate `CDN/dist`. When hosting the build, configure `Cross-Origin-Resource-Policy: cross-origin` and add `Cross-Origin-Embedder-Policy: require-corp` and `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`. Local CDN scripts retain their classic script ordering.
+
+### Local development with Vite 8 and Oxc
+
+The Local sample requires Node.js 20.19+ or 22.12+ (Node.js 22 LTS recommended). In `Local`, run `npm install`, then `npm start` for HTTP or `npm run https` for HTTPS with the included local certificate. Both use port 9999; the meeting page receives cross-origin isolation headers directly, so a second server on port 9998 is no longer needed.
+
+Vite 8 uses Oxc for JavaScript transformation and minification. Run `npm run lint` / `npm run lint:fix` for Oxlint, and `npm run format` / `npm run format:check` for Oxfmt. SDK-provided helper HTML is kept unchanged. Run `npm run build` to generate `Local/dist`, and `npm run preview` to serve that build locally.
+
+When deploying `Local/dist`, configure `Cross-Origin-Resource-Policy: cross-origin` on responses and `Cross-Origin-Embedder-Policy: require-corp` plus `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`, including requests with query parameters. React, ReactDOM, React Redux, Redux, Redux Thunk, and Lodash remain external classic scripts. The build copies these six vendor files into `dist/node_modules` and includes the helper pages; deploy the entire `dist` directory.
