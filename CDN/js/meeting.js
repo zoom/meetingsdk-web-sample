@@ -37,6 +37,7 @@ function websdkready() {
       }
     })(),
     lang: tmpArgs.lang,
+    apiMode: tmpArgs.apiMode === "promise" ? "promise" : "callback",
     signature: tmpArgs.signature || "",
     china: tmpArgs.china === "1",
   };
@@ -59,41 +60,80 @@ function websdkready() {
     //  https://developers.zoom.us/docs/meeting-sdk/web/client-view/multi-language/
     ZoomMtg.i18n.load(meetingConfig.lang);
     ZoomMtg.i18n.onLoad(function () {
-      ZoomMtg.init({
+      const initOptions = {
         leaveUrl: meetingConfig.leaveUrl,
         webEndpoint: meetingConfig.webEndpoint,
         disableCORP: !window.crossOriginIsolated, // default true
         // disablePreview: false, // default false
         externalLinkPage: "./externalLinkPage.html",
-        success: function () {
-          console.log(meetingConfig);
-          console.log("signature", signature);
+      };
+      const joinOptions = {
+        meetingNumber: meetingConfig.meetingNumber,
+        userName: meetingConfig.userName,
+        signature: signature,
+        userEmail: meetingConfig.userEmail,
+        passWord: meetingConfig.passWord,
+      };
 
-          ZoomMtg.join({
-            meetingNumber: meetingConfig.meetingNumber,
-            userName: meetingConfig.userName,
-            signature: signature,
-            userEmail: meetingConfig.userEmail,
-            passWord: meetingConfig.passWord,
-            success: function (res) {
-              console.log("join meeting success");
-              console.log("get attendeelist");
-              ZoomMtg.getAttendeeslist({});
-              ZoomMtg.getCurrentUser({
-                success: function (res) {
-                  console.log("success getCurrentUser", res.result.currentUser);
-                },
-              });
-            },
-            error: function (res) {
-              console.log(res);
-            },
+      function onJoinSuccess() {
+        console.log("join meeting success");
+
+        function onAttendeesSuccess(res) {
+          console.log("success getAttendeeslist", res);
+        }
+
+        function onCurrentUserSuccess(res) {
+          console.log("success getCurrentUser", res.result.currentUser);
+        }
+
+        function onAttendeesError(error) {
+          console.error("Failed to get attendees list", error);
+        }
+
+        function onCurrentUserError(error) {
+          console.error("Failed to get current user", error);
+        }
+
+        if (meetingConfig.apiMode === "promise") {
+          ZoomMtg.getAttendeeslist({}).then(onAttendeesSuccess).catch(onAttendeesError);
+          ZoomMtg.getCurrentUser({}).then(onCurrentUserSuccess).catch(onCurrentUserError);
+        } else {
+          ZoomMtg.getAttendeeslist({
+            success: onAttendeesSuccess,
+            error: onAttendeesError,
           });
-        },
-        error: function (res) {
-          console.log(res);
-        },
-      });
+          ZoomMtg.getCurrentUser({
+            success: onCurrentUserSuccess,
+            error: onCurrentUserError,
+          });
+        }
+      }
+
+      function onError(error) {
+        console.error("Failed to initialize or join meeting", error);
+      }
+
+      if (meetingConfig.apiMode === "promise") {
+        // SDK 6.5.0 returns Promises when success/error callbacks are omitted.
+        ZoomMtg.init(initOptions)
+          .then(function () {
+            return ZoomMtg.join(joinOptions);
+          })
+          .then(onJoinSuccess)
+          .catch(onError);
+      } else {
+        ZoomMtg.init({
+          ...initOptions,
+          success: function () {
+            ZoomMtg.join({
+              ...joinOptions,
+              success: onJoinSuccess,
+              error: onError,
+            });
+          },
+          error: onError,
+        });
+      }
 
       ZoomMtg.inMeetingServiceListener("onUserJoin", function (data) {
         console.log("inMeetingServiceListener onUserJoin", data);

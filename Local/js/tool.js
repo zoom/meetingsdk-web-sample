@@ -38,6 +38,7 @@ var testTool = {
       role: parseInt(document.getElementById('meeting_role').value, 10),
       email: testTool.b64EncodeUnicode(document.getElementById('meeting_email').value),
       lang: document.getElementById('meeting_lang').value,
+      apiMode: document.getElementById('meeting_api_mode').value,
       signature: '',
       china: document.getElementById('meeting_china').value
     };

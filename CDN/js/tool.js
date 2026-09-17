@@ -45,6 +45,7 @@ var testTool = {
         document.getElementById("meeting_email").value
       ),
       lang: document.getElementById("meeting_lang").value,
+      apiMode: document.getElementById("meeting_api_mode").value,
       signature: "",
       china: document.getElementById("meeting_china").value,
     };
