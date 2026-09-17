@@ -115,10 +115,13 @@
       .form-group {
         margin: 0;
         flex-grow: 0;
+        min-width: 0;
       }
 
       .sdk-select {
-        min-width: 120px;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
         position: relative;
       }
 
@@ -362,6 +365,12 @@
                 <option value="id-ID">Indonesian Bahasa Indonesia</option>
                 <option value="nl-NL">Dutch Nederlands</option>
                 <option value="sv-SE">Swedish Svenska</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select id="meeting_api_mode" class="sdk-select" aria-label="SDK API mode">
+                <option value="callback">Callback</option>
+                <option value="promise">Promise</option>
               </select>
             </div>
             <div class="button-group">
