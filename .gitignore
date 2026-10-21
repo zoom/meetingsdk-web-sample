@@ -21,4 +21,5 @@ CDN/.playwright-mcp/
 Components/.playwright-mcp/
 .serena
 esm
+*.zip
 

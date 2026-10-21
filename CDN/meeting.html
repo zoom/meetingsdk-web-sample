@@ -9,16 +9,22 @@
 </head>
 
 <body>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/react-redux.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/lib/vendor/lodash.min.js"></script>
-    <script src="https://source.zoom.us/6.10.0/zoom-meeting-6.10.0.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@18.3.1",
+            "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+            "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1"
+        }
+    }
+    </script>
+    <script type="module">
+        import { ZoomMtg } from "https://source.zoom.us/6.10.0/esm/client-view.es.min.js";
+        window.ZoomMtg = ZoomMtg;
+    </script>
     <script src="js/tool.js"></script>
     <script src="js/vconsole.min.js"></script>
-    <script src="js/meeting.js"></script>
+    <script defer src="js/meeting.js"></script>
 
     <script>
 

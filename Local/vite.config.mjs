@@ -2,43 +2,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
 
-const vendorScripts = [
-  'react/umd/react.production.min.js',
-  'react-dom/umd/react-dom.production.min.js',
-  'react-redux/dist/react-redux.min.js',
-  'redux/dist/redux.min.js',
-  'redux-thunk/dist/redux-thunk.min.js',
-  'lodash/lodash.min.js'
-];
-
 const root = fileURLToPath(new URL('.', import.meta.url));
-
-// Keep SDK dependencies external in both the dev optimizer and production build.
-function externalLibraries() {
-  const globals = {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    'react-dom/client': 'ReactDOM',
-    'react-redux': 'ReactRedux',
-    redux: 'Redux',
-    'redux-thunk': 'ReduxThunk',
-    lodash: '_'
-  };
-  const prefix = '\0external-library:';
-  return {
-    name: 'external-libraries',
-    enforce: 'pre',
-    resolveId(id) {
-      if (Object.hasOwn(globals, id)) return `${prefix}${id}.cjs`;
-    },
-    load(id) {
-      if (id.startsWith(prefix)) {
-        const name = id.slice(prefix.length, -4);
-        return `module.exports = window.${globals[name]};`;
-      }
-    }
-  };
-}
 
 function meetingHeaders(server) {
   server.middlewares.use((req, res, next) => {
@@ -72,13 +36,9 @@ export default defineConfig(({ mode }) => {
     root,
     appType: 'mpa',
     publicDir: false,
-    optimizeDeps: {
-      rolldownOptions: { plugins: [externalLibraries()] }
-    },
     server,
     preview: server,
     plugins: [
-      externalLibraries(),
       {
         name: 'meeting-pages',
         configureServer: meetingHeaders,
@@ -88,8 +48,7 @@ export default defineConfig(({ mode }) => {
           for (const fileName of [
             'helper.html',
             'externalLinkPage.html',
-            'favicon.ico',
-            ...vendorScripts.map((name) => `node_modules/${name}`)
+            'favicon.ico'
           ]) {
             this.emitFile({
               type: 'asset',
