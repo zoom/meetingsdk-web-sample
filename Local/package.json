@@ -1,6 +1,6 @@
 {
   "name": "websdk-local",
-  "version": "6.5.0",
+  "version": "6.10.0",
   "description": "Zoom sample app for MeetingSDK-Web client view",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   "author": "Zoom Communications, Inc.",
   "license": "SEE LICENSE IN LICENSE.md",
   "dependencies": {
-    "@zoom/meetingsdk": "6.5.0"
+    "@zoom/meetingsdk": "6.10.0"
   },
   "devDependencies": {
     "vite": "^8.3.0",
