@@ -16,5 +16,8 @@ CLAUDE.md
 CDN/.npmrc
 Local/.npmrc
 Components/.npmrc
-esm
+Local/.playwright-mcp/
+CDN/.playwright-mcp/
+Components/.playwright-mcp/
 .serena
+
