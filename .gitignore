@@ -20,4 +20,5 @@ Local/.playwright-mcp/
 CDN/.playwright-mcp/
 Components/.playwright-mcp/
 .serena
+esm
 
