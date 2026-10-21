@@ -34,8 +34,8 @@ const meetingConfig = {
 console.log(JSON.stringify(ZoomMtg.checkSystemRequirements()));
 
 // it's option if you want to change the MeetingSDK-Web dependency link resources. setZoomJSLib must be run at first
-// ZoomMtg.setZoomJSLib("https://source.zoom.us/6.10.0/lib", "/av"); // default, don't need call it
-if (meetingConfig.china) ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/6.10.0/lib', '/av'); // china cdn option
+// ZoomMtg.setZoomJSLib("https://source.zoom.us/{VERSION_NUMBER}/lib", "/av"); // default, don't need call it
+if (meetingConfig.china) ZoomMtg.setZoomJSLib('https://jssdk.zoomus.cn/{VERSION_NUMBER}/lib', '/av'); // china cdn option
 
 ZoomMtg.preLoadWasm();
 ZoomMtg.prepareWebSDK();
@@ -97,7 +97,7 @@ function beginJoin(signature) {
     }
 
     if (meetingConfig.apiMode === 'promise') {
-      // SDK 6.10.0 returns Promises when success/error callbacks are omitted.
+      // SDK 6.5.0 returns Promises when success/error callbacks are omitted.
       ZoomMtg.init(initOptions)
         .then(function () {
           return ZoomMtg.join(joinOptions);
