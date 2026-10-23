@@ -4,12 +4,22 @@
     <meta charset="UTF-8" />
     <title>WebSDK Embedded CDN demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/zoom-meeting-embedded-6.5.0.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.3.1",
+          "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+          "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1"
+        }
+      }
+    </script>
+    <script type="module">
+      import ZoomMtgEmbedded from "https://source.zoom.us/6.10.0/esm/component-view.es.min.js";
+      window.ZoomMtgEmbedded = ZoomMtgEmbedded;
+    </script>
     <script src="./tools/tool.js"></script>
     <script src="./tools/vconsole.min.js"></script>
-    <script src="./tools/cdn.js"></script>
+    <script defer src="./tools/cdn.js"></script>
   </head>
 
   <body>

@@ -277,7 +277,7 @@
             <div id="navbar" class="flex-grow-1">
                 <form class="form-container" id="meeting_form">
                     <div class="form-group">
-                        <input type="text" name="display_name" id="display_name" value="6.5.0#CDN" maxLength="100"
+                        <input type="text" name="display_name" id="display_name" value="6.10.0#CDN" maxLength="100"
                             placeholder="Name" class="form-control" required>
                     </div>
                     <div class="form-group">
@@ -347,16 +347,22 @@
         </div>
     </nav>
 
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/react.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/react-dom.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/react-redux.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/redux.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/redux-thunk.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/lib/vendor/lodash.min.js"></script>
-    <script src="https://source.zoom.us/6.5.0/zoom-meeting-6.5.0.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@18.3.1",
+            "react-dom": "https://esm.sh/react-dom@18.3.1?deps=react@18.3.1",
+            "react-dom/client": "https://esm.sh/react-dom@18.3.1/client?deps=react@18.3.1"
+        }
+    }
+    </script>
+    <script type="module">
+        import { ZoomMtg } from "https://source.zoom.us/6.10.0/esm/client-view.es.min.js";
+        window.ZoomMtg = ZoomMtg;
+    </script>
     <script src="js/tool.js"></script>
     <script src="js/vconsole.min.js"></script>
-    <script src="js/index.js"></script>
+    <script defer src="js/index.js"></script>
 
     <script>
         function handleCopyClick(selector) {

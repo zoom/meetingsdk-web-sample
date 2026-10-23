@@ -1,7 +1,7 @@
 # Zoom Meeting SDK Web Sample
 
 > **⚠️ Action Required:**  
-> We recommend that you upgrade to 5.1.4 or above if you use WebRTC video to prevent issues with future Chrome versions.
+> We recommend that you upgrade to 6.5.0 or above if you use WebRTC video to prevent issues with future Chrome versions.
 
 > **Note**: Use of this sample app is subject to our [Terms of Use](https://explore.zoom.us/en/legal/zoom-api-license-and-tou/).
 
@@ -14,8 +14,8 @@ The [Zoom Meeting SDK for web](https://developers.zoom.us/docs/meeting-sdk/web/)
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/zoom/sample-app-web.git
-cd sample-app-web
+git clone https://github.com/zoom/meetingsdk-web-sample.git
+cd meetingsdk-web-sample
 ```
 
 ### 2. Choose Your Implementation
@@ -40,7 +40,7 @@ cd Components    # or Local, or CDN
 npm install
 ```
 
-**Note**: For Node.js 16, use `npm install --force`
+**Note**: Node.js 22.12 or newer is required.
 
 ### 4. Set Up Authentication Backend
 
@@ -84,6 +84,22 @@ npm start
    - Role (Host or Attendee)
    - Click "Join"
 
+## 🛠️ Development Notes
+
+### CDN development with Vite 8
+
+The CDN sample uses Node.js 22 (22.12 or newer). Run `nvm install` and `nvm use` inside `CDN` to select it. Run `npm install` in `CDN`, then `npm start` for HTTP or `npm run https` to use the included local certificate. The main server uses port 9999 and the meeting isolation server uses port 9998.
+
+Run `npm run build` to generate `CDN/dist`. When hosting the build, configure `Cross-Origin-Resource-Policy: cross-origin` and add `Cross-Origin-Embedder-Policy: require-corp` and `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`. The CDN pages load the SDK as an ES module through an import map (React from esm.sh), so no vendor scripts are needed.
+
+### Local development with Vite 8 and Oxc
+
+The Local sample requires Node.js 22.12 or newer. In `Local`, run `npm install`, then `npm start` for HTTP or `npm run https` for HTTPS with the included local certificate. Both use port 9999; the meeting page receives cross-origin isolation headers directly, so a second server on port 9998 is no longer needed.
+
+Vite 8 uses Oxc for JavaScript transformation and minification. Run `npm run lint` / `npm run lint:fix` for Oxlint, and `npm run format` / `npm run format:check` for Oxfmt. SDK-provided helper HTML is kept unchanged. Run `npm run build` to generate `Local/dist`, and `npm run preview` to serve that build locally.
+
+When deploying `Local/dist`, configure `Cross-Origin-Resource-Policy: cross-origin` on responses and `Cross-Origin-Embedder-Policy: require-corp` plus `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`, including requests with query parameters. React and the other SDK dependencies are resolved from `node_modules` and bundled by Vite, and the build includes the helper pages; deploy the entire `dist` directory.
+
 ## 🎯 Implementation Types
 
 ### Client View
@@ -106,6 +122,10 @@ The [component view](https://developers.zoom.us/docs/meeting-sdk/web/component-v
 - [Gallery View Requirements](https://developers.zoom.us/docs/meeting-sdk/web/gallery-view/)
 - [Authentication Guide](https://developers.zoom.us/docs/meeting-sdk/auth/#generate-a-meeting-sdk-jwt)
 
+## 📦 Install the Meeting SDK for Web as ES Modules (ESM) — 6.10.0 and later
+
+Starting with 6.10.0 the SDK ships an ESM build next to the UMD build. For npm and CDN (import map) install steps, see [ESM.md](ESM.md).
+
 ## 🏛️ Zoom for Government (ZFG)
 
 For government applications, you need to apply for a new SDK key at [ZFG Marketplace](https://marketplace.zoomgov.com/).
@@ -115,7 +135,7 @@ For government applications, you need to apply for a new SDK key at [ZFG Marketp
 ```json
 {
   "dependencies": {
-    "@zoom/meetingsdk": "3.11.2-zfg"
+    "@zoom/meetingsdk": "6.0.2-zfg"
   }
 }
 ```
@@ -146,17 +166,3 @@ client.init({
 - [Developer Support](https://developers.zoom.us/support/) - Technical support
 - [Developer Forum](https://devforum.zoom.us) - Community discussions
 - [Premier Developer Support](https://www.zoom.com/en/support-plans/developer/) - Priority support plans
-
-### CDN development with Vite 8
-
-The CDN sample uses Node.js 22 (22.12 or newer). Run `nvm install` and `nvm use` inside `CDN` to select it. Run `npm install` in `CDN`, then `npm start` for HTTP or `npm run https` to use the included local certificate. The main server uses port 9999 and the meeting isolation server uses port 9998.
-
-Run `npm test` for server and build checks, or `npm run build` to generate `CDN/dist`. When hosting the build, configure `Cross-Origin-Resource-Policy: cross-origin` and add `Cross-Origin-Embedder-Policy: require-corp` and `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`. Local CDN scripts retain their classic script ordering.
-
-### Local development with Vite 8 and Oxc
-
-The Local sample requires Node.js 20.19+ or 22.12+ (Node.js 22 LTS recommended). In `Local`, run `npm install`, then `npm start` for HTTP or `npm run https` for HTTPS with the included local certificate. Both use port 9999; the meeting page receives cross-origin isolation headers directly, so a second server on port 9998 is no longer needed.
-
-Vite 8 uses Oxc for JavaScript transformation and minification. Run `npm run lint` / `npm run lint:fix` for Oxlint, and `npm run format` / `npm run format:check` for Oxfmt. SDK-provided helper HTML is kept unchanged. Run `npm run build` to generate `Local/dist`, and `npm run preview` to serve that build locally.
-
-When deploying `Local/dist`, configure `Cross-Origin-Resource-Policy: cross-origin` on responses and `Cross-Origin-Embedder-Policy: require-corp` plus `Cross-Origin-Opener-Policy: same-origin` for `/meeting.html`, including requests with query parameters. React, ReactDOM, React Redux, Redux, Redux Thunk, and Lodash remain external classic scripts. The build copies these six vendor files into `dist/node_modules` and includes the helper pages; deploy the entire `dist` directory.
